@@ -80,6 +80,16 @@
   var buttonLabel = button ? button.textContent : "";
   form.noValidate = true; /* JSが動く時は独自メッセージで案内する */
 
+  /* 送信サービスのキーが未設定の間は、メールソフトで送る代替動作になる。案内文もそれに合わせる */
+  var keyField = form.querySelector("[name='access_key']");
+  var keyReady = !!(keyField && keyField.value && keyField.value.indexOf("YOUR_") !== 0);
+  if (!keyReady) {
+    var submitHint = document.getElementById("submit-hint");
+    if (submitHint) submitHint.textContent = "送信ボタンを押すと、入力内容を下書きしたメールソフトが開きます。";
+    var privacyHint = document.getElementById("hint-privacy");
+    if (privacyHint) privacyHint.hidden = true;
+  }
+
   var MESSAGES = {
     valueMissing: {
       "ご相談の種類": "ご相談の種類を選んでください。",
@@ -158,8 +168,7 @@
     }
 
     var data = payload();
-    var key = data.access_key || "";
-    if (!key || key.indexOf("YOUR_") === 0) { mailtoFallback(data); return; }
+    if (!keyReady) { mailtoFallback(data); return; }
 
     button.disabled = true;
     button.textContent = "送信中…";
