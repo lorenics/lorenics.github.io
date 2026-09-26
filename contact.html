@@ -88,9 +88,9 @@
             <label class="c-field__label" for="f-type">ご相談の種類 <span class="c-field__tag c-field__tag--req">必須</span></label>
             <select class="c-select" id="f-type" name="ご相談の種類" required aria-describedby="err-type">
               <option value="">選択してください</option>
-              <option>PLC教育・社員研修</option>
-              <option>FA制御の技術顧問</option>
-              <option>AIを使った業務改善</option>
+              <option>PLC教育・研修</option>
+              <option>FA制御技術顧問</option>
+              <option>AI導入・業務改善</option>
               <option>取材・PR・その他</option>
             </select>
             <p class="c-field__error" id="err-type"></p>
@@ -122,12 +122,13 @@
 
           <div class="c-field">
             <label class="c-field__label" for="f-message">ご相談内容 <span class="c-field__tag c-field__tag--req">必須</span></label>
-            <textarea class="c-textarea" id="f-message" name="ご相談内容" required maxlength="4000" placeholder="例:見積書づくりに毎晩時間がかかっている/若手にPLCを教えたい など" aria-describedby="err-message"></textarea>
+            <textarea class="c-textarea" id="f-message" name="ご相談内容" required maxlength="4000" placeholder="例：見積書づくりに毎晩時間がかかっている／若手にPLCを教えたい など" aria-describedby="err-message"></textarea>
             <p class="c-field__error" id="err-message"></p>
           </div>
 
           <div class="c-field">
-            <label class="c-check"><input type="checkbox" name="privacy" value="同意する" required aria-describedby="err-privacy"><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する <span class="c-field__tag c-field__tag--req">必須</span></span></label>
+            <label class="c-check"><input type="checkbox" name="privacy" value="同意する" required aria-describedby="hint-privacy err-privacy"><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>（外国の事業者への提供を含む）に同意する <span class="c-field__tag c-field__tag--req">必須</span></span></label>
+            <p class="c-field__hint" id="hint-privacy">送信内容は、フォーム送信サービス Web3Forms（インドの事業者）を経由して当社に届きます。</p>
             <p class="c-field__error" id="err-privacy"></p>
           </div>
 

@@ -37,15 +37,24 @@
     Array.prototype.forEach.call(reveals, function (el) { io.observe(el); });
   }
 
-  /* ---------- スマホ固定CTA ---------- */
+  /* ---------- スマホ固定CTA(ファーストビューのボタンか最後のCTAが見えている間は隠す) ---------- */
   var sticky = document.querySelector(".c-sticky-cta");
-  var finalCta = document.querySelector("[data-final-cta]");
   if (sticky) {
     document.body.classList.add("has-sticky-cta");
-    if (finalCta && "IntersectionObserver" in window) {
-      new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { sticky.classList.toggle("is-hidden", en.isIntersecting); });
-      }, { threshold: 0.05 }).observe(finalCta);
+    var targets = document.querySelectorAll("[data-hero-cta], [data-final-cta]");
+    if (targets.length && "IntersectionObserver" in window) {
+      var inView = [];
+      var watch = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          var i = inView.indexOf(en.target);
+          if (en.isIntersecting && i < 0) inView.push(en.target);
+          if (!en.isIntersecting && i >= 0) inView.splice(i, 1);
+        });
+        sticky.classList.toggle("is-hidden", inView.length > 0);
+      }, { threshold: 0.05 });
+      Array.prototype.forEach.call(targets, function (t) { watch.observe(t); });
+    } else {
+      sticky.classList.remove("is-hidden");
     }
   }
 
@@ -55,9 +64,9 @@
 
   var MAIL_TO = "lorenics@outlook.jp";
   var TYPES = {
-    plc: "PLC教育・社員研修",
-    advisor: "FA制御の技術顧問",
-    ai: "AIを使った業務改善",
+    plc: "PLC教育・研修",
+    advisor: "FA制御技術顧問",
+    ai: "AI導入・業務改善",
     other: "取材・PR・その他"
   };
   var select = form.querySelector("[name='ご相談の種類']");
