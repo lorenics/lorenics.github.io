@@ -12,8 +12,14 @@
 <meta property="og:title" content="ロアニクス株式会社｜生産設備屋のイヌ｜PLC・制御技術の内製化支援">
 <meta property="og:description" content="ロアニクス株式会社（Lorenics）は、製造業向けに発信する『生産設備屋のイヌ』が代表を務める大阪の会社です。PLC教育・制御設計・生成AI活用で、設備を社内で直せる現場づくりに伴走します。">
 <meta property="og:url" content="https://lorenics.github.io/">
-<meta property="og:image" content="https://lorenics.github.io/images/lorenics-logo.png">
+<meta property="og:image" content="https://lorenics.github.io/images/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,6 +30,7 @@
   "logo": "https://lorenics.github.io/images/lorenics-logo.png",
   "email": "lorenics@outlook.jp",
   "foundingDate": "2026-06-08",
+  "identifier": {"@type": "PropertyValue", "propertyID": "法人番号", "value": "8120001286908"},
   "founder": {"@type": "Person", "name": "西原 健人", "alternateName": "生産設備屋のイヌ"},
   "address": {"@type": "PostalAddress", "postalCode": "542-0081", "addressRegion": "大阪府", "addressLocality": "大阪市中央区", "streetAddress": "南船場3丁目2番22号 おおきに南船場ビル205", "addressCountry": "JP"},
   "description": "PLC・制御設計に関する教育・研修、生産設備の制御設計・技術支援、生成AIを活用した業務効率化支援を行う会社です。"
@@ -70,8 +77,10 @@
   .fv-result-flow { display: grid; grid-template-columns: 1fr 78px 1fr; align-items: center; gap: 10px; margin: 0 0 12px auto; max-width: 560px; }
   /* Keep the factory demo running on phones; reduced-motion still applies on larger screens. */
   @media (prefers-reduced-motion: reduce) and (min-width: 681px) { .fx-gear, [style*="fx-"], [style*="fv-"] { animation: none !important; } }
+  @media (max-width: 1080px) { .hdr-email { display: none !important; } }
   @media (max-width: 680px) {
     .hdr-email { display: none !important; }
+    .hdr-ai { display: none !important; }
     .hdr-daihyo { display: none !important; }
     .hdr-company { display: none !important; }
     .hdr-right { gap: 14px !important; }
@@ -103,13 +112,14 @@
   <div style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.82); backdrop-filter: blur(10px); border-bottom: 1px solid #e8ebf0;">
     <div class="hdr-inner" style="max-width: 1340px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px clamp(16px, 4vw, 40px);">
       <div style="display: flex; align-items: center; gap: 12px;">
-        <img src="images/lorenics-logo.png" alt="Lorenics" style="height: 30px; width: auto; display: block;">
+        <img src="images/lorenics-logo.png" alt="Lorenics" width="899" height="209" style="height: 30px; width: auto; display: block;">
       </div>
       <div class="hdr-right" style="display: flex; align-items: center; gap: 24px;">
+        <a class="hdr-ai" href="ai.html" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 700; color: #17181c; text-decoration: none;" style-hover="color: #2E86D3;">AI業務改善</a>
         <a class="hdr-daihyo" href="message.html" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 700; color: #17181c; text-decoration: none;" style-hover="color: #2E86D3;">代表メッセージ</a>
         <a class="hdr-company" href="company.html" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 700; color: #17181c; text-decoration: none;" style-hover="color: #2E86D3;">会社案内</a>
-        <a class="hdr-email" href="mailto:lorenics@outlook.jp" style="font-family: 'Space Mono', monospace; font-size: 15px; color: #17181c; font-weight: 700; text-decoration: none;">lorenics@outlook.jp<span style="display: block; font-size: 11px; color: #787b83; font-weight: 400; font-family: 'Noto Sans JP', sans-serif;">お問い合わせはメールで</span></a>
-        <a class="hdr-cta" href="#contact" style="background: var(--accent, #2E86D3); color: #0e0e0f; font-weight: 700; padding: 12px 24px; border-radius: 3px; text-decoration: none; font-size: 15px; transition: transform 0.2s;" style-hover="transform: scale(1.02);">お問い合わせ</a>
+        <a class="hdr-email" href="mailto:lorenics@outlook.jp" style="font-family: 'Space Mono', monospace; font-size: 15px; color: #17181c; font-weight: 700; text-decoration: none;">lorenics@outlook.jp<span style="display: block; font-size: 11px; color: #787b83; font-weight: 400; font-family: 'Noto Sans JP', sans-serif;">メールでも受付中</span></a>
+        <a class="hdr-cta" href="contact.html" style="background: var(--accent, #2E86D3); color: #0e0e0f; font-weight: 700; padding: 12px 24px; border-radius: 3px; text-decoration: none; font-size: 15px; transition: transform 0.2s;" style-hover="transform: scale(1.02);">お問い合わせ</a>
       </div>
     </div>
   </div>
@@ -279,7 +289,7 @@
           <div style="border-left: 3px solid var(--accent, #2E86D3); background: rgba(255,255,255,0.88); padding: 11px 12px;"><div style="font-family: 'Space Mono', monospace; color: #7a7e86; font-size: 9px; letter-spacing: 0.14em; margin-bottom: 3px;">BENEFIT 03</div><div style="font-size: 14px; font-weight: 900;">技術継承を仕組みに</div><div style="font-size: 11px; color: #666a72; margin-top: 3px;">若手へ教えられる</div></div>
         </div>
         <div style="display: flex; align-items: center; gap: 18px; margin-top: 28px; flex-wrap: wrap;">
-          <a href="#contact" style="background: var(--accent, #2E86D3); color: #0e0e0f; font-weight: 900; padding: 18px 34px; border-radius: 3px; font-size: 16px; text-decoration: none; box-shadow: 0 6px 24px rgba(46,134,211,0.25); transition: transform 0.2s;" style-hover="transform: scale(1.02);">設備の課題を相談する</a>
+          <a href="contact.html" style="background: var(--accent, #2E86D3); color: #0e0e0f; font-weight: 900; padding: 18px 34px; border-radius: 3px; font-size: 16px; text-decoration: none; box-shadow: 0 6px 24px rgba(46,134,211,0.25); transition: transform 0.2s;" style-hover="transform: scale(1.02);">設備の課題を相談する</a>
           <span style="font-size: 12px; line-height: 1.7; color: #6f737b;">相談内容が固まっていなくても<br>現状の整理からお手伝いします</span>
         </div>
         <div style="display: flex; align-items: center; gap: 13px; margin-top: 24px; max-width: 590px; border-top: 1px solid #dfe3e9; padding-top: 16px;">
@@ -517,7 +527,7 @@
           <div style="color: var(--accent, #2E86D3); font-family: 'Space Mono', monospace; font-size: 20px; line-height: 1; margin-bottom: 16px;">“</div>
           <p style="font-size: 15px; line-height: 2; color: #26272c; margin: 0 0 20px;">夜中の停止でも、まず自分たちで原因を確認できるようになった。外注を呼ぶ回数が目に見えて減った。</p>
           <div style="display: flex; align-items: center; gap: 12px; border-top: 1px solid #e4e7ec; padding-top: 16px;">
-            <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e4e7ec; overflow: hidden; flex-shrink: 0;"><img src="images/voice-1.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"></div>
+            <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e4e7ec; overflow: hidden; flex-shrink: 0;"><img src="images/voice-1.png" alt="" width="100" height="100" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"></div>
             <div style="font-size: 13px; color: #565860;">食品工場</div>
           </div>
         </div>
@@ -525,7 +535,7 @@
           <div style="color: var(--accent, #2E86D3); font-family: 'Space Mono', monospace; font-size: 20px; line-height: 1; margin-bottom: 16px;">“</div>
           <p style="font-size: 15px; line-height: 2; color: #26272c; margin: 0 0 20px;">ベテランしか知らなかった調整のコツが、手順書として残った。人に依存しない体制に近づいている。</p>
           <div style="display: flex; align-items: center; gap: 12px; border-top: 1px solid #e4e7ec; padding-top: 16px;">
-            <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e4e7ec; overflow: hidden; flex-shrink: 0;"><img src="images/voice-2.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"></div>
+            <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e4e7ec; overflow: hidden; flex-shrink: 0;"><img src="images/voice-2.png" alt="" width="100" height="100" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"></div>
             <div style="font-size: 13px; color: #565860;">部品加工メーカー</div>
           </div>
         </div>
@@ -533,7 +543,7 @@
           <div style="color: var(--accent, #2E86D3); font-family: 'Space Mono', monospace; font-size: 20px; line-height: 1; margin-bottom: 16px;">“</div>
           <p style="font-size: 15px; line-height: 2; color: #26272c; margin: 0 0 20px;">未経験の若手が、半年で簡単な改造まで任せられるように。本人が一番自信をつけた。</p>
           <div style="display: flex; align-items: center; gap: 12px; border-top: 1px solid #e4e7ec; padding-top: 16px;">
-            <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e4e7ec; overflow: hidden; flex-shrink: 0;"><img src="images/voice-3.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"></div>
+            <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e4e7ec; overflow: hidden; flex-shrink: 0;"><img src="images/voice-3.png" alt="" width="100" height="100" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"></div>
             <div style="font-size: 13px; color: #565860;">樹脂成形メーカー</div>
           </div>
         </div>
@@ -548,103 +558,92 @@
     <h2 style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: clamp(26px, 3.2vw, 40px); margin: 0 0 12px;">得たい成果から、必要な支援を。</h2>
     <p style="color: #44464d; font-size: 16px; line-height: 2; margin: 0 0 44px; max-width: 760px;">「設備停止を短くしたい」「外注費を抑えたい」「技術を次世代へ残したい」。目的に合わせて、<strong style="color: #17181c;">PLC教育・FA制御技術顧問・AI導入×業務改善</strong>を組み合わせます。</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px;">
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
+      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
           <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.01</span>
           <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
         </div>
-        <div style="padding: 24px 26px 26px;">
+        <div style="padding: 24px 26px 26px; flex: 1; display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">PLC教育事業</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><line x1="8" y1="6" x2="8" y2="38"></line><line x1="38" y1="6" x2="38" y2="38"></line><line x1="8" y1="16" x2="16" y2="16"></line><line x1="20" y1="16" x2="27" y2="16"></line><line x1="16" y1="11" x2="16" y2="21"></line><line x1="20" y1="11" x2="20" y2="21"></line><circle cx="32" cy="16" r="4" stroke="var(--accent, #2E86D3)"></circle><line x1="36" y1="16" x2="38" y2="16"></line><line x1="8" y1="30" x2="27" y2="30"></line><circle cx="32" cy="30" r="4"></circle><line x1="36" y1="30" x2="38" y2="30"></line></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">設備を動かすPLC(シーケンス制御)を、貴社の社員が自分で直せるようになるまで教える実践研修。</p>
+          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 14px;">設備を動かすPLC(シーケンス制御)を、貴社の社員が自分で直せるようになるまで教える実践研修。</p>
+          <a href="contact.html?type=plc" style="display: inline-block; align-self: flex-start; margin: auto 0 18px; font-size: 14px; font-weight: 700; color: #1F6FB0; text-decoration: none; border-bottom: 1px solid rgba(46,134,211,0.4);" style-hover="color: #2E86D3; border-bottom-color: #2E86D3;">PLC教育について相談する →</a>
           <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 0.00s infinite;"></span></div>
         </div>
       </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
+      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
           <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.02</span>
           <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
         </div>
-        <div style="padding: 24px 26px 26px;">
+        <div style="padding: 24px 26px 26px; flex: 1; display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">FA制御技術顧問</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><circle cx="22" cy="22" r="9"></circle><line x1="22" y1="7" x2="22" y2="13"></line><line x1="22" y1="31" x2="22" y2="37"></line><line x1="7" y1="22" x2="13" y2="22"></line><line x1="31" y1="22" x2="37" y2="22"></line><line x1="11.4" y1="11.4" x2="15.6" y2="15.6"></line><line x1="28.4" y1="28.4" x2="32.6" y2="32.6"></line><line x1="11.4" y1="32.6" x2="15.6" y2="28.4"></line><line x1="28.4" y1="15.6" x2="32.6" y2="11.4"></line><circle cx="22" cy="22" r="3" fill="var(--accent, #2E86D3)" stroke="none"></circle></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">生産設備の制御について、社外の技術顧問として継続的にご相談へ対応します。</p>
+          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 14px;">生産設備の制御について、社外の技術顧問として継続的にご相談へ対応します。</p>
+          <a href="contact.html?type=advisor" style="display: inline-block; align-self: flex-start; margin: auto 0 18px; font-size: 14px; font-weight: 700; color: #1F6FB0; text-decoration: none; border-bottom: 1px solid rgba(46,134,211,0.4);" style-hover="color: #2E86D3; border-bottom-color: #2E86D3;">技術顧問について相談する →</a>
           <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 0.32s infinite;"></span></div>
         </div>
       </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
+      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
           <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.03</span>
           <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
         </div>
-        <div style="padding: 24px 26px 26px;">
+        <div style="padding: 24px 26px 26px; flex: 1; display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">AI導入 × 業務改善</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><rect x="13" y="13" width="18" height="18" rx="2"></rect><line x1="17" y1="13" x2="17" y2="7"></line><line x1="22" y1="13" x2="22" y2="7"></line><line x1="27" y1="13" x2="27" y2="7"></line><line x1="17" y1="31" x2="17" y2="37"></line><line x1="22" y1="31" x2="22" y2="37"></line><line x1="27" y1="31" x2="27" y2="37"></line><line x1="13" y1="18" x2="7" y2="18"></line><line x1="13" y1="26" x2="7" y2="26"></line><line x1="31" y1="18" x2="37" y2="18"></line><line x1="31" y1="26" x2="37" y2="26"></line><circle cx="22" cy="22" r="3" fill="var(--accent, #2E86D3)" stroke="none"></circle></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">現場業務へのAI活用を、企画から導入・定着まで伴走して支援します。</p>
+          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 14px;">現場業務へのAI活用を、企画から導入・定着まで伴走して支援します。</p>
+          <a href="ai.html" style="display: inline-block; align-self: flex-start; margin: auto 0 18px; font-size: 14px; font-weight: 700; color: #1F6FB0; text-decoration: none; border-bottom: 1px solid rgba(46,134,211,0.4);" style-hover="color: #2E86D3; border-bottom-color: #2E86D3;">AI業務改善のページを見る →</a>
           <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 0.64s infinite;"></span></div>
         </div>
       </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
-          <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.04</span>
-          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
-        </div>
-        <div style="padding: 24px 26px 26px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">シミュレータ開発</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><rect x="7" y="9" width="30" height="20" rx="2"></rect><line x1="22" y1="29" x2="22" y2="35"></line><line x1="15" y1="35" x2="29" y2="35"></line><polyline points="11,21 16,21 19,14 24,24 27,18 33,18" stroke="var(--accent, #2E86D3)"></polyline></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">設備・制御のシミュレータを開発。教育や導入前の事前検証に活用できます。</p>
-          <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 0.96s infinite;"></span></div>
-        </div>
-      </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
-          <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.05</span>
-          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
-        </div>
-        <div style="padding: 24px 26px 26px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">各種アプリ作成</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><rect x="8" y="8" width="28" height="28" rx="3"></rect><line x1="8" y1="15" x2="36" y2="15"></line><circle cx="12.5" cy="11.5" r="1.3" fill="#8f9aa8" stroke="none"></circle><circle cx="17" cy="11.5" r="1.3" fill="#8f9aa8" stroke="none"></circle><rect x="13" y="21" width="12" height="4" rx="1" fill="var(--accent, #2E86D3)" stroke="none"></rect><line x1="13" y1="30" x2="29" y2="30"></line></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">現場の困りごとに合わせた業務用アプリケーションを設計・開発します。</p>
-          <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 1.28s infinite;"></span></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px; margin: 52px 0 8px; font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: 20px;"><span style="width: 22px; height: 3px; background: #17181c;"></span>そのほかの対応領域</div>
+    <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">上の3つと組み合わせて、または単独でもご相談いただけます。</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 12px;">
+      <div style="display: flex; gap: 14px; align-items: flex-start; border: 1px solid #e4e7ec; background: #f6f8fb; padding: 18px 18px 16px; transition: border-color 0.25s, background-color 0.25s;" style-hover="border-color: var(--accent, #2E86D3); background-color: #ffffff;">
+        <svg viewBox="0 0 44 44" width="34" height="34" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="7" y="9" width="30" height="20" rx="2"></rect><line x1="22" y1="29" x2="22" y2="35"></line><line x1="15" y1="35" x2="29" y2="35"></line><polyline points="11,21 16,21 19,14 24,24 27,18 33,18" stroke="var(--accent, #2E86D3)"></polyline></svg>
+        <div style="min-width: 0;">
+          <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 10px; font-weight: 700; letter-spacing: 0.16em;">MOD.04</div>
+          <div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 17px; line-height: 1.4; margin: 2px 0 4px;">シミュレータ開発</div>
+          <p style="color: #565860; font-size: 13.5px; line-height: 1.8; margin: 0;">設備・制御のシミュレータを開発。教育や導入前の事前検証に活用できます。</p>
         </div>
       </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
-          <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.06</span>
-          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
-        </div>
-        <div style="padding: 24px 26px 26px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">PR</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><polygon points="8,18 14,18 26,11 26,33 14,26 8,26"></polygon><line x1="31" y1="16" x2="36" y2="13" stroke="var(--accent, #2E86D3)"></line><line x1="31" y1="22" x2="38" y2="22" stroke="var(--accent, #2E86D3)"></line><line x1="31" y1="28" x2="36" y2="31" stroke="var(--accent, #2E86D3)"></line></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">技術や製品の価値を、伝わるかたちに整えて発信を支援します。</p>
-          <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 1.60s infinite;"></span></div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; border: 1px solid #e4e7ec; background: #f6f8fb; padding: 18px 18px 16px; transition: border-color 0.25s, background-color 0.25s;" style-hover="border-color: var(--accent, #2E86D3); background-color: #ffffff;">
+        <svg viewBox="0 0 44 44" width="34" height="34" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="8" y="8" width="28" height="28" rx="3"></rect><line x1="8" y1="15" x2="36" y2="15"></line><circle cx="12.5" cy="11.5" r="1.3" fill="#8f9aa8" stroke="none"></circle><circle cx="17" cy="11.5" r="1.3" fill="#8f9aa8" stroke="none"></circle><rect x="13" y="21" width="12" height="4" rx="1" fill="var(--accent, #2E86D3)" stroke="none"></rect><line x1="13" y1="30" x2="29" y2="30"></line></svg>
+        <div style="min-width: 0;">
+          <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 10px; font-weight: 700; letter-spacing: 0.16em;">MOD.05</div>
+          <div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 17px; line-height: 1.4; margin: 2px 0 4px;">各種アプリ作成</div>
+          <p style="color: #565860; font-size: 13.5px; line-height: 1.8; margin: 0;">現場の困りごとに合わせた業務用アプリケーションを設計・開発します。</p>
         </div>
       </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
-          <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.07</span>
-          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
-        </div>
-        <div style="padding: 24px 26px 26px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">広告代理案件</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><rect x="8" y="9" width="28" height="16" rx="2"></rect><rect x="12" y="13" width="12" height="3" fill="var(--accent, #2E86D3)" stroke="none"></rect><line x1="12" y1="21" x2="30" y2="21"></line><line x1="18" y1="25" x2="18" y2="35"></line><line x1="26" y1="25" x2="26" y2="35"></line><line x1="13" y1="35" x2="31" y2="35"></line></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">広告の企画・出稿・制作を代理でお引き受けします。</p>
-          <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 1.92s infinite;"></span></div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; border: 1px solid #e4e7ec; background: #f6f8fb; padding: 18px 18px 16px; transition: border-color 0.25s, background-color 0.25s;" style-hover="border-color: var(--accent, #2E86D3); background-color: #ffffff;">
+        <svg viewBox="0 0 44 44" width="34" height="34" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><polygon points="8,18 14,18 26,11 26,33 14,26 8,26"></polygon><line x1="31" y1="16" x2="36" y2="13" stroke="var(--accent, #2E86D3)"></line><line x1="31" y1="22" x2="38" y2="22" stroke="var(--accent, #2E86D3)"></line><line x1="31" y1="28" x2="36" y2="31" stroke="var(--accent, #2E86D3)"></line></svg>
+        <div style="min-width: 0;">
+          <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 10px; font-weight: 700; letter-spacing: 0.16em;">MOD.06</div>
+          <div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 17px; line-height: 1.4; margin: 2px 0 4px;">PR</div>
+          <p style="color: #565860; font-size: 13.5px; line-height: 1.8; margin: 0;">技術や製品の価値を、伝わるかたちに整えて発信を支援します。</p>
         </div>
       </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
-          <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.08</span>
-          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
-        </div>
-        <div style="padding: 24px 26px 26px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">取材のご依頼</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><rect x="7" y="13" width="30" height="21" rx="3"></rect><line x1="16" y1="13" x2="18" y2="9"></line><line x1="18" y1="9" x2="26" y2="9"></line><line x1="26" y1="9" x2="28" y2="13"></line><circle cx="22" cy="23" r="6"></circle><circle cx="22" cy="23" r="2" fill="var(--accent, #2E86D3)" stroke="none"></circle><circle cx="32.5" cy="17.5" r="1.2" fill="#8f9aa8" stroke="none"></circle></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">メディア取材・技術取材のご依頼を承ります。</p>
-          <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 2.24s infinite;"></span></div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; border: 1px solid #e4e7ec; background: #f6f8fb; padding: 18px 18px 16px; transition: border-color 0.25s, background-color 0.25s;" style-hover="border-color: var(--accent, #2E86D3); background-color: #ffffff;">
+        <svg viewBox="0 0 44 44" width="34" height="34" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="8" y="9" width="28" height="16" rx="2"></rect><rect x="12" y="13" width="12" height="3" fill="var(--accent, #2E86D3)" stroke="none"></rect><line x1="12" y1="21" x2="30" y2="21"></line><line x1="18" y1="25" x2="18" y2="35"></line><line x1="26" y1="25" x2="26" y2="35"></line><line x1="13" y1="35" x2="31" y2="35"></line></svg>
+        <div style="min-width: 0;">
+          <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 10px; font-weight: 700; letter-spacing: 0.16em;">MOD.07</div>
+          <div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 17px; line-height: 1.4; margin: 2px 0 4px;">広告代理案件</div>
+          <p style="color: #565860; font-size: 13.5px; line-height: 1.8; margin: 0;">広告の企画・出稿・制作を代理でお引き受けします。</p>
         </div>
       </div>
-      <div style="position: relative; border: 1px solid #e4e7ec; background: #ffffff; overflow: hidden; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;" style-hover="border-color: var(--accent, #2E86D3); transform: translateY(-5px); box-shadow: 0 14px 34px rgba(46,134,211,0.13);">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #edf0f4; background: #f6f8fb;">
-          <span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 12px; font-weight: 700; letter-spacing: 0.16em;">MOD.09</span>
-          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #9a9da4;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2E86D3); animation: blink 1.8s ease-in-out infinite;"></span>ONLINE</span>
+      <div style="display: flex; gap: 14px; align-items: flex-start; border: 1px solid #e4e7ec; background: #f6f8fb; padding: 18px 18px 16px; transition: border-color 0.25s, background-color 0.25s;" style-hover="border-color: var(--accent, #2E86D3); background-color: #ffffff;">
+        <svg viewBox="0 0 44 44" width="34" height="34" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="7" y="13" width="30" height="21" rx="3"></rect><line x1="16" y1="13" x2="18" y2="9"></line><line x1="18" y1="9" x2="26" y2="9"></line><line x1="26" y1="9" x2="28" y2="13"></line><circle cx="22" cy="23" r="6"></circle><circle cx="22" cy="23" r="2" fill="var(--accent, #2E86D3)" stroke="none"></circle><circle cx="32.5" cy="17.5" r="1.2" fill="#8f9aa8" stroke="none"></circle></svg>
+        <div style="min-width: 0;">
+          <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 10px; font-weight: 700; letter-spacing: 0.16em;">MOD.08</div>
+          <div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 17px; line-height: 1.4; margin: 2px 0 4px;">取材のご依頼</div>
+          <p style="color: #565860; font-size: 13.5px; line-height: 1.8; margin: 0;">メディア取材・技術取材のご依頼を承ります。</p>
         </div>
-        <div style="padding: 24px 26px 26px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px;"><div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 21px; line-height: 1.4;">SNS代行</div><svg viewBox="0 0 44 44" width="46" height="46" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;" aria-hidden="true"><rect x="7" y="8" width="20" height="14" rx="4"></rect><polyline points="12,22 12,27 17,22"></polyline><circle cx="13" cy="15" r="1.4" fill="var(--accent, #2E86D3)" stroke="none"></circle><circle cx="17.5" cy="15" r="1.4" fill="var(--accent, #2E86D3)" stroke="none"></circle><circle cx="22" cy="15" r="1.4" fill="var(--accent, #2E86D3)" stroke="none"></circle><rect x="21" y="21" width="16" height="11" rx="4"></rect><polyline points="31,32 31,36 27,32"></polyline></svg></div>
-          <p style="color: #565860; font-size: 14.5px; line-height: 1.9; margin: 0 0 20px;">SNSアカウントの運用・投稿制作を代行し、技術や現場の魅力を継続的に発信します。</p>
-          <div style="position: relative; height: 3px; background: #e6eaef; border-radius: 2px; overflow: hidden;"><span style="position: absolute; top: 0; bottom: 0; width: 44px; background: linear-gradient(90deg, transparent, var(--accent, #2E86D3), transparent); animation: fx-signal 2.8s linear 2.56s infinite;"></span></div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; border: 1px solid #e4e7ec; background: #f6f8fb; padding: 18px 18px 16px; transition: border-color 0.25s, background-color 0.25s;" style-hover="border-color: var(--accent, #2E86D3); background-color: #ffffff;">
+        <svg viewBox="0 0 44 44" width="34" height="34" fill="none" stroke="#8f9aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="7" y="8" width="20" height="14" rx="4"></rect><polyline points="12,22 12,27 17,22"></polyline><circle cx="13" cy="15" r="1.4" fill="var(--accent, #2E86D3)" stroke="none"></circle><circle cx="17.5" cy="15" r="1.4" fill="var(--accent, #2E86D3)" stroke="none"></circle><circle cx="22" cy="15" r="1.4" fill="var(--accent, #2E86D3)" stroke="none"></circle><rect x="21" y="21" width="16" height="11" rx="4"></rect><polyline points="31,32 31,36 27,32"></polyline></svg>
+        <div style="min-width: 0;">
+          <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 10px; font-weight: 700; letter-spacing: 0.16em;">MOD.09</div>
+          <div style="font-weight: 900; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 17px; line-height: 1.4; margin: 2px 0 4px;">SNS代行</div>
+          <p style="color: #565860; font-size: 13.5px; line-height: 1.8; margin: 0;">SNSアカウントの運用・投稿制作を代行し、技術や現場の魅力を継続的に発信します。</p>
         </div>
       </div>
     </div>
@@ -659,8 +658,8 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
         <div style="border-top: 3px solid var(--accent, #2E86D3); padding-top: 22px;">
           <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 14px; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 12px;">STEP 01</div>
-          <div style="font-weight: 700; font-size: 19px; margin-bottom: 10px;">メールでお問い合わせ</div>
-          <p style="color: #565860; font-size: 15px; line-height: 1.9; margin: 0;">メールで、いまの困りごとやご相談内容をお送りください。担当より折り返しご連絡します。</p>
+          <div style="font-weight: 700; font-size: 19px; margin-bottom: 10px;">フォーム・メールでお問い合わせ</div>
+          <p style="color: #565860; font-size: 15px; line-height: 1.9; margin: 0;">お問い合わせフォームかメールで、いまの困りごとやご相談内容をお送りください。担当より折り返しご連絡します。</p>
         </div>
         <div style="border-top: 3px solid #3a3a3e; padding-top: 22px;">
           <div style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-size: 14px; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 12px;">STEP 02</div>
@@ -696,7 +695,7 @@
       </div>
       <div style="background: #eef1f5; border: 1px solid #e4e7ec; padding: 30px 34px; transition: border-color 0.25s;" style-hover="border-color: var(--accent, #2E86D3);">
         <div style="display: flex; gap: 16px; align-items: baseline; margin-bottom: 10px;"><span style="font-family: 'Space Mono', monospace; color: var(--accent, #2E86D3); font-weight: 700; font-size: 24px;">Q</span><span style="font-weight: 700; font-size: 18px;">「費用に見合う効果があるのか、判断できない」</span></div>
-        <p style="color: #565860; font-size: 15px; line-height: 1.9; margin: 0 0 0 40px; position: relative;"><span style="position: absolute; left: -40px; top: -2px; font-family: 'Space Mono', monospace; color: #8b8e96; font-weight: 700; font-size: 22px;">A</span>まずはメールで、いまの外注費や設備が止まっている時間など、現状をお聞かせください。その上で、内容と費用の目安をご提示します。数字で比べてから判断いただけます。</p>
+        <p style="color: #565860; font-size: 15px; line-height: 1.9; margin: 0 0 0 40px; position: relative;"><span style="position: absolute; left: -40px; top: -2px; font-family: 'Space Mono', monospace; color: #8b8e96; font-weight: 700; font-size: 22px;">A</span>まずはフォームかメールで、いまの外注費や設備が止まっている時間など、現状をお聞かせください。その上で、内容と費用の目安をご提示します。数字で比べてから判断いただけます。</p>
       </div>
     </div>
   </div>
@@ -709,7 +708,7 @@
         <div style="text-align: center; margin-bottom: 40px;">
           <div style="display: inline-flex; align-items: center; gap: 12px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.24em; color: var(--accent, #2E86D3); margin-bottom: 16px;"><span style="width: 28px; height: 2px; background: var(--accent, #2E86D3);"></span>CONTACT<span style="width: 28px; height: 2px; background: var(--accent, #2E86D3);"></span></div>
           <h2 style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 900; font-size: clamp(26px, 3.4vw, 40px); margin: 0 0 16px; line-height: 1.45;">お気軽に、ご相談ください。</h2>
-          <p style="color: #3a3c42; font-size: 16px; line-height: 2; margin: 0 auto; max-width: 620px;">PLC教育事業を軸に、下記の領域まで幅広くご相談を承っています。まずはメールにてお問い合わせください。</p>
+          <p style="color: #3a3c42; font-size: 16px; line-height: 2; margin: 0 auto; max-width: 620px;">PLC教育事業を軸に、下記の領域まで幅広くご相談を承っています。まずはお問い合わせフォームかメールでご連絡ください。</p>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 760px; margin: 36px auto 44px;">
           <span style="border: 1px solid #dfe3e9; background: #eef1f5; color: #26272c; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 999px;">PLC教育事業</span>
@@ -723,9 +722,12 @@
           <span style="border: 1px solid #dfe3e9; background: #eef1f5; color: #26272c; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 999px;">SNS代行</span>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+          <a href="contact.html" style="display: inline-block; background: var(--accent, #2E86D3); color: #0e0e0f; font-weight: 900; padding: 18px 48px; border-radius: 3px; text-decoration: none; font-size: 17px; box-shadow: 0 6px 24px rgba(46,134,211,0.25); transition: transform 0.2s;" style-hover="transform: scale(1.02);">お問い合わせフォームへ</a>
+          <div style="font-size: 13px; color: #787b83;">相談内容が固まっていなくても大丈夫です</div>
+          <div style="width: 100%; max-width: 420px; height: 1px; background: #e4e7ec; margin: 14px 0 6px;"></div>
           <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.24em; color: #787b83;">MAIL</div>
           <a href="mailto:lorenics@outlook.jp" style="font-family: 'Space Mono', monospace; font-size: clamp(20px, 3.4vw, 32px); font-weight: 700; color: var(--accent, #2E86D3); text-decoration: none; border-bottom: 2px solid rgba(46,134,211,0.4); padding-bottom: 4px; word-break: break-all; transition: opacity 0.2s;" style-hover="opacity: 0.8;">lorenics@outlook.jp</a>
-          <a href="mailto:lorenics@outlook.jp" style="margin-top: 10px; display: inline-block; background: var(--accent, #2E86D3); color: #0e0e0f; font-weight: 700; padding: 16px 44px; border-radius: 3px; text-decoration: none; font-size: 17px; box-shadow: 0 6px 24px rgba(46,134,211,0.25); transition: transform 0.2s;" style-hover="transform: scale(1.02);">メールで問い合わせる</a>
+          <a href="mailto:lorenics@outlook.jp" style="margin-top: 6px; display: inline-block; background: #ffffff; color: #17181c; border: 2px solid #17181c; font-weight: 700; padding: 13px 36px; border-radius: 3px; text-decoration: none; font-size: 15px; transition: background-color 0.2s, color 0.2s;" style-hover="background-color: #17181c; color: #ffffff;">メールで問い合わせる</a>
         </div>
       </div>
     </div>
@@ -736,7 +738,7 @@
     <div style="max-width: 1120px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 40px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 40px;">
       <div>
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-          <img src="images/lorenics-logo.png" alt="Lorenics" style="height: 24px; width: auto; display: block;">
+          <img src="images/lorenics-logo.png" alt="Lorenics" width="899" height="209" style="height: 24px; width: auto; display: block;">
           <span style="font-family: 'Zen Kaku Gothic New', sans-serif; font-weight: 700; font-size: 15px;">ロアニクス株式会社</span>
         </div>
         <p style="color: #5c5f66; font-size: 14px; line-height: 1.9; margin: 0; max-width: 320px;">生産設備の現場から生まれた、PLC(シーケンス制御)の実践教育事業。設備保全の内製化を支援します。</p>
@@ -749,11 +751,13 @@
       </div>
       <div style="font-size: 14px; color: #44464d; line-height: 2.2;">
         <div style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: #8b8e96; margin-bottom: 12px;">CONTACT</div>
-        お問い合わせはメールにて承ります。<br>
+        お問い合わせはフォーム・メールで承ります。<br>
         <a href="mailto:lorenics@outlook.jp" style="color: var(--accent, #2E86D3); text-decoration: none; font-weight: 700; word-break: break-all;">lorenics@outlook.jp</a><br>
-        <a href="#contact" style="color: var(--accent, #2E86D3); text-decoration: none; font-weight: 700;">お問い合わせ →</a><br>
+        <a href="contact.html" style="color: var(--accent, #2E86D3); text-decoration: none; font-weight: 700;">お問い合わせフォーム →</a><br>
+        <a href="ai.html" style="color: var(--accent, #2E86D3); text-decoration: none; font-weight: 700;">AI業務改善 →</a><br>
         <a href="message.html" style="color: var(--accent, #2E86D3); text-decoration: none; font-weight: 700;">代表メッセージ →</a>
         <br><a href="company.html" style="color: var(--accent, #2E86D3); text-decoration: none; font-weight: 700;">会社案内 →</a>
+        <br><a href="privacy.html" style="color: var(--accent, #2E86D3); text-decoration: none; font-weight: 700;">プライバシーポリシー →</a>
       </div>
     </div>
     <div style="max-width: 1120px; margin: 0 auto; padding: 20px clamp(20px, 5vw, 40px) 40px; border-top: 1px solid #e8ebf0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-family: 'Space Mono', monospace; font-size: 12px; color: #8b8e96;">

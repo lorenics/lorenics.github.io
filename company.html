@@ -9,41 +9,60 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ロアニクス株式会社">
 <meta property="og:title" content="会社案内｜ロアニクス株式会社">
+<meta property="og:description" content="ロアニクス株式会社の会社概要。PLC・制御設計の教育、技術支援、生成AI活用支援を行っています。">
 <meta property="og:url" content="https://lorenics.github.io/company.html">
-<meta property="og:image" content="https://lorenics.github.io/images/lorenics-logo.png">
+<meta property="og:image" content="https://lorenics.github.io/images/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sub.css">
 <style>
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #fff; color: #17181c; font-family: 'Noto Sans JP', sans-serif; line-break: strict; }
-  a { color: inherit; }
   .company-row { display: grid; grid-template-columns: 200px 1fr; border-right: 1px solid #d9dde4; border-bottom: 1px solid #d9dde4; border-left: 1px solid #d9dde4; }
   .company-label { display: flex; align-items: center; padding: 26px 34px; background: #eef0f4; color: #303746; font-size: 15px; font-weight: 700; }
   .company-value { padding: 26px 40px; font-size: 15px; line-height: 1.9; }
+  .company-cta { display: flex; flex-wrap: wrap; gap: 12px; }
   @media (max-width: 640px) {
     .company-row { grid-template-columns: 110px 1fr; }
     .company-label { padding: 20px 14px; font-size: 13px; color: #303746; }
     .company-value { padding: 20px 16px; font-size: 14px; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://lorenics.github.io/"},
+    {"@type": "ListItem", "position": 2, "name": "会社案内", "item": "https://lorenics.github.io/company.html"}
+  ]
+}
+</script>
 </head>
-<body>
-  <div style="height: 8px; background: repeating-linear-gradient(135deg, #2E86D3 0 18px, #ffffff 18px 36px);"></div>
+<body class="p-company">
+<a class="c-skip" href="#main">本文へスキップ</a>
+<div class="c-hazard" aria-hidden="true"></div>
+<header class="c-header">
+  <div class="c-header__inner">
+    <a class="c-header__logo" href="index.html"><img src="images/lorenics-logo.png" alt="ロアニクス株式会社 トップへ" width="899" height="209"></a>
+    <nav class="c-header__nav" aria-label="メインメニュー">
+      <a class="c-header__link" href="ai.html">AI業務改善</a>
+      <a class="c-header__link" href="message.html">代表メッセージ</a>
+      <a class="c-header__link" href="company.html" aria-current="page">会社案内</a>
+    </nav>
+    <a class="c-btn c-btn--primary c-header__cta" href="contact.html">お問い合わせ</a>
+  </div>
+</header>
 
-  <header style="border-bottom: 1px solid #e8ebf0; background: rgba(255,255,255,0.96);">
-    <div style="max-width: 1040px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px clamp(20px, 5vw, 40px);">
-      <a href="index.html" style="display: inline-flex; align-items: center; text-decoration: none;"><img src="images/lorenics-logo.png" alt="Lorenics" style="height: 28px; width: auto; display: block;"></a>
-      <nav style="display: flex; align-items: center; gap: clamp(16px, 4vw, 32px); font-size: 14px; font-weight: 700;">
-        <a href="message.html" style="text-decoration: none;">代表メッセージ</a>
-        <a href="index.html#contact" style="color: #2E86D3; text-decoration: none;">お問い合わせ</a>
-      </nav>
-    </div>
-  </header>
-
-  <section style="position: relative; height: clamp(190px, 26vw, 260px); overflow: hidden; background: linear-gradient(110deg, #0b1b31 0%, #174c7b 48%, #2E86D3 100%); color: #fff; display: grid; place-items: center;">
-    <svg aria-hidden="true" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.36;">
+<main id="main">
+  <section class="c-hero">
+    <svg class="c-hero__art" aria-hidden="true" focusable="false" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMid slice">
       <g fill="none" stroke="#c8e3fa" stroke-width="2">
         <path d="M0 240L180 40L340 240M105 240L260 70L410 240M790 240L930 25L1090 240M900 240L1050 55L1200 235"></path>
         <path d="M40 205H1160M75 165H1125M110 125H1090M145 85H1055"></path>
@@ -53,60 +72,89 @@
         <rect x="450" y="92" width="56" height="148"></rect><rect x="520" y="55" width="74" height="185"></rect><rect x="608" y="115" width="52" height="125"></rect><rect x="675" y="72" width="86" height="168"></rect>
       </g>
     </svg>
-    <div style="position: relative; text-align: center; text-shadow: 0 2px 18px rgba(0,0,0,0.28);">
-      <div style="font-family: 'Space Mono', monospace; font-size: clamp(26px, 5vw, 48px); font-weight: 700; letter-spacing: 0.15em;">COMPANY</div>
-      <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.18em; margin-top: 8px;">会社案内</div>
+    <div class="c-hero__body">
+      <div class="c-hero__en" aria-hidden="true">COMPANY</div>
+      <h1 class="c-hero__ja">会社案内</h1>
+    </div>
+  </section>
+  <nav class="c-crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">トップ</a></li><li aria-current="page">会社案内</li></ol></nav>
+
+  <section style="max-width: 920px; margin: 0 auto; padding: clamp(48px, 7vw, 80px) clamp(20px, 5vw, 40px) clamp(72px, 10vw, 120px);">
+    <div style="border-top: 1px solid #d9dde4;">
+      <div class="company-row">
+        <div class="company-label">会社名</div>
+        <div class="company-value">ロアニクス株式会社</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">代表者名</div>
+        <div class="company-value">西原 健人</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">所在地</div>
+        <div class="company-value">〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに南船場ビル205</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">設立日</div>
+        <div class="company-value">2026年6月8日</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">資本金</div>
+        <div class="company-value">100万円</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">法人番号</div>
+        <div class="company-value">8120001286908</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">事業内容</div>
+        <div class="company-value">PLC・制御設計に関する教育、研修<br>生産設備の制御設計、技術支援<br>生成AIを活用した業務効率化支援</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">連絡先</div>
+        <div class="company-value"><a href="mailto:lorenics@outlook.jp">lorenics@outlook.jp</a><br><a href="contact.html">お問い合わせフォーム</a></div>
+      </div>
     </div>
   </section>
 
-  <main>
-    <section style="max-width: 920px; margin: 0 auto; padding: clamp(64px, 8vw, 88px) clamp(20px, 5vw, 40px) clamp(72px, 10vw, 120px);">
-      <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">会社案内</h1>
-      <div style="border-top: 1px solid #d9dde4;">
-        <div class="company-row">
-          <div class="company-label">会社名</div>
-          <div class="company-value">ロアニクス株式会社</div>
-        </div>
-        <div class="company-row">
-          <div class="company-label">代表者名</div>
-          <div class="company-value">西原 健人</div>
-        </div>
-        <div class="company-row">
-          <div class="company-label">所在地</div>
-          <div class="company-value">〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに南船場ビル205</div>
-        </div>
-        <div class="company-row">
-          <div class="company-label">設立日</div>
-          <div class="company-value">2026年6月8日</div>
-        </div>
-        <div class="company-row">
-          <div class="company-label">資本金</div>
-          <div class="company-value">100万円</div>
-        </div>
-        <div class="company-row">
-          <div class="company-label">事業内容</div>
-          <div class="company-value">PLC・制御設計に関する教育、研修<br>生産設備の制御設計、技術支援<br>生成AIを活用した業務効率化支援</div>
-        </div>
+  <section style="background: #f5f8fb; border-top: 1px solid #e4e7ec; border-bottom: 1px solid #e4e7ec;">
+    <div style="max-width: 920px; margin: 0 auto; padding: clamp(56px, 8vw, 84px) clamp(20px, 5vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;">
+      <div>
+        <div style="font-family: 'Space Mono', monospace; color: #2E86D3; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; margin-bottom: 10px;">CONTACT</div>
+        <h2 style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: clamp(25px, 4vw, 36px); margin: 0 0 8px;">お問い合わせはこちら</h2>
+        <p style="margin: 0; color: #5c5f66; font-size: 14px;">設備・PLC教育、AIを使った業務改善のご相談を承ります。</p>
       </div>
-    </section>
-
-    <section style="background: #f5f8fb; border-top: 1px solid #e4e7ec; border-bottom: 1px solid #e4e7ec;">
-      <div style="max-width: 920px; margin: 0 auto; padding: clamp(56px, 8vw, 84px) clamp(20px, 5vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;">
-        <div>
-          <div style="font-family: 'Space Mono', monospace; color: #2E86D3; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; margin-bottom: 10px;">CONTACT</div>
-          <h2 style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: clamp(25px, 4vw, 36px); margin: 0 0 8px;">お問い合わせはこちら</h2>
-          <p style="margin: 0; color: #5c5f66; font-size: 14px;">設備・PLC教育に関するご相談を承ります。</p>
-        </div>
-        <a href="mailto:lorenics@outlook.jp" style="display: inline-block; background: #2E86D3; color: #fff; font-size: 15px; font-weight: 700; text-decoration: none; padding: 16px 32px; border-radius: 3px;">メールで問い合わせる →</a>
+      <div class="company-cta">
+        <a class="c-btn c-btn--primary" href="contact.html">フォームで問い合わせる →</a>
+        <a class="c-btn c-btn--ghost" href="mailto:lorenics@outlook.jp">メールで問い合わせる</a>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div style="max-width: 920px; margin: 0 auto; padding: 26px clamp(20px, 5vw, 40px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; color: #8b8e96; font-family: 'Space Mono', monospace; font-size: 12px;">
-      <span>ロアニクス株式会社 / Lorenics</span>
-      <span>© 2026 Lorenics Inc.</span>
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer class="c-footer">
+  <div class="c-footer__grid">
+    <div>
+      <div class="c-footer__brand"><img src="images/lorenics-logo.png" alt="" width="899" height="209"><span>ロアニクス株式会社</span></div>
+      <p class="c-footer__desc">生産設備の現場から生まれた、PLC(シーケンス制御)の実践教育事業。設備保全の内製化を支援します。</p>
+    </div>
+    <div class="c-footer__col">
+      <div class="c-footer__head">COMPANY</div>
+      〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに南船場ビル205<br>
+      <a href="mailto:lorenics@outlook.jp">lorenics@outlook.jp</a>
+    </div>
+    <div class="c-footer__col">
+      <div class="c-footer__head">MENU</div>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="ai.html">AI業務改善</a></li>
+        <li><a href="message.html">代表メッセージ</a></li>
+        <li><a href="company.html">会社案内</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="c-footer__bottom"><span>ロアニクス株式会社 / Lorenics</span><span>© 2026 Lorenics Inc.</span></div>
+</footer>
 </body>
 </html>
