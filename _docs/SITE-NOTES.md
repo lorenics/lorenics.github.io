@@ -21,9 +21,9 @@
 ## お問い合わせフォーム(Web3Forms)
 
 - 送信先サービス: Web3Forms(無料プランは月250件、通知先メール1件)
-- `contact.html` の `access_key` が `YOUR_ACCESS_KEY_HERE` のままの間は、送信ボタンを押すとメールソフトが開く「代替動作」になります
-- キーを取得したら、`contact.html` の次の1行を書き換えるだけで本番送信に切り替わります
-  `<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">`
+- 2026-09-27 にキー設定済み(Web3Forms のフォーム名「ロアニクス お問い合わせ」、アカウント lorenics@outlook.jp)
+- キーは `contact.html` の `<input type="hidden" name="access_key" ...>` の1行。値を `YOUR_ACCESS_KEY_HERE` に戻すと、送信ボタンでメールソフトが開く代替動作になる
+- Web3Forms 側の Website URL は `lorenics.github.io/contact.html` で登録。独自ドメインに移したら Web3Forms 側も更新
 - 通知先メールアドレスを変える場合は、Web3Forms 側で新しいキーを発行して差し替え
 - 公開後は必ず1通テスト送信し、完了ページ(thanks.html)が出ること・メールが届くことを確認
 
@@ -42,4 +42,5 @@
 
 ## 更新履歴
 
+- 2026-09-27: Web3Forms のキーを設定し、フォームを本番送信に切り替え
 - 2026-09-27: フォーム・送信完了・プライバシーポリシー・AI業務改善ページを追加。事業内容を主力3つ+そのほか6つに整理。会社案内に法人番号と連絡先を追加。ファビコンとSNS共有画像を追加
