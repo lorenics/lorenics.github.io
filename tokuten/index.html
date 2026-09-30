@@ -282,7 +282,9 @@
       <h2>ぜひ今回のセミナーの感想を引用ポストしてください</h2>
       <p>リポストさせていただきます。学びをアウトプットしてみてください。お返事させていただきます。</p>
       <a class="btn" href="https://x.com/intent/post?url=https%3A%2F%2Fx.com%2Fgodai_ceo%2Fstatus%2F2104756912143368665" target="_blank" rel="noopener">感想を引用ポストする</a>
-      <p class="note">押すとXが開き、五代の記事を引用した投稿画面になります。</p>
+      <p class="note">押すとXが開き、五代の記事を引用した投稿画面になります。ログインを求められたら、LINEの中で開いています。右上の「…」から「Safari / Chromeで開く」を選ぶか、下のボタンでURLをコピーしてXアプリの投稿画面に貼ってください（貼るだけで引用になります）。</p>
+      <button class="btn secondary" id="copyurl" type="button">記事のURLをコピー</button>
+      <div class="copied" id="copiedurl"></div>
     </div>
 
     <p class="foot">このページのURLとパスワードは、セミナー参加者以外には共有しないでください。</p>
@@ -330,6 +332,13 @@
     });
   });
 
+  // 記事URLコピー
+  document.getElementById('copyurl').addEventListener('click', function(){
+    var t='https://x.com/godai_ceo/status/2104756912143368665';
+    var done=function(){ document.getElementById('copiedurl').textContent='コピーしました。Xアプリの投稿画面に貼ってください'; };
+    if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done); }
+    else { var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done(); }
+  });
   // コピー
   document.getElementById('copybtn').addEventListener('click', function(){
     var t=document.getElementById('prompt').textContent;
