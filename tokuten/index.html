@@ -336,15 +336,15 @@
   document.getElementById('copyurl').addEventListener('click', function(){
     var t='https://x.com/godai_ceo/status/2104756912143368665';
     var done=function(){ document.getElementById('copiedurl').textContent='コピーしました。Xアプリの投稿画面に貼ってください'; };
-    if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done); }
-    else { var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done(); }
+    var fb=function(){ var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done(); };
+    if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done).catch(fb); } else { fb(); }
   });
   // コピー
   document.getElementById('copybtn').addEventListener('click', function(){
     var t=document.getElementById('prompt').textContent;
     var done=function(){ document.getElementById('copied').textContent='コピーしました'; };
-    if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done); }
-    else { var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done(); }
+    var fb=function(){ var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done(); };
+    if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done).catch(fb); } else { fb(); }
   });
 
 })();
