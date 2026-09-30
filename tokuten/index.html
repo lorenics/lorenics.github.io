@@ -303,7 +303,7 @@
   if (ok) show(content);
 
   function normalize(s){
-    s = (s||'').normalize('NFKC').trim();
+    s = (s||'').normalize('NFKC').trim().toLowerCase();
     // ひらがな→カタカナ
     s = s.replace(/[ぁ-ゖ]/g, function(c){ return String.fromCharCode(c.charCodeAt(0)+0x60); });
     return s;
