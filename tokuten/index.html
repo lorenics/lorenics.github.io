@@ -38,6 +38,22 @@
   .steps li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:17px}
   .steps li:first-child{border-top:0}
   .steps b{color:var(--gold);flex:0 0 2.2em;font-size:17px}
+  .rule{height:1px;background:var(--line);margin:18px 0}
+  .k{color:var(--gold);font-weight:700;font-size:15px;letter-spacing:.06em;margin:0 0 10px}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+  .flow span{background:#0f0f12;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:16px;font-weight:700}
+  .flow span::after{content:"→";color:var(--gold);margin-left:8px}
+  .flow span:last-child::after{content:""}
+  .step{padding:16px 0;border-top:1px solid var(--line)}
+  .step:first-of-type{border-top:0;padding-top:0}
+  .stepno{color:var(--gold);font-weight:900;font-size:15px;letter-spacing:.06em}
+  .step h3{font-size:19px;margin:4px 0 8px;font-weight:900;line-height:1.4}
+  .step p{margin:0 0 8px;font-size:16px}
+  .ex{background:#0f0f12;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:6px}
+  .ex .exk{color:var(--muted);font-size:14px;font-weight:700;margin-bottom:4px}
+  .ex p{margin:0 0 4px}
+  .four{display:flex;flex-wrap:wrap;gap:8px}
+  .four span{background:#0f0f12;border:1px solid var(--gold-dim);border-radius:8px;padding:8px 14px;font-size:17px;font-weight:700;color:var(--gold)}
   .foot{color:var(--muted);font-size:14px;margin-top:40px;text-align:center}
   @media (min-width:600px){ h1{font-size:34px} .card{padding:30px 30px} }
 </style>
@@ -88,12 +104,27 @@
 
     <div class="card">
       <div class="no">特典 1</div>
-      <h2>解説ポストの型（10ステップ）</h2>
+      <h2>フォロー転換率の高い解説ポストの型（10ステップ）</h2>
       <p>ネタを拾ったら、上から順に埋めるだけ。ライフフィットもC-plaも、この型で書いています。</p>
-      <ol class="steps" id="steps">
-        <!-- STEPS_PLACEHOLDER -->
-      </ol>
-      <p class="note" id="steps-note">準備中です。追加され次第、このページで見られます。</p>
+      <div class="rule"></div>
+      <div class="k">基本構造</div>
+      <div class="flow"><span>フック</span><span>スタート地点</span><span>苦戦</span><span>転換点</span><span>急成長</span><span>数字</span><span>成功理由</span><span>学び</span><span>自分の視点</span><span>本質</span></div>
+      <p>この順番を使うと、「ただ情報をまとめただけの投稿」ではなく、読まれて、理解されて、保存される解説ポストを作りやすくなります。</p>
+      <div class="rule"></div>
+      <div class="step"><div class="stepno">STEP 1</div><h3>一瞬で意味が伝わるフックを置く</h3><p>最初の1〜2行で「何の話なのか」「なぜ読む価値があるのか」を伝える。</p><p>数字・意外性・ギャップがあると強い。</p><div class="ex"><div class="exk">例</div><p>「たった〇〇円から始めて年商〇億円」</p><p>「誰も見向きもしなかった市場が10年で〇倍」</p></div></div>
+<div class="step"><div class="stepno">STEP 2</div><h3>主人公やテーマのスタート地点を出す</h3><p>最初から成功している状態を見せない。</p><p>・元々どんな会社だったのか<br>・どんな人だったのか<br>・どんな課題があったのか</p><p>読者が状況を理解できる最低限の背景を書く。</p></div>
+<div class="step"><div class="stepno">STEP 3</div><h3>最初の苦戦を具体的に見せる</h3><p>成功だけでは人は読まない。</p><p>売上・人数・期間・失敗・当時の状況などを、数字や具体的な出来事で見せる。</p></div>
+<div class="step"><div class="stepno">STEP 4</div><h3>転換点を1つ置く</h3><p>「何がきっかけで流れが変わったのか」を明確にする。</p><p>新商品／新市場／新しい販売方法／人との出会い／技術革新／制度変更など、成長の分岐点を探す。</p></div>
+<div class="step"><div class="stepno">STEP 5</div><h3>時系列で一気に進める</h3><p>長い説明ではなく、テンポよく読ませる。</p><p>〇〇開始<br>↓<br>〇〇達成<br>↓<br>〇〇へ進出<br>↓<br>売上〇倍</p><p>読者に「続きを見たい」と思わせることが重要。</p></div>
+<div class="step"><div class="stepno">STEP 6</div><h3>成長を数字で証明する</h3><p>「すごい」「伸びた」ではなく数字を書く。</p><p>売上・店舗数・ユーザー数・社員数・市場規模・販売数・導入社数など。</p><p>数字があるだけで説得力が大きく変わる。</p></div>
+<div class="step"><div class="stepno">STEP 7</div><h3>なぜ伸びたのかを具体的な出来事から考える</h3><p>結果だけ紹介して終わらない。「なぜ成功したのか？」を考える。</p><p>価格／タイミング／販売方法／商品設計／市場選定／ポジショニング／技術／顧客体験などから、成長理由を分解する。</p></div>
+<div class="step"><div class="stepno">STEP 8</div><h3>学びを3つ程度に整理する</h3><p>読者が自分の仕事に持ち帰れる形に変換する。</p><p>・競争が弱い場所を狙う<br>・固定費を小さくする<br>・既存資産を別用途に使う</p><p>情報紹介ではなく「自分ならどう使えるか」まで落とし込む。</p></div>
+<div class="step"><div class="stepno">STEP 9</div><h3>自分の視点を加える</h3><p>ここが単なるまとめ記事との差になる。</p><p>「自分はここが面白いと思った」「この部分は他業界でも使える」「実際に自分の仕事でも似た経験がある」など、自分なりの解釈を入れる。</p><p>一次体験があればさらに強い。</p></div>
+<div class="step"><div class="stepno">STEP 10</div><h3>最後に一段視点を上げる</h3><p>単なる企業紹介や人物紹介で終わらせない。</p><p>最後に「つまりこれは〇〇の話ではなく、〇〇の話だ」と抽象度を1段上げる。</p><p>具体例から入り、最後に普遍的な学びへ着地させる。</p></div>
+      <div class="rule"></div>
+      <div class="k">この型が伸びやすい理由</div>
+      <p>興味付けの4要素が、型の中に自然に入るからです。</p>
+      <div class="four"><span>1. ギャップ</span><span>2. 欲求</span><span>3. 視認性</span><span>4. 好奇心</span></div>
     </div>
 
     <div class="card">
@@ -316,8 +347,6 @@
     else { var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done(); }
   });
 
-  // 10ステップが入っていれば「準備中」を消す
-  if (document.getElementById('steps').children.length>0){ document.getElementById('steps-note').classList.add('hidden'); }
 })();
 </script>
 </body>
