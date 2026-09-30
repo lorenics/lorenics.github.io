@@ -76,18 +76,11 @@
     </div>
   </section>
 
-  <!-- ===== 期限切れ ===== -->
-  <section id="closed" class="hidden">
-    <div class="eyebrow">最新𝕏攻略セミナー</div>
-    <h1>特典の公開は終了しました</h1>
-    <p class="sub">ご参加ありがとうございました。</p>
-  </section>
-
   <!-- ===== 特典本体 ===== -->
   <section id="content" class="hidden">
     <div class="eyebrow">最新𝕏攻略セミナー</div>
     <h1>参加者特典</h1>
-    <p class="sub">ご参加ありがとうございました。五代です。<br>公開は <b id="deadline-label"></b> までです。</p>
+    <p class="sub">ご参加ありがとうございました。五代です。</p>
 
     <div class="card">
       <div class="no">はじめに</div>
@@ -284,10 +277,12 @@
       <div class="copied" id="copied"></div>
     </div>
 
-    <div class="card mendan">
-      <div class="no">個別面談</div>
-      <h2>特典を自分のアカウントに当てはめるなら、面談で</h2>
-      <a class="btn" href="https://x.gd/YiQuz" target="_blank" rel="noopener">個別面談を申し込む</a>
+    <div class="card">
+      <div class="no">感想をポスト</div>
+      <h2>ぜひ今回のセミナーの感想を引用ポストしてください</h2>
+      <p>リポストさせていただきます。学びをアウトプットしてみてください。お返事させていただきます。</p>
+      <a class="btn" href="https://x.com/intent/post?url=https%3A%2F%2Fx.com%2Fgodai_ceo%2Fstatus%2F2104756912143368665" target="_blank" rel="noopener">感想を引用ポストする</a>
+      <p class="note">押すとXが開き、五代の記事を引用した投稿画面になります。</p>
     </div>
 
     <p class="foot">このページのURLとパスワードは、セミナー参加者以外には共有しないでください。</p>
@@ -297,16 +292,12 @@
 <script>
 (function(){
   // ===== 設定 =====
-  var DEADLINE = new Date('2026-10-07T23:59:59+09:00');   // 公開期限（JST）
   var HASH = 'c2bb955ec5d3d8063ff9d34dd71889cb7bc0f917956233a9396bf95a2d908ec6';
   var KEY = 'x_seminar_tokuten_ok';
 
-  var gate=document.getElementById('gate'), content=document.getElementById('content'), closed=document.getElementById('closed');
-  document.getElementById('deadline-label').textContent = '10月7日（水）23:59';
+  var gate=document.getElementById('gate'), content=document.getElementById('content');
 
-  function show(el){ [gate,content,closed].forEach(function(x){x.classList.add('hidden')}); el.classList.remove('hidden'); }
-
-  if (new Date() > DEADLINE) { show(closed); return; }
+  function show(el){ [gate,content].forEach(function(x){x.classList.add('hidden')}); el.classList.remove('hidden'); }
 
   var ok=false; try{ ok = localStorage.getItem(KEY)==='1'; }catch(e){}
   if (ok) show(content);
