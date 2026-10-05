@@ -23,11 +23,17 @@
 - 送信先サービス: Web3Forms(無料プランは月250件、通知先メール1件)
 - 2026-09-27 にキー設定済み(Web3Forms のフォーム名「ロアニクス お問い合わせ」、アカウント lorenics@outlook.jp)
 - キーは `contact.html` の `<input type="hidden" name="access_key" ...>` の1行。値を `YOUR_ACCESS_KEY_HERE` に戻すと、送信ボタンでメールソフトが開く代替動作になる
-- Web3Forms 側の Website URL は `lorenics.github.io/contact.html` で登録。独自ドメインに移したら Web3Forms 側も更新
+- Web3Forms 側の Website URL は `lorenics.github.io/contact.html` で登録。2026-10-05 に lorenics.com へ移したので Web3Forms 側も更新する
 - 通知先メールアドレスを変える場合は、Web3Forms 側で新しいキーを発行して差し替え
 - 公開後は必ず1通テスト送信し、完了ページ(thanks.html)が出ること・メールが届くことを確認
 
-## 独自ドメインに切り替えるとき
+## 独自ドメイン（2026-10-05 切り替え済み）
+
+- ドメイン: `lorenics.com`（XServerドメインで取得。アカウントのメールは lorenics@outlook.jp、2027-10-05 自動更新）
+- DNS: A 185.199.108.153 / 109 / 110 / 111、www は CNAME lorenics.github.io。ネームサーバーは ns1〜3.xdomain.ne.jp
+- リポジトリ直下の `CNAME` ファイル（中身 `lorenics.com`）を消さない。消すと独自ドメインが外れる
+
+切り替えのときに行ったこと（再び移すときの手順）:
 
 `https://lorenics.github.io/` と書かれた箇所をすべて新ドメインに置き換える。
 
@@ -42,5 +48,6 @@
 
 ## 更新履歴
 
+- 2026-10-05: 独自ドメイン lorenics.com に切り替え
 - 2026-09-27: Web3Forms のキーを設定し、フォームを本番送信に切り替え
 - 2026-09-27: フォーム・送信完了・プライバシーポリシー・AI業務改善ページを追加。事業内容を主力3つ+そのほか6つに整理。会社案内に法人番号と連絡先を追加。ファビコンとSNS共有画像を追加
