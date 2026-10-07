@@ -66,6 +66,7 @@
   var TYPES = {
     plc: "PLC教育・研修",
     advisor: "FA制御技術顧問",
+    edu: "社内の技術教育の仕組みづくり",
     ai: "AI導入・業務改善",
     other: "取材・PR・その他"
   };

@@ -8,7 +8,7 @@
 |---|---|---|
 | `index.html` | トップ | Claude Design の書き出し形式。`support.js` が表示時に unpkg から React を読み込んで組み立てる |
 | `message.html` | 代表メッセージ | 同上 |
-| `ai.html` | AI業務改善(工務店・電気工事・設備会社向け) | 普通のHTML。`css/sub.css` と `js/sub.js` を使用 |
+| `ai.html` | 技術教育の仕組みづくり（製造業の設備・保全・技術部門向け） | 普通のHTML。`css/sub.css` と `js/sub.js` を使用。図は `images/edu/` |
 | `contact.html` | お問い合わせフォーム | 普通のHTML |
 | `thanks.html` | 送信完了(検索除外 noindex) | 普通のHTML |
 | `privacy.html` | プライバシーポリシー | 普通のHTML |
@@ -47,6 +47,10 @@
 `_docs/ogp/ogp.html.tmpl` を `.html` にしてブラウザで開き、1200×630 で画面を保存 → `images/` に上書き。
 
 ## 更新履歴
+
+- 2026-10-07: 技術教育の仕組みづくりLPの公開を本人が承認。ベテランの制御プログラミングの知識を新人へ受け継ぐトップ画（第4版）を採用。検証記録は `edu-review-20261006.md`
+
+- 2026-10-06: 技術教育の仕組みづくりLPのローカル確認版を作成。PC/スマホと問い合わせ種類の選択を検証。本人確認待ちで未公開。検証記録は `edu-review-20261006.md`
 
 - 2026-10-05: 独自ドメイン lorenics.com に切り替え
 - 2026-09-27: Web3Forms のキーを設定し、フォームを本番送信に切り替え
