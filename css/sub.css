@@ -705,3 +705,90 @@ html:not(.force-motion) .c-anim, html:not(.force-motion) .c-anim * { animation: 
   .edu-career-number { font-size:68px; }
   .edu-stats dd { font-size:28px; }
 }
+
+/* ===== 依頼を判断する実績と教材の実物 ===== */
+.edu-hero h1 { font-size:clamp(34px,3.5vw,44px); }
+.edu-proof { display:grid; grid-template-columns:190px minmax(0,1fr); align-items:center; gap:24px; margin:26px 0 0; padding:24px 0; border-top:1px solid #d9e0e7; }
+.edu-proof p { margin:0; font-size:15px; }
+.edu-proof p span { display:block; font-size:13px; line-height:1.7; color:#4c6072; margin-top:7px; }
+.edu-proof p a { display:block; color:#1f6fb0; font-size:13px; font-weight:700; margin-top:9px; }
+.edu-proof dl { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:18px; margin:0; }
+.edu-proof dt { font-size:13px; color:#4c6072; }
+.edu-proof dd { font-family:var(--font-head); font-size:35px; font-weight:900; margin:4px 0 0; line-height:1.3; }
+.edu-proof dd span { font-size:15px; margin-left:5px; }
+.edu-simulator { margin:30px 0 0; background:#fff; border:1px solid #d9e0e7; }
+.edu-simulator-screen { display:block; }
+.edu-simulator img { width:100%; height:auto; display:block; }
+.edu-simulator figcaption { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; padding:17px 22px; font-size:14px; }
+.edu-simulator figcaption span { color:#4c6072; font-size:13px; }
+.edu-simulator figcaption a { font-weight:700; color:#1f6fb0; }
+.edu-example-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; list-style:none; padding:0; margin:28px 0; }
+.edu-example-steps li { display:flex; align-items:center; gap:14px; font-size:18px; position:relative; }
+.edu-example-steps li b { font-family:var(--font-head); font-size:27px; }
+.edu-example-steps li:not(:last-child)::after { content:'→'; position:absolute; right:-5px; color:#1f6fb0; }
+.edu-example-delivery { border-top:1px solid #a5b4c1; padding-top:24px; }
+.edu-example-delivery > b { font-family:var(--font-head); font-size:23px; }
+.edu-example-delivery > div { display:flex; align-items:center; flex-wrap:wrap; gap:15px; margin:18px 0; font-size:16px; }
+.edu-example-delivery > div span { background:#fff; border:1px solid #a5b4c1; padding:12px 18px; }
+.edu-example-delivery i { font-style:normal; font-size:18px; }
+.edu-example-delivery p { margin:0; font-size:14px; color:#4c6072; line-height:1.8; }
+.edu-consult-topics { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:10px; padding:0; margin:24px 0 28px; }
+.edu-consult-topics li { font-size:14px; padding:11px 16px; background:#fff; color:#17181c; border:1px solid #93a3b3; }
+@media(max-width:759px) {
+  .edu-hero h1 { font-size:31px; }
+  .edu-proof { grid-template-columns:1fr; gap:20px; padding:21px 0; }
+  .edu-proof p span { display:block; margin:6px 0 0; }
+  .edu-proof dl { grid-template-columns:1fr; gap:12px; }
+  .edu-proof dl > div { display:flex; justify-content:space-between; align-items:center; gap:15px; border-top:1px solid #d9e0e7; padding-top:12px; }
+  .edu-proof dt { max-width:195px; }
+  .edu-proof dd { white-space:nowrap; font-size:27px; }
+  .edu-proof dd span { font-size:13px; }
+  .edu-simulator figcaption { padding:16px; }
+  .edu-example-steps { grid-template-columns:1fr; gap:25px; }
+  .edu-example-steps li { font-size:17px; }
+  .edu-example-steps li:not(:last-child)::after { content:'↓'; right:auto; left:5px; bottom:-24px; font-size:18px; }
+  .edu-example-delivery > b { font-size:21px; }
+  .edu-example-delivery > div { gap:8px; font-size:13px; }
+  .edu-example-delivery > div span { padding:10px 9px; }
+  .edu-example-delivery i { font-size:13px; }
+  .edu-example-delivery p { font-size:13px; }
+  .edu-consult-topics { flex-direction:column; margin:22px 0; }
+}
+
+/* ===== 数値で追う変化と学習の手法 ===== */
+.edu-metric-list { list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding:0; margin:30px 0 0; }
+.edu-metric-list li { border-top:2px solid #17181c; padding:21px 0 8px; }
+.edu-metric-list h3 { font-size:17px; line-height:1.6; margin:0 0 15px; }
+.edu-metric-list li > div { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+.edu-metric-list b { font-family:var(--font-head); font-size:31px; font-weight:900; }
+.edu-metric-list b span { font-size:15px; font-weight:500; margin-left:4px; }
+.edu-metric-direction { font-size:16px; white-space:nowrap; }
+.edu-method-list { list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; padding:0; margin:30px 0; }
+.edu-method-list li { padding:24px; background:#fff; border-top:2px solid #17181c; position:relative; }
+.edu-method-list li > span { font-family:var(--font-head); font-size:30px; font-weight:900; }
+.edu-method-list h3 { font-size:19px; margin:9px 0 13px; line-height:1.5; }
+.edu-method-list p { color:#4c6072; font-size:14px; line-height:1.8; margin:0; }
+.edu-method-list li:not(:last-child)::after { content:'→'; position:absolute; right:-23px; top:50%; color:#1f6fb0; font-size:21px; }
+.edu-learning-order { display:flex; align-items:center; gap:28px; border-block:1px solid #a5b4c1; padding:23px 0; margin:28px 0 37px; }
+.edu-learning-order > b { flex-shrink:0; font-size:14px; }
+.edu-learning-order ol { flex:1; list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.edu-learning-order li { position:relative; }
+.edu-learning-order li span { display:block; color:#4c6072; font-size:13px; margin-bottom:5px; }
+.edu-learning-order li b { display:block; font-size:16px; line-height:1.5; }
+.edu-learning-order li:not(:last-child)::after { content:'→'; position:absolute; right:0; top:16px; color:#1f6fb0; }
+.edu-environment-title { font-family:var(--font-head); font-size:26px; line-height:1.5; margin:0 0 15px; }
+@media(max-width:759px) {
+  .edu-metric-list { grid-template-columns:1fr; gap:19px; margin-top:25px; }
+  .edu-metric-list li { padding:17px 0 4px; }
+  .edu-metric-list h3 { font-size:16px; margin-bottom:9px; }
+  .edu-metric-list b { font-size:27px; }
+  .edu-metric-list b span { font-size:13px; }
+  .edu-metric-direction { font-size:15px; }
+  .edu-method-list { grid-template-columns:1fr; gap:24px; }
+  .edu-method-list li { padding:20px; }
+  .edu-method-list li:not(:last-child)::after { content:'↓'; right:auto; left:21px; top:auto; bottom:-26px; font-size:20px; }
+  .edu-learning-order { display:block; padding:22px 0; }
+  .edu-learning-order ol { grid-template-columns:1fr; gap:23px; margin-top:19px; }
+  .edu-learning-order li:not(:last-child)::after { content:'↓'; left:0; right:auto; top:auto; bottom:-24px; font-size:17px; }
+  .edu-environment-title { font-size:22px; }
+}
