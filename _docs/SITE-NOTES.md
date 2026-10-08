@@ -23,7 +23,7 @@
 - 送信先サービス: Web3Forms(無料プランは月250件、通知先メール1件)
 - 2026-09-27 にキー設定済み(Web3Forms のフォーム名「ロアニクス お問い合わせ」、アカウント lorenics@outlook.jp)
 - キーは `contact.html` の `<input type="hidden" name="access_key" ...>` の1行。値を `YOUR_ACCESS_KEY_HERE` に戻すと、送信ボタンでメールソフトが開く代替動作になる
-- Web3Forms 側の Website URL は `lorenics.github.io/contact.html` で登録。2026-10-05 に lorenics.com へ移したので Web3Forms 側も更新する
+- Web3Forms 側の Website URL は `lorenics.com/contact.html`（2026-10-08 更新済み）
 - 通知先メールアドレスを変える場合は、Web3Forms 側で新しいキーを発行して差し替え
 - 公開後は必ず1通テスト送信し、完了ページ(thanks.html)が出ること・メールが届くことを確認
 
