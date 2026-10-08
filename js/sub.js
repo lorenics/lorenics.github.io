@@ -66,8 +66,8 @@
   var TYPES = {
     plc: "PLC教育・研修",
     advisor: "FA制御技術顧問",
-    edu: "社内の技術教育の仕組みづくり",
-    ai: "AI導入・業務改善",
+    edu: "教育システム導入・伴走",
+    ai: "AI研修・業務改善",
     other: "取材・PR・その他"
   };
   var select = form.querySelector("[name='ご相談の種類']");
