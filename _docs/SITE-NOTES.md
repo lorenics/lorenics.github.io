@@ -6,8 +6,8 @@
 
 | ファイル | 中身 | 形式 |
 |---|---|---|
-| `index.html` | トップ | Claude Design の書き出し形式。`support.js` が表示時に unpkg から React を読み込んで組み立てる |
-| `message.html` | 代表メッセージ | 同上 |
+| `index.html` | トップ | 通常HTML。`css/sub.css`＋`css/home.css`、`js/sub.js`を使用。図は`images/home/` |
+| `message.html` | 代表メッセージ | Claude Design書き出し形式。`support.js`がReactを読み込んで表示 |
 | `ai.html` | 技術教育の仕組みづくり（製造業の設備・保全・技術部門向け） | 普通のHTML。`css/sub.css` と `js/sub.js` を使用。図は `images/edu/` |
 | `contact.html` | お問い合わせフォーム | 普通のHTML |
 | `thanks.html` | 送信完了(検索除外 noindex) | 普通のHTML |
@@ -47,6 +47,8 @@
 `_docs/ogp/ogp.html.tmpl` を `.html` にしてブラウザで開き、1200×630 で画面を保存 → `images/` に上書き。
 
 ## 更新履歴
+
+- 2026-10-08: トップを通常HTMLへ再制作、代表メッセージの実績・経歴を指定文言へ修正。本人確認待ち・未公開。検証記録は `home-review-20261008.md`
 
 - 2026-10-07: 技術教育の仕組みづくりLPの公開を本人が承認。ベテランの制御プログラミングの知識を新人へ受け継ぐトップ画（第4版）を採用。検証記録は `edu-review-20261006.md`
 
