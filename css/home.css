@@ -193,3 +193,9 @@
  .hx-calc-total {font-size:38px;}
  .hx-case-lead br {display:none;}
 }
+.hx-saved {margin-top:18px;background:#17181c;color:#fff;padding:22px 26px;display:grid;grid-template-columns:auto auto 1fr;align-items:center;gap:6px 22px;}
+.hx-saved p {margin:0;font-size:14px;color:#c9d2dc;line-height:1.8;}
+.hx-saved p:first-child {font-weight:700;color:#a8cef0;}
+.hx-saved b {font-family:var(--font-head);font-size:42px;line-height:1.2;color:#fff;}
+.hx-saved b span {font-size:18px;margin-left:6px;}
+@media (max-width:759px) {.hx-saved {grid-template-columns:1fr;} .hx-saved b {font-size:36px;}}
