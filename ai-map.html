@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>製品ができるまで × AI活用マップ｜ロアニクス株式会社</title>
+<meta name="description" content="受注から納品・アフターまで、設備メーカーの工程ごとにAIに任せられる作業と人に残す判断をまとめました。工程を押すと活用例が見え、工程ごとのユースケース集（PDF）をダウンロードできます。">
+<link rel="canonical" href="https://lorenics.com/ai-map.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ロアニクス株式会社">
+<meta property="og:title" content="製品ができるまで × AI活用マップ｜ロアニクス株式会社">
+<meta property="og:description" content="工程を押すと、その作業でAIに任せられることと人に残す判断が見えます。工程ごとのユースケース集（PDF）付き。">
+<meta property="og:url" content="https://lorenics.com/ai-map.html">
+<meta property="og:image" content="https://lorenics.com/images/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/ai-map.css">
+<script src="js/ai-map.js" defer></script>
+<script src="js/sub.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "製品ができるまで × AI活用マップ",
+      "description": "設備メーカーの受注から納品・アフターまでの工程ごとに、AIに任せられる作業と人に残す判断をまとめたマップ。工程ごとのユースケース集（PDF）をダウンロードできます。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ロアニクス株式会社",
+        "url": "https://lorenics.com/",
+        "email": "lorenics@outlook.jp",
+        "address": {
+          "@type": "PostalAddress",
+          "postalCode": "542-0081",
+          "addressRegion": "大阪府",
+          "addressLocality": "大阪市中央区",
+          "streetAddress": "南船場3丁目2番22号 おおきに南船場ビル205",
+          "addressCountry": "JP"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "トップ",
+          "item": "https://lorenics.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI活用マップ",
+          "item": "https://lorenics.com/ai-map.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="p-map">
+<a class="c-skip" href="#main">本文へスキップ</a>
+<div class="c-hazard" aria-hidden="true"></div>
+<header class="c-header">
+  <div class="c-header__inner">
+    <a class="c-header__logo" href="index.html"><img src="images/lorenics-logo.png" alt="ロアニクス株式会社 トップへ" width="899" height="209"></a>
+    <nav class="c-header__nav" aria-label="メインメニュー">
+      <a class="c-header__link" href="ai.html">技術教育の仕組みづくり</a>
+      <a class="c-header__link" href="plc.html">PLC教育・研修</a>
+      <a class="c-header__link" href="advisor.html">技術顧問</a>
+      <a class="c-header__link" href="faq.html">よくある質問</a>
+      <a class="c-header__link" href="message.html">代表メッセージ</a>
+      <a class="c-header__link" href="company.html">会社案内</a>
+    </nav>
+    <div class="c-header__actions">
+      <a class="c-btn c-btn--sub c-header__diag" href="contact.html?type=diag">無料診断</a>
+      <a class="c-btn c-btn--primary c-header__cta" href="contact.html">お問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="map-hero">
+ <div class="l-container">
+  <p class="svc-eyebrow">製品ができるまで × AI活用マップ</p>
+  <h1>製品ができるまでの<br><span>どこでAIが使えるか</span></h1>
+  <p class="svc-intro">受注から納品・アフターまで　設備メーカーの仕事を担当ごとに並べました。<br>工程を押すと　その作業でAIに任せられることと　人に残す判断が見えます。</p>
+ </div>
+</section>
+
+<section class="map-sec" id="map" aria-labelledby="map-h">
+ <div class="map-wrap">
+  <div class="map-head">
+   <h2 id="map-h" class="map-h">全体の流れ　<small>押せる箇所は右上にオレンジの点がある箱と　上の工程名です</small></h2>
+   <ul class="map-legend"><li><i style="background:#6B4FA0"></i>お客様</li><li><i style="background:#2E7D6B"></i>営業・CS</li><li><i style="background:#5A6472"></i>PM</li><li><i style="background:#1F6FB0"></i>メカ設計</li><li><i style="background:#C0841A"></i>電気設計</li><li><i style="background:#C2410C"></i>制御・ソフト</li><li><i style="background:#0E7490"></i>購買</li><li><i style="background:#475569"></i>製作・据付</li><li><i style="background:#E8730C"></i>関門（DR・立会など）</li><li><i class="dash" style="border-color:#D0342C"></i>差し戻し・分岐</li></ul>
+  </div>
+  <div class="map-scroll" tabindex="0" aria-label="全体の流れ（横にスクロールできます）">
+<svg class="map-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1352" role="group" aria-label="製品ができるまでの全体の流れ。工程を押すと、その工程でのAI活用が表示されます">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3A4250"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#D0342C"/></marker>
+</defs>
+<rect x="160" y="64" width="398" height="1280" fill="#F4F7FB"/>
+<rect x="562" y="64" width="130" height="1280" fill="#FFFFFF"/>
+<rect x="696" y="64" width="186" height="1280" fill="#F4F7FB"/>
+<rect x="884" y="64" width="186" height="1280" fill="#FFFFFF"/>
+<rect x="1072" y="64" width="264" height="1280" fill="#F4F7FB"/>
+<rect x="1340" y="64" width="186" height="1280" fill="#FFFFFF"/>
+<rect x="1528" y="64" width="320" height="1280" fill="#F4F7FB"/>
+<rect x="1850" y="64" width="186" height="1280" fill="#FFFFFF"/>
+<rect x="2038" y="64" width="130" height="1280" fill="#F4F7FB"/>
+<g class="mp" data-phase="sales" tabindex="0" role="button" aria-label="営業・見積の資料を見る"><rect class="mp-r" x="160" y="12" width="398" height="42" rx="4" fill="#12355B"/><text x="359.0" y="33" class="ph">営業・見積</text></g>
+<g class="mp" data-phase="order" tabindex="0" role="button" aria-label="受注の資料を見る"><rect class="mp-r" x="562" y="12" width="130" height="42" rx="4" fill="#12355B"/><text x="627.0" y="33" class="ph">受注</text></g>
+<g class="mp" data-phase="concept" tabindex="0" role="button" aria-label="構想設計の資料を見る"><rect class="mp-r" x="696" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="789.0" y="33" class="ph">構想設計</text></g>
+<g class="mp" data-phase="detail" tabindex="0" role="button" aria-label="詳細設計の資料を見る"><rect class="mp-r" x="884" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="977.0" y="33" class="ph">詳細設計</text></g>
+<g class="mp" data-phase="make" tabindex="0" role="button" aria-label="製作の資料を見る"><rect class="mp-r" x="1072" y="12" width="264" height="42" rx="4" fill="#12355B"/><text x="1204.0" y="33" class="ph">製作</text></g>
+<g class="mp" data-phase="debug" tabindex="0" role="button" aria-label="社内デバッグの資料を見る"><rect class="mp-r" x="1340" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="1433.0" y="33" class="ph">社内デバッグ</text></g>
+<g class="mp" data-phase="site" tabindex="0" role="button" aria-label="出荷・現地の資料を見る"><rect class="mp-r" x="1528" y="12" width="320" height="42" rx="4" fill="#12355B"/><text x="1688.0" y="33" class="ph">出荷・現地</text></g>
+<g class="mp" data-phase="deliver" tabindex="0" role="button" aria-label="納品の資料を見る"><rect class="mp-r" x="1850" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="1943.0" y="33" class="ph">納品</text></g>
+<g class="mp" data-phase="after" tabindex="0" role="button" aria-label="アフターの資料を見る"><rect class="mp-r" x="2038" y="12" width="130" height="42" rx="4" fill="#12355B"/><text x="2103.0" y="33" class="ph">アフター</text></g>
+<line x1="24" y1="64" x2="2168" y2="64" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="67" width="128" height="154" rx="6" fill="#6B4FA0"/>
+<text x="88" y="132.0" class="ln">お客様</text><text x="88" y="160.0" class="lns">工場側</text>
+<line x1="24" y1="224" x2="2168" y2="224" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="227" width="128" height="154" rx="6" fill="#2E7D6B"/>
+<text x="88" y="304.0" class="ln">営業・CS</text>
+<line x1="24" y1="384" x2="2168" y2="384" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="387" width="128" height="154" rx="6" fill="#5A6472"/>
+<text x="88" y="452.0" class="ln">PM</text><text x="88" y="480.0" class="lns">日程・原価</text>
+<line x1="24" y1="544" x2="2168" y2="544" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="547" width="128" height="154" rx="6" fill="#1F6FB0"/>
+<text x="88" y="624.0" class="ln">メカ設計</text>
+<line x1="24" y1="704" x2="2168" y2="704" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="707" width="128" height="154" rx="6" fill="#C0841A"/>
+<text x="88" y="784.0" class="ln">電気設計</text>
+<line x1="24" y1="864" x2="2168" y2="864" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="867" width="128" height="154" rx="6" fill="#C2410C"/>
+<text x="88" y="944.0" class="ln">制御・ソフト</text>
+<line x1="24" y1="1024" x2="2168" y2="1024" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="1027" width="128" height="154" rx="6" fill="#0E7490"/>
+<text x="88" y="1104.0" class="ln">購買</text>
+<line x1="24" y1="1184" x2="2168" y2="1184" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="24" y="1187" width="128" height="154" rx="6" fill="#475569"/>
+<text x="88" y="1264.0" class="ln">製作・据付</text>
+<line x1="24" y1="1344" x2="2168" y2="1344" stroke="#C9D3DE" stroke-width="1.2"/>
+<g class="mb" data-id="s_inq" tabindex="0" role="button" aria-label="営業・見積　引き合いのAI活用を見る">
+<rect class="mb-r" x="168" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M169.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="229.0" y="293.0" class="bt" fill="#17181C">引き合い</text><text x="229.0" y="319.0" class="bs" fill="#3A4250">課題を聞く</text>
+<circle class="mb-dot" cx="274" cy="281.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="s_survey" tabindex="0" role="button" aria-label="営業・見積　現地調査のAI活用を見る">
+<rect class="mb-r" x="302" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M303.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="363.0" y="293.0" class="bt" fill="#17181C">現地調査</text><text x="363.0" y="319.0" class="bs" fill="#3A4250">設置場所の確認</text>
+<circle class="mb-dot" cx="408" cy="281.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="s_work" tabindex="0" role="button" aria-label="営業・見積　ワーク評価のAI活用を見る">
+<rect class="mb-r" x="302" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M303.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="363.0" y="613.0" class="bt" fill="#17181C">ワーク評価</text><text x="363.0" y="639.0" class="bs" fill="#3A4250">製品で試作</text>
+<circle class="mb-dot" cx="408" cy="601.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="s_quote" tabindex="0" role="button" aria-label="営業・見積　見積・提案のAI活用を見る">
+<rect class="mb-r" x="436" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M437.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="497.0" y="293.0" class="bt" fill="#17181C">見積・提案</text><text x="497.0" y="319.0" class="bs" fill="#3A4250">範囲と金額</text>
+<circle class="mb-dot" cx="542" cy="281.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="s_alt" tabindex="0" role="button" aria-label="営業・見積　工法見直しのAI活用を見る">
+<rect class="mb-r" x="302" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#D0342C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<text x="359.0" y="773.0" class="bt" fill="#D0342C">工法見直し</text><text x="359.0" y="799.0" class="bs" fill="#D0342C">受注の見送り</text>
+<circle class="mb-dot" cx="408" cy="761.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M282 304.0 H299" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M225.0 335.0 V624.0 H299" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M416 304.0 H433" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M416 624.0 H493.0 V338.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M359.0 655.0 V750.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="369.0" y="704.0" class="br" text-anchor="start">成り立たない時</text>
+<g class="mb" data-id="o_contract" tabindex="0" role="button" aria-label="受注　受注・契約のAI活用を見る">
+<rect class="mb-r" x="570" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M571.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="631.0" y="293.0" class="bt" fill="#17181C">受注・契約</text><text x="631.0" y="319.0" class="bs" fill="#3A4250">仕様の確定</text>
+<circle class="mb-dot" cx="676" cy="281.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="o_spec" tabindex="0" role="button" aria-label="受注　仕様の承認のAI活用を見る">
+<rect class="mb-r" x="570" y="113.0" width="114" height="62" rx="6" fill="#E8730C"/>
+<text x="627.0" y="133.0" class="bt" fill="#FFFFFF">仕様の承認</text><text x="627.0" y="159.0" class="bs" fill="#FFFFFF">お客様が承認</text>
+<circle class="mb-dot" cx="676" cy="121.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M550 304.0 H567" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M627.0 273.0 V178.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M684 304.0 H694 M694 304.0 V1104.0" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M694 464.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M694 624.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M694 784.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M694 944.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M694 1104.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="c_plan" tabindex="0" role="button" aria-label="構想設計　日程・予算のAI活用を見る">
+<rect class="mb-r" x="704" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M705.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="765.0" y="453.0" class="bt" fill="#17181C">日程・予算</text><text x="765.0" y="479.0" class="bs" fill="#3A4250">工程表と予算</text>
+<circle class="mb-dot" cx="810" cy="441.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="c_mech" tabindex="0" role="button" aria-label="構想設計　メカ構想のAI活用を見る">
+<rect class="mb-r" x="704" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M705.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="765.0" y="613.0" class="bt" fill="#17181C">メカ構想</text><text x="765.0" y="639.0" class="bs" fill="#3A4250">方式と配置</text>
+<circle class="mb-dot" cx="810" cy="601.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="c_elec" tabindex="0" role="button" aria-label="構想設計　電気構想のAI活用を見る">
+<rect class="mb-r" x="704" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
+<path d="M705.2 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
+<text x="765.0" y="773.0" class="bt" fill="#17181C">電気構想</text><text x="765.0" y="799.0" class="bs" fill="#3A4250">盤と安全回路</text>
+<circle class="mb-dot" cx="810" cy="761.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="c_ctrl" tabindex="0" role="button" aria-label="構想設計　制御構想のAI活用を見る">
+<rect class="mb-r" x="704" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M705.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="765.0" y="933.0" class="bt" fill="#17181C">制御構想</text><text x="765.0" y="959.0" class="bs" fill="#3A4250">動作順とタクト</text>
+<circle class="mb-dot" cx="810" cy="921.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="c_long" tabindex="0" role="button" aria-label="構想設計　長納期品のAI活用を見る">
+<rect class="mb-r" x="704" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M705.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="765.0" y="1093.0" class="bt" fill="#17181C">長納期品</text><text x="765.0" y="1119.0" class="bs" fill="#3A4250">機種と納期</text>
+<circle class="mb-dot" cx="810" cy="1081.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="g_cdr" tabindex="0" role="button" aria-label="構想設計　構想DRのAI活用を見る">
+<rect class="mb-r" x="838" y="552" width="36" height="464" rx="6" fill="#E8730C"/>
+<text x="856.0" y="748.0" class="gt" fill="#FFFFFF">構</text>
+<text x="856.0" y="772.0" class="gt" fill="#FFFFFF">想</text>
+<text x="856.0" y="796.0" class="gt" fill="#FFFFFF">D</text>
+<text x="856.0" y="820.0" class="gt" fill="#FFFFFF">R</text>
+</g>
+<path d="M818 624.0 H835" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M818 784.0 H835" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M818 944.0 H835" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M874 624.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M874 784.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M874 944.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="d_mech" tabindex="0" role="button" aria-label="詳細設計　メカ詳細のAI活用を見る">
+<rect class="mb-r" x="892" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M893.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="953.0" y="613.0" class="bt" fill="#17181C">メカ詳細</text><text x="953.0" y="639.0" class="bs" fill="#3A4250">3D・強度</text>
+<circle class="mb-dot" cx="998" cy="601.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="d_elec" tabindex="0" role="button" aria-label="詳細設計　電気詳細のAI活用を見る">
+<rect class="mb-r" x="892" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
+<path d="M893.2 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
+<text x="953.0" y="773.0" class="bt" fill="#17181C">電気詳細</text><text x="953.0" y="799.0" class="bs" fill="#3A4250">回路図・I/O表</text>
+<circle class="mb-dot" cx="998" cy="761.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="d_soft" tabindex="0" role="button" aria-label="詳細設計　ソフト設計のAI活用を見る">
+<rect class="mb-r" x="892" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M893.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="953.0" y="933.0" class="bt" fill="#17181C">ソフト設計</text><text x="953.0" y="959.0" class="bs" fill="#3A4250">PLC・HMI</text>
+<circle class="mb-dot" cx="998" cy="921.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="d_order" tabindex="0" role="button" aria-label="詳細設計　先行手配のAI活用を見る">
+<rect class="mb-r" x="892" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M893.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="953.0" y="1093.0" class="bt" fill="#17181C">先行手配</text><text x="953.0" y="1119.0" class="bs" fill="#3A4250">長納期品を発注</text>
+<circle class="mb-dot" cx="998" cy="1081.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="d_appr" tabindex="0" role="button" aria-label="詳細設計　承認図のAI活用を見る">
+<rect class="mb-r" x="892" y="113.0" width="114" height="62" rx="6" fill="#E8730C"/>
+<text x="949.0" y="133.0" class="bt" fill="#FFFFFF">承認図</text><text x="949.0" y="159.0" class="bs" fill="#FFFFFF">外形と配置</text>
+<circle class="mb-dot" cx="998" cy="121.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="d_safety" tabindex="0" role="button" aria-label="詳細設計　安全の検討のAI活用を見る">
+<rect class="mb-r" x="892" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M893.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="953.0" y="453.0" class="bt" fill="#17181C">安全の検討</text><text x="953.0" y="479.0" class="bs" fill="#3A4250">危険の洗い出し</text>
+<circle class="mb-dot" cx="998" cy="441.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M818 1104.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M856.0 552 V144.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="g_ddr" tabindex="0" role="button" aria-label="詳細設計　詳細DRのAI活用を見る">
+<rect class="mb-r" x="1026" y="552" width="36" height="464" rx="6" fill="#E8730C"/>
+<text x="1044.0" y="748.0" class="gt" fill="#FFFFFF">詳</text>
+<text x="1044.0" y="772.0" class="gt" fill="#FFFFFF">細</text>
+<text x="1044.0" y="796.0" class="gt" fill="#FFFFFF">D</text>
+<text x="1044.0" y="820.0" class="gt" fill="#FFFFFF">R</text>
+</g>
+<path d="M1006 624.0 H1023" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1006 784.0 H1023" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1006 944.0 H1023" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1062 944.0 H1071 M1071 944.0 V1300 M1006 1104.0 H1071" fill="none" stroke="#3A4250" stroke-width="2"/>
+<g class="mb" data-id="m_prog" tabindex="0" role="button" aria-label="製作　プログラムのAI活用を見る">
+<rect class="mb-r" x="1080" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M1081.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1141.0" y="933.0" class="bt" fill="#17181C">プログラム</text><text x="1141.0" y="959.0" class="bs" fill="#3A4250">作成・机上確認</text>
+<circle class="mb-dot" cx="1186" cy="921.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="m_parts" tabindex="0" role="button" aria-label="製作　部品手配のAI活用を見る">
+<rect class="mb-r" x="1080" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M1081.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="1141.0" y="1093.0" class="bt" fill="#17181C">部品手配</text><text x="1141.0" y="1119.0" class="bs" fill="#3A4250">発注・納期管理</text>
+<circle class="mb-dot" cx="1186" cy="1081.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="m_machining" tabindex="0" role="button" aria-label="製作　部品加工のAI活用を見る">
+<rect class="mb-r" x="1080" y="1197.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1081.2 1203.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1141.0" y="1217" class="bt" fill="#17181C">部品加工</text><text x="1141.0" y="1243" class="bs" fill="#3A4250">板金・機械加工</text>
+<circle class="mb-dot" cx="1186" cy="1205.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="m_panel" tabindex="0" role="button" aria-label="製作　盤製作のAI活用を見る">
+<rect class="mb-r" x="1080" y="1269.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1081.2 1275.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1141.0" y="1289" class="bt" fill="#17181C">盤製作</text><text x="1141.0" y="1315" class="bs" fill="#3A4250">盤の組立・配線</text>
+<circle class="mb-dot" cx="1186" cy="1277.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M1071 944.0 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1071 1104.0 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1071 1228 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1071 1300 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="m_inspect" tabindex="0" role="button" aria-label="製作　受入検査のAI活用を見る">
+<rect class="mb-r" x="1214" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M1215.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="1275.0" y="1093.0" class="bt" fill="#17181C">受入検査</text><text x="1275.0" y="1119.0" class="bs" fill="#3A4250">部品と寸法</text>
+<circle class="mb-dot" cx="1320" cy="1081.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="m_assy" tabindex="0" role="button" aria-label="製作　組立・配線のAI活用を見る">
+<rect class="mb-r" x="1214" y="1233.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1215.2 1239.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1275.0" y="1253.0" class="bt" fill="#17181C">組立・配線</text><text x="1275.0" y="1279.0" class="bs" fill="#3A4250">機械・盤・配管</text>
+<circle class="mb-dot" cx="1320" cy="1241.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M1194 1104.0 H1211" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1194 1228 H1204 V1300 M1194 1300 H1204" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M1204 1264.0 H1211" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1271.0 1135.0 V1230.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1328 1264.0 H1338 M1338 1264.0 V624.0 M1194 944.0 H1338" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M1338 624.0 H1345" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1338 784.0 H1345" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1338 944.0 H1345" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="b_mech" tabindex="0" role="button" aria-label="社内デバッグ　機構の調整のAI活用を見る">
+<rect class="mb-r" x="1348" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M1349.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="1409.0" y="613.0" class="bt" fill="#17181C">機構の調整</text><text x="1409.0" y="639.0" class="bs" fill="#3A4250">精度・タクト</text>
+<circle class="mb-dot" cx="1454" cy="601.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="b_elec" tabindex="0" role="button" aria-label="社内デバッグ　配線修正のAI活用を見る">
+<rect class="mb-r" x="1348" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
+<path d="M1349.2 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
+<text x="1409.0" y="773.0" class="bt" fill="#17181C">配線修正</text><text x="1409.0" y="799.0" class="bs" fill="#3A4250">図面と照合</text>
+<circle class="mb-dot" cx="1454" cy="761.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="b_ctrl" tabindex="0" role="button" aria-label="社内デバッグ　動作確認のAI活用を見る">
+<rect class="mb-r" x="1348" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M1349.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1409.0" y="933.0" class="bt" fill="#17181C">動作確認</text><text x="1409.0" y="959.0" class="bs" fill="#3A4250">連続運転まで</text>
+<circle class="mb-dot" cx="1454" cy="921.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="b_manual" tabindex="0" role="button" aria-label="社内デバッグ　取説・教材のAI活用を見る">
+<rect class="mb-r" x="1348" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M1349.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="1409.0" y="453.0" class="bt" fill="#17181C">取説・教材</text><text x="1409.0" y="479.0" class="bs" fill="#3A4250">並行して作成</text>
+<circle class="mb-dot" cx="1454" cy="441.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="g_fat" tabindex="0" role="button" aria-label="社内デバッグ　社内立会のAI活用を見る">
+<rect class="mb-r" x="1482" y="72" width="36" height="1264" rx="6" fill="#E8730C"/>
+<text x="1500.0" y="668.0" class="gt" fill="#FFFFFF">社</text>
+<text x="1500.0" y="692.0" class="gt" fill="#FFFFFF">内</text>
+<text x="1500.0" y="716.0" class="gt" fill="#FFFFFF">立</text>
+<text x="1500.0" y="740.0" class="gt" fill="#FFFFFF">会</text>
+</g>
+<path d="M1462 624.0 H1479" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1462 784.0 H1479" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1462 944.0 H1479" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="t_ship" tabindex="0" role="button" aria-label="出荷・現地　分解・輸送のAI活用を見る">
+<rect class="mb-r" x="1536" y="1197.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1537.2 1203.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1597.0" y="1217" class="bt" fill="#17181C">分解・輸送</text><text x="1597.0" y="1243" class="bs" fill="#3A4250">梱包・輸出</text>
+<circle class="mb-dot" cx="1642" cy="1205.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="t_install" tabindex="0" role="button" aria-label="出荷・現地　搬入・据付のAI活用を見る">
+<rect class="mb-r" x="1536" y="1269.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1537.2 1275.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1597.0" y="1289" class="bt" fill="#17181C">搬入・据付</text><text x="1597.0" y="1315" class="bs" fill="#3A4250">芯出し・固定</text>
+<circle class="mb-dot" cx="1642" cy="1277.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="t_cwork" tabindex="0" role="button" aria-label="出荷・現地　受入れ工事のAI活用を見る">
+<rect class="mb-r" x="1536" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M1537.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="1597.0" y="133.0" class="bt" fill="#17181C">受入れ工事</text><text x="1597.0" y="159.0" class="bs" fill="#3A4250">電源・エア</text>
+<circle class="mb-dot" cx="1642" cy="121.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M1518 1228 H1533" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1518 144.0 H1533" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1593.0 1259.0 V1266.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1650 1300 H1660 M1660 1300 V144.0 M1650 144.0 H1660" fill="none" stroke="#3A4250" stroke-width="2"/>
+<g class="mb" data-id="t_train" tabindex="0" role="button" aria-label="出荷・現地　操作教育のAI活用を見る">
+<rect class="mb-r" x="1670" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M1671.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="1731.0" y="133.0" class="bt" fill="#17181C">操作教育</text><text x="1731.0" y="159.0" class="bs" fill="#3A4250">操作と保全</text>
+<circle class="mb-dot" cx="1776" cy="121.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="t_madj" tabindex="0" role="button" aria-label="出荷・現地　現地調整のAI活用を見る">
+<rect class="mb-r" x="1670" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M1671.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="1731.0" y="613.0" class="bt" fill="#17181C">現地調整</text><text x="1731.0" y="639.0" class="bs" fill="#3A4250">機構の再調整</text>
+<circle class="mb-dot" cx="1776" cy="601.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="t_start" tabindex="0" role="button" aria-label="出荷・現地　現地立上げのAI活用を見る">
+<rect class="mb-r" x="1670" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M1671.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1731.0" y="933.0" class="bt" fill="#17181C">現地立上げ</text><text x="1731.0" y="959.0" class="bs" fill="#3A4250">現地での調整</text>
+<circle class="mb-dot" cx="1776" cy="921.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M1660 144.0 H1667" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1660 624.0 H1667" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1660 944.0 H1667" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="g_sat" tabindex="0" role="button" aria-label="出荷・現地　現地検査のAI活用を見る">
+<rect class="mb-r" x="1804" y="72" width="36" height="1264" rx="6" fill="#E8730C"/>
+<text x="1822.0" y="668.0" class="gt" fill="#FFFFFF">現</text>
+<text x="1822.0" y="692.0" class="gt" fill="#FFFFFF">地</text>
+<text x="1822.0" y="716.0" class="gt" fill="#FFFFFF">検</text>
+<text x="1822.0" y="740.0" class="gt" fill="#FFFFFF">査</text>
+</g>
+<path d="M1784 144.0 H1801" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1784 624.0 H1801" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1784 944.0 H1801" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="n_mass" tabindex="0" role="button" aria-label="納品　量産立上げのAI活用を見る">
+<rect class="mb-r" x="1858" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M1859.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="1919.0" y="133.0" class="bt" fill="#17181C">量産立上げ</text><text x="1919.0" y="159.0" class="bs" fill="#3A4250">歩留まりの安定</text>
+<circle class="mb-dot" cx="1964" cy="121.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="n_support" tabindex="0" role="button" aria-label="納品　立上げ支援のAI活用を見る">
+<rect class="mb-r" x="1858" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M1859.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1919.0" y="933.0" class="bt" fill="#17181C">立上げ支援</text><text x="1919.0" y="959.0" class="bs" fill="#3A4250">条件出し・調整</text>
+<circle class="mb-dot" cx="1964" cy="921.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="n_docs" tabindex="0" role="button" aria-label="納品　完成図書のAI活用を見る">
+<rect class="mb-r" x="1858" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M1859.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="1919.0" y="453.0" class="bt" fill="#17181C">完成図書</text><text x="1919.0" y="479.0" class="bs" fill="#3A4250">図面・資料</text>
+<circle class="mb-dot" cx="1964" cy="441.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M1840 144.0 H1855" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1840 464.0 H1855" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1840 944.0 H1855" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="g_acc" tabindex="0" role="button" aria-label="納品　検収のAI活用を見る">
+<rect class="mb-r" x="1992" y="72" width="36" height="1264" rx="6" fill="#E8730C"/>
+<text x="2010.0" y="692.0" class="gt" fill="#FFFFFF">検</text>
+<text x="2010.0" y="716.0" class="gt" fill="#FFFFFF">収</text>
+</g>
+<path d="M1972 144.0 H1989" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1972 464.0 H1989" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1972 944.0 H1989" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<g class="mb" data-id="a_ops" tabindex="0" role="button" aria-label="アフター　運転・保全のAI活用を見る">
+<rect class="mb-r" x="2046" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M2047.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="2107.0" y="133.0" class="bt" fill="#17181C">運転・保全</text><text x="2107.0" y="159.0" class="bs" fill="#3A4250">日常点検・改善</text>
+<circle class="mb-dot" cx="2152" cy="121.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="a_fail" tabindex="0" role="button" aria-label="アフター　故障対応のAI活用を見る">
+<rect class="mb-r" x="2046" y="237.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M2047.2 243.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="2107.0" y="257" class="bt" fill="#17181C">故障対応</text><text x="2107.0" y="283" class="bs" fill="#3A4250">遠隔・駆けつけ</text>
+<circle class="mb-dot" cx="2152" cy="245.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="a_next" tabindex="0" role="button" aria-label="アフター　次の案件のAI活用を見る">
+<rect class="mb-r" x="2046" y="309.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M2047.2 315.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="2107.0" y="329" class="bt" fill="#17181C">次の案件</text><text x="2107.0" y="355" class="bs" fill="#3A4250">リピート</text>
+<circle class="mb-dot" cx="2152" cy="317.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="a_mod" tabindex="0" role="button" aria-label="アフター　改造・増設のAI活用を見る">
+<rect class="mb-r" x="2046" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M2047.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="2107.0" y="613.0" class="bt" fill="#17181C">改造・増設</text><text x="2107.0" y="639.0" class="bs" fill="#3A4250">品種追加など</text>
+<circle class="mb-dot" cx="2152" cy="601.0" r="6" fill="#E8730C"/>
+</g>
+<g class="mb" data-id="a_spare" tabindex="0" role="button" aria-label="アフター　保守部品のAI活用を見る">
+<rect class="mb-r" x="2046" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M2047.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="2107.0" y="1093.0" class="bt" fill="#17181C">保守部品</text><text x="2107.0" y="1119.0" class="bs" fill="#3A4250">生産中止の対応</text>
+<circle class="mb-dot" cx="2152" cy="1081.0" r="6" fill="#E8730C"/>
+</g>
+<path d="M2028 144.0 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M2028 268 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M2028 624.0 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M2028 1104.0 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M2103.0 299.0 V306.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M838 568 H761.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="769.0" y="556" class="br" text-anchor="start">差し戻し</text>
+<path d="M1026 568 H949.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="957.0" y="556" class="br" text-anchor="start">差し戻し</text>
+<path d="M1482 568 H1405.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="1413.0" y="556" class="br" text-anchor="start">是正</text>
+<path d="M1804 568 H1727.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="1735.0" y="556" class="br" text-anchor="start">是正</text>
+</svg>
+  </div>
+  <p class="map-hint" aria-hidden="true">← 横にスクロールできます →</p>
+ </div>
+ <div class="l-container map-list">
+  <h3 class="map-list-h">工程から選ぶ</h3>
+  <details class="map-acc"><summary><span>営業・見積</span></summary><p>引き合いから見積まで。ここでの見極めが、後の全工程の手戻りと利益を左右します。</p><ul><li><button type="button" class="map-li" data-id="s_inq">引き合い<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_survey">現地調査<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_work">ワーク評価<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="s_quote">見積・提案<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_alt">工法見直し<small>電気設計</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="sales">営業・見積編の資料を受け取る</button></details><details class="map-acc"><summary><span>受注</span></summary><p>契約と仕様の確定。あいまいなまま進むと、立ち上げの段階で問題が噴き出します。</p><ul><li><button type="button" class="map-li" data-id="o_contract">受注・契約<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="o_spec">仕様の承認<small>お客様</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="order">受注編の資料を受け取る</button></details><details class="map-acc"><summary><span>構想設計</span></summary><p>メカ・電気・制御が同時に方式を決め、構想DRで合流する工程です。</p><ul><li><button type="button" class="map-li" data-id="c_plan">日程・予算<small>PM</small></button></li><li><button type="button" class="map-li" data-id="c_mech">メカ構想<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="c_elec">電気構想<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="c_ctrl">制御構想<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="c_long">長納期品<small>購買</small></button></li><li><button type="button" class="map-li" data-id="g_cdr">構想DR<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="concept">構想設計編の資料を受け取る</button></details><details class="map-acc"><summary><span>詳細設計</span></summary><p>図面とプログラムを作り込み、詳細DRで確かめる工程です。</p><ul><li><button type="button" class="map-li" data-id="d_mech">メカ詳細<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="d_elec">電気詳細<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="d_soft">ソフト設計<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="d_order">先行手配<small>購買</small></button></li><li><button type="button" class="map-li" data-id="d_appr">承認図<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="d_safety">安全の検討<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_ddr">詳細DR<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="detail">詳細設計編の資料を受け取る</button></details><details class="map-acc"><summary><span>製作</span></summary><p>部品の加工・盤製作・組立を同時に進め、1台の設備にまとめる工程です。</p><ul><li><button type="button" class="map-li" data-id="m_prog">プログラム<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="m_parts">部品手配<small>購買</small></button></li><li><button type="button" class="map-li" data-id="m_machining">部品加工<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="m_panel">盤製作<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="m_inspect">受入検査<small>購買</small></button></li><li><button type="button" class="map-li" data-id="m_assy">組立・配線<small>製作・据付</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="make">製作編の資料を受け取る</button></details><details class="map-acc"><summary><span>社内デバッグ</span></summary><p>組み上がった設備を動かして調整し、社内立会（出荷前にお客様が動作を確かめる検査）に備える工程です。</p><ul><li><button type="button" class="map-li" data-id="b_mech">機構の調整<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="b_elec">配線修正<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="b_ctrl">動作確認<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="b_manual">取説・教材<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_fat">社内立会<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="debug">社内デバッグ編の資料を受け取る</button></details><details class="map-acc"><summary><span>出荷・現地</span></summary><p>分解・輸送・据付を経て、お客様の工場で立ち上げる工程です。</p><ul><li><button type="button" class="map-li" data-id="t_ship">分解・輸送<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="t_install">搬入・据付<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="t_cwork">受入れ工事<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="t_train">操作教育<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="t_madj">現地調整<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="t_start">現地立上げ<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="g_sat">現地検査<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="site">出荷・現地編の資料を受け取る</button></details><details class="map-acc"><summary><span>納品</span></summary><p>量産を立ち上げ、完成図書をそろえて検収（引き渡しの確定）を迎える工程です。</p><ul><li><button type="button" class="map-li" data-id="n_mass">量産立上げ<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="n_support">立上げ支援<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="n_docs">完成図書<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_acc">検収<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="deliver">納品編の資料を受け取る</button></details><details class="map-acc"><summary><span>アフター</span></summary><p>故障対応・保守部品・改造を通じて、次の案件につなげる工程です。</p><ul><li><button type="button" class="map-li" data-id="a_ops">運転・保全<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="a_fail">故障対応<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="a_next">次の案件<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="a_mod">改造・増設<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="a_spare">保守部品<small>購買</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="after">アフター編の資料を受け取る</button></details>
+ </div>
+</section>
+
+<section class="l-section svc-tint" id="usecase">
+ <div class="l-container">
+  <p class="c-label">ユースケース集（PDF）</p><h2 class="c-h2">工程ごとの資料をお送りします</h2>
+  <p class="map-sub">各工程の困りごと　作業ごとのAI活用例　人に残す判断　進め方を2ページにまとめました。<br>お名前・会社名・メールアドレスを入力すると　その場でダウンロードできます。</p>
+  <ul class="map-cards"><li><button type="button" class="map-card" data-phase="sales"><span class="map-card-k">PDF・2ページ</span><b>営業・見積編</b><span class="map-card-l">引き合いから見積まで。ここでの見極めが、後の全工程の手戻りと利益を左右します。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="order"><span class="map-card-k">PDF・2ページ</span><b>受注編</b><span class="map-card-l">契約と仕様の確定。あいまいなまま進むと、立ち上げの段階で問題が噴き出します。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="concept"><span class="map-card-k">PDF・2ページ</span><b>構想設計編</b><span class="map-card-l">メカ・電気・制御が同時に方式を決め、構想DRで合流する工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="detail"><span class="map-card-k">PDF・2ページ</span><b>詳細設計編</b><span class="map-card-l">図面とプログラムを作り込み、詳細DRで確かめる工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="make"><span class="map-card-k">PDF・2ページ</span><b>製作編</b><span class="map-card-l">部品の加工・盤製作・組立を同時に進め、1台の設備にまとめる工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="debug"><span class="map-card-k">PDF・2ページ</span><b>社内デバッグ編</b><span class="map-card-l">組み上がった設備を動かして調整し、社内立会（出荷前にお客様が動作を確かめる検査）に備える工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="site"><span class="map-card-k">PDF・2ページ</span><b>出荷・現地編</b><span class="map-card-l">分解・輸送・据付を経て、お客様の工場で立ち上げる工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="deliver"><span class="map-card-k">PDF・2ページ</span><b>納品編</b><span class="map-card-l">量産を立ち上げ、完成図書をそろえて検収（引き渡しの確定）を迎える工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="after"><span class="map-card-k">PDF・2ページ</span><b>アフター編</b><span class="map-card-l">故障対応・保守部品・改造を通じて、次の案件につなげる工程です。</span><span class="map-card-go">内容を見る →</span></button></li></ul>
+ </div>
+</section>
+
+<section class="l-section" id="eye">
+ <div class="l-container">
+  <div class="map-core">
+   <p class="map-core-k">ロアニクスの役割</p>
+   <p class="map-core-b">どこまでが「ベテランにしかできない判断」なのか<br>その線を引くのが目利きです</p>
+   <p class="map-core-s">AIに任せる範囲を広げすぎると現場で使われず　狭すぎると負担が減りません。<br>パナソニックの生産設備開発部門で17年　構想設計から現地の立ち上げまで担当してきた経験から　御社の業務に合わせて線を引きます。</p>
+  </div>
+ </div>
+</section>
+
+<section class="l-section c-diag-sec" id="diagnosis">
+ <div class="l-container">
+  <div class="c-diag">
+   <div>
+    <p class="c-diag__badge"><span>無料</span>オンライン30分</p>
+    <h2 class="c-diag__title">技術伝承の無料診断</h2>
+    <p class="c-diag__lead">教えたい技術と　いまの教え方を伺います。<br>教材にできる範囲と　どこから始めると効果が大きいかを<br>その場でお伝えします。</p>
+   </div>
+   <div>
+    <ul class="c-diag__list">
+     <li>教材にできる仕事の洗い出し</li>
+     <li>着手する順番と進め方の目安</li>
+     <li>公開中のシミュレーターと教材の形のご紹介</li>
+    </ul>
+    <div class="c-diag__actions">
+     <a class="c-btn c-btn--primary c-btn--lg" href="contact.html?type=diag">フォームから申し込む <span aria-hidden="true">→</span></a>
+     <a class="c-btn c-btn--line c-btn--lg" data-line hidden href="#">LINEで申し込む <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="c-diag__note">相談内容が固まっていなくても大丈夫です。担当は代表の西原です。</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+<div class="map-panel" id="map-panel" hidden>
+ <div class="map-panel__bg" data-close></div>
+ <aside class="map-panel__box" role="dialog" aria-modal="true" aria-labelledby="mp-title">
+  <button type="button" class="map-panel__x" data-close aria-label="閉じる">×</button>
+  <div class="map-panel__body" id="mp-body"></div>
+  <div class="map-dl" id="mp-dl">
+   <p class="map-dl__k">この工程のユースケース集</p>
+   <p class="map-dl__t" id="mp-doc"></p>
+   <p class="map-dl__s">困りごと／作業ごとのAI活用例／人に残す判断／進め方（PDF・2ページ）</p>
+   <form id="dl-form" class="map-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <input type="hidden" name="access_key" value="35a54cac-ba46-4df4-822a-b2da46f7cc64">
+    <input type="hidden" name="subject" value="【ロアニクスWeb】資料請求">
+    <input type="hidden" name="from_name" value="ロアニクス株式会社 Webサイト">
+    <input type="hidden" name="資料名" value="">
+    <input type="hidden" name="押した箇所" value="">
+    <input type="checkbox" name="botcheck" class="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label class="map-f"><span>お名前 <em>必須</em></span><input class="c-input" name="お名前" autocomplete="name" required maxlength="80" placeholder="山田 太郎"></label>
+    <label class="map-f"><span>会社名 <em>必須</em></span><input class="c-input" name="会社名" autocomplete="organization" required maxlength="120" placeholder="山田製作所"></label>
+    <label class="map-f"><span>メールアドレス <em>必須</em></span><input class="c-input" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="160" placeholder="name@example.co.jp"></label>
+    <fieldset class="map-f map-radio"><legend>検討状況 <em>必須</em></legend>
+     <label><input type="radio" name="検討状況" value="話を聞きたい" required>話を聞きたい</label>
+     <label><input type="radio" name="検討状況" value="比較・検討している">比較・検討している</label>
+     <label><input type="radio" name="検討状況" value="将来的に検討したい">将来的に検討したい</label>
+     <label><input type="radio" name="検討状況" value="情報収集のみ">情報収集のみ</label>
+    </fieldset>
+    <label class="map-check"><input type="checkbox" name="privacy" value="同意する" required><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>（外国の事業者への提供を含む）に同意する</span></label>
+    <p class="map-form__note">送信内容はフォーム送信サービス Web3Forms（インドの事業者）を経由して当社に届きます。</p>
+    <p class="map-form__err" id="dl-err" role="alert"></p>
+    <button class="c-btn c-btn--primary map-form__btn" type="submit">資料をダウンロードする</button>
+   </form>
+   <div class="map-done" id="dl-done" hidden>
+    <p class="map-done__t">ダウンロードを始めました</p>
+    <p>始まらない場合は <a id="dl-link" href="#" download>こちらから保存</a> してください。</p>
+    <p class="map-done__s">御社の業務に当てはめるとどうなるか　30分でお伝えします。</p>
+    <a class="c-btn c-btn--sub" href="contact.html?type=diag">技術伝承の無料診断を申し込む →</a>
+   </div>
+  </div>
+ </aside>
+</div>
+<script type="application/json" id="map-data">{"phases": [{"id": "sales", "name": "営業・見積", "lead": "引き合いから見積まで。ここでの見極めが、後の全工程の手戻りと利益を左右します。", "pains": ["過去の似た案件や見積の根拠が、担当者の頭の中にしかない", "現地調査や打合せの内容が、メモのまま設計に渡る", "できるかどうかの判断が、ベテラン1人に集中する"], "pdf": "downloads/ai-usecase-sales.pdf", "count": 5}, {"id": "order", "name": "受注", "lead": "契約と仕様の確定。あいまいなまま進むと、立ち上げの段階で問題が噴き出します。", "pains": ["仕様書と打合せの内容に食い違いがあっても気付けない", "契約条件の確認が人によってばらつく", "決まったことが社内に正しく伝わらない"], "pdf": "downloads/ai-usecase-order.pdf", "count": 2}, {"id": "concept", "name": "構想設計", "lead": "メカ・電気・制御が同時に方式を決め、構想DRで合流する工程です。", "pains": ["似た設備の構想や過去の失敗が、探しても見つからない", "長納期品の手配が遅れ、日程が後ろ倒しになる", "DR（設計を複数人で確かめる審査）の準備に時間がかかる"], "pdf": "downloads/ai-usecase-concept.pdf", "count": 6}, {"id": "detail", "name": "詳細設計", "lead": "図面とプログラムを作り込み、詳細DRで確かめる工程です。", "pains": ["部品表や回路図の作成に、同じ作業の繰り返しが多い", "標準の回路やラダーがあっても、使い回されない", "承認図への指摘が設計に戻りきらない"], "pdf": "downloads/ai-usecase-detail.pdf", "count": 7}, {"id": "make", "name": "製作", "lead": "部品の加工・盤製作・組立を同時に進め、1台の設備にまとめる工程です。", "pains": ["発注漏れや納期遅れに、後から気付く", "組立や配線の手順が、作業者ごとに違う", "受入検査の記録が残らない"], "pdf": "downloads/ai-usecase-make.pdf", "count": 6}, {"id": "debug", "name": "社内デバッグ", "lead": "組み上がった設備を動かして調整し、社内立会（出荷前にお客様が動作を確かめる検査）に備える工程です。", "pains": ["不具合の原因の切り分けが、詳しい人頼みになる", "調整した内容が記録に残らず、現地で同じことを繰り返す", "取扱説明書や教材づくりが出荷直前に集中する"], "pdf": "downloads/ai-usecase-debug.pdf", "count": 5}, {"id": "site", "name": "出荷・現地", "lead": "分解・輸送・据付を経て、お客様の工場で立ち上げる工程です。", "pains": ["社内で調整した内容が、現地で参照できない", "お客様側の受入れ準備（電源・エアなど）の確認漏れ", "操作教育が口頭中心で、相手に残らない"], "pdf": "downloads/ai-usecase-site.pdf", "count": 7}, {"id": "deliver", "name": "納品", "lead": "量産を立ち上げ、完成図書をそろえて検収（引き渡しの確定）を迎える工程です。", "pains": ["図面・プログラム・部品表の版がそろわない", "量産の立ち上げで起きたことが記録に残らない", "引き渡し書類の抜けに、後から気付く"], "pdf": "downloads/ai-usecase-deliver.pdf", "count": 4}, {"id": "after", "name": "アフター", "lead": "故障対応・保守部品・改造を通じて、次の案件につなげる工程です。", "pains": ["故障の問い合わせに、詳しい人しか答えられない", "部品の生産中止に、後から気付く", "アフターで得た知見が、次の案件の見積や設計に戻らない"], "pdf": "downloads/ai-usecase-after.pdf", "count": 5}], "boxes": {"s_inq": {"phase": "sales", "lane": "営業・CS", "title": "引き合い", "work": "お客様の相談を受け、課題を聞く", "ai": ["問い合わせ内容を整理し、確認すべき項目を一覧にする", "過去の似た案件を探し、当時の見積と結果を並べる"], "keep": "受けるかどうか、どこまでやるかの見極め"}, "s_survey": {"phase": "sales", "lane": "営業・CS", "title": "現地調査", "work": "設置場所・ライン・電源やエアを確認する", "ai": ["現場で話した内容を、音声から調査票の形に整える", "写真に注記を付け、設計に渡す資料にまとめる"], "keep": "現場の制約に見落としがないかの確認"}, "s_work": {"phase": "sales", "lane": "メカ設計", "title": "ワーク評価", "work": "お客様の製品で、加工や組付けが成り立つかを試す", "ai": ["試作の条件と結果を記録し、成り立つ条件を表にまとめる", "過去の試作記録から、似た製品の結果を探す"], "keep": "工法が成り立つかどうかの判断"}, "s_quote": {"phase": "sales", "lane": "営業・CS", "title": "見積・提案", "work": "範囲と金額を決め、提案書を出す", "ai": ["過去案件の見積と実績を比べ、工数の目安を出す", "提案書と見積の前提条件の下書きを作る"], "keep": "どこまで請けるか、リスクをどう見積もるか"}, "s_alt": {"phase": "sales", "lane": "電気設計", "title": "工法見直し", "work": "成り立たない時に工法を見直す、または受注を見送る", "ai": ["別の工法の候補を、過去の事例から挙げる"], "keep": "見直すか見送るかの判断"}, "o_contract": {"phase": "order", "lane": "営業・CS", "title": "受注・契約", "work": "契約条件を決め、仕様を確定する", "ai": ["契約条件の抜けを確認表で点検する", "打合せの記録から、未決事項と課題の一覧を作る"], "keep": "条件の交渉と最終判断"}, "o_spec": {"phase": "order", "lane": "お客様", "title": "仕様の承認", "work": "お客様が仕様を承認する（関門）", "ai": ["仕様書と打合せ記録の食い違いを洗い出す", "あいまいな表現を指摘し、確認項目を作る"], "keep": "何を約束するかの最終判断"}, "c_plan": {"phase": "concept", "lane": "PM", "title": "日程・予算", "work": "工程表と実行予算を作る", "ai": ["過去案件から工程表のたたき台を作る", "週ごとの進み具合から、遅れの兆しを知らせる"], "keep": "優先順位と人の割り振り"}, "c_mech": {"phase": "concept", "lane": "メカ設計", "title": "メカ構想", "work": "方式と配置を決める", "ai": ["似た設備の構想図を探し、方式ごとの比較表を作る"], "keep": "方式の選定"}, "c_elec": {"phase": "concept", "lane": "電気設計", "title": "電気構想", "work": "盤の構成と安全回路を決める", "ai": ["安全回路の構成を、確認表で点検する", "必要な電源容量の概算を出す"], "keep": "盤構成と安全方式の決定"}, "c_ctrl": {"phase": "concept", "lane": "制御・ソフト", "title": "制御構想", "work": "動作の順番とタクト（1個を作る時間）の配分を決める", "ai": ["動作の順番をタイムチャート（時間ごとの動きの図）に起こす", "タクトの試算をする"], "keep": "タクト配分と動作方式の判断"}, "c_long": {"phase": "concept", "lane": "購買", "title": "長納期品", "work": "納期の長い機種を選ぶ", "ai": ["部品の納期や生産中止の情報を確認する"], "keep": "機種の選定"}, "g_cdr": {"phase": "concept", "lane": "関門", "title": "構想DR", "work": "構想を複数人で審査する（関門）", "ai": ["過去の指摘事項を確認表にして、事前に点検する", "審査の記録から指摘の一覧を作り、担当ごとに振り分ける"], "keep": "構想を通すかどうかの判断"}, "d_mech": {"phase": "detail", "lane": "メカ設計", "title": "メカ詳細", "work": "3D設計・強度の確認・部品表をつくる", "ai": ["3Dデータから部品表を作る", "購入品の型式と在庫を確認する"], "keep": "強度と精度の判断"}, "d_elec": {"phase": "detail", "lane": "電気設計", "title": "電気詳細", "work": "回路図・I/O表（入出力の一覧）・盤図をつくる", "ai": ["I/O表から回路図と盤図の下書きを作る", "配線の本数や部品を集計する"], "keep": "安全回路の最終確認"}, "d_soft": {"phase": "detail", "lane": "制御・ソフト", "title": "ソフト設計", "work": "PLC（設備を動かす制御装置）のプログラムと操作画面を設計する", "ai": ["I/O表からラダー（PLCのプログラム）のひな形を作る", "標準のラダーを再利用し、コメントを付ける"], "keep": "インターロック（危険な動きを止める条件）の設計"}, "d_order": {"phase": "detail", "lane": "購買", "title": "先行手配", "work": "長納期品を先に発注する", "ai": ["部品表と発注状況を照合し、発注漏れを知らせる"], "keep": "前倒しで発注するかの判断"}, "d_appr": {"phase": "detail", "lane": "お客様", "title": "承認図", "work": "お客様が外形と配置を承認する（関門）", "ai": ["前回の図面との差分を一覧にする", "お客様の指摘を記録し、設計の担当へ戻す"], "keep": "外形と配置の妥当性"}, "d_safety": {"phase": "detail", "lane": "PM", "title": "安全の検討", "work": "危険を洗い出し、対策を決める（リスクアセスメント）", "ai": ["過去の事例から、危険の候補を洗い出す下書きを作る"], "keep": "対策の妥当性の判断"}, "g_ddr": {"phase": "detail", "lane": "関門", "title": "詳細DR", "work": "図面とプログラムを複数人で審査する（関門）", "ai": ["図面と確認表を照らし合わせ、事前に点検する", "審査の指摘を記録し、直したかを追いかける"], "keep": "製作に進めるかの判断"}, "m_prog": {"phase": "make", "lane": "制御・ソフト", "title": "プログラム", "work": "プログラムを作り、机上で確認する", "ai": ["保存するたびに前の版と比べ、変わった所を知らせる", "動作の確認項目の一覧を作る"], "keep": "動作が正しいかの判断"}, "m_parts": {"phase": "make", "lane": "購買", "title": "部品手配", "work": "部品を発注し、納期を管理する", "ai": ["部品表から発注リストを作る", "納期の一覧を作り、遅れを知らせる"], "keep": "代替品を使うかの判断"}, "m_machining": {"phase": "make", "lane": "製作・据付", "title": "部品加工", "work": "板金・機械加工をする", "ai": ["加工図から、加工の手順と確認表を作る"], "keep": "加工方法の判断"}, "m_panel": {"phase": "make", "lane": "製作・据付", "title": "盤製作", "work": "制御盤を組み立て、配線する", "ai": ["回路図から配線のチェック表を作る"], "keep": "配線の品質の確認"}, "m_inspect": {"phase": "make", "lane": "購買", "title": "受入検査", "work": "届いた部品と寸法を確かめる", "ai": ["検査の記録を整え、図面との照合表を作る"], "keep": "合否の判断"}, "m_assy": {"phase": "make", "lane": "製作・据付", "title": "組立・配線", "work": "機械・盤・配管を1台にまとめる", "ai": ["写真付きの組立手順書を作る", "組立の記録を音声から整える"], "keep": "図面と実物が合わない時の判断"}, "b_mech": {"phase": "debug", "lane": "メカ設計", "title": "機構の調整", "work": "精度とタクトを調整する", "ai": ["調整した内容を音声から記録に整える", "タクトの計測結果を集計する"], "keep": "調整の勘所"}, "b_elec": {"phase": "debug", "lane": "電気設計", "title": "配線修正", "work": "図面と照合して配線を直す", "ai": ["修正した内容を記録し、図面への反映漏れを防ぐ"], "keep": "修正方法の判断"}, "b_ctrl": {"phase": "debug", "lane": "制御・ソフト", "title": "動作確認", "work": "I/Oチェックから連続運転まで確かめる", "ai": ["不具合の記録から、原因の候補を挙げる", "動作確認の項目表を作り、進み具合を見える形にする"], "keep": "原因の切り分け"}, "b_manual": {"phase": "debug", "lane": "PM", "title": "取説・教材", "work": "取扱説明書と教材を並行して作る", "ai": ["設計資料から取扱説明書の下書きを作る", "操作の手順を動画の台本と教材にする"], "keep": "書いた内容が事実と合っているかの確認"}, "g_fat": {"phase": "debug", "lane": "関門", "title": "社内立会", "work": "出荷前にお客様が動作を確かめる（関門）", "ai": ["検査成績書のひな形を作る", "指摘事項を記録し、是正を追いかける"], "keep": "出荷してよいかの判断"}, "t_ship": {"phase": "site", "lane": "製作・据付", "title": "分解・輸送", "work": "分解・梱包して輸送する", "ai": ["分解の手順と合いマーク（組み戻す位置の印）を写真付きで記録する"], "keep": "輸送方法の判断"}, "t_install": {"phase": "site", "lane": "製作・据付", "title": "搬入・据付", "work": "搬入して芯出し・固定をする", "ai": ["据付の手順書と芯出しの記録を作る"], "keep": "現地の条件への対応"}, "t_cwork": {"phase": "site", "lane": "お客様", "title": "受入れ工事", "work": "お客様側で電源・エアなどを準備する", "ai": ["設備の仕様から、必要な電源・エア・基礎の条件を抜き出し、お客様向けの確認表にする"], "keep": "工事の段取りの判断"}, "t_train": {"phase": "site", "lane": "お客様", "title": "操作教育", "work": "お客様の作業者に操作と保全を教える", "ai": ["操作の手順を教材と理解度テストにする", "受講者の質問の傾向を分析し、教材を補う"], "keep": "相手の理解に合わせた伝え方"}, "t_madj": {"phase": "site", "lane": "メカ設計", "title": "現地調整", "work": "現地で機構を再調整する", "ai": ["社内で調整した記録を、現地ですぐ探せるようにする"], "keep": "現地の条件に合わせた判断"}, "t_start": {"phase": "site", "lane": "制御・ソフト", "title": "現地立上げ", "work": "現地で動かして調整する", "ai": ["社内デバッグの記録を検索できるようにする", "プログラムの変更履歴を残す"], "keep": "現地での判断"}, "g_sat": {"phase": "site", "lane": "関門", "title": "現地検査", "work": "お客様の工場で受入検査をする（関門）", "ai": ["検査の記録と指摘を整理し、是正を追いかける"], "keep": "合格かどうかの判断"}, "n_mass": {"phase": "deliver", "lane": "お客様", "title": "量産立上げ", "work": "量産を立ち上げ、歩留まり（良品の割合）を安定させる", "ai": ["稼働と不良の記録を集計し、原因の候補を挙げる"], "keep": "条件を変えるかの判断"}, "n_support": {"phase": "deliver", "lane": "制御・ソフト", "title": "立上げ支援", "work": "条件出しと調整で量産を支える", "ai": ["条件出しの記録を整え、次の設備に残す"], "keep": "条件の決定"}, "n_docs": {"phase": "deliver", "lane": "PM", "title": "完成図書", "work": "図面・プログラム・資料一式をそろえる", "ai": ["図面・プログラム・部品表の版をそろえ、抜けを点検する"], "keep": "引き渡す内容の確定"}, "g_acc": {"phase": "deliver", "lane": "関門", "title": "検収", "work": "引き渡しを確定する（関門）", "ai": ["引き渡し書類の抜けを点検する"], "keep": "引き渡してよいかの判断"}, "a_ops": {"phase": "after", "lane": "お客様", "title": "運転・保全", "work": "日常点検と改善を続ける", "ai": ["点検の記録を音声から整える", "過去のトラブル記録を検索できるようにする"], "keep": "設備の状態の見極め"}, "a_fail": {"phase": "after", "lane": "営業・CS", "title": "故障対応", "work": "遠隔や駆けつけで故障に対応する", "ai": ["症状から、過去のトラブル事例と原因の候補を探す"], "keep": "原因の切り分けと処置"}, "a_next": {"phase": "after", "lane": "営業・CS", "title": "次の案件", "work": "リピートや横展開につなげる", "ai": ["アフターで得た不具合と改善を、次の見積と設計の確認表に反映する"], "keep": "何を標準にするかの判断"}, "a_mod": {"phase": "after", "lane": "メカ設計", "title": "改造・増設", "work": "品種追加や能力向上のために改造する", "ai": ["元の図面・プログラムと改造案の差分を整理する"], "keep": "改造範囲の判断"}, "a_spare": {"phase": "after", "lane": "購買", "title": "保守部品", "work": "保守部品を用意し、生産中止に対応する", "ai": ["生産中止の部品と代替品の候補を探す"], "keep": "代替品の採用判断"}}, "laneColor": {"お客様": "#6B4FA0", "営業・CS": "#2E7D6B", "PM": "#5A6472", "メカ設計": "#1F6FB0", "電気設計": "#C0841A", "制御・ソフト": "#C2410C", "購買": "#0E7490", "製作・据付": "#475569", "関門": "#E8730C"}}</script>
+</main>
+
+<footer class="c-footer">
+  <div class="c-footer__grid">
+    <div>
+      <div class="c-footer__brand"><img src="images/lorenics-logo.png" alt="" width="899" height="209"><span>ロアニクス株式会社</span></div>
+      <p class="c-footer__desc">製造業の現場から生まれた技術教育事業。人材育成と、社内で教え続けられる仕組みづくりを支援します。</p>
+    </div>
+    <div class="c-footer__col">
+      <div class="c-footer__head">COMPANY</div>
+      〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに南船場ビル205<br>
+      <a href="mailto:lorenics@outlook.jp">lorenics@outlook.jp</a>
+    </div>
+    <div class="c-footer__col">
+      <div class="c-footer__head">MENU</div>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="ai.html">技術教育の仕組みづくり</a></li>
+        <li><a href="plc.html">PLC教育・研修</a></li>
+        <li><a href="advisor.html">FA制御技術顧問</a></li>
+        <li><a href="ai-map.html">AI活用マップ</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="message.html">代表メッセージ</a></li>
+        <li><a href="company.html">会社案内</a></li>
+        <li><a href="contact.html?type=diag">技術伝承の無料診断</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="c-footer__bottom"><span>ロアニクス株式会社 / Lorenics</span><span>© 2026 Lorenics Inc.</span></div>
+</footer>
+</body>
+</html>

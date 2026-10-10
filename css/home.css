@@ -199,3 +199,14 @@
 .hx-saved b {font-family:var(--font-head);font-size:42px;line-height:1.2;color:#fff;}
 .hx-saved b span {font-size:18px;margin-left:6px;}
 @media (max-width:759px) {.hx-saved {grid-template-columns:1fr;} .hx-saved b {font-size:36px;}}
+
+/* AI活用マップへの入口 */
+.hx-maplink {display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:center;margin-top:36px;padding:20px;border:2px solid #12355b;border-radius:6px;background:#fff;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s;}
+.hx-maplink:hover {border-color:#e8730c;transform:translateY(-2px);}
+.hx-maplink img {width:100%;height:auto;display:block;border:1px solid #d9e2ec;border-radius:4px;}
+.hx-maplink-t {display:grid;gap:10px;}
+.hx-maplink-t small {font-size:13px;font-weight:700;color:#b45309;letter-spacing:.04em;}
+.hx-maplink-t b {font-family:var(--font-head);font-weight:900;font-size:clamp(20px,2.2vw,26px);line-height:1.5;}
+.hx-maplink-t span {font-size:14px;color:#3a3c42;line-height:1.85;}
+.hx-maplink-t em {font-style:normal;font-weight:700;color:#1f6fb0;}
+@media (max-width:760px){.hx-maplink{grid-template-columns:1fr;gap:16px;padding:14px;}}
