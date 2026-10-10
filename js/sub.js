@@ -58,6 +58,17 @@
     }
   }
 
+  /* ---------- 公式LINE（URLを入れると全ページのLINEボタンが表示される） ---------- */
+  var LINE_URL = ""; /* 例: "https://lin.ee/xxxxxxx"。空のままならLINEボタンは出さない */
+  if (LINE_URL) {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-line]"), function (a) {
+      a.href = LINE_URL;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.hidden = false;
+    });
+  }
+
   /* ---------- お問い合わせフォーム ---------- */
   var form = document.getElementById("contact-form");
   if (!form) return;
@@ -67,6 +78,7 @@
     plc: "PLC教育・研修",
     advisor: "FA制御技術顧問",
     edu: "教育システム導入・伴走",
+    diag: "技術伝承の無料診断（オンライン30分）",
     ai: "AI研修・業務改善",
     other: "取材・PR・その他"
   };
@@ -75,6 +87,19 @@
     var t = new URLSearchParams(location.search).get("type");
     if (t && TYPES[t] && select) select.value = TYPES[t];
   } catch (e) { /* 古いブラウザは初期値のまま */ }
+
+  /* 無料診断を選んだときは、ご相談内容の書き方の例を診断向けに切り替える */
+  var message = form.querySelector("[name='ご相談内容']");
+  var diagHint = document.getElementById("hint-diag");
+  var defaultPlaceholder = message ? message.placeholder : "";
+  function syncDiag() {
+    var isDiag = select && select.value === TYPES.diag;
+    if (diagHint) diagHint.hidden = !isDiag;
+    if (message) message.placeholder = isDiag
+      ? "例：保全の段取りを若手に教えたい／教えられる人が1人しかいない　など\n診断のご希望日時（候補を2〜3つ）もご記入ください"
+      : defaultPlaceholder;
+  }
+  if (select) { select.addEventListener("change", syncDiag); syncDiag(); }
 
   var status = document.getElementById("form-status");
   var button = form.querySelector("button[type='submit']");
