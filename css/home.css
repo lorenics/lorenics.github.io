@@ -110,3 +110,86 @@
  .home-contact .c-btn {font-size:15px;padding-inline:12px;width:100%;}
 }
 @media (prefers-reduced-motion:reduce) {.p-home {scroll-behavior:auto;} .p-home .c-btn {transition:none;}}
+
+/* ===== 製造業版の業務仕組み化 2026-10-10 ===== */
+.hx-sp {display:none;}
+.home-proof dl.hx-proof4 {grid-template-columns:1.4fr 1.1fr .9fr 1fr;}
+.home-proof dl.hx-proof4 dd span {font-size:15px;}
+.hx-approach-lead {font-size:16px;line-height:1.9;color:#3a3c42;margin:-6px 0 0;}
+.hx-issues {list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;}
+.hx-issues li {position:relative;padding:16px 0 16px 34px;border-bottom:1px solid #d9e4ee;font-size:17px;font-weight:700;line-height:1.6;}
+.hx-issues li::before {content:"×";position:absolute;left:4px;top:15px;color:#9aa6b2;font-weight:700;}
+.hx-pillars {list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.hx-pillars li {background:#fff;border-top:2px solid #17181c;padding:24px;}
+.hx-pillars span {font-family:var(--font-mono);font-size:14px;font-weight:700;color:#1f6fb0;}
+.hx-pillars b {display:block;font-family:var(--font-head);font-size:21px;line-height:1.5;margin:8px 0 10px;}
+.hx-pillars p {margin:0;font-size:15px;line-height:1.9;color:#4c6072;}
+.hx-core {margin-top:40px;background:#17181c;color:#fff;padding:clamp(28px,4vw,44px);}
+.hx-core-label {margin:0 0 12px;font-size:14px;font-weight:700;letter-spacing:.08em;color:#a8cef0;}
+.hx-core-main {margin:0;font-family:var(--font-head);font-weight:900;font-size:clamp(23px,2.8vw,34px);line-height:1.55;}
+.hx-core-main span {color:#7fc0f5;}
+.hx-core-sub {margin:18px 0 0;font-size:15px;line-height:1.95;color:#c9d2dc;}
+.hx-legend {display:flex;gap:10px;margin:-8px 0 22px;}
+.hx-tag {display:inline-block;padding:3px 10px;font-size:13px;font-weight:700;line-height:1.6;white-space:nowrap;}
+.hx-tag--sys {background:#e3f0fb;color:#174e7c;border:1px solid #9cc4e6;}
+.hx-tag--human {background:#17181c;color:#fff;border:1px solid #17181c;}
+.hx-flow + .hx-flow {margin-top:40px;}
+.hx-flow h3 {font-family:var(--font-head);font-size:22px;margin:0 0 14px;}
+.hx-table {width:100%;border-collapse:collapse;background:#fff;font-size:15px;line-height:1.7;}
+.hx-table th,.hx-table td {padding:14px 16px;border-bottom:1px solid #d9e4ee;text-align:left;vertical-align:middle;}
+.hx-table thead th {background:#0e2a47;color:#fff;font-size:13px;font-weight:700;border-bottom:0;}
+.hx-table tbody th {width:22%;font-weight:700;}
+.hx-table td:last-child {width:110px;}
+.hx-table tr.is-human {background:#f2f3f5;}
+.hx-case {background:#fff;border-top:3px solid #17181c;padding:clamp(24px,4vw,40px);}
+.hx-case-tag {display:inline-block;margin:0 0 10px;padding:3px 12px;background:#e3f0fb;color:#174e7c;font-size:13px;font-weight:700;}
+.hx-case h3 {margin:0 0 14px;font-family:var(--font-head);font-size:clamp(22px,2.6vw,30px);line-height:1.5;}
+.hx-case-lead {margin:0 0 26px;font-size:15px;line-height:1.95;color:#3a3c42;}
+.hx-calc {display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);align-items:stretch;gap:0;}
+.hx-calc-col {border:1px solid #c9d6e3;padding:22px 24px;}
+.hx-calc-col--after {border:2px solid #1f6fb0;background:#f6fafe;}
+.hx-calc-head {margin:0 0 12px;font-weight:700;font-size:15px;}
+.hx-calc-line {margin:0;font-size:15px;line-height:1.9;color:#3a3c42;}
+.hx-calc-total {margin:10px 0 6px;font-family:var(--font-head);font-weight:900;font-size:44px;line-height:1.2;color:#17181c;}
+.hx-calc-total span {font-size:18px;margin-left:6px;}
+.hx-calc-col--after .hx-calc-total {color:#1f6fb0;}
+.hx-pending {color:#b23b3b !important;font-size:28px !important;}
+.hx-calc-note {margin:0;font-size:13px;color:#565860;line-height:1.8;}
+.hx-calc-arrow {display:grid;place-items:center;font-size:26px;color:#1f6fb0;}
+.hx-case-more {margin:18px 0 0;font-size:14px;color:#565860;}
+.hx-reasons {list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px;}
+.hx-reasons li {border-top:3px solid #1f6fb0;padding-top:18px;}
+.hx-reasons span {font-family:var(--font-mono);font-size:14px;font-weight:700;color:#1f6fb0;}
+.hx-reasons b {display:block;font-family:var(--font-head);font-size:21px;line-height:1.5;margin:6px 0 8px;}
+.hx-reasons p {margin:0;font-size:15px;line-height:1.9;color:#4c6072;}
+.hx-inhouse {list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;counter-reset:none;}
+.hx-inhouse li {position:relative;border:1px solid #d9e4ee;padding:22px 24px;}
+.hx-inhouse li:not(:last-child)::after {content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:#1f6fb0;font-size:18px;}
+.hx-inhouse span {font-size:13px;font-weight:700;color:#1f6fb0;}
+.hx-inhouse b {display:block;font-family:var(--font-head);font-size:21px;margin:6px 0 8px;}
+.hx-inhouse p {margin:0;font-size:15px;line-height:1.85;color:#4c6072;}
+.hx-assets {margin:22px 0 0;padding:16px 20px;border-left:3px solid #1f6fb0;background:#f3f7fb;font-size:15px;line-height:1.8;}
+.hx-assets b {margin-right:14px;color:#1f6fb0;}
+@media (max-width:759px) {
+ .hx-sp {display:inline;}
+ .home-proof dl.hx-proof4 {grid-template-columns:1fr;}
+ .hx-approach-lead {font-size:15px;}
+ .hx-approach-lead br {display:none;}
+ .hx-issues {grid-template-columns:1fr;gap:0;}
+ .hx-issues li {font-size:16px;}
+ .hx-pillars,.hx-reasons,.hx-inhouse {grid-template-columns:1fr;}
+ .hx-inhouse li:not(:last-child)::after {content:"↓";right:auto;left:24px;top:auto;bottom:-24px;transform:none;}
+ .hx-inhouse {gap:30px;}
+ .hx-core-main br,.hx-core-sub br {display:none;}
+ .hx-table thead {display:none;}
+ .hx-table,.hx-table tbody,.hx-table tr {display:block;}
+ .hx-table tr {padding:12px 14px;border-bottom:1px solid #d9e4ee;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;}
+ .hx-table th,.hx-table td {border:0;padding:0;width:auto !important;}
+ .hx-table tbody th {grid-column:1;}
+ .hx-table td:last-child {grid-column:2;grid-row:1;}
+ .hx-table td:nth-child(2) {grid-column:1 / -1;font-size:14px;color:#4c6072;}
+ .hx-calc {grid-template-columns:1fr;}
+ .hx-calc-arrow {transform:rotate(90deg);padding:6px 0;}
+ .hx-calc-total {font-size:38px;}
+ .hx-case-lead br {display:none;}
+}
