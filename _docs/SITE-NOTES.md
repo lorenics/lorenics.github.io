@@ -66,3 +66,9 @@
 - 件名は「【ロアニクスWeb】資料請求：{工程}編」。押した箇所も通知に入る
 - PDFは静的ファイルなので、URLを知っていればフォームなしでも開ける
 - css/ai-map.css, js/ai-map.js。トップの #flows 下とフッターMENUからリンク
+
+## 2026-10-11 ライブデモ（b2b-funnel-phase1・未公開）
+- demo.html：3Dシミュレータ（押すとiframeで本物を読み込む。plc-mech3d.vercel.app は埋め込み可）とラダーカルテ（plc-knowledge-app.vercel.app。CSPのframe-ancestorsがUTAGEと自分だけなので埋め込めず、新しいタブで開く）
+- ラダーカルテの図は〔体験用CSVで試す〕の結果（人身2・設備破損0・品質2・読みやすさ6、10件中新人7件）を写したもの。アプリ側の結果が変わったら合わせて直す
+- 会員サイト・ポケットシミュレータはURL待ち。フッターMENUに「AI活用マップ」「ライブデモ」を追加
+- AutoCompilerという名前はもう使わない（今はラダーカルテ）

@@ -1,0 +1,85 @@
+/* ライブデモ（demo.html）専用 */
+.demo-hero { padding: 46px 0 34px; background: linear-gradient(180deg, #f6f9fc, #fff 85%); }
+.demo-hero h1 { margin: 0; font-family: var(--font-head); font-weight: 900; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.38; }
+.demo-hero h1 span { color: #1f6fb0; }
+.demo-hero .svc-intro { margin-bottom: 18px; }
+.demo-index { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.demo-index a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border: 1px solid #c9d3de; border-radius: 99px; background: #fff; color: #17181c; font-weight: 700; font-size: 14px; text-decoration: none; }
+.demo-index a:hover { border-color: #1f6fb0; color: #1f6fb0; }
+.demo-index i { font-style: normal; font-size: 11px; font-weight: 700; color: #fff; background: #e8730c; border-radius: 3px; padding: 1px 6px; }
+
+.demo-sec { padding: clamp(40px, 6vw, 72px) 0; border-top: 1px solid #e4e7ec; }
+.demo-sec:nth-of-type(even) { background: #f6f9fc; }
+.demo-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.demo-k { margin: 0 0 8px; font-size: 13px; font-weight: 700; color: #b45309; letter-spacing: .04em; }
+.demo-h { margin: 0 0 6px; font-family: var(--font-head); font-size: clamp(24px, 2.6vw, 32px); font-weight: 900; line-height: 1.4; }
+.demo-lead { margin: 0 0 18px; font-size: 17px; font-weight: 700; color: #1f6fb0; line-height: 1.7; }
+.demo-p { margin: 0 0 18px; color: #3a3c42; line-height: 1.95; font-size: 15px; }
+.demo-try { margin: 0 0 18px; padding: 16px 18px; background: #fff; border: 1px solid #d9e2ec; border-left: 5px solid #e8730c; border-radius: 4px; }
+.demo-try b { display: block; margin-bottom: 8px; font-size: 14px; }
+.demo-try ol { margin: 0; padding-left: 1.4em; line-height: 1.9; font-size: 15px; }
+.demo-use { margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 8px; }
+.demo-use li { position: relative; padding-left: 22px; line-height: 1.8; font-size: 15px; }
+.demo-use li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 9px; height: 9px; background: #1f6fb0; border-radius: 2px; }
+.demo-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.demo-note { margin: 10px 0 0; font-size: 12.5px; color: #6b7280; line-height: 1.7; }
+
+/* 3Dシミュレータ：押すまで読み込まない */
+.demo-embed { position: relative; border-radius: 8px; overflow: hidden; background: #2b3038; aspect-ratio: 16 / 10; box-shadow: 0 10px 30px rgba(18, 53, 91, .18); }
+.demo-embed svg { display: block; width: 100%; height: 100%; }
+.demo-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
+.demo-embed.is-live { aspect-ratio: auto; height: min(78vh, 720px); }
+.demo-play { position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; border: 0; border-radius: 99px; background: #e8730c; color: #fff; font: inherit; font-size: 17px; font-weight: 900; cursor: pointer; box-shadow: 0 8px 24px rgba(0, 0, 0, .35); }
+.demo-play:hover { background: #d4650a; }
+.demo-play:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.demo-play span { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #fff; color: #e8730c; font-size: 13px; }
+.demo-embed-cap { margin: 8px 0 0; font-size: 12.5px; color: #6b7280; }
+
+/* ラダーカルテ：体験用データの結果（実物の画面の要約） */
+.karte { background: #fff; border: 1px solid #d9e2ec; border-radius: 8px; box-shadow: 0 10px 30px rgba(18, 53, 91, .12); overflow: hidden; }
+.karte-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 18px; border-bottom: 1px solid #e4e7ec; }
+.karte-bar b { font-size: 15px; }
+.karte-bar span { font-size: 12px; color: #2e7d32; font-weight: 700; background: #e8f5e9; border-radius: 99px; padding: 3px 10px; }
+.karte-body { padding: 16px 18px 18px; }
+.karte-k { margin: 0 0 10px; font-size: 13px; font-weight: 700; color: #3a4250; }
+.karte-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 0 0 14px; padding: 0; list-style: none; }
+.karte-tiles li { border-radius: 6px; padding: 10px 8px; text-align: center; border: 1px solid; }
+.karte-tiles b { display: block; font-size: 26px; line-height: 1.1; font-family: var(--font-head); }
+.karte-tiles small { display: block; margin-top: 4px; font-size: 11.5px; font-weight: 700; line-height: 1.35; }
+.karte-tiles .t1 { background: #fdecec; border-color: #f3b9b9; color: #b42318; }
+.karte-tiles .t2 { background: #fff3e6; border-color: #f6c89f; color: #b45309; }
+.karte-tiles .t3 { background: #fffae6; border-color: #f2dc8a; color: #8a6100; }
+.karte-tiles .t4 { background: #eef5fc; border-color: #c7dcf1; color: #1f5f99; }
+.karte-rows { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.karte-rows li { display: grid; grid-template-columns: 74px 1fr auto; gap: 10px; align-items: center; padding: 9px 10px; border: 1px solid #e4e7ec; border-radius: 6px; font-size: 13.5px; }
+.karte-rows em { font-style: normal; font-size: 11.5px; font-weight: 700; text-align: center; border-radius: 3px; padding: 2px 0; color: #fff; }
+.karte-rows .r1 em { background: #b42318; }
+.karte-rows .r3 em { background: #a16207; }
+.karte-rows .r4 em { background: #1f6fb0; }
+.karte-rows span small { display: block; color: #6b7280; font-size: 11.5px; }
+.karte-rows i { font-style: normal; font-size: 11.5px; color: #3a4250; white-space: nowrap; }
+.karte-sum { margin: 12px 0 0; padding: 10px 12px; background: #f4f7fb; border-radius: 6px; font-size: 13.5px; font-weight: 700; }
+.karte-papers { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.karte-papers div { border: 1px dashed #c9d3de; border-radius: 6px; padding: 9px 10px; font-size: 12.5px; line-height: 1.6; }
+.karte-papers b { display: block; font-size: 13px; }
+.karte-cap { margin: 8px 0 0; font-size: 12.5px; color: #6b7280; }
+
+.demo-eye { background: #17181c; color: #fff; padding: clamp(26px, 4vw, 40px); border-radius: 4px; }
+.demo-eye p { margin: 0; }
+.demo-eye .k { font-size: 13px; font-weight: 700; color: #a8cef0; letter-spacing: .06em; margin-bottom: 10px; }
+.demo-eye .b { font-family: var(--font-head); font-weight: 900; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.6; }
+.demo-eye .s { margin-top: 12px; color: #c9d2dc; line-height: 1.9; font-size: 15px; }
+
+@media (max-width: 860px) {
+  .demo-grid { grid-template-columns: 1fr; }
+  .demo-visual { order: -1; }
+}
+@media (max-width: 759px) {
+  .demo-play { display: none; }
+  .demo-index i { display: none; }
+  .demo-embed-cap .pc { display: none; }
+  .karte-tiles b { font-size: 22px; }
+  .karte-rows li { grid-template-columns: 64px 1fr; }
+  .karte-rows i { grid-column: 2; }
+  .demo-actions .c-btn { width: 100%; justify-content: center; }
+}
