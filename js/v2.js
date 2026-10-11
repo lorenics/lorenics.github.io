@@ -9,6 +9,14 @@
     items.forEach(el => io.observe(el));
   }
 
+  const menu = document.querySelector('.v2-menu');
+  const drawer = document.getElementById('v2-drawer');
+  if (menu && drawer) {
+    const close = () => { drawer.hidden = true; menu.setAttribute('aria-expanded', 'false'); };
+    menu.addEventListener('click', () => { const open = drawer.hidden; drawer.hidden = !open; menu.setAttribute('aria-expanded', String(open)); });
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  }
+
   const float = document.querySelector('[data-float]');
   if (!float) return;
   let closed = false;

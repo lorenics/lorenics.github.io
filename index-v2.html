@@ -30,7 +30,16 @@
    <a href="#faq">FAQ</a>
   </nav>
   <a class="v2-pill v2-pill--sm" href="contact.html?type=diag">無料診断 <span aria-hidden="true">→</span></a>
+  <button class="v2-menu" type="button" aria-expanded="false" aria-controls="v2-drawer"><span></span><span></span><span class="u-vh">メニュー</span></button>
  </div>
+ <nav class="v2-drawer" id="v2-drawer" aria-label="メニュー" hidden>
+  <a href="#service">遡る・渡す・回す</a>
+  <a href="#cases">導入事例</a>
+  <a href="#reasons">選ばれる理由</a>
+  <a href="#profile">代表紹介</a>
+  <a href="#faq">よくある質問</a>
+  <a class="v2-pill" href="contact.html?type=diag">技術伝承の無料診断を申し込む</a>
+ </nav>
 </header>
 
 <main id="main">
@@ -45,6 +54,41 @@
   <a class="v2-pill" href="contact.html?type=diag">技術伝承の無料診断を申し込む <span aria-hidden="true">→</span></a>
   <p class="v2-hero__name">社名の「<b>Lore</b>」には「伝承」の想いを込めています。</p>
  </div>
+ <figure class="v2-lineage" aria-label="技術の系譜の図。設備の生い立ちから、改造の履歴・過去トラ・ベテランの判断へ遡り、聞き取りを経て、若手が今使える形で渡す。渡したものは社内で回して足していく">
+  <svg viewBox="0 0 520 600" role="img" aria-hidden="true">
+   <defs>
+    <clipPath id="ln-photo"><circle cx="260" cy="392" r="58"/></clipPath>
+    <marker id="ln-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff8a5c"/></marker>
+    <marker id="ln-arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7cc4ff"/></marker>
+   </defs>
+   <g class="ln-lines" fill="none" stroke="#7cc4ff" stroke-width="1.6">
+    <path class="ln-d d1" d="M260 92V134M90 134H430M90 134V166M260 134V166M430 134V166"/>
+    <path class="ln-d d2" d="M90 248V290H430V248M260 248V290M260 290V334"/>
+    <path class="ln-d d3" d="M260 450V492"/>
+   </g>
+   <path class="ln-d d4 ln-cause" d="M140 252Q172 286 212 254" fill="none" marker-end="url(#ln-arr)"/>
+   <text class="ln-n n4 redtxt" x="176" y="284">根拠</text>
+   <path class="ln-d d5 ln-loop" d="M478 548C512 470 512 150 404 50" fill="none" stroke="#7cc4ff" stroke-width="1.4" stroke-dasharray="5 6" marker-end="url(#ln-arr-b)"/>
+   <path class="ln-d d4 ln-pencil" d="M262 156C326 154 352 176 350 208 348 244 300 260 254 258 206 256 170 240 172 206 174 176 210 158 270 160" fill="none"/>
+
+   <g class="ln-n n1"><rect x="150" y="28" width="220" height="64" rx="12"/><text x="260" y="56" class="t">設備の生い立ち</text><text x="260" y="77" class="s">導入の目的・当時の制約</text></g>
+   <g class="ln-n n2"><rect x="10" y="166" width="160" height="82" rx="12"/><text x="90" y="198" class="t">改造の履歴</text><text x="90" y="220" class="s">いつ・何を・なぜ</text><text x="90" y="238" class="s">変えたか</text></g>
+   <g class="ln-n n2"><rect x="180" y="166" width="160" height="82" rx="12"/><text x="260" y="198" class="t">過去トラ</text><text x="260" y="220" class="s">結論だけでなく</text><text x="260" y="238" class="s">経過と根拠まで</text></g>
+   <g class="ln-n n2"><rect x="350" y="166" width="160" height="82" rx="12"/><text x="430" y="198" class="t">ベテランの判断</text><text x="430" y="220" class="s">聞き取りで言葉に</text><text x="430" y="238" class="s">した「ここを見る」</text></g>
+   <g class="ln-n n3">
+    <circle cx="260" cy="392" r="62" class="ring"/>
+    <image href="images/home/hero.webp" x="150" y="320" width="230" height="153" preserveAspectRatio="xMidYMid slice" clip-path="url(#ln-photo)"/>
+    <text x="352" y="388" class="t l">聞き取り</text><text x="352" y="408" class="s l">利害のない外部の立場で</text>
+   </g>
+   <g class="ln-n n4"><rect x="100" y="492" width="320" height="80" rx="14" class="out"/><text x="260" y="526" class="t o">若手が今使える形で渡す</text><text x="260" y="550" class="s o">教材・確認表・更新の手引き</text></g>
+   <g class="ln-tags">
+    <text x="40" y="126" class="tag ln-n n2">遡る</text>
+    <text x="40" y="484" class="tag ln-n n4">渡す</text>
+    <text x="482" y="300" class="tag ln-n n5" transform="rotate(90 482 300)">回す</text>
+   </g>
+  </svg>
+  <figcaption>技術の系譜（構成のイメージ）</figcaption>
+ </figure>
  <dl class="v2-wrap v2-hero__proof">
   <div><dt>パナソニックの生産設備開発部門に</dt><dd>17<span>年</span></dd></div>
   <div><dt>技術者の指導</dt><dd>500<span>名・500社</span></dd></div>
@@ -58,10 +102,10 @@
 <section class="v2-facts" aria-label="製造業の技能継承の現状">
  <div class="v2-wrap">
   <dl class="v2-facts__grid v2-in">
-   <div><dt>技能継承を重視している製造業</dt><dd>91.1<span>%</span></dd></div>
-   <div class="is-gap"><dt>技能継承が「うまくいっている」</dt><dd>33.3<span>%</span></dd><small>3社に1社</small></div>
-   <div class="is-gap"><dt>継承すべき技能の見える化に取り組んでいる</dt><dd>31.2<span>%</span></dd></div>
-   <div><dt>取組の1位は「高齢者に継続勤務してもらう」</dt><dd>54.8<span>%</span></dd><small>先送りが最多</small></div>
+   <div><svg class="v2-ring" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="30"/><circle class="v" cx="36" cy="36" r="30" stroke-dasharray="171.7 188.5"/></svg><dt>技能継承を重視している製造業</dt><dd>91.1<span>%</span></dd></div>
+   <div class="is-gap"><svg class="v2-ring" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="30"/><circle class="v" cx="36" cy="36" r="30" stroke-dasharray="62.8 188.5"/></svg><dt>技能継承が「うまくいっている」</dt><dd>33.3<span>%</span></dd><small>3社に1社</small></div>
+   <div class="is-gap"><svg class="v2-ring" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="30"/><circle class="v" cx="36" cy="36" r="30" stroke-dasharray="58.8 188.5"/></svg><dt>継承すべき技能の見える化に取り組んでいる</dt><dd>31.2<span>%</span></dd></div>
+   <div><svg class="v2-ring" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="30"/><circle class="v" cx="36" cy="36" r="30" stroke-dasharray="103.3 188.5"/></svg><dt>取組の1位は「高齢者に継続勤務してもらう」</dt><dd>54.8<span>%</span></dd><small>先送りが最多</small></div>
   </dl>
   <p class="v2-facts__src">出典：労働政策研究・研修機構「ものづくり産業における人材確保・定着と技能継承に関する調査」（2026年5月公表　製造業・従業員30人以上の4,342社が回答）</p>
  </div>
@@ -73,11 +117,11 @@
   <p class="v2-en">TROUBLE</p>
   <h2 class="v2-h2 v2-h2--center">こんなお悩みありませんか？</h2>
   <ul class="v2-trouble__list">
-   <li class="v2-in">改造の理由を知っている人が　辞めてしまった</li>
-   <li class="v2-in">過去トラ（過去のトラブルの記録）に　結論しか残っていない</li>
-   <li class="v2-in">若手が「なぜそうなっているか」を知らずに設備を触っている</li>
-   <li class="v2-in">手順書やマニュアルを作っても　定着せず放置される</li>
-   <li class="v2-in">ベテラン1人が教えていて　手が回らない</li>
+   <li class="v2-in"><svg class="v2-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h5v16h-5"/><circle cx="8" cy="6.5" r="2"/><path d="M8 9v6l-2 5M8 12l3 2M8 15l2 5"/><path d="M15 12h-3"/></svg><span>改造の理由を知っている人が　辞めてしまった</span></li>
+   <li class="v2-in"><svg class="v2-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><path d="M9 9h6" opacity=".35"/><path d="M9 12h6" opacity=".35"/><path d="M9 15h3" opacity=".35"/><path d="M9 18h6" stroke-width="2.4"/></svg><span>過去トラ（過去のトラブルの記録）に　結論しか残っていない</span></li>
+   <li class="v2-in"><svg class="v2-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="14" r="3"/><path d="M12 9v1.5M12 17.5V19M7 14H5.5M18.5 14H17M8.5 10.5l-1-1M16.5 18.5l-1-1M15.5 10.5l1-1M7.5 18.5l1-1"/><path d="M9.5 4.2a2.5 2.5 0 1 1 3.4 2.3c-.6.3-.9.7-.9 1.3"/></svg><span>若手が「なぜそうなっているか」を知らずに設備を触っている</span></li>
+   <li class="v2-in"><svg class="v2-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20V8h3v12M10 20V6h3v14M14.5 20l2-13 3 .5-2 12.5"/><path d="M5 4.5h2M11 3h2M17 3.5h2" opacity=".5"/></svg><span>手順書やマニュアルを作っても　定着せず放置される</span></li>
+   <li class="v2-in"><svg class="v2-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="7" r="2.6"/><path d="M3 20v-4.5A4 4 0 0 1 11 15.5V20"/><circle cx="15" cy="10" r="1.6"/><circle cx="19.5" cy="10" r="1.6"/><circle cx="17.2" cy="14.6" r="1.6"/><path d="M13 20c0-1.6 1-2.6 2-2.9M21.5 20c0-1.6-1-2.6-2-2.9"/></svg><span>ベテラン1人が教えていて　手が回らない</span></li>
   </ul>
  </div>
 </section>
@@ -85,7 +129,7 @@
 <!-- 問い -->
 <section class="v2-ask">
  <div class="v2-wrap v2-in">
-  <p class="v2-ask__q">御社の設備で　いちばん古い改造の理由を<br>説明できる人は　まだ社内にいますか</p>
+  <p class="v2-ask__q">御社の設備で　いちばん古い改造の理由を<br>説明できる人は　<span class="v2-redpen">まだ社内にいますか<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 13C70 6 160 5 296 9M30 17C110 12 200 12 270 14"/></svg></span></p>
   <p class="v2-ask__a">いるうちに遡っておけば　技術は資産として残ります。<br>いなくなってからでは　報告書と図面から推し量るしかありません。</p>
  </div>
 </section>
@@ -99,9 +143,9 @@
    <p class="v2-lead">シミュレータや教材は手段です。先に　御社の技術の過去を技術者が読み解き　何を残すかを決めます。</p>
   </div>
 
-  <article class="v2-svc v2-in">
+  <article class="v2-svc v2-in" data-kanji="遡">
    <div class="v2-svc__text">
-    <p class="v2-tagpill">STEP 1　調査・整理</p>
+    <p class="v2-rung" aria-hidden="true"><svg viewBox="0 0 120 24"><path d="M0 12H34M34 3V21M44 3V21M44 12H78"/><path d="M84 4A10 10 0 0 0 84 20M100 4A10 10 0 0 1 100 20"/><path d="M78 12H82M102 12H120"/></svg></p><p class="v2-tagpill">STEP 1　調査・整理</p>
     <h3 class="v2-svc__title">遡る</h3>
     <p>過去トラ・改造履歴・図面の赤入れ・ラダー（PLCのプログラム）の変更の理由を　設備を作ってきた技術者が読みます。ベテランには「なぜ」を聞き　背景にある失敗まで引き出します。</p>
     <p class="v2-svc__out"><small>出てくるもの</small>御社の技術の系譜　なぜ今の形になったかの一覧</p>
@@ -135,9 +179,9 @@
    </div>
   </article>
 
-  <article class="v2-svc v2-svc--rev v2-in">
+  <article class="v2-svc v2-svc--rev v2-in" data-kanji="渡">
    <div class="v2-svc__text">
-    <p class="v2-tagpill">STEP 2　教育・伴走</p>
+    <p class="v2-rung" aria-hidden="true"><svg viewBox="0 0 120 24"><path d="M0 12H34M34 3V21M44 3V21M44 12H78"/><path d="M84 4A10 10 0 0 0 84 20M100 4A10 10 0 0 1 100 20"/><path d="M78 12H82M102 12H120"/></svg></p><p class="v2-tagpill">STEP 2　教育・伴走</p>
     <h3 class="v2-svc__title">渡す</h3>
     <p>若手がどこまで分かっているかを確かめ　理解度に合わせた教材と確認の仕組みにします。人に残す判断と仕組みに任せる作業の線を引きます。</p>
     <p class="v2-svc__out"><small>出てくるもの</small>教材・確認表・理解度テスト（会員サイトやシミュレータはここの道具）</p>
@@ -156,9 +200,9 @@
    </div>
   </article>
 
-  <article class="v2-svc v2-in">
+  <article class="v2-svc v2-in" data-kanji="回">
    <div class="v2-svc__text">
-    <p class="v2-tagpill">STEP 3　内製化</p>
+    <p class="v2-rung" aria-hidden="true"><svg viewBox="0 0 120 24"><path d="M0 12H34M34 3V21M44 3V21M44 12H78"/><path d="M84 4A10 10 0 0 0 84 20M100 4A10 10 0 0 1 100 20"/><path d="M78 12H82M102 12H120"/></svg></p><p class="v2-tagpill">STEP 3　内製化</p>
     <h3 class="v2-svc__title">回す</h3>
     <p>運用しながら　社内の担当者が系譜と教材を自分で足せる状態にします。背景の共有と動機づけまで設計し　今の業務に組み込みます。</p>
     <p class="v2-svc__out"><small>出てくるもの</small>御社だけで更新できる仕組み・運用の手引き・直せる担当者</p>
@@ -198,6 +242,10 @@
    <p class="v2-tagpill">技術教育　PLC</p>
    <h3>PLCを100名に教える時間を　仕組みに置き換えた</h3>
    <p class="v2-case__lead">1人ずつ付き添って教えると　100名で24,000時間。<br>講師の頭の中にある教え方を2年かけて教材・課題・テストに置き換え　付き添う時間を「質問に答える所」だけにしました。</p>
+   <div class="v2-bars" aria-hidden="true">
+    <div class="v2-bars__row"><span>1人ずつ付き添う</span><i style="--w:100%"></i><b>24,000時間</b></div>
+    <div class="v2-bars__row is-after"><span>仕組みに置き換える</span><i style="--w:4.5%"></i><b>約1,070時間</b></div>
+   </div>
    <div class="v2-calc">
     <div class="v2-calc__col">
      <p class="v2-calc__head">1人ずつ付き添う場合</p>
@@ -227,10 +275,10 @@
   <p class="v2-en v2-en--center">WHY CHOOSE LORENICS</p>
   <h2 class="v2-h2 v2-h2--center v2-h2--line">遡って読める技術者が　定着まで設計する</h2>
   <ol class="v2-why__list">
-   <li class="v2-in"><div class="v2-why__img" style="--img:url(../images/edu/routes-v2.webp);--pos:0% 50%"></div><div class="v2-why__body"><span class="v2-why__n">01</span><h3>社内の利害関係がない立場で　<em>「現場の本音」</em>を聞ける</h3><p>上長と現場の間に入り　立場を気にせず話せる場をつくります。500社以上の相談で身につけた聞き方で　現場が言えずにいる困りごとを引き出します。</p></div></li>
-   <li class="v2-in"><div class="v2-why__img" style="--img:url(../images/edu/comparison-v2.webp);--pos:100% 50%"></div><div class="v2-why__body"><span class="v2-why__n">02</span><h3>手順書を作って終わりではなく　<em>「定着まで設計」</em>する</h3><p>教育工学と行動経済学をもとに　背景の共有と動機づけまで組み込みます。職種も経歴も違う500名を教えてきた型です。</p></div></li>
-   <li class="v2-in"><div class="v2-why__img" style="--img:url(../images/home/services.webp);--pos:50% 40%;--size:300%"></div><div class="v2-why__body"><span class="v2-why__n">03</span><h3>カスタム設備17年の　<em>「広く深い知見」</em></h3><p>パナソニックの生産設備開発部門で17年。毎回お客様も仕様も変わる設備を手がけてきたため　報告書や図面の「省かれたところ」が読めます。</p></div></li>
-   <li class="v2-in"><div class="v2-why__img" style="--img:url(../images/home/hero.webp);--pos:50% 50%;--size:cover"></div><div class="v2-why__body"><span class="v2-why__n">04</span><h3>AIと技術顧問で　<em>「今も現場に入っている」</em></h3><p>技術顧問として約12社に横断的に入り　AI推進リーダーとAIエンジニアの経験で　読み解いたものを教材と仕組みに落とすところまで担います。</p></div></li>
+   <li class="v2-in"><div class="v2-why__img"><div class="v2-why__photo" style="--img:url(../images/edu/routes-v2.webp);--pos:0% 50%"></div></div><div class="v2-why__body"><span class="v2-why__n">01</span><h3>社内の利害関係がない立場で　<em>「現場の本音」</em>を聞ける</h3><p>上長と現場の間に入り　立場を気にせず話せる場をつくります。500社以上の相談で身につけた聞き方で　現場が言えずにいる困りごとを引き出します。</p></div></li>
+   <li class="v2-in"><div class="v2-why__img"><div class="v2-why__photo" style="--img:url(../images/edu/comparison-v2.webp);--pos:100% 50%"></div></div><div class="v2-why__body"><span class="v2-why__n">02</span><h3>手順書を作って終わりではなく　<em>「定着まで設計」</em>する</h3><p>教育工学と行動経済学をもとに　背景の共有と動機づけまで組み込みます。職種も経歴も違う500名を教えてきた型です。</p></div></li>
+   <li class="v2-in"><div class="v2-why__img"><div class="v2-why__photo" style="--img:url(../images/home/services.webp);--pos:50% 40%;--size:300%"></div></div><div class="v2-why__body"><span class="v2-why__n">03</span><h3>カスタム設備17年の　<em>「広く深い知見」</em></h3><p>パナソニックの生産設備開発部門で17年。毎回お客様も仕様も変わる設備を手がけてきたため　報告書や図面の「省かれたところ」が読めます。</p></div></li>
+   <li class="v2-in"><div class="v2-why__img"><div class="v2-why__photo" style="--img:url(../images/home/hero.webp);--pos:50% 50%;--size:cover"></div></div><div class="v2-why__body"><span class="v2-why__n">04</span><h3>AIと技術顧問で　<em>「今も現場に入っている」</em></h3><p>技術顧問として約12社に横断的に入り　AI推進リーダーとAIエンジニアの経験で　読み解いたものを教材と仕組みに落とすところまで担います。</p></div></li>
   </ol>
  </div>
 </section>
@@ -260,7 +308,7 @@
   <h2 class="v2-h2">現場で培った技術を次の担当者へ</h2>
   <div class="v2-profile__card v2-in">
    <div class="v2-profile__id">
-    <p class="v2-profile__mark" aria-hidden="true">Lore</p>
+    <svg class="v2-profile__draw" viewBox="0 0 240 150" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 140H226"/><path d="M40 140V52H180V140M40 70H180M40 112H180M92 52V112M136 52V112"/><path d="M188 140V60H222V140M194 72H216V96H194z"/><path d="M200 106h4M210 106h4M200 116h4"/><path d="M60 52V30M60 30h4M56 30h4"/><rect x="56" y="10" width="8" height="8"/><rect x="56" y="18" width="8" height="8"/><rect x="56" y="26" width="8" height="4"/><path d="M104 88h20v14h-20zM110 88V76h8v12M114 76V64"/><path d="M48 102h28M48 92h28M148 92h24M148 102h24" opacity=".5"/></g><circle cx="60" cy="14" r="2.4" fill="#ff8a5c"/></svg>
     <h3>西原 健人</h3>
     <p>ロアニクス株式会社 代表<br>生産設備屋のイヌ</p>
     <a class="v2-profile__yt" href="https://www.youtube.com/channel/UCx8MuZy0zM5a0pWfAGM0q9Q" target="_blank" rel="noopener">YouTube <span aria-hidden="true">↗</span></a>
@@ -287,7 +335,7 @@
 
 <!-- 目利きの帯 -->
 <section class="v2-band">
- <div class="v2-band__bg" aria-hidden="true"></div>
+ <div class="v2-band__bg" aria-hidden="true"></div><div class="v2-band__wave" aria-hidden="true"></div>
  <div class="v2-wrap v2-band__inner">
   <p class="v2-en v2-en--light">OUR EYE</p>
   <p class="v2-band__main v2-in">聞き出す　線を引く　定着させる——</p>
