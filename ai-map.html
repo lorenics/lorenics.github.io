@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/sub.css?v=20261012g">
-<link rel="stylesheet" href="css/ai-map.css?v=20261012f">
+<link rel="stylesheet" href="css/ai-map.css?v=20261013a">
 <script src="js/ai-map.js" defer></script>
 <script src="js/sub.js?v=20261012f" defer></script>
 <script type="application/ld+json">
@@ -112,406 +112,406 @@
    <ul class="map-legend"><li><i style="background:#6B4FA0"></i>お客様</li><li><i style="background:#2E7D6B"></i>営業・CS</li><li><i style="background:#5A6472"></i>PM</li><li><i style="background:#1F6FB0"></i>メカ設計</li><li><i style="background:#C0841A"></i>電気設計</li><li><i style="background:#C2410C"></i>制御・ソフト</li><li><i style="background:#0E7490"></i>購買</li><li><i style="background:#475569"></i>製作・据付</li><li><i style="background:#E8730C"></i>関門<wbr>（DR・立会など）</li><li><i class="dash" style="border-color:#D0342C"></i>差し戻し・分岐</li></ul>
   </div>
   <div class="map-scroll" tabindex="0" aria-label="全体の流れ（横にスクロールできます）">
-<svg class="map-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1352" role="group" aria-label="製品ができるまでの全体の流れ。工程を押すと、その工程でのAI活用が表示されます">
+<svg class="map-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1892 1352" role="group" aria-label="製品ができるまでの全体の流れ。工程を押すと、その工程でのAI活用が表示されます">
 <defs>
 <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3A4250"/></marker>
 <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#D0342C"/></marker>
 </defs>
-<rect x="160" y="64" width="398" height="1280" fill="#F4F7FB"/>
-<rect x="562" y="64" width="130" height="1280" fill="#FFFFFF"/>
-<rect x="696" y="64" width="186" height="1280" fill="#F4F7FB"/>
-<rect x="884" y="64" width="186" height="1280" fill="#FFFFFF"/>
-<rect x="1072" y="64" width="264" height="1280" fill="#F4F7FB"/>
-<rect x="1340" y="64" width="186" height="1280" fill="#FFFFFF"/>
-<rect x="1528" y="64" width="320" height="1280" fill="#F4F7FB"/>
-<rect x="1850" y="64" width="186" height="1280" fill="#FFFFFF"/>
-<rect x="2038" y="64" width="130" height="1280" fill="#F4F7FB"/>
-<g class="mp" data-phase="sales" tabindex="0" role="button" aria-label="営業・見積の資料を見る"><rect class="mp-r" x="160" y="12" width="398" height="42" rx="4" fill="#12355B"/><text x="359.0" y="33" class="ph">営業・見積</text></g>
-<g class="mp" data-phase="order" tabindex="0" role="button" aria-label="受注の資料を見る"><rect class="mp-r" x="562" y="12" width="130" height="42" rx="4" fill="#12355B"/><text x="627.0" y="33" class="ph">受注</text></g>
-<g class="mp" data-phase="concept" tabindex="0" role="button" aria-label="構想設計の資料を見る"><rect class="mp-r" x="696" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="789.0" y="33" class="ph">構想設計</text></g>
-<g class="mp" data-phase="detail" tabindex="0" role="button" aria-label="詳細設計の資料を見る"><rect class="mp-r" x="884" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="977.0" y="33" class="ph">詳細設計</text></g>
-<g class="mp" data-phase="make" tabindex="0" role="button" aria-label="製作の資料を見る"><rect class="mp-r" x="1072" y="12" width="264" height="42" rx="4" fill="#12355B"/><text x="1204.0" y="33" class="ph">製作</text></g>
-<g class="mp" data-phase="debug" tabindex="0" role="button" aria-label="社内デバッグの資料を見る"><rect class="mp-r" x="1340" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="1433.0" y="33" class="ph">社内デバッグ</text></g>
-<g class="mp" data-phase="site" tabindex="0" role="button" aria-label="出荷・現地の資料を見る"><rect class="mp-r" x="1528" y="12" width="320" height="42" rx="4" fill="#12355B"/><text x="1688.0" y="33" class="ph">出荷・現地</text></g>
-<g class="mp" data-phase="deliver" tabindex="0" role="button" aria-label="納品の資料を見る"><rect class="mp-r" x="1850" y="12" width="186" height="42" rx="4" fill="#12355B"/><text x="1943.0" y="33" class="ph">納品</text></g>
-<g class="mp" data-phase="after" tabindex="0" role="button" aria-label="アフターの資料を見る"><rect class="mp-r" x="2038" y="12" width="130" height="42" rx="4" fill="#12355B"/><text x="2103.0" y="33" class="ph">アフター</text></g>
-<line x1="24" y1="64" x2="2168" y2="64" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="67" width="128" height="154" rx="6" fill="#6B4FA0"/>
-<text x="88" y="132.0" class="ln">お客様</text><text x="88" y="160.0" class="lns">工場側</text>
-<line x1="24" y1="224" x2="2168" y2="224" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="227" width="128" height="154" rx="6" fill="#2E7D6B"/>
-<text x="88" y="304.0" class="ln">営業・CS</text>
-<line x1="24" y1="384" x2="2168" y2="384" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="387" width="128" height="154" rx="6" fill="#5A6472"/>
-<text x="88" y="452.0" class="ln">PM</text><text x="88" y="480.0" class="lns">日程・原価</text>
-<line x1="24" y1="544" x2="2168" y2="544" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="547" width="128" height="154" rx="6" fill="#1F6FB0"/>
-<text x="88" y="624.0" class="ln">メカ設計</text>
-<line x1="24" y1="704" x2="2168" y2="704" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="707" width="128" height="154" rx="6" fill="#C0841A"/>
-<text x="88" y="784.0" class="ln">電気設計</text>
-<line x1="24" y1="864" x2="2168" y2="864" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="867" width="128" height="154" rx="6" fill="#C2410C"/>
-<text x="88" y="944.0" class="ln">制御・ソフト</text>
-<line x1="24" y1="1024" x2="2168" y2="1024" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="1027" width="128" height="154" rx="6" fill="#0E7490"/>
-<text x="88" y="1104.0" class="ln">購買</text>
-<line x1="24" y1="1184" x2="2168" y2="1184" stroke="#C9D3DE" stroke-width="1.2"/>
-<rect x="24" y="1187" width="128" height="154" rx="6" fill="#475569"/>
-<text x="88" y="1264.0" class="ln">製作・据付</text>
-<line x1="24" y1="1344" x2="2168" y2="1344" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="160" y="64" width="352.8" height="1280" fill="#F4F7FB"/>
+<rect x="515.2" y="64" width="115.6" height="1280" fill="#FFFFFF"/>
+<rect x="633.2" y="64" width="153.2" height="1280" fill="#F4F7FB"/>
+<rect x="787.6" y="64" width="152.9" height="1280" fill="#FFFFFF"/>
+<rect x="941.6" y="64" width="233.2" height="1280" fill="#F4F7FB"/>
+<rect x="1177.2" y="64" width="153.2" height="1280" fill="#FFFFFF"/>
+<rect x="1331.6" y="64" width="270.9" height="1280" fill="#F4F7FB"/>
+<rect x="1603.6" y="64" width="152.9" height="1280" fill="#FFFFFF"/>
+<rect x="1757.6" y="64" width="115.2" height="1280" fill="#F4F7FB"/>
+<g class="mp" data-phase="sales" tabindex="0" role="button" aria-label="営業・見積の資料を見る"><rect class="mp-r" x="160" y="12" width="352.8" height="42" rx="4" fill="#12355B"/><text x="336.4" y="33" class="ph">営業・見積</text></g>
+<g class="mp" data-phase="order" tabindex="0" role="button" aria-label="受注の資料を見る"><rect class="mp-r" x="515.2" y="12" width="115.6" height="42" rx="4" fill="#12355B"/><text x="573" y="33" class="ph">受注</text></g>
+<g class="mp" data-phase="concept" tabindex="0" role="button" aria-label="構想設計の資料を見る"><rect class="mp-r" x="633.2" y="12" width="153.2" height="42" rx="4" fill="#12355B"/><text x="709.8" y="33" class="ph">構想設計</text></g>
+<g class="mp" data-phase="detail" tabindex="0" role="button" aria-label="詳細設計の資料を見る"><rect class="mp-r" x="787.6" y="12" width="152.9" height="42" rx="4" fill="#12355B"/><text x="864.1" y="33" class="ph">詳細設計</text></g>
+<g class="mp" data-phase="make" tabindex="0" role="button" aria-label="製作の資料を見る"><rect class="mp-r" x="941.6" y="12" width="233.2" height="42" rx="4" fill="#12355B"/><text x="1058.2" y="33" class="ph">製作</text></g>
+<g class="mp" data-phase="debug" tabindex="0" role="button" aria-label="社内デバッグの資料を見る"><rect class="mp-r" x="1177.2" y="12" width="153.2" height="42" rx="4" fill="#12355B"/><text x="1253.8" y="33" class="ph">社内デバッグ</text></g>
+<g class="mp" data-phase="site" tabindex="0" role="button" aria-label="出荷・現地の資料を見る"><rect class="mp-r" x="1331.6" y="12" width="270.9" height="42" rx="4" fill="#12355B"/><text x="1467" y="33" class="ph">出荷・現地</text></g>
+<g class="mp" data-phase="deliver" tabindex="0" role="button" aria-label="納品の資料を見る"><rect class="mp-r" x="1603.6" y="12" width="152.9" height="42" rx="4" fill="#12355B"/><text x="1680" y="33" class="ph">納品</text></g>
+<g class="mp" data-phase="after" tabindex="0" role="button" aria-label="アフターの資料を見る"><rect class="mp-r" x="1757.6" y="12" width="115.2" height="42" rx="4" fill="#12355B"/><text x="1815.2" y="33" class="ph">アフター</text></g>
+<line x1="16" y1="64" x2="1872.8" y2="64" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="67" width="138" height="154" rx="6" fill="#6B4FA0"/>
+<text x="85" y="132.0" class="ln">お客様</text><text x="85" y="160.0" class="lns">工場側</text>
+<line x1="16" y1="224" x2="1872.8" y2="224" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="227" width="138" height="154" rx="6" fill="#2E7D6B"/>
+<text x="85" y="304.0" class="ln">営業・CS</text>
+<line x1="16" y1="384" x2="1872.8" y2="384" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="387" width="138" height="154" rx="6" fill="#5A6472"/>
+<text x="85" y="452.0" class="ln">PM</text><text x="85" y="480.0" class="lns">日程・原価</text>
+<line x1="16" y1="544" x2="1872.8" y2="544" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="547" width="138" height="154" rx="6" fill="#1F6FB0"/>
+<text x="85" y="624.0" class="ln">メカ設計</text>
+<line x1="16" y1="704" x2="1872.8" y2="704" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="707" width="138" height="154" rx="6" fill="#C0841A"/>
+<text x="85" y="784.0" class="ln">電気設計</text>
+<line x1="16" y1="864" x2="1872.8" y2="864" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="867" width="138" height="154" rx="6" fill="#C2410C"/>
+<text x="85" y="944.0" class="ln">制御・ソフト</text>
+<line x1="16" y1="1024" x2="1872.8" y2="1024" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="1027" width="138" height="154" rx="6" fill="#0E7490"/>
+<text x="85" y="1104.0" class="ln">購買</text>
+<line x1="16" y1="1184" x2="1872.8" y2="1184" stroke="#C9D3DE" stroke-width="1.2"/>
+<rect x="16" y="1187" width="138" height="154" rx="6" fill="#475569"/>
+<text x="85" y="1264.0" class="ln">製作・据付</text>
+<line x1="16" y1="1344" x2="1872.8" y2="1344" stroke="#C9D3DE" stroke-width="1.2"/>
 <g class="mb" data-id="s_inq" tabindex="0" role="button" aria-label="営業・見積　引き合いのAI活用を見る">
-<rect class="mb-r" x="168" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
-<path d="M169.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
-<text x="229.0" y="293.0" class="bt" fill="#17181C">引き合い</text><text x="229.0" y="319.0" class="bs" fill="#3A4250">課題を聞く</text>
-<circle class="mb-dot" cx="274" cy="281.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="166" y="273.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M167.1 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="222.7" y="293.0" class="bt" fill="#17181C">引き合い</text><text x="222.7" y="319.0" class="bs" fill="#3A4250">課題を聞く</text>
+<circle class="mb-dot" cx="264.6" cy="281.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="s_survey" tabindex="0" role="button" aria-label="営業・見積　現地調査のAI活用を見る">
-<rect class="mb-r" x="302" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
-<path d="M303.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
-<text x="363.0" y="293.0" class="bt" fill="#17181C">現地調査</text><text x="363.0" y="319.0" class="bs" fill="#3A4250">設置場所の確認</text>
-<circle class="mb-dot" cx="408" cy="281.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="284" y="273.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M285.1 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="340.7" y="293.0" class="bt" fill="#17181C">現地調査</text><text x="340.7" y="319.0" class="bs" fill="#3A4250">設置場所の確認</text>
+<circle class="mb-dot" cx="382.6" cy="281.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="s_work" tabindex="0" role="button" aria-label="営業・見積　ワーク評価のAI活用を見る">
-<rect class="mb-r" x="302" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
-<path d="M303.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
-<text x="363.0" y="613.0" class="bt" fill="#17181C">ワーク評価</text><text x="363.0" y="639.0" class="bs" fill="#3A4250">製品で試作</text>
-<circle class="mb-dot" cx="408" cy="601.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="284" y="593.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M285.1 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="340.7" y="613.0" class="bt" fill="#17181C">ワーク評価</text><text x="340.7" y="639.0" class="bs" fill="#3A4250">製品で試作</text>
+<circle class="mb-dot" cx="382.6" cy="601.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="s_quote" tabindex="0" role="button" aria-label="営業・見積　見積・提案のAI活用を見る">
-<rect class="mb-r" x="436" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
-<path d="M437.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
-<text x="497.0" y="293.0" class="bt" fill="#17181C">見積・提案</text><text x="497.0" y="319.0" class="bs" fill="#3A4250">範囲と金額</text>
-<circle class="mb-dot" cx="542" cy="281.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="402" y="273.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M403.1 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="458.7" y="293.0" class="bt" fill="#17181C">見積・提案</text><text x="458.7" y="319.0" class="bs" fill="#3A4250">範囲と金額</text>
+<circle class="mb-dot" cx="500.6" cy="281.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="s_alt" tabindex="0" role="button" aria-label="営業・見積　工法見直しのAI活用を見る">
-<rect class="mb-r" x="302" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#D0342C" stroke-width="2.2" stroke-dasharray="7 4"/>
-<text x="359.0" y="773.0" class="bt" fill="#D0342C">工法見直し</text><text x="359.0" y="799.0" class="bs" fill="#D0342C">受注の見送り</text>
-<circle class="mb-dot" cx="408" cy="761.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="284" y="753.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#D0342C" stroke-width="2.2" stroke-dasharray="7 4"/>
+<text x="337" y="773.0" class="bt" fill="#D0342C">工法見直し</text><text x="337" y="799.0" class="bs" fill="#D0342C">受注の見送り</text>
+<circle class="mb-dot" cx="382.6" cy="761.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M282 304.0 H299" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M225.0 335.0 V624.0 H299" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M416 304.0 H433" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M416 624.0 H493.0 V338.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M359.0 655.0 V750.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
-<text x="369.0" y="704.0" class="br" text-anchor="start">成り立たない時</text>
+<path d="M272 304.0 H282.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M219 335.0 V624.0 H282.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M390 304.0 H400.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M390 624.0 H455 V338.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M337 655.0 V750.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="346.3" y="704.0" class="br" text-anchor="start">成り立たない時</text>
 <g class="mb" data-id="o_contract" tabindex="0" role="button" aria-label="受注　受注・契約のAI活用を見る">
-<rect class="mb-r" x="570" y="273.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
-<path d="M571.2 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
-<text x="631.0" y="293.0" class="bt" fill="#17181C">受注・契約</text><text x="631.0" y="319.0" class="bs" fill="#3A4250">仕様の確定</text>
-<circle class="mb-dot" cx="676" cy="281.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="520" y="273.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M521.1 279.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="576.7" y="293.0" class="bt" fill="#17181C">受注・契約</text><text x="576.7" y="319.0" class="bs" fill="#3A4250">仕様の確定</text>
+<circle class="mb-dot" cx="618.6" cy="281.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="o_spec" tabindex="0" role="button" aria-label="受注　仕様の承認のAI活用を見る">
-<rect class="mb-r" x="570" y="113.0" width="114" height="62" rx="6" fill="#E8730C"/>
-<text x="627.0" y="133.0" class="bt" fill="#FFFFFF">仕様の承認</text><text x="627.0" y="159.0" class="bs" fill="#FFFFFF">お客様が承認</text>
-<circle class="mb-dot" cx="676" cy="121.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="520" y="113.0" width="106" height="62" rx="6" fill="#E8730C"/>
+<text x="573" y="133.0" class="bt" fill="#FFFFFF">仕様の承認</text><text x="573" y="159.0" class="bs" fill="#FFFFFF">お客様が承認</text>
+<circle class="mb-dot" cx="618.6" cy="121.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M550 304.0 H567" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M627.0 273.0 V178.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M684 304.0 H694 M694 304.0 V1104.0" fill="none" stroke="#3A4250" stroke-width="2"/>
-<path d="M694 464.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M694 624.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M694 784.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M694 944.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M694 1104.0 H701" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M508 304.0 H518.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M573 273.0 V178.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M626 304.0 H632 M632 304.0 V1104.0" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M632 464.0 H636.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M632 624.0 H636.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M632 784.0 H636.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M632 944.0 H636.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M632 1104.0 H636.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="c_plan" tabindex="0" role="button" aria-label="構想設計　日程・予算のAI活用を見る">
-<rect class="mb-r" x="704" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
-<path d="M705.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
-<text x="765.0" y="453.0" class="bt" fill="#17181C">日程・予算</text><text x="765.0" y="479.0" class="bs" fill="#3A4250">工程表と予算</text>
-<circle class="mb-dot" cx="810" cy="441.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="638" y="433.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M639.1 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="694.7" y="453.0" class="bt" fill="#17181C">日程・予算</text><text x="694.7" y="479.0" class="bs" fill="#3A4250">工程表と予算</text>
+<circle class="mb-dot" cx="736.6" cy="441.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="c_mech" tabindex="0" role="button" aria-label="構想設計　メカ構想のAI活用を見る">
-<rect class="mb-r" x="704" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
-<path d="M705.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
-<text x="765.0" y="613.0" class="bt" fill="#17181C">メカ構想</text><text x="765.0" y="639.0" class="bs" fill="#3A4250">方式と配置</text>
-<circle class="mb-dot" cx="810" cy="601.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="638" y="593.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M639.1 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="694.7" y="613.0" class="bt" fill="#17181C">メカ構想</text><text x="694.7" y="639.0" class="bs" fill="#3A4250">方式と配置</text>
+<circle class="mb-dot" cx="736.6" cy="601.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="c_elec" tabindex="0" role="button" aria-label="構想設計　電気構想のAI活用を見る">
-<rect class="mb-r" x="704" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
-<path d="M705.2 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
-<text x="765.0" y="773.0" class="bt" fill="#17181C">電気構想</text><text x="765.0" y="799.0" class="bs" fill="#3A4250">盤と安全回路</text>
-<circle class="mb-dot" cx="810" cy="761.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="638" y="753.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
+<path d="M639.1 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
+<text x="694.7" y="773.0" class="bt" fill="#17181C">電気構想</text><text x="694.7" y="799.0" class="bs" fill="#3A4250">盤と安全回路</text>
+<circle class="mb-dot" cx="736.6" cy="761.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="c_ctrl" tabindex="0" role="button" aria-label="構想設計　制御構想のAI活用を見る">
-<rect class="mb-r" x="704" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
-<path d="M705.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
-<text x="765.0" y="933.0" class="bt" fill="#17181C">制御構想</text><text x="765.0" y="959.0" class="bs" fill="#3A4250">動作順とタクト</text>
-<circle class="mb-dot" cx="810" cy="921.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="638" y="913.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M639.1 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="694.7" y="933.0" class="bt" fill="#17181C">制御構想</text><text x="694.7" y="959.0" class="bs" fill="#3A4250">動作順とタクト</text>
+<circle class="mb-dot" cx="736.6" cy="921.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="c_long" tabindex="0" role="button" aria-label="構想設計　長納期品のAI活用を見る">
-<rect class="mb-r" x="704" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
-<path d="M705.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
-<text x="765.0" y="1093.0" class="bt" fill="#17181C">長納期品</text><text x="765.0" y="1119.0" class="bs" fill="#3A4250">機種と納期</text>
-<circle class="mb-dot" cx="810" cy="1081.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="638" y="1073.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M639.1 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="694.7" y="1093.0" class="bt" fill="#17181C">長納期品</text><text x="694.7" y="1119.0" class="bs" fill="#3A4250">機種と納期</text>
+<circle class="mb-dot" cx="736.6" cy="1081.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="g_cdr" tabindex="0" role="button" aria-label="構想設計　構想DRのAI活用を見る">
-<rect class="mb-r" x="838" y="552" width="36" height="464" rx="6" fill="#E8730C"/>
-<text x="856.0" y="748.0" class="gt" fill="#FFFFFF">構</text>
-<text x="856.0" y="772.0" class="gt" fill="#FFFFFF">想</text>
-<text x="856.0" y="796.0" class="gt" fill="#FFFFFF">D</text>
-<text x="856.0" y="820.0" class="gt" fill="#FFFFFF">R</text>
+<rect class="mb-r" x="754" y="552" width="28" height="464" rx="6" fill="#E8730C"/>
+<text x="768" y="748.0" class="gt" fill="#FFFFFF">構</text>
+<text x="768" y="772.0" class="gt" fill="#FFFFFF">想</text>
+<text x="768" y="796.0" class="gt" fill="#FFFFFF">D</text>
+<text x="768" y="820.0" class="gt" fill="#FFFFFF">R</text>
 </g>
-<path d="M818 624.0 H835" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M818 784.0 H835" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M818 944.0 H835" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M874 624.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M874 784.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M874 944.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M744 624.0 H752.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M744 784.0 H752.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M744 944.0 H752.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M782 624.0 H790.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M782 784.0 H790.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M782 944.0 H790.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="d_mech" tabindex="0" role="button" aria-label="詳細設計　メカ詳細のAI活用を見る">
-<rect class="mb-r" x="892" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
-<path d="M893.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
-<text x="953.0" y="613.0" class="bt" fill="#17181C">メカ詳細</text><text x="953.0" y="639.0" class="bs" fill="#3A4250">3D・強度</text>
-<circle class="mb-dot" cx="998" cy="601.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="792" y="593.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M793.1 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="848.7" y="613.0" class="bt" fill="#17181C">メカ詳細</text><text x="848.7" y="639.0" class="bs" fill="#3A4250">3D・強度</text>
+<circle class="mb-dot" cx="890.6" cy="601.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="d_elec" tabindex="0" role="button" aria-label="詳細設計　電気詳細のAI活用を見る">
-<rect class="mb-r" x="892" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
-<path d="M893.2 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
-<text x="953.0" y="773.0" class="bt" fill="#17181C">電気詳細</text><text x="953.0" y="799.0" class="bs" fill="#3A4250">回路図・I/O表</text>
-<circle class="mb-dot" cx="998" cy="761.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="792" y="753.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
+<path d="M793.1 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
+<text x="848.7" y="773.0" class="bt" fill="#17181C">電気詳細</text><text x="848.7" y="799.0" class="bs" fill="#3A4250">回路図・I/O表</text>
+<circle class="mb-dot" cx="890.6" cy="761.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="d_soft" tabindex="0" role="button" aria-label="詳細設計　ソフト設計のAI活用を見る">
-<rect class="mb-r" x="892" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
-<path d="M893.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
-<text x="953.0" y="933.0" class="bt" fill="#17181C">ソフト設計</text><text x="953.0" y="959.0" class="bs" fill="#3A4250">PLC・HMI</text>
-<circle class="mb-dot" cx="998" cy="921.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="792" y="913.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M793.1 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="848.7" y="933.0" class="bt" fill="#17181C">ソフト設計</text><text x="848.7" y="959.0" class="bs" fill="#3A4250">PLC・HMI</text>
+<circle class="mb-dot" cx="890.6" cy="921.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="d_order" tabindex="0" role="button" aria-label="詳細設計　先行手配のAI活用を見る">
-<rect class="mb-r" x="892" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
-<path d="M893.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
-<text x="953.0" y="1093.0" class="bt" fill="#17181C">先行手配</text><text x="953.0" y="1119.0" class="bs" fill="#3A4250">長納期品を発注</text>
-<circle class="mb-dot" cx="998" cy="1081.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="792" y="1073.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M793.1 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="848.7" y="1093.0" class="bt" fill="#17181C">先行手配</text><text x="848.7" y="1119.0" class="bs" fill="#3A4250">長納期品を発注</text>
+<circle class="mb-dot" cx="890.6" cy="1081.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="d_appr" tabindex="0" role="button" aria-label="詳細設計　承認図のAI活用を見る">
-<rect class="mb-r" x="892" y="113.0" width="114" height="62" rx="6" fill="#E8730C"/>
-<text x="949.0" y="133.0" class="bt" fill="#FFFFFF">承認図</text><text x="949.0" y="159.0" class="bs" fill="#FFFFFF">外形と配置</text>
-<circle class="mb-dot" cx="998" cy="121.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="792" y="113.0" width="106" height="62" rx="6" fill="#E8730C"/>
+<text x="845" y="133.0" class="bt" fill="#FFFFFF">承認図</text><text x="845" y="159.0" class="bs" fill="#FFFFFF">外形と配置</text>
+<circle class="mb-dot" cx="890.6" cy="121.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="d_safety" tabindex="0" role="button" aria-label="詳細設計　安全の検討のAI活用を見る">
-<rect class="mb-r" x="892" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
-<path d="M893.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
-<text x="953.0" y="453.0" class="bt" fill="#17181C">安全の検討</text><text x="953.0" y="479.0" class="bs" fill="#3A4250">危険の洗い出し</text>
-<circle class="mb-dot" cx="998" cy="441.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="792" y="433.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M793.1 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="848.7" y="453.0" class="bt" fill="#17181C">安全の検討</text><text x="848.7" y="479.0" class="bs" fill="#3A4250">危険の洗い出し</text>
+<circle class="mb-dot" cx="890.6" cy="441.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M818 1104.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M856.0 552 V144.0 H889" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M744 1104.0 H790.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M768 552 V144.0 H790.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="g_ddr" tabindex="0" role="button" aria-label="詳細設計　詳細DRのAI活用を見る">
-<rect class="mb-r" x="1026" y="552" width="36" height="464" rx="6" fill="#E8730C"/>
-<text x="1044.0" y="748.0" class="gt" fill="#FFFFFF">詳</text>
-<text x="1044.0" y="772.0" class="gt" fill="#FFFFFF">細</text>
-<text x="1044.0" y="796.0" class="gt" fill="#FFFFFF">D</text>
-<text x="1044.0" y="820.0" class="gt" fill="#FFFFFF">R</text>
+<rect class="mb-r" x="908" y="552" width="28" height="464" rx="6" fill="#E8730C"/>
+<text x="922" y="748.0" class="gt" fill="#FFFFFF">詳</text>
+<text x="922" y="772.0" class="gt" fill="#FFFFFF">細</text>
+<text x="922" y="796.0" class="gt" fill="#FFFFFF">D</text>
+<text x="922" y="820.0" class="gt" fill="#FFFFFF">R</text>
 </g>
-<path d="M1006 624.0 H1023" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1006 784.0 H1023" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1006 944.0 H1023" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1062 944.0 H1071 M1071 944.0 V1300 M1006 1104.0 H1071" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M898 624.0 H906.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M898 784.0 H906.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M898 944.0 H906.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M936 944.0 H941 M941 944.0 V1300 M898 1104.0 H941" fill="none" stroke="#3A4250" stroke-width="2"/>
 <g class="mb" data-id="m_prog" tabindex="0" role="button" aria-label="製作　プログラムのAI活用を見る">
-<rect class="mb-r" x="1080" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
-<path d="M1081.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
-<text x="1141.0" y="933.0" class="bt" fill="#17181C">プログラム</text><text x="1141.0" y="959.0" class="bs" fill="#3A4250">作成・机上確認</text>
-<circle class="mb-dot" cx="1186" cy="921.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="946" y="913.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M947.1 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1002.7" y="933.0" class="bt" fill="#17181C">プログラム</text><text x="1002.7" y="959.0" class="bs" fill="#3A4250">作成・机上確認</text>
+<circle class="mb-dot" cx="1044.6" cy="921.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="m_parts" tabindex="0" role="button" aria-label="製作　部品手配のAI活用を見る">
-<rect class="mb-r" x="1080" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
-<path d="M1081.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
-<text x="1141.0" y="1093.0" class="bt" fill="#17181C">部品手配</text><text x="1141.0" y="1119.0" class="bs" fill="#3A4250">発注・納期管理</text>
-<circle class="mb-dot" cx="1186" cy="1081.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="946" y="1073.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M947.1 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="1002.7" y="1093.0" class="bt" fill="#17181C">部品手配</text><text x="1002.7" y="1119.0" class="bs" fill="#3A4250">発注・納期管理</text>
+<circle class="mb-dot" cx="1044.6" cy="1081.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="m_machining" tabindex="0" role="button" aria-label="製作　部品加工のAI活用を見る">
-<rect class="mb-r" x="1080" y="1197.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
-<path d="M1081.2 1203.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
-<text x="1141.0" y="1217" class="bt" fill="#17181C">部品加工</text><text x="1141.0" y="1243" class="bs" fill="#3A4250">板金・機械加工</text>
-<circle class="mb-dot" cx="1186" cy="1205.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="946" y="1197.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M947.1 1203.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1002.7" y="1217" class="bt" fill="#17181C">部品加工</text><text x="1002.7" y="1243" class="bs" fill="#3A4250">板金・機械加工</text>
+<circle class="mb-dot" cx="1044.6" cy="1205.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="m_panel" tabindex="0" role="button" aria-label="製作　盤製作のAI活用を見る">
-<rect class="mb-r" x="1080" y="1269.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
-<path d="M1081.2 1275.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
-<text x="1141.0" y="1289" class="bt" fill="#17181C">盤製作</text><text x="1141.0" y="1315" class="bs" fill="#3A4250">盤の組立・配線</text>
-<circle class="mb-dot" cx="1186" cy="1277.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="946" y="1269.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M947.1 1275.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1002.7" y="1289" class="bt" fill="#17181C">盤製作</text><text x="1002.7" y="1315" class="bs" fill="#3A4250">盤の組立・配線</text>
+<circle class="mb-dot" cx="1044.6" cy="1277.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M1071 944.0 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1071 1104.0 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1071 1228 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1071 1300 H1077" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M941 944.0 H944.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M941 1104.0 H944.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M941 1228 H944.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M941 1300 H944.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="m_inspect" tabindex="0" role="button" aria-label="製作　受入検査のAI活用を見る">
-<rect class="mb-r" x="1214" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
-<path d="M1215.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
-<text x="1275.0" y="1093.0" class="bt" fill="#17181C">受入検査</text><text x="1275.0" y="1119.0" class="bs" fill="#3A4250">部品と寸法</text>
-<circle class="mb-dot" cx="1320" cy="1081.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1064" y="1073.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M1065.1 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="1120.7" y="1093.0" class="bt" fill="#17181C">受入検査</text><text x="1120.7" y="1119.0" class="bs" fill="#3A4250">部品と寸法</text>
+<circle class="mb-dot" cx="1162.6" cy="1081.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="m_assy" tabindex="0" role="button" aria-label="製作　組立・配線のAI活用を見る">
-<rect class="mb-r" x="1214" y="1233.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
-<path d="M1215.2 1239.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
-<text x="1275.0" y="1253.0" class="bt" fill="#17181C">組立・配線</text><text x="1275.0" y="1279.0" class="bs" fill="#3A4250">機械・盤・配管</text>
-<circle class="mb-dot" cx="1320" cy="1241.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1064" y="1233.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1065.1 1239.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1120.7" y="1253.0" class="bt" fill="#17181C">組立・配線</text><text x="1120.7" y="1279.0" class="bs" fill="#3A4250">機械・盤・配管</text>
+<circle class="mb-dot" cx="1162.6" cy="1241.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M1194 1104.0 H1211" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1194 1228 H1204 V1300 M1194 1300 H1204" fill="none" stroke="#3A4250" stroke-width="2"/>
-<path d="M1204 1264.0 H1211" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1271.0 1135.0 V1230.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1328 1264.0 H1338 M1338 1264.0 V624.0 M1194 944.0 H1338" fill="none" stroke="#3A4250" stroke-width="2"/>
-<path d="M1338 624.0 H1345" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1338 784.0 H1345" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1338 944.0 H1345" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1052 1104.0 H1062.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1052 1228 H1058 V1300 M1052 1300 H1058" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M1058 1264.0 H1062.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1117 1135.0 V1230.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1170 1264.0 H1176 M1176 1264.0 V624.0 M1052 944.0 H1176" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M1176 624.0 H1180.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1176 784.0 H1180.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1176 944.0 H1180.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="b_mech" tabindex="0" role="button" aria-label="社内デバッグ　機構の調整のAI活用を見る">
-<rect class="mb-r" x="1348" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
-<path d="M1349.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
-<text x="1409.0" y="613.0" class="bt" fill="#17181C">機構の調整</text><text x="1409.0" y="639.0" class="bs" fill="#3A4250">精度・タクト</text>
-<circle class="mb-dot" cx="1454" cy="601.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1182" y="593.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M1183.1 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="1238.7" y="613.0" class="bt" fill="#17181C">機構の調整</text><text x="1238.7" y="639.0" class="bs" fill="#3A4250">精度・タクト</text>
+<circle class="mb-dot" cx="1280.6" cy="601.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="b_elec" tabindex="0" role="button" aria-label="社内デバッグ　配線修正のAI活用を見る">
-<rect class="mb-r" x="1348" y="753.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
-<path d="M1349.2 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
-<text x="1409.0" y="773.0" class="bt" fill="#17181C">配線修正</text><text x="1409.0" y="799.0" class="bs" fill="#3A4250">図面と照合</text>
-<circle class="mb-dot" cx="1454" cy="761.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1182" y="753.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C0841A" stroke-width="2.4"/>
+<path d="M1183.1 759.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C0841A"/>
+<text x="1238.7" y="773.0" class="bt" fill="#17181C">配線修正</text><text x="1238.7" y="799.0" class="bs" fill="#3A4250">図面と照合</text>
+<circle class="mb-dot" cx="1280.6" cy="761.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="b_ctrl" tabindex="0" role="button" aria-label="社内デバッグ　動作確認のAI活用を見る">
-<rect class="mb-r" x="1348" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
-<path d="M1349.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
-<text x="1409.0" y="933.0" class="bt" fill="#17181C">動作確認</text><text x="1409.0" y="959.0" class="bs" fill="#3A4250">連続運転まで</text>
-<circle class="mb-dot" cx="1454" cy="921.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1182" y="913.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M1183.1 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1238.7" y="933.0" class="bt" fill="#17181C">動作確認</text><text x="1238.7" y="959.0" class="bs" fill="#3A4250">連続運転まで</text>
+<circle class="mb-dot" cx="1280.6" cy="921.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="b_manual" tabindex="0" role="button" aria-label="社内デバッグ　取説・教材のAI活用を見る">
-<rect class="mb-r" x="1348" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
-<path d="M1349.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
-<text x="1409.0" y="453.0" class="bt" fill="#17181C">取説・教材</text><text x="1409.0" y="479.0" class="bs" fill="#3A4250">並行して作成</text>
-<circle class="mb-dot" cx="1454" cy="441.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1182" y="433.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M1183.1 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="1238.7" y="453.0" class="bt" fill="#17181C">取説・教材</text><text x="1238.7" y="479.0" class="bs" fill="#3A4250">並行して作成</text>
+<circle class="mb-dot" cx="1280.6" cy="441.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="g_fat" tabindex="0" role="button" aria-label="社内デバッグ　社内立会のAI活用を見る">
-<rect class="mb-r" x="1482" y="72" width="36" height="1264" rx="6" fill="#E8730C"/>
-<text x="1500.0" y="668.0" class="gt" fill="#FFFFFF">社</text>
-<text x="1500.0" y="692.0" class="gt" fill="#FFFFFF">内</text>
-<text x="1500.0" y="716.0" class="gt" fill="#FFFFFF">立</text>
-<text x="1500.0" y="740.0" class="gt" fill="#FFFFFF">会</text>
+<rect class="mb-r" x="1298" y="72" width="28" height="1264" rx="6" fill="#E8730C"/>
+<text x="1312" y="668.0" class="gt" fill="#FFFFFF">社</text>
+<text x="1312" y="692.0" class="gt" fill="#FFFFFF">内</text>
+<text x="1312" y="716.0" class="gt" fill="#FFFFFF">立</text>
+<text x="1312" y="740.0" class="gt" fill="#FFFFFF">会</text>
 </g>
-<path d="M1462 624.0 H1479" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1462 784.0 H1479" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1462 944.0 H1479" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1288 624.0 H1296.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1288 784.0 H1296.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1288 944.0 H1296.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="t_ship" tabindex="0" role="button" aria-label="出荷・現地　分解・輸送のAI活用を見る">
-<rect class="mb-r" x="1536" y="1197.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
-<path d="M1537.2 1203.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
-<text x="1597.0" y="1217" class="bt" fill="#17181C">分解・輸送</text><text x="1597.0" y="1243" class="bs" fill="#3A4250">梱包・輸出</text>
-<circle class="mb-dot" cx="1642" cy="1205.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1336" y="1197.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1337.1 1203.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1392.7" y="1217" class="bt" fill="#17181C">分解・輸送</text><text x="1392.7" y="1243" class="bs" fill="#3A4250">梱包・輸出</text>
+<circle class="mb-dot" cx="1434.6" cy="1205.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="t_install" tabindex="0" role="button" aria-label="出荷・現地　搬入・据付のAI活用を見る">
-<rect class="mb-r" x="1536" y="1269.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
-<path d="M1537.2 1275.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
-<text x="1597.0" y="1289" class="bt" fill="#17181C">搬入・据付</text><text x="1597.0" y="1315" class="bs" fill="#3A4250">芯出し・固定</text>
-<circle class="mb-dot" cx="1642" cy="1277.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1336" y="1269.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="2.4"/>
+<path d="M1337.1 1275.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#475569"/>
+<text x="1392.7" y="1289" class="bt" fill="#17181C">搬入・据付</text><text x="1392.7" y="1315" class="bs" fill="#3A4250">芯出し・固定</text>
+<circle class="mb-dot" cx="1434.6" cy="1277.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="t_cwork" tabindex="0" role="button" aria-label="出荷・現地　受入れ工事のAI活用を見る">
-<rect class="mb-r" x="1536" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
-<path d="M1537.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
-<text x="1597.0" y="133.0" class="bt" fill="#17181C">受入れ工事</text><text x="1597.0" y="159.0" class="bs" fill="#3A4250">電源・エア</text>
-<circle class="mb-dot" cx="1642" cy="121.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1336" y="113.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M1337.1 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="1392.7" y="133.0" class="bt" fill="#17181C">受入れ工事</text><text x="1392.7" y="159.0" class="bs" fill="#3A4250">電源・エア</text>
+<circle class="mb-dot" cx="1434.6" cy="121.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M1518 1228 H1533" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1518 144.0 H1533" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1593.0 1259.0 V1266.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1650 1300 H1660 M1660 1300 V144.0 M1650 144.0 H1660" fill="none" stroke="#3A4250" stroke-width="2"/>
+<path d="M1326 1228 H1334.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1326 144.0 H1334.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1389 1259.0 V1266.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1442 1300 H1448 M1448 1300 V144.0 M1442 144.0 H1448" fill="none" stroke="#3A4250" stroke-width="2"/>
 <g class="mb" data-id="t_train" tabindex="0" role="button" aria-label="出荷・現地　操作教育のAI活用を見る">
-<rect class="mb-r" x="1670" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
-<path d="M1671.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
-<text x="1731.0" y="133.0" class="bt" fill="#17181C">操作教育</text><text x="1731.0" y="159.0" class="bs" fill="#3A4250">操作と保全</text>
-<circle class="mb-dot" cx="1776" cy="121.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1454" y="113.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M1455.1 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="1510.7" y="133.0" class="bt" fill="#17181C">操作教育</text><text x="1510.7" y="159.0" class="bs" fill="#3A4250">操作と保全</text>
+<circle class="mb-dot" cx="1552.6" cy="121.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="t_madj" tabindex="0" role="button" aria-label="出荷・現地　現地調整のAI活用を見る">
-<rect class="mb-r" x="1670" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
-<path d="M1671.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
-<text x="1731.0" y="613.0" class="bt" fill="#17181C">現地調整</text><text x="1731.0" y="639.0" class="bs" fill="#3A4250">機構の再調整</text>
-<circle class="mb-dot" cx="1776" cy="601.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1454" y="593.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M1455.1 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="1510.7" y="613.0" class="bt" fill="#17181C">現地調整</text><text x="1510.7" y="639.0" class="bs" fill="#3A4250">機構の再調整</text>
+<circle class="mb-dot" cx="1552.6" cy="601.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="t_start" tabindex="0" role="button" aria-label="出荷・現地　現地立上げのAI活用を見る">
-<rect class="mb-r" x="1670" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
-<path d="M1671.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
-<text x="1731.0" y="933.0" class="bt" fill="#17181C">現地立上げ</text><text x="1731.0" y="959.0" class="bs" fill="#3A4250">現地での調整</text>
-<circle class="mb-dot" cx="1776" cy="921.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1454" y="913.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M1455.1 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1510.7" y="933.0" class="bt" fill="#17181C">現地立上げ</text><text x="1510.7" y="959.0" class="bs" fill="#3A4250">現地での調整</text>
+<circle class="mb-dot" cx="1552.6" cy="921.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M1660 144.0 H1667" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1660 624.0 H1667" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1660 944.0 H1667" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1448 144.0 H1452.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1448 624.0 H1452.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1448 944.0 H1452.2" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="g_sat" tabindex="0" role="button" aria-label="出荷・現地　現地検査のAI活用を見る">
-<rect class="mb-r" x="1804" y="72" width="36" height="1264" rx="6" fill="#E8730C"/>
-<text x="1822.0" y="668.0" class="gt" fill="#FFFFFF">現</text>
-<text x="1822.0" y="692.0" class="gt" fill="#FFFFFF">地</text>
-<text x="1822.0" y="716.0" class="gt" fill="#FFFFFF">検</text>
-<text x="1822.0" y="740.0" class="gt" fill="#FFFFFF">査</text>
+<rect class="mb-r" x="1570" y="72" width="28" height="1264" rx="6" fill="#E8730C"/>
+<text x="1584" y="668.0" class="gt" fill="#FFFFFF">現</text>
+<text x="1584" y="692.0" class="gt" fill="#FFFFFF">地</text>
+<text x="1584" y="716.0" class="gt" fill="#FFFFFF">検</text>
+<text x="1584" y="740.0" class="gt" fill="#FFFFFF">査</text>
 </g>
-<path d="M1784 144.0 H1801" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1784 624.0 H1801" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1784 944.0 H1801" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1560 144.0 H1568.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1560 624.0 H1568.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1560 944.0 H1568.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="n_mass" tabindex="0" role="button" aria-label="納品　量産立上げのAI活用を見る">
-<rect class="mb-r" x="1858" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
-<path d="M1859.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
-<text x="1919.0" y="133.0" class="bt" fill="#17181C">量産立上げ</text><text x="1919.0" y="159.0" class="bs" fill="#3A4250">歩留まりの安定</text>
-<circle class="mb-dot" cx="1964" cy="121.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1608" y="113.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M1609.1 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="1664.7" y="133.0" class="bt" fill="#17181C">量産立上げ</text><text x="1664.7" y="159.0" class="bs" fill="#3A4250">歩留まりの安定</text>
+<circle class="mb-dot" cx="1706.6" cy="121.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="n_support" tabindex="0" role="button" aria-label="納品　立上げ支援のAI活用を見る">
-<rect class="mb-r" x="1858" y="913.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
-<path d="M1859.2 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
-<text x="1919.0" y="933.0" class="bt" fill="#17181C">立上げ支援</text><text x="1919.0" y="959.0" class="bs" fill="#3A4250">条件出し・調整</text>
-<circle class="mb-dot" cx="1964" cy="921.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1608" y="913.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#C2410C" stroke-width="2.4"/>
+<path d="M1609.1 919.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#C2410C"/>
+<text x="1664.7" y="933.0" class="bt" fill="#17181C">立上げ支援</text><text x="1664.7" y="959.0" class="bs" fill="#3A4250">条件出し・調整</text>
+<circle class="mb-dot" cx="1706.6" cy="921.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="n_docs" tabindex="0" role="button" aria-label="納品　完成図書のAI活用を見る">
-<rect class="mb-r" x="1858" y="433.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
-<path d="M1859.2 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
-<text x="1919.0" y="453.0" class="bt" fill="#17181C">完成図書</text><text x="1919.0" y="479.0" class="bs" fill="#3A4250">図面・資料</text>
-<circle class="mb-dot" cx="1964" cy="441.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1608" y="433.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#5A6472" stroke-width="2.4"/>
+<path d="M1609.1 439.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#5A6472"/>
+<text x="1664.7" y="453.0" class="bt" fill="#17181C">完成図書</text><text x="1664.7" y="479.0" class="bs" fill="#3A4250">図面・資料</text>
+<circle class="mb-dot" cx="1706.6" cy="441.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M1840 144.0 H1855" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1840 464.0 H1855" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1840 944.0 H1855" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1598 144.0 H1606.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1598 464.0 H1606.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1598 944.0 H1606.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="g_acc" tabindex="0" role="button" aria-label="納品　検収のAI活用を見る">
-<rect class="mb-r" x="1992" y="72" width="36" height="1264" rx="6" fill="#E8730C"/>
-<text x="2010.0" y="692.0" class="gt" fill="#FFFFFF">検</text>
-<text x="2010.0" y="716.0" class="gt" fill="#FFFFFF">収</text>
+<rect class="mb-r" x="1724" y="72" width="28" height="1264" rx="6" fill="#E8730C"/>
+<text x="1738" y="692.0" class="gt" fill="#FFFFFF">検</text>
+<text x="1738" y="716.0" class="gt" fill="#FFFFFF">収</text>
 </g>
-<path d="M1972 144.0 H1989" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1972 464.0 H1989" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M1972 944.0 H1989" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1714 144.0 H1722.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1714 464.0 H1722.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1714 944.0 H1722.5" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
 <g class="mb" data-id="a_ops" tabindex="0" role="button" aria-label="アフター　運転・保全のAI活用を見る">
-<rect class="mb-r" x="2046" y="113.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
-<path d="M2047.2 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
-<text x="2107.0" y="133.0" class="bt" fill="#17181C">運転・保全</text><text x="2107.0" y="159.0" class="bs" fill="#3A4250">日常点検・改善</text>
-<circle class="mb-dot" cx="2152" cy="121.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1762" y="113.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#6B4FA0" stroke-width="2.4"/>
+<path d="M1763.1 119.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#6B4FA0"/>
+<text x="1818.7" y="133.0" class="bt" fill="#17181C">運転・保全</text><text x="1818.7" y="159.0" class="bs" fill="#3A4250">日常点検・改善</text>
+<circle class="mb-dot" cx="1860.6" cy="121.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="a_fail" tabindex="0" role="button" aria-label="アフター　故障対応のAI活用を見る">
-<rect class="mb-r" x="2046" y="237.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
-<path d="M2047.2 243.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
-<text x="2107.0" y="257" class="bt" fill="#17181C">故障対応</text><text x="2107.0" y="283" class="bs" fill="#3A4250">遠隔・駆けつけ</text>
-<circle class="mb-dot" cx="2152" cy="245.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1762" y="237.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M1763.1 243.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="1818.7" y="257" class="bt" fill="#17181C">故障対応</text><text x="1818.7" y="283" class="bs" fill="#3A4250">遠隔・駆けつけ</text>
+<circle class="mb-dot" cx="1860.6" cy="245.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="a_next" tabindex="0" role="button" aria-label="アフター　次の案件のAI活用を見る">
-<rect class="mb-r" x="2046" y="309.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
-<path d="M2047.2 315.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
-<text x="2107.0" y="329" class="bt" fill="#17181C">次の案件</text><text x="2107.0" y="355" class="bs" fill="#3A4250">リピート</text>
-<circle class="mb-dot" cx="2152" cy="317.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1762" y="309.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="2.4"/>
+<path d="M1763.1 315.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#2E7D6B"/>
+<text x="1818.7" y="329" class="bt" fill="#17181C">次の案件</text><text x="1818.7" y="355" class="bs" fill="#3A4250">リピート</text>
+<circle class="mb-dot" cx="1860.6" cy="317.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="a_mod" tabindex="0" role="button" aria-label="アフター　改造・増設のAI活用を見る">
-<rect class="mb-r" x="2046" y="593.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
-<path d="M2047.2 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
-<text x="2107.0" y="613.0" class="bt" fill="#17181C">改造・増設</text><text x="2107.0" y="639.0" class="bs" fill="#3A4250">品種追加など</text>
-<circle class="mb-dot" cx="2152" cy="601.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1762" y="593.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#1F6FB0" stroke-width="2.4"/>
+<path d="M1763.1 599.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#1F6FB0"/>
+<text x="1818.7" y="613.0" class="bt" fill="#17181C">改造・増設</text><text x="1818.7" y="639.0" class="bs" fill="#3A4250">品種追加など</text>
+<circle class="mb-dot" cx="1860.6" cy="601.0" r="6" fill="#E8730C"/>
 </g>
 <g class="mb" data-id="a_spare" tabindex="0" role="button" aria-label="アフター　保守部品のAI活用を見る">
-<rect class="mb-r" x="2046" y="1073.0" width="114" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
-<path d="M2047.2 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
-<text x="2107.0" y="1093.0" class="bt" fill="#17181C">保守部品</text><text x="2107.0" y="1119.0" class="bs" fill="#3A4250">生産中止の対応</text>
-<circle class="mb-dot" cx="2152" cy="1081.0" r="6" fill="#E8730C"/>
+<rect class="mb-r" x="1762" y="1073.0" width="106" height="62" rx="6" fill="#FFFFFF" stroke="#0E7490" stroke-width="2.4"/>
+<path d="M1763.1 1079.0 a5 5 0 0 1 5 -5 h3 v60 h-3 a5 5 0 0 1 -5 -5z" fill="#0E7490"/>
+<text x="1818.7" y="1093.0" class="bt" fill="#17181C">保守部品</text><text x="1818.7" y="1119.0" class="bs" fill="#3A4250">生産中止の対応</text>
+<circle class="mb-dot" cx="1860.6" cy="1081.0" r="6" fill="#E8730C"/>
 </g>
-<path d="M2028 144.0 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M2028 268 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M2028 624.0 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M2028 1104.0 H2043" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M2103.0 299.0 V306.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
-<path d="M838 568 H761.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
-<text x="769.0" y="556" class="br" text-anchor="start">差し戻し</text>
-<path d="M1026 568 H949.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
-<text x="957.0" y="556" class="br" text-anchor="start">差し戻し</text>
-<path d="M1482 568 H1405.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
-<text x="1413.0" y="556" class="br" text-anchor="start">是正</text>
-<path d="M1804 568 H1727.0 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
-<text x="1735.0" y="556" class="br" text-anchor="start">是正</text>
+<path d="M1752 144.0 H1760.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1752 268 H1760.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1752 624.0 H1760.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1752 1104.0 H1760.3" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1815 299.0 V306.0" fill="none" stroke="#3A4250" stroke-width="2" marker-end="url(#a)"/>
+<path d="M754 568 H691 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="698.4" y="556" class="br" text-anchor="start">差し戻し</text>
+<path d="M908 568 H845 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="852.4" y="556" class="br" text-anchor="start">差し戻し</text>
+<path d="M1298 568 H1235 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="1242.4" y="556" class="br" text-anchor="start">是正</text>
+<path d="M1570 568 H1507 V590.0" fill="none" stroke="#D0342C" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#ab)"/>
+<text x="1514.4" y="556" class="br" text-anchor="start">是正</text>
 </svg>
   </div>
   <p class="map-hint" aria-hidden="true">⁠← 横に<wbr>スクロールできます →</p>

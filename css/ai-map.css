@@ -5,7 +5,7 @@
 .map-hero .svc-intro { margin-bottom: 0; }
 
 .map-sec { padding: 8px 0 56px; }
-.map-wrap { max-width: 1760px; margin: 0 auto; padding-inline: var(--gutter); }
+.map-wrap { max-width: none; margin: 0 auto; padding-inline: clamp(12px, 1.2vw, 24px); }   /* 図は画面の幅いっぱいに使う（2026-10-13 本人の指摘：幅をフルに使えばスクロールなしで全体が入る） */
 .map-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 24px; margin-bottom: 12px; }
 .map-h { margin: 0; font-family: var(--font-head); font-size: 20px; font-weight: 900; }
 .map-h small { display: block; margin-top: 4px; font-family: var(--font-body); font-size: 13px; font-weight: 500; color: #4b5563; }
@@ -16,9 +16,9 @@
 
 .map-scroll { overflow-x: auto; border: 1px solid #d9e2ec; border-radius: 8px; background: #fff; -webkit-overflow-scrolling: touch; }
 .map-scroll:focus-visible { outline: 3px solid #2e86d3; outline-offset: 2px; }
-.map-svg { display: block; width: 100%; min-width: 1700px; height: auto; }
+.map-svg { display: block; width: 100%; min-width: 1560px; height: auto; }   /* 図の幅は 1866。これより狭い画面では縮めて見せ、1560 を下回る所だけ横にスクロール */
 .map-hint { display: none; margin: 8px 0 0; text-align: center; font-size: 12px; color: #6b7280; }
-@media (max-width: 1740px) { .map-hint { display: block; } }
+@media (max-width: 1600px) { .map-hint { display: block; } }
 
 .map-svg text { font-family: "Noto Sans JP", "Noto Sans CJK JP", sans-serif; dominant-baseline: central; pointer-events: none; }
 .map-svg .ph { font-size: 20px; font-weight: 900; fill: #fff; text-anchor: middle; }
