@@ -1,4 +1,4 @@
-/* 実績の図解（トップ・技術教育の仕組みづくりで共通）。生成元：scratchpad results/build_strengths.py */
+/* 実績の図解（トップ・技術教育の仕組みづくり・代表メッセージで共通）。生成元：scratchpad results/build_strengths.py */
 /* 実績の図解（作ってきた生産設備／技術者が集まる分野）。トップと下層で同じ見た目にするため、書体も色もここで決める */
 .sg-sec { word-break: keep-all; overflow-wrap: anywhere; padding: 72px 0; background: linear-gradient(180deg, #f3f8ff, #fff); }
 .sg-wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
@@ -36,4 +36,24 @@
   .sg-h { font-size: 25px; }
   .sg-h3 { font-size: 19px; margin-top: 44px; }
   .sg-chips li { font-size: 13px; padding: 3px 8px; }
+}
+/* カードを横に流れる帯にする（2段を互い違いの向きに。マウスを乗せると止まる） */
+.sg-sec { overflow: hidden; }
+.sg-mq { grid-column: 1 / -1; display: grid; gap: 14px; overflow: hidden; margin: 0 calc(50% - 50vw); padding: 6px 0 12px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+.sg-row { overflow: visible; }
+.sg-track { display: flex; width: max-content; animation: sg-flow 46s linear infinite; }
+.sg-row--b .sg-track { animation-direction: reverse; animation-duration: 52s; }
+.sg-mq:hover .sg-track { animation-play-state: paused; }
+.sg .sg-tiles { display: flex; gap: 14px; padding-right: 14px; list-style: none; margin: 0; }
+.sg .sg-tile { flex: 0 0 auto; width: 270px; }
+.sg-hub-em { font: 900 26px/1 "Barlow Semi Condensed", "Noto Sans JP", sans-serif; margin: 0 2px; }
+@keyframes sg-flow { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (max-width: 560px) { .sg .sg-tile { width: 220px; } .sg-mq { gap: 10px; } .sg .sg-tiles { gap: 10px; padding-right: 10px; } }
+@media (prefers-reduced-motion: reduce) {
+  .sg-mq { -webkit-mask-image: none; mask-image: none; margin: 0; }
+  .sg-track { animation: none; width: auto; }
+  .sg .sg-tiles { flex-wrap: wrap; }
+  .sg .sg-tile { width: calc(50% - 7px); }
+  .sg-dup { display: none !important; }
 }
