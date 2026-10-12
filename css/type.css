@@ -1,0 +1,29 @@
+/* 書体をサイト全体でそろえる（2026-10-13）
+   見出し＝明朝（Shippori Mincho B1）、大きな数字＝数字用の書体（Barlow Semi Condensed）、本文は Noto Sans JP のまま。
+   代表メッセージ（message.css）と同じ組み合わせ。各ページの CSS のあとに読み込む */
+:root {
+  --font-serif: "Shippori Mincho B1", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --font-num: "Barlow Semi Condensed", "Noto Sans JP", sans-serif;
+}
+
+/* ---------- 見出し（明朝） ---------- */
+.c-h2, .c-doc h1, .c-diag__title, .faq-group > h2, .res-h,
+.edu-hero h1, .edu-compare h3, .edu-route-head h3, .edu-role-diagram h3, .edu-profile-name h3, .edu-environment-title,
+.svc-hero h1, .svc-ways h3, .p-ai-profile__name, .p-ai-pain h3,
+.sg-h, .sg-h3, .sg-hub-v,
+.h1, .h2, .ex-txt h3, .more-h, .prom b, .ask-q,
+.map-sec .c-h2 {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+
+/* ---------- 大きな数字（数字用の書体） ---------- */
+.res-v b, .res-b4, .res-bar-top b, .res-point-num,
+.edu-stats dd, .edu-proof dd, .svc-proof dd, .edu-method-list li > span, .edu-example-steps li b,
+.sg-hub-n b,
+.num-big, .stat .val, .bar-top b, .mv em, .mv .b4, .step .no, .ritem .no {
+  font-family: var(--font-num);
+  font-weight: 700;
+  letter-spacing: 0;
+}
