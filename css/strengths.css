@@ -1,0 +1,39 @@
+/* 実績の図解（トップ・技術教育の仕組みづくりで共通）。生成元：scratchpad results/build_strengths.py */
+/* 実績の図解（作ってきた生産設備／技術者が集まる分野）。トップと下層で同じ見た目にするため、書体も色もここで決める */
+.sg-sec { word-break: keep-all; overflow-wrap: anywhere; padding: 72px 0; background: linear-gradient(180deg, #f3f8ff, #fff); }
+.sg-wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+.sg-eyebrow { margin: 0 0 10px; font: 900 14px/1.4 "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; letter-spacing: .12em; color: #0a5fd0; }
+.sg-h { margin: 0 0 30px; font: 900 clamp(28px, 3.2vw, 40px)/1.4 "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; color: #12233a; }
+.sg-h3 { margin: 56px 0 22px; font: 900 clamp(21px, 2.2vw, 27px)/1.5 "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; color: #12233a; }
+.sg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; font-family: "Noto Sans JP", sans-serif; }
+.sg-hub { grid-column: 1 / -1; display: grid; grid-template-columns: auto auto 1fr; align-items: center; gap: 6px 24px; padding: 22px 28px; border-radius: 16px; background: linear-gradient(110deg, #0b2a52, #0a5fd0); color: #fff; }
+.sg-hub-k { grid-column: 1; font-size: 14px; font-weight: 700; opacity: .9; }
+.sg-hub-v { grid-column: 1; font: 900 clamp(30px, 3.4vw, 42px)/1.15 "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; }
+.sg-hub-v small { font-size: .5em; margin-left: 2px; }
+.sg-hub-n { grid-column: 2; grid-row: 1 / span 2; font-size: 17px; font-weight: 700; padding-left: 24px; border-left: 2px solid rgba(255,255,255,.35); }
+.sg-hub-n b { font: 900 38px/1 "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; margin: 0 3px 0 0; }
+.sg-hub-s { grid-column: 3; grid-row: 1 / span 2; font-size: 15px; font-weight: 700; line-height: 1.7; opacity: .95; }
+.sg-tiles { display: contents; list-style: none; margin: 0; padding: 0; }
+.sg-tile { display: flex; flex-direction: column; gap: 12px; padding: 18px 18px 20px; background: #fff; border: 1.5px solid #d4e5fb; border-radius: 14px; box-shadow: 0 10px 24px rgba(5, 40, 110, .06); }
+.sg-tile-h { display: flex; align-items: center; gap: 12px; }
+.sg-ic { flex-shrink: 0; width: 46px; height: 46px; padding: 7px; border-radius: 12px; background: #e8f2ff; color: #0a5fd0; }
+.sg-tile-h b { font: 900 19px/1.35 "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; color: #12233a; }
+.sg-chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.sg-chips li { padding: 4px 10px; border-radius: 999px; background: #f1f5fa; color: #1d2b3c; font-size: 14px; font-weight: 700; line-height: 1.5; }
+.sg--fields .sg-hub { background: linear-gradient(110deg, #3b2a0b, #c2580a); }
+.sg--fields .sg-ic { background: #fff1e4; color: #c2580a; }
+.sg--fields .sg-tile { border-color: #f3dcc6; }
+@media (max-width: 1000px) { .sg { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sg-hub { grid-template-columns: 1fr; } .sg-hub-k, .sg-hub-v, .sg-hub-n, .sg-hub-s { grid-column: 1; grid-row: auto; } .sg-hub-n { padding: 10px 0 0; border-left: 0; border-top: 2px solid rgba(255,255,255,.35); } }
+@media (max-width: 560px) {
+  .sg-sec { padding: 52px 0; }
+  .sg { gap: 10px; }
+  .sg-hub { padding: 18px 18px; border-radius: 14px; }
+  .sg-hub-n b { font-size: 32px; }
+  .sg-tile { padding: 14px 12px 16px; gap: 10px; border-radius: 12px; }
+  .sg-ic { width: 38px; height: 38px; padding: 6px; border-radius: 10px; }
+  .sg-tile-h { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .sg-tile-h b { font-size: 16px; }
+  .sg-h { font-size: 25px; }
+  .sg-h3 { font-size: 19px; margin-top: 44px; }
+  .sg-chips li { font-size: 13px; padding: 3px 8px; }
+}
