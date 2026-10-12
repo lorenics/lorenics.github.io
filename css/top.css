@@ -245,6 +245,7 @@ background:radial-gradient(900px 560px at 86% 100%,rgba(22,166,243,.20),rgba(22,
 .mv{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px}
 .mv .b4{font-size:16px;font-weight:700;color:#26324a}
 .mv .ar{font-size:17px;font-weight:900;color:#0a5fd0}
+.mv .to{display:inline-flex;align-items:baseline;gap:10px}
 .mv em{font-style:normal;font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;font-size:23px;font-weight:900;line-height:1.35;color:#0a5fd0}
 .mn{font-size:15px;font-weight:700;line-height:1.6;color:#26324a}
 .more-note{margin:18px 0 0;font-size:15px;font-weight:700;line-height:1.75;color:#26324a;word-break:auto-phrase}
