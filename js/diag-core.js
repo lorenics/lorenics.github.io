@@ -592,7 +592,7 @@
     L.push('――');
     L.push('ロアニクス株式会社　代表取締役　西原健人（生産設備屋のイヌ）');
     L.push('〒542-0081 大阪府大阪市中央区南船場3丁目2番22号 おおきに南船場ビル205');
-    L.push(opts.sender || 'lorenics@outlook.jp');
+    L.push(opts.sender || 'nishihara.kento@lorenics.co.jp');
     L.push('https://lorenics.com/');
     L.push('');
     L.push('今後のご案内が不要なときは、こちらから止められます。');   /* UTAGEでは配信を止めるURLが必須 */
