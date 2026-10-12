@@ -142,3 +142,8 @@
 body.map-lock { overflow: hidden; }
 
 .map-form[hidden], .map-done[hidden] { display: none; }
+
+/* 2026-10-12 小さかった文字を読める大きさと濃さに */
+.map-hint { font-size: 13px; color: #4b5563; }
+.map-li small { font-size: 13px; }
+.map-card-k { font-size: 13px; }
