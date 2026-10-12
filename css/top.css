@@ -144,7 +144,7 @@ background:radial-gradient(900px 560px at 86% 100%,rgba(22,166,243,.20),rgba(22,
 .pain span{font-size:19px;font-weight:900;line-height:1.6}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:44px}
 .stat{padding:24px 22px 22px;border-radius:22px;background:#fff;border:1.5px solid #d4e5fb;box-shadow:0 14px 34px rgba(5,40,110,.08)}
-.stat .lb{margin:0;font-size:16px;font-weight:700;line-height:1.5;min-height:3em}
+.stat .lb{margin:0;font-size:16px;font-weight:700;line-height:1.5;min-height:4.5em}
 .stat .val{display:block;margin:8px 0 12px;font-size:52px;line-height:1;color:#141b26}
 .stat .val small{font-size:22px;margin-left:2px}
 .meter{height:10px;border-radius:4px;background:#d6e6fb;overflow:hidden}
