@@ -6,15 +6,16 @@
 
   /* ------------------------------------------------------------
      結果メールの送り先（UTAGEの登録フォーム）
+     UTAGE：アカウント「ロアニクス」→ シナリオ「技術伝承の無料診断｜結果メール」
      endpoint が空のあいだは試作として動き、メールは送らない。
-     UTAGEにロアニクスのシナリオを作ったら、送り先と項目名（free1 など）をここに入れる
+     登録フォームの送り先（UTAGEの埋め込みフォームの送り先URL）が分かったら、endpoint に入れる
      ------------------------------------------------------------ */
   var CONFIG = {
     endpoint: '',
     fields: {
       mail: 'mail', name: 'name',
-      route: '', one: '', total: '', free: '', totalNote: '', roi: '', time: '', delivery: '', role: '', meeting: '', screen: '',
-      resultUrl: '', answers: ''
+      greet: 'free1', route: 'free2', one: 'free3', total: 'free4', time: 'free5', delivery: 'free6', role: 'free7',
+      meeting: 'free8', screen: 'free9', resultHash: 'free10', answers: 'free11'
     }
   };
 
@@ -239,7 +240,7 @@
     var btn = $('#dg-submit');
     if (!CONFIG.endpoint) { renderDone(false); return; }
     btn.disabled = true; btn.firstChild.textContent = '送っています…';
-    var f = D.mailFields(a, { resultUrl: resultUrl });
+    var f = D.mailFields(a, { name: name, hash: hash });
     var body = new URLSearchParams();
     body.append(CONFIG.fields.mail, mail);
     if (name && CONFIG.fields.name) { body.append(CONFIG.fields.name, name); }

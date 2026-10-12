@@ -592,34 +592,46 @@
     L.push('――');
     L.push('ロアニクス株式会社　代表取締役　西原健人（生産設備屋のイヌ）');
     L.push('〒542-0081 大阪府大阪市中央区南船場3丁目2番22号 おおきに南船場ビル205');
-    L.push(opts.sender || '{送り主のメールアドレス}');
+    L.push(opts.sender || 'lorenics@outlook.jp');
     L.push('https://lorenics.com/');
+    L.push('');
+    L.push('今後のご案内が不要なときは、こちらから止められます。');   /* UTAGEでは配信を止めるURLが必須 */
+    L.push(opts.cancelUrl || '{配信を止めるURL}');
     return L.join('\n');
   }
 
   /* 結果メールに差し込む文（UTAGEの見えない項目に入れて送る。文の切り替えはここで済ませる）
-     行の頭の「・」も項目に入れて渡す。中身がない項目は空になるので、メールのひな形では各項目を1行に1つだけ置く
-     （「・」をひな形に書くと、空のときに「・」だけが残るため） */
+     行の頭の「・」も項目に入れて渡す。どの項目も空にならないようにして、メールのひな形では各項目を1行に1つだけ置く
+     ・出たり出なかったりする行（ほかの仕事に回せる時間・品質の注・回収の目安）は、合計の行とまとめて total に改行つきで入れる
+       （項目ごとに分けると、出ないときにメールに空の行が残るため）
+     ・宛名は、お名前がないとき「ご担当者様」にする（UTAGEの差し込みには、空のときの代わりの文がないため）
+     ・結果の1枚は記号（#から後ろ）だけを渡し、URLの前半はメールのひな形に書いておく（ほかのサイトへのリンクを差し込まれないように）
+     UTAGEの項目：greet=free1 route=free2 one=free3 total=free4 time=free5 delivery=free6 role=free7 meeting=free8 screen=free9
+                  resultHash=free10 answers=free11（js/diag.js の CONFIG と合わせる） */
   function mailFields(a, opts) {
+    opts = opts || {};
     var R = compute(a), rt = route(a), T = texts(a, R, rt);
     var f = {};
+    f.greet = opts.name ? opts.name + '様' : 'ご担当者様';
     f.route = T.routeName;                                   /* ひな形：・始めるのが合いそうな所：{route}（{one}） */
     f.one = T.one;
+    var lines = [];
     if (T.total.state === 'value') {
-      f.total = '・品質・コスト・納期（QCD）の効果の合計：年 ' + T.total.hero + (T.total.kari ? KARI : '') + '（' + COND + '。' +
-        T.total.parts.map(function (p) { return p.label + ' ' + p.txt; }).join('／') + '）';
-      f.free = '・' + T.total.freeLine;                       /* ひな形：{total} の次の行 */
-      f.totalNote = T.total.qNote || '';
-      f.roi = '・' + T.total.roi;
+      lines.push('・品質・コスト・納期（QCD）の効果の合計：年 ' + T.total.hero + (T.total.kari ? KARI : '') + '（' + COND + '。' +
+        T.total.parts.map(function (p) { return p.label + ' ' + p.txt; }).join('／') + '）');
+      lines.push('・' + T.total.freeLine);
+      if (T.total.qNote) { lines.push(T.total.qNote); }
+      lines.push('・' + T.total.roi);
     } else {
-      f.total = '・' + T.total.alt; f.free = ''; f.totalNote = ''; f.roi = '';
+      lines.push('・' + T.total.alt);
     }
+    f.total = lines.join('\n');
     f.time = '・教えることに使っている時間：' + (T.timeLine || '付き添いの時間は、すでに少ない状態です（ご回答）');
     f.delivery = '・' + T.delivery.say;
     f.role = '・' + roleLine(a, R, T);
     f.meeting = '・' + T.meeting;
     f.screen = (a.q2 === 1 || a.q2 === 2) ? '教材や3Dシミュレータ（本物の設備を止めずに何度でも試せる場）の実際の画面もお見せします。' : '教材の実際の画面もお見せします。';
-    f.resultUrl = (opts && opts.resultUrl) || '';
+    f.resultHash = opts.hash || '';
     f.answers = encodeAll(a);
     return f;
   }
