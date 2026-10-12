@@ -69,6 +69,31 @@
     });
   }
 
+  /* ---------- ヘッダーの「事業内容」（押すと4つの事業が開く。外を押すか Esc で閉じる） ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-nav-biz]"), function (box) {
+    var btn = box.querySelector(".c-nav-biz__btn");
+    if (!btn) return;
+    function set(open) { box.classList.toggle("is-open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(!box.classList.contains("is-open")); });
+    document.addEventListener("click", function (e) { if (!box.contains(e.target)) set(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && box.classList.contains("is-open")) { set(false); btn.focus(); } });
+    box.addEventListener("focusout", function (e) { if (!box.contains(e.relatedTarget)) set(false); });
+  });
+
+  /* ---------- ヘッダーの高さ（ページ内リンクで飛んだとき、見出しがヘッダーに隠れないように CSS の --hdr に入れる） ---------- */
+  var header = document.querySelector(".c-header");
+  function syncHeader() { if (header) root.style.setProperty("--hdr", header.offsetHeight + "px"); }
+  syncHeader();
+  window.addEventListener("resize", syncHeader);
+
+  /* ---------- 横に長い図（右にまだ続くときだけ、右端をぼかして続きがあると分かるようにする） ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll(".map-scroll"), function (sc) {
+    function sync() { sc.classList.toggle("has-more", sc.scrollLeft + sc.clientWidth < sc.scrollWidth - 4); }
+    sc.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+    sync();
+  });
+
   /* ---------- お問い合わせフォーム ---------- */
   var form = document.getElementById("contact-form");
   if (!form) return;
@@ -76,10 +101,11 @@
   var MAIL_TO = "lorenics@outlook.jp";
   var TYPES = {
     plc: "PLC教育・研修",
-    advisor: "FA制御技術顧問",
-    edu: "教育システム導入・伴走",
+    advisor: "技術顧問",
+    edu: "技術教育の仕組みづくり",
     diag: "技術伝承の無料診断（オンライン30分）",
     ai: "AI研修・業務改善",
+    pr: "PR・Webマーケティング（YouTube・X）",
     other: "取材・PR・その他"
   };
   var select = form.querySelector("[name='ご相談の種類']");

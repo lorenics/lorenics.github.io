@@ -15,17 +15,33 @@ body{margin:0;background:#fff}
 .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
 .h1,.h2,.word b,.step b,.num-big,.ask-q,.stat .val,.ritem .no,.sub{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;font-weight:900}
 .cred,.lead,.svc-lead,.h2,.card h3,.case-box h3,.cta-panel p,.prom b,.saved p,.sub,.lead2,.pain span,.ask-q,.ask-sub,.ritem h3,.faq summary,.stat .lb{word-break:keep-all;overflow-wrap:anywhere}
-.card p,.ritem p,.case-box p,.faq .ans p,.svc-lead{word-break:auto-phrase}
+/* 文節の切れ目でだけ改行する。文節の間には <wbr> を入れてある（wbr_ja.py。iPhone の Safari は auto-phrase が効かないため） */
+.tb{word-break:keep-all;overflow-wrap:anywhere}
 
 /* ヘッダー */
 .hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid #dfe9f7}
-.hz{height:6px;background:repeating-linear-gradient(135deg,#0a5fd0 0 14px,#fff 14px 28px)}
 .hd-in{max-width:1360px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;gap:28px}
 .logo{display:block;line-height:0}
 .logo img{height:28px;width:auto}
 .nav{display:flex;gap:30px;margin-left:auto;font-size:16px;font-weight:700}
 .nav a{color:#141b26;text-decoration:none}
 .nav a:hover{color:#0a5fd0}
+.nav{align-items:center}
+.nav a,.nav-biz-btn{white-space:nowrap}
+.nw{display:inline-block;white-space:nowrap}
+.bar-top b{white-space:nowrap}
+.tb h1,.tb h2,.tb h3,.stat .lb,.ask-q{text-wrap:balance}
+.nav-biz{position:relative;display:flex}
+.nav-biz-btn{display:inline-flex;align-items:center;gap:8px;margin:0;padding:0;background:none;border:0;font:inherit;font-weight:700;color:#141b26;cursor:pointer}
+.nav-biz-btn:hover,.nav-biz-btn[aria-expanded="true"]{color:#0a5fd0}
+.nav-biz-btn .caret{width:8px;height:8px;border-right:2.4px solid currentColor;border-bottom:2.4px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.nav-biz-btn[aria-expanded="true"] .caret{transform:translateY(2px) rotate(-135deg)}
+.nav-biz-menu{display:none;position:absolute;top:calc(100% + 14px);left:-18px;z-index:60;min-width:280px;padding:10px;background:#fff;border:1.5px solid #d4e5fb;border-radius:16px;box-shadow:0 18px 40px rgba(5,40,110,.16)}
+.nav-biz-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.nav-biz.is-open .nav-biz-menu{display:grid}
+@media (hover:hover){.nav-biz:hover .nav-biz-menu{display:grid}}
+.nav-biz-menu a{display:block;padding:12px 14px;border-radius:10px;font-size:16px;line-height:1.5;white-space:nowrap}
+.nav-biz-menu a:hover,.nav-biz-menu a:focus-visible{background:#eef5ff}
 .menu-btn{display:none;place-items:center;position:relative;width:46px;height:46px;border:2px solid #0a5fd0;border-radius:12px;background:#fff;color:#0a5fd0;padding:0;cursor:pointer}
 .menu-btn span{position:absolute;left:10px;right:10px;height:2.4px;border-radius:2px;background:#0a5fd0;transition:transform .2s,opacity .2s}
 .menu-btn span:nth-child(1){top:12px}.menu-btn span:nth-child(2){top:19px}.menu-btn span:nth-child(3){top:26px}
@@ -36,6 +52,8 @@ body{margin:0;background:#fff}
 .drawer[hidden]{display:none}
 .drawer a{padding:15px 4px;border-bottom:1px solid #e6eef9;font-size:17px;font-weight:700;color:#141b26;text-decoration:none}
 .drawer .pill{margin-top:16px;height:56px;border-bottom:0;color:#fff}
+.drawer-h{margin:8px 0 0;padding:12px 4px 4px;font-size:14px;font-weight:900;letter-spacing:.04em;color:#0a5fd0}
+.drawer a.drawer-sub{padding:12px 4px 12px 18px;font-size:16px}
 .c-skip{position:absolute;left:-9999px;top:8px;z-index:100;padding:10px 16px;background:#fff;color:#0a5fd0;font-weight:700;border-radius:8px}
 .c-skip:focus{left:12px}
 .tb section[id]{scroll-margin-top:84px}
@@ -163,7 +181,7 @@ background:radial-gradient(900px 560px at 86% 100%,rgba(22,166,243,.20),rgba(22,
 .ask::before{content:"";position:absolute;left:0;right:0;bottom:0;height:70%;background:radial-gradient(760px 320px at 50% 100%,rgba(22,166,243,.16),rgba(22,166,243,0) 70%);pointer-events:none}
 .ask-q{position:relative;margin:0;font-size:clamp(28px,3.9vw,56px);line-height:1.65;letter-spacing:.02em}
 .ask-q .pen{position:relative;display:inline-block;white-space:nowrap}
-.ask-q .pen img{position:absolute;left:-3%;bottom:-.24em;width:106%;height:.5em;max-width:none;opacity:.9}
+.ask-q .pen img{position:absolute;left:-3%;bottom:-.24em;width:106%;height:.5em;max-width:none;opacity:.9;object-fit:fill}
 .ask-sub{position:relative;margin:38px 0 0;font-size:20px;line-height:1.9;font-weight:700}
 .ask .pill{position:relative;margin-top:40px}
 

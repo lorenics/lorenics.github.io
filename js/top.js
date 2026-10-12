@@ -12,6 +12,16 @@
     });
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
   }
+  // ヘッダーの「事業内容」：押すと4つの事業が開く。外を押すか Esc で閉じる（パソコンは重ねるだけでも開く）
+  document.querySelectorAll('[data-nav-biz]').forEach(box => {
+    const b = box.querySelector('.nav-biz-btn');
+    if (!b) return;
+    const set = open => { box.classList.toggle('is-open', open); b.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+    b.addEventListener('click', e => { e.stopPropagation(); set(!box.classList.contains('is-open')); });
+    document.addEventListener('click', e => { if (!box.contains(e.target)) set(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && box.classList.contains('is-open')) { set(false); b.focus(); } });
+    box.addEventListener('focusout', e => { if (!box.contains(e.relatedTarget)) set(false); });
+  });
   // 動きを減らす設定の人にだけ出るボタン。押した人だけ動きを止める（同じタブの間は覚えておく）
   const root = document.getElementById('tb');
   const stop = document.getElementById('motion-stop');

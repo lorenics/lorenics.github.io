@@ -22,10 +22,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/sub.css">
-<link rel="stylesheet" href="css/ai-map.css">
+<link rel="stylesheet" href="css/sub.css?v=20261012f">
+<link rel="stylesheet" href="css/ai-map.css?v=20261012f">
 <script src="js/ai-map.js" defer></script>
-<script src="js/sub.js" defer></script>
+<script src="js/sub.js?v=20261012f" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,17 +70,22 @@
 }
 </script>
 </head>
-<body class="p-map">
-<a class="c-skip" href="#main">本文へスキップ</a>
-<div class="c-hazard" aria-hidden="true"></div>
+<body class="p-map"><!-- wbr:budoux -->
+<a class="c-skip" href="#main">本文へ<wbr>スキップ</a>
 <header class="c-header">
   <div class="c-header__inner">
     <a class="c-header__logo" href="index.html"><img src="images/lorenics-logo.png" alt="ロアニクス株式会社 トップへ" width="899" height="209"></a>
     <nav class="c-header__nav" aria-label="メインメニュー">
-      <a class="c-header__link" href="ai.html">技術教育の仕組みづくり</a>
-      <a class="c-header__link" href="plc.html">PLC教育・研修</a>
-      <a class="c-header__link" href="advisor.html">技術顧問</a>
-      <a class="c-header__link" href="faq.html">よくある質問</a>
+      <div class="c-nav-biz" data-nav-biz>
+        <button type="button" class="c-header__link c-nav-biz__btn" aria-expanded="false" aria-controls="nav-biz">事業内容<span class="c-nav-biz__caret" aria-hidden="true"></span></button>
+        <div class="c-nav-biz__menu" id="nav-biz">
+          <a href="ai.html">技術教育の<wbr>仕組みづくり</a>
+          <a href="plc.html">PLC教育・研修</a>
+          <a href="advisor.html">技術顧問</a>
+          <a href="company.html#business">PR・Webマーケティング</a>
+        </div>
+      </div>
+      <a class="c-header__link" href="faq.html">よく<wbr>ある<wbr>質問</a>
       <a class="c-header__link" href="message.html">代表メッセージ</a>
       <a class="c-header__link" href="company.html">会社案内</a>
     </nav>
@@ -94,17 +99,17 @@
 <main id="main">
 <section class="map-hero">
  <div class="l-container">
-  <p class="svc-eyebrow">製品ができるまで × AI活用マップ</p>
-  <h1>製品ができるまでの<br><span>どこでAIが使えるか</span></h1>
-  <p class="svc-intro">受注から納品・アフターまで　設備メーカーの仕事を担当ごとに並べました。<br>工程を押すと　その作業でAIに任せられることと　人に残す判断が見えます。</p>
+  <p class="svc-eyebrow">製品が<wbr>できるまで <wbr>× AI活用マップ</p>
+  <h1>製品が<wbr>できるまでの<br><span>どこで<wbr>AIが<wbr>使えるか</span></h1>
+  <p class="svc-intro">受注から<wbr>納品・アフターまで　<wbr>設備メーカーの<wbr>仕事を<wbr>担当ごとに<wbr>並べました。<br>工程を<wbr>押すと　<wbr>その<wbr>作業で<wbr>AIに<wbr>任せられる<wbr>ことと　人に<wbr>残す判断が<wbr>見えます。</p>
  </div>
 </section>
 
 <section class="map-sec" id="map" aria-labelledby="map-h">
  <div class="map-wrap">
   <div class="map-head">
-   <h2 id="map-h" class="map-h">全体の流れ　<small>押せる箇所は右上にオレンジの点がある箱と　上の工程名です</small></h2>
-   <ul class="map-legend"><li><i style="background:#6B4FA0"></i>お客様</li><li><i style="background:#2E7D6B"></i>営業・CS</li><li><i style="background:#5A6472"></i>PM</li><li><i style="background:#1F6FB0"></i>メカ設計</li><li><i style="background:#C0841A"></i>電気設計</li><li><i style="background:#C2410C"></i>制御・ソフト</li><li><i style="background:#0E7490"></i>購買</li><li><i style="background:#475569"></i>製作・据付</li><li><i style="background:#E8730C"></i>関門（DR・立会など）</li><li><i class="dash" style="border-color:#D0342C"></i>差し戻し・分岐</li></ul>
+   <h2 id="map-h" class="map-h">全体の<wbr>流れ　<small>押せる<wbr>箇所は<wbr>右上に<wbr>オレンジの<wbr>点が<wbr>ある<wbr>箱と　<wbr>上の<wbr>工程名です</small></h2>
+   <ul class="map-legend"><li><i style="background:#6B4FA0"></i>お客様</li><li><i style="background:#2E7D6B"></i>営業・CS</li><li><i style="background:#5A6472"></i>PM</li><li><i style="background:#1F6FB0"></i>メカ設計</li><li><i style="background:#C0841A"></i>電気設計</li><li><i style="background:#C2410C"></i>制御・ソフト</li><li><i style="background:#0E7490"></i>購買</li><li><i style="background:#475569"></i>製作・据付</li><li><i style="background:#E8730C"></i>関門<wbr>（DR・立会など）</li><li><i class="dash" style="border-color:#D0342C"></i>差し戻し・分岐</li></ul>
   </div>
   <div class="map-scroll" tabindex="0" aria-label="全体の流れ（横にスクロールできます）">
 <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1352" role="group" aria-label="製品ができるまでの全体の流れ。工程を押すと、その工程でのAI活用が表示されます">
@@ -509,28 +514,28 @@
 <text x="1735.0" y="556" class="br" text-anchor="start">是正</text>
 </svg>
   </div>
-  <p class="map-hint" aria-hidden="true">← 横にスクロールできます →</p>
+  <p class="map-hint" aria-hidden="true">← 横に<wbr>スクロールできます →</p>
  </div>
  <div class="l-container map-list">
-  <h3 class="map-list-h">工程から選ぶ</h3>
-  <details class="map-acc"><summary><span>営業・見積</span></summary><p>引き合いから見積まで。ここでの見極めが、後の全工程の手戻りと利益を左右します。</p><ul><li><button type="button" class="map-li" data-id="s_inq">引き合い<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_survey">現地調査<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_work">ワーク評価<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="s_quote">見積・提案<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_alt">工法見直し<small>電気設計</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="sales">営業・見積編の資料を受け取る</button></details><details class="map-acc"><summary><span>受注</span></summary><p>契約と仕様の確定。あいまいなまま進むと、立ち上げの段階で問題が噴き出します。</p><ul><li><button type="button" class="map-li" data-id="o_contract">受注・契約<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="o_spec">仕様の承認<small>お客様</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="order">受注編の資料を受け取る</button></details><details class="map-acc"><summary><span>構想設計</span></summary><p>メカ・電気・制御が同時に方式を決め、構想DRで合流する工程です。</p><ul><li><button type="button" class="map-li" data-id="c_plan">日程・予算<small>PM</small></button></li><li><button type="button" class="map-li" data-id="c_mech">メカ構想<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="c_elec">電気構想<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="c_ctrl">制御構想<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="c_long">長納期品<small>購買</small></button></li><li><button type="button" class="map-li" data-id="g_cdr">構想DR<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="concept">構想設計編の資料を受け取る</button></details><details class="map-acc"><summary><span>詳細設計</span></summary><p>図面とプログラムを作り込み、詳細DRで確かめる工程です。</p><ul><li><button type="button" class="map-li" data-id="d_mech">メカ詳細<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="d_elec">電気詳細<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="d_soft">ソフト設計<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="d_order">先行手配<small>購買</small></button></li><li><button type="button" class="map-li" data-id="d_appr">承認図<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="d_safety">安全の検討<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_ddr">詳細DR<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="detail">詳細設計編の資料を受け取る</button></details><details class="map-acc"><summary><span>製作</span></summary><p>部品の加工・盤製作・組立を同時に進め、1台の設備にまとめる工程です。</p><ul><li><button type="button" class="map-li" data-id="m_prog">プログラム<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="m_parts">部品手配<small>購買</small></button></li><li><button type="button" class="map-li" data-id="m_machining">部品加工<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="m_panel">盤製作<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="m_inspect">受入検査<small>購買</small></button></li><li><button type="button" class="map-li" data-id="m_assy">組立・配線<small>製作・据付</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="make">製作編の資料を受け取る</button></details><details class="map-acc"><summary><span>社内デバッグ</span></summary><p>組み上がった設備を動かして調整し、社内立会（出荷前にお客様が動作を確かめる検査）に備える工程です。</p><ul><li><button type="button" class="map-li" data-id="b_mech">機構の調整<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="b_elec">配線修正<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="b_ctrl">動作確認<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="b_manual">取説・教材<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_fat">社内立会<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="debug">社内デバッグ編の資料を受け取る</button></details><details class="map-acc"><summary><span>出荷・現地</span></summary><p>分解・輸送・据付を経て、お客様の工場で立ち上げる工程です。</p><ul><li><button type="button" class="map-li" data-id="t_ship">分解・輸送<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="t_install">搬入・据付<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="t_cwork">受入れ工事<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="t_train">操作教育<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="t_madj">現地調整<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="t_start">現地立上げ<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="g_sat">現地検査<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="site">出荷・現地編の資料を受け取る</button></details><details class="map-acc"><summary><span>納品</span></summary><p>量産を立ち上げ、完成図書をそろえて検収（引き渡しの確定）を迎える工程です。</p><ul><li><button type="button" class="map-li" data-id="n_mass">量産立上げ<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="n_support">立上げ支援<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="n_docs">完成図書<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_acc">検収<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="deliver">納品編の資料を受け取る</button></details><details class="map-acc"><summary><span>アフター</span></summary><p>故障対応・保守部品・改造を通じて、次の案件につなげる工程です。</p><ul><li><button type="button" class="map-li" data-id="a_ops">運転・保全<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="a_fail">故障対応<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="a_next">次の案件<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="a_mod">改造・増設<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="a_spare">保守部品<small>購買</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="after">アフター編の資料を受け取る</button></details>
+  <h3 class="map-list-h">工程から<wbr>選ぶ</h3>
+  <details class="map-acc"><summary><span>営業・<wbr>見積</span></summary><p>引き合いから<wbr>見積まで。<wbr>ここでの<wbr>見極めが、<wbr>後の<wbr>全工程の<wbr>手戻りと<wbr>利益を<wbr>左右します。</p><ul><li><button type="button" class="map-li" data-id="s_inq">引き合い<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_survey">現地調査<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_work">ワーク評価<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="s_quote">見積・提案<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="s_alt">工法見直し<small>電気設計</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="sales">営業・<wbr>見積編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>受注</span></summary><p>契約と<wbr>仕様の<wbr>確定。<wbr>あいまいなまま<wbr>進むと、<wbr>立ち上げの<wbr>段階で<wbr>問題が<wbr>噴き出します。</p><ul><li><button type="button" class="map-li" data-id="o_contract">受注・契約<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="o_spec">仕様の<wbr>承認<small>お客様</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="order">受注編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>構想設計</span></summary><p>メカ・電気・<wbr>制御が<wbr>同時に<wbr>方式を<wbr>決め、<wbr>構想DRで<wbr>合流する<wbr>工程です。</p><ul><li><button type="button" class="map-li" data-id="c_plan">日程・予算<small>PM</small></button></li><li><button type="button" class="map-li" data-id="c_mech">メカ構想<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="c_elec">電気構想<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="c_ctrl">制御構想<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="c_long">長納期品<small>購買</small></button></li><li><button type="button" class="map-li" data-id="g_cdr">構想DR<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="concept">構想設計編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>詳細設計</span></summary><p>図面と<wbr>プログラムを<wbr>作り込み、<wbr>詳細DRで<wbr>確かめる<wbr>工程です。</p><ul><li><button type="button" class="map-li" data-id="d_mech">メカ詳細<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="d_elec">電気詳細<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="d_soft">ソフト設計<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="d_order">先行手配<small>購買</small></button></li><li><button type="button" class="map-li" data-id="d_appr">承認図<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="d_safety">安全の<wbr>検討<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_ddr">詳細DR<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="detail">詳細設計編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>製作</span></summary><p>部品の<wbr>加工・盤製作・組立を<wbr>同時に<wbr>進め、<wbr>1台の<wbr>設備に<wbr>まとめる<wbr>工程です。</p><ul><li><button type="button" class="map-li" data-id="m_prog">プログラム<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="m_parts">部品手配<small>購買</small></button></li><li><button type="button" class="map-li" data-id="m_machining">部品加工<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="m_panel">盤製作<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="m_inspect">受入検査<small>購買</small></button></li><li><button type="button" class="map-li" data-id="m_assy">組立・配線<small>製作・据付</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="make">製作編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>社内デバッグ</span></summary><p>組み上がった<wbr>設備を<wbr>動かして<wbr>調整し、<wbr>社内立会<wbr>（出荷前に<wbr>お客様が<wbr>動作を<wbr>確かめる<wbr>検査）に<wbr>備える<wbr>工程です。</p><ul><li><button type="button" class="map-li" data-id="b_mech">機構の<wbr>調整<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="b_elec">配線修正<small>電気設計</small></button></li><li><button type="button" class="map-li" data-id="b_ctrl">動作確認<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="b_manual">取説・教材<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_fat">社内立会<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="debug">社内デバッグ編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>出荷・現地</span></summary><p>分解・輸送・据付を<wbr>経て、<wbr>お客様の<wbr>工場で<wbr>立ち上げる<wbr>工程です。</p><ul><li><button type="button" class="map-li" data-id="t_ship">分解・輸送<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="t_install">搬入・据付<small>製作・据付</small></button></li><li><button type="button" class="map-li" data-id="t_cwork">受入れ工事<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="t_train">操作教育<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="t_madj">現地調整<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="t_start">現地立上げ<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="g_sat">現地検査<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="site">出荷・現地編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>納品</span></summary><p>量産を<wbr>立ち上げ、<wbr>完成図書を<wbr>そろえて<wbr>検収<wbr>（引き渡しの<wbr>確定）を<wbr>迎える<wbr>工程です。</p><ul><li><button type="button" class="map-li" data-id="n_mass">量産立上げ<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="n_support">立上げ支援<small>制御・ソフト</small></button></li><li><button type="button" class="map-li" data-id="n_docs">完成図書<small>PM</small></button></li><li><button type="button" class="map-li" data-id="g_acc">検収<small>関門</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="deliver">納品編の<wbr>資料を<wbr>受け取る</button></details><details class="map-acc"><summary><span>アフター</span></summary><p>故障対応・保守部品・改造を<wbr>通じて、<wbr>次の<wbr>案件に<wbr>つなげる<wbr>工程です。</p><ul><li><button type="button" class="map-li" data-id="a_ops">運転・保全<small>お客様</small></button></li><li><button type="button" class="map-li" data-id="a_fail">故障対応<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="a_next">次の<wbr>案件<small>営業・CS</small></button></li><li><button type="button" class="map-li" data-id="a_mod">改造・増設<small>メカ設計</small></button></li><li><button type="button" class="map-li" data-id="a_spare">保守部品<small>購買</small></button></li></ul><button type="button" class="map-acc-pdf" data-phase="after">アフター編の<wbr>資料を<wbr>受け取る</button></details>
  </div>
 </section>
 
 <section class="l-section svc-tint" id="usecase">
  <div class="l-container">
-  <p class="c-label">ユースケース集（PDF）</p><h2 class="c-h2">工程ごとの資料をお送りします</h2>
-  <p class="map-sub">各工程の困りごと　作業ごとのAI活用例　人に残す判断　進め方を2ページにまとめました。<br>お名前・会社名・メールアドレスを入力すると　その場でダウンロードできます。</p>
-  <ul class="map-cards"><li><button type="button" class="map-card" data-phase="sales"><span class="map-card-k">PDF・2ページ</span><b>営業・見積編</b><span class="map-card-l">引き合いから見積まで。ここでの見極めが、後の全工程の手戻りと利益を左右します。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="order"><span class="map-card-k">PDF・2ページ</span><b>受注編</b><span class="map-card-l">契約と仕様の確定。あいまいなまま進むと、立ち上げの段階で問題が噴き出します。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="concept"><span class="map-card-k">PDF・2ページ</span><b>構想設計編</b><span class="map-card-l">メカ・電気・制御が同時に方式を決め、構想DRで合流する工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="detail"><span class="map-card-k">PDF・2ページ</span><b>詳細設計編</b><span class="map-card-l">図面とプログラムを作り込み、詳細DRで確かめる工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="make"><span class="map-card-k">PDF・2ページ</span><b>製作編</b><span class="map-card-l">部品の加工・盤製作・組立を同時に進め、1台の設備にまとめる工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="debug"><span class="map-card-k">PDF・2ページ</span><b>社内デバッグ編</b><span class="map-card-l">組み上がった設備を動かして調整し、社内立会（出荷前にお客様が動作を確かめる検査）に備える工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="site"><span class="map-card-k">PDF・2ページ</span><b>出荷・現地編</b><span class="map-card-l">分解・輸送・据付を経て、お客様の工場で立ち上げる工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="deliver"><span class="map-card-k">PDF・2ページ</span><b>納品編</b><span class="map-card-l">量産を立ち上げ、完成図書をそろえて検収（引き渡しの確定）を迎える工程です。</span><span class="map-card-go">内容を見る →</span></button></li><li><button type="button" class="map-card" data-phase="after"><span class="map-card-k">PDF・2ページ</span><b>アフター編</b><span class="map-card-l">故障対応・保守部品・改造を通じて、次の案件につなげる工程です。</span><span class="map-card-go">内容を見る →</span></button></li></ul>
+  <p class="c-label">ユースケース集<wbr>（PDF）</p><h2 class="c-h2">工程ごとの<wbr>資料を<wbr>お送りします</h2>
+  <p class="map-sub">各工程の<wbr>困りごと　<wbr>作業ごとの<wbr>AI活用例　人に<wbr>残す判断　進め方を<wbr>2ページに<wbr>まとめました。<br>お名前・会社名・<wbr>メールアドレスを<wbr>入力すると　その<wbr>場で<wbr>ダウンロードできます。</p>
+  <ul class="map-cards"><li><button type="button" class="map-card" data-phase="sales"><span class="map-card-k">PDF・2ページ</span><b>営業・<wbr>見積編</b><span class="map-card-l">引き合いから<wbr>見積まで。<wbr>ここでの<wbr>見極めが、<wbr>後の<wbr>全工程の<wbr>手戻りと<wbr>利益を<wbr>左右します。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="order"><span class="map-card-k">PDF・2ページ</span><b>受注編</b><span class="map-card-l">契約と<wbr>仕様の<wbr>確定。<wbr>あいまいなまま<wbr>進むと、<wbr>立ち上げの<wbr>段階で<wbr>問題が<wbr>噴き出します。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="concept"><span class="map-card-k">PDF・2ページ</span><b>構想設計編</b><span class="map-card-l">メカ・電気・<wbr>制御が<wbr>同時に<wbr>方式を<wbr>決め、<wbr>構想DRで<wbr>合流する<wbr>工程です。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="detail"><span class="map-card-k">PDF・2ページ</span><b>詳細設計編</b><span class="map-card-l">図面と<wbr>プログラムを<wbr>作り込み、<wbr>詳細DRで<wbr>確かめる<wbr>工程です。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="make"><span class="map-card-k">PDF・2ページ</span><b>製作編</b><span class="map-card-l">部品の<wbr>加工・盤製作・組立を<wbr>同時に<wbr>進め、<wbr>1台の<wbr>設備に<wbr>まとめる<wbr>工程です。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="debug"><span class="map-card-k">PDF・2ページ</span><b>社内デバッグ編</b><span class="map-card-l">組み上がった<wbr>設備を<wbr>動かして<wbr>調整し、<wbr>社内立会<wbr>（出荷前に<wbr>お客様が<wbr>動作を<wbr>確かめる<wbr>検査）に<wbr>備える<wbr>工程です。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="site"><span class="map-card-k">PDF・2ページ</span><b>出荷・現地編</b><span class="map-card-l">分解・輸送・据付を<wbr>経て、<wbr>お客様の<wbr>工場で<wbr>立ち上げる<wbr>工程です。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="deliver"><span class="map-card-k">PDF・2ページ</span><b>納品編</b><span class="map-card-l">量産を<wbr>立ち上げ、<wbr>完成図書を<wbr>そろえて<wbr>検収<wbr>（引き渡しの<wbr>確定）を<wbr>迎える<wbr>工程です。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li><li><button type="button" class="map-card" data-phase="after"><span class="map-card-k">PDF・2ページ</span><b>アフター編</b><span class="map-card-l">故障対応・保守部品・改造を<wbr>通じて、<wbr>次の<wbr>案件に<wbr>つなげる<wbr>工程です。</span><span class="map-card-go">内容を<wbr>見る <wbr>→</span></button></li></ul>
  </div>
 </section>
 
 <section class="l-section" id="eye">
  <div class="l-container">
   <div class="map-core">
-   <p class="map-core-k">ロアニクスの役割</p>
-   <p class="map-core-b">どこまでが「ベテランにしかできない判断」なのか<br>その線を引くのが目利きです</p>
-   <p class="map-core-s">「感覚でしか分からない」とされる判断も　なぜそう判断したのかを聞くと　背景にある過去の失敗や事例が出てきます。それを言葉にして線を引きます。<br>AIに任せる範囲を広げすぎると現場で使われず　狭すぎると負担が減りません。<br>パナソニックの生産設備開発部門で17年　構想設計から現地の立ち上げまで担当してきた経験から　御社の業務に合わせて線を引きます。</p>
+   <p class="map-core-k">ロアニクスの<wbr>役割</p>
+   <p class="map-core-b">どこまでが<wbr>「ベテランに<wbr>しかできない<wbr>判断」なのか<br>その<wbr>線を<wbr>引くのが<wbr>目利きです</p>
+   <p class="map-core-s">「感覚でしか<wbr>分からない」と<wbr>される<wbr>判断も　<wbr>なぜそう<wbr>判断したのかを<wbr>聞くと　背景に<wbr>ある<wbr>過去の<wbr>失敗や<wbr>事例が<wbr>出てきます。<wbr>それを<wbr>言葉に<wbr>して<wbr>線を<wbr>引きます。<br>AIに<wbr>任せる<wbr>範囲を<wbr>広げすぎると<wbr>現場で<wbr>使われず　狭すぎると<wbr>負担が<wbr>減りません。<br>パナソニックの<wbr>生産設備開発部門で<wbr>17年　構想設計から<wbr>現地の<wbr>立ち上げまで<wbr>担当してきた<wbr>経験から　<wbr>御社の<wbr>業務に<wbr>合わせて<wbr>線を<wbr>引きます。</p>
   </div>
  </div>
 </section>
@@ -540,20 +545,20 @@
   <div class="c-diag">
    <div>
     <p class="c-diag__badge"><span>無料</span>オンライン30分</p>
-    <h2 class="c-diag__title">技術伝承の無料診断</h2>
-    <p class="c-diag__lead">教えたい技術と　いまの教え方を伺います。<br>教材にできる範囲と　どこから始めると効果が大きいかを<br>その場でお伝えします。</p>
+    <h2 class="c-diag__title">技術伝承の<wbr>無料診断</h2>
+    <p class="c-diag__lead">教えたい<wbr>技術と　<wbr>いまの<wbr>教え方を<wbr>伺います。<br>教材に<wbr>できる<wbr>範囲と　<wbr>どこから<wbr>始めると<wbr>効果が<wbr>大きいかを<br>その<wbr>場で<wbr>お伝えします。</p>
    </div>
    <div>
     <ul class="c-diag__list">
-     <li>教材にできる仕事の洗い出し</li>
-     <li>着手する順番と進め方の目安</li>
-     <li>公開中のシミュレーターと教材の形のご紹介</li>
+     <li>教材に<wbr>できる<wbr>仕事の<wbr>洗い<wbr>出し</li>
+     <li>着手する<wbr>順番と<wbr>進め方の<wbr>目安</li>
+     <li>公開中の<wbr>シミュレーターと<wbr>教材の<wbr>形の<wbr>ご紹介</li>
     </ul>
     <div class="c-diag__actions">
-     <a class="c-btn c-btn--primary c-btn--lg" href="contact.html?type=diag">フォームから申し込む <span aria-hidden="true">→</span></a>
-     <a class="c-btn c-btn--line c-btn--lg" data-line hidden href="#">LINEで申し込む <span aria-hidden="true">→</span></a>
+     <a class="c-btn c-btn--primary c-btn--lg" href="contact.html?type=diag">フォームから<wbr>申し込む <span aria-hidden="true">→</span></a>
+     <a class="c-btn c-btn--line c-btn--lg" data-line hidden href="#">LINEで<wbr>申し込む <span aria-hidden="true">→</span></a>
     </div>
-    <p class="c-diag__note">相談内容が固まっていなくても大丈夫です。担当は代表の西原です。</p>
+    <p class="c-diag__note">相談内容が<wbr>固まっていなくても<wbr>大丈夫です。<wbr>担当は<wbr>代表の<wbr>西原です。</p>
    </div>
   </div>
  </div>
@@ -566,9 +571,9 @@
   <button type="button" class="map-panel__x" data-close aria-label="閉じる">×</button>
   <div class="map-panel__body" id="mp-body"></div>
   <div class="map-dl" id="mp-dl">
-   <p class="map-dl__k">この工程のユースケース集</p>
+   <p class="map-dl__k">この<wbr>工程の<wbr>ユースケース集</p>
    <p class="map-dl__t" id="mp-doc"></p>
-   <p class="map-dl__s">困りごと／作業ごとのAI活用例／人に残す判断／進め方<span style="white-space:nowrap">（PDF・2ページ）</span></p>
+   <p class="map-dl__s">困りごと<wbr>／作業ごとの<wbr>AI活用例／人に<wbr>残す判断／進め方<span style="white-space:nowrap">（PDF・2ページ）</span></p>
    <form id="dl-form" class="map-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
     <input type="hidden" name="access_key" value="35a54cac-ba46-4df4-822a-b2da46f7cc64">
     <input type="hidden" name="subject" value="【ロアニクスWeb】資料請求">
@@ -580,20 +585,20 @@
     <label class="map-f"><span>会社名 <em>必須</em></span><input class="c-input" name="会社名" autocomplete="organization" required maxlength="120" placeholder="山田製作所"></label>
     <label class="map-f"><span>メールアドレス <em>必須</em></span><input class="c-input" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="160" placeholder="name@example.co.jp"></label>
     <fieldset class="map-f map-radio"><legend>検討状況 <em>必須</em></legend>
-     <label><input type="radio" name="検討状況" value="話を聞きたい" required>話を聞きたい</label>
+     <label><input type="radio" name="検討状況" value="話を聞きたい" required>話を<wbr>聞きたい</label>
      <label><input type="radio" name="検討状況" value="比較・検討している">比較・検討している</label>
-     <label><input type="radio" name="検討状況" value="将来的に検討したい">将来的に検討したい</label>
+     <label><input type="radio" name="検討状況" value="将来的に検討したい">将来的に<wbr>検討したい</label>
      <label><input type="radio" name="検討状況" value="情報収集のみ">情報収集のみ</label>
     </fieldset>
-    <label class="map-check"><input type="checkbox" name="privacy" value="同意する" required><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する</span></label>
+    <label class="map-check"><input type="checkbox" name="privacy" value="同意する" required><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に<wbr>同意する</span></label>
     <p class="map-form__err" id="dl-err" role="alert"></p>
-    <button class="c-btn c-btn--primary map-form__btn" type="submit">資料をダウンロードする</button>
+    <button class="c-btn c-btn--primary map-form__btn" type="submit">資料を<wbr>ダウンロードする</button>
    </form>
    <div class="map-done" id="dl-done" hidden>
-    <p class="map-done__t">ダウンロードを始めました</p>
-    <p>始まらない場合は <a id="dl-link" href="#" download>こちらから保存</a> してください。</p>
-    <p class="map-done__s">御社の業務に当てはめるとどうなるか　30分でお伝えします。</p>
-    <a class="c-btn c-btn--sub" href="contact.html?type=diag">技術伝承の無料診断を申し込む →</a>
+    <p class="map-done__t">ダウンロードを<wbr>始めました</p>
+    <p>始まらない<wbr>場合は <wbr><a id="dl-link" href="#" download>こちらから<wbr>保存</a> してください。</p>
+    <p class="map-done__s">御社の<wbr>業務に<wbr>当ては<wbr>めると<wbr>どうなるか　30分で<wbr>お伝えします。</p>
+    <a class="c-btn c-btn--sub" href="contact.html?type=diag">技術伝承の<wbr>無料診断を<wbr>申し込む →</a>
    </div>
   </div>
  </aside>
@@ -605,26 +610,26 @@
   <div class="c-footer__grid">
     <div>
       <div class="c-footer__brand"><img src="images/lorenics-logo.png" alt="" width="899" height="209"><span>ロアニクス株式会社</span></div>
-      <p class="c-footer__desc">製造業の現場から生まれた技術教育事業。人材育成と、社内で教え続けられる仕組みづくりを支援します。</p>
+      <p class="c-footer__desc">製造業の<wbr>現場から<wbr>生まれた<wbr>技術教育事業。<wbr>人材育成と、<wbr>社内で<wbr>教え続けられる<wbr>仕組みづくりを<wbr>支援します。</p>
     </div>
     <div class="c-footer__col">
       <div class="c-footer__head">COMPANY</div>
-      〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに南船場ビル205<br>
+      〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに<wbr>南船場ビル205<br>
       <a href="mailto:lorenics@outlook.jp">lorenics@outlook.jp</a>
     </div>
     <div class="c-footer__col">
       <div class="c-footer__head">MENU</div>
       <ul>
         <li><a href="index.html">トップ</a></li>
-        <li><a href="ai.html">技術教育の仕組みづくり</a></li>
+        <li><a href="ai.html">技術教育の<wbr>仕組みづくり</a></li>
         <li><a href="plc.html">PLC教育・研修</a></li>
-        <li><a href="advisor.html">FA制御技術顧問</a></li>
+        <li><a href="advisor.html">技術顧問</a></li>
         <li><a href="ai-map.html">AI活用マップ</a></li>
         <li><a href="demo.html">ライブデモ</a></li>
-        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="faq.html">よく<wbr>ある<wbr>質問</a></li>
         <li><a href="message.html">代表メッセージ</a></li>
         <li><a href="company.html">会社案内</a></li>
-        <li><a href="contact.html?type=diag">技術伝承の無料診断</a></li>
+        <li><a href="contact.html?type=diag">技術伝承の<wbr>無料診断</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="privacy.html">プライバシーポリシー</a></li>
       </ul>

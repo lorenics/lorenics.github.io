@@ -22,12 +22,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/sub.css?v=20261012f">
+<script src="js/sub.js?v=20261012f" defer></script>
 <style>
   .company-row { display: grid; grid-template-columns: 200px 1fr; border-right: 1px solid #d9dde4; border-bottom: 1px solid #d9dde4; border-left: 1px solid #d9dde4; }
   .company-label { display: flex; align-items: center; padding: 26px 34px; background: #eef0f4; color: #303746; font-size: 15px; font-weight: 700; }
   .company-value { padding: 26px 40px; font-size: 15px; line-height: 1.9; }
   .company-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .company-biz { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .company-biz li { display: grid; gap: 2px; }
+  .company-biz a, .company-biz b { font-weight: 700; }
+  .company-biz span { color: #3a3c42; font-size: 14px; line-height: 1.8; }
+  .company-biz span a { font-weight: 700; white-space: nowrap; }
   @media (max-width: 640px) {
     .company-row { grid-template-columns: 110px 1fr; }
     .company-label { padding: 20px 14px; font-size: 13px; color: #303746; }
@@ -45,17 +51,22 @@
 }
 </script>
 </head>
-<body class="p-company">
-<a class="c-skip" href="#main">本文へスキップ</a>
-<div class="c-hazard" aria-hidden="true"></div>
+<body class="p-company"><!-- wbr:budoux -->
+<a class="c-skip" href="#main">本文へ<wbr>スキップ</a>
 <header class="c-header">
   <div class="c-header__inner">
     <a class="c-header__logo" href="index.html"><img src="images/lorenics-logo.png" alt="ロアニクス株式会社 トップへ" width="899" height="209"></a>
     <nav class="c-header__nav" aria-label="メインメニュー">
-      <a class="c-header__link" href="ai.html">技術教育の仕組みづくり</a>
-      <a class="c-header__link" href="plc.html">PLC教育・研修</a>
-      <a class="c-header__link" href="advisor.html">技術顧問</a>
-      <a class="c-header__link" href="faq.html">よくある質問</a>
+      <div class="c-nav-biz" data-nav-biz>
+        <button type="button" class="c-header__link c-nav-biz__btn" aria-expanded="false" aria-controls="nav-biz">事業内容<span class="c-nav-biz__caret" aria-hidden="true"></span></button>
+        <div class="c-nav-biz__menu" id="nav-biz">
+          <a href="ai.html">技術教育の<wbr>仕組みづくり</a>
+          <a href="plc.html">PLC教育・研修</a>
+          <a href="advisor.html">技術顧問</a>
+          <a href="company.html#business">PR・Webマーケティング</a>
+        </div>
+      </div>
+      <a class="c-header__link" href="faq.html">よく<wbr>ある<wbr>質問</a>
       <a class="c-header__link" href="message.html">代表メッセージ</a>
       <a class="c-header__link" href="company.html" aria-current="page">会社案内</a>
     </nav>
@@ -97,7 +108,7 @@
       </div>
       <div class="company-row">
         <div class="company-label">所在地</div>
-        <div class="company-value">〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに南船場ビル205</div>
+        <div class="company-value">〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに<wbr>南船場ビル205</div>
       </div>
       <div class="company-row">
         <div class="company-label">設立日</div>
@@ -108,12 +119,20 @@
         <div class="company-value">100万円</div>
       </div>
       <div class="company-row">
-        <div class="company-label">法人番号</div>
+        <div class="company-label">法人<wbr>番号</div>
         <div class="company-value">8120001286908</div>
       </div>
-      <div class="company-row">
+      <div class="company-row" id="business">
         <div class="company-label">事業内容</div>
-        <div class="company-value">PLC・制御設計に関する教育、研修<br>生産設備の制御設計、技術支援<br>生成AIを活用した業務効率化支援</div>
+        <div class="company-value">
+          <ul class="company-biz">
+            <li><a href="ai.html">技術教育の<wbr>仕組みづくり</a><span>製造業の<wbr>技術伝承と、<wbr>社内で<wbr>教え続けられる<wbr>教育の<wbr>仕組みの<wbr>導入</span></li>
+            <li><a href="plc.html">PLC教育・研修</a><span>新人・若手向けの<wbr>PLC研修と、<wbr>個人向けの<wbr>PLC講座</span></li>
+            <li><a href="advisor.html">技術顧問</a><span>FA・<wbr>制御の<wbr>設計レビュー、<wbr>不具合と<wbr>立上げの<wbr>相談</span></li>
+            <li><b>PR・Webマーケティングの<wbr>コンサルティング</b><span>YouTube・Xを<wbr>活用した<wbr>発信の<wbr>支援　<a href="contact.html?type=pr">相談する <wbr>→</a></span></li>
+            <li><a href="ai-map.html">生成AIを<wbr>活用した<wbr>業務効率化支援</a></li>
+          </ul>
+        </div>
       </div>
       <div class="company-row">
         <div class="company-label">連絡先</div>
@@ -126,12 +145,12 @@
     <div style="max-width: 920px; margin: 0 auto; padding: clamp(56px, 8vw, 84px) clamp(20px, 5vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;">
       <div>
         <div style="font-family: 'Space Mono', monospace; color: #2E86D3; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; margin-bottom: 10px;">CONTACT</div>
-        <h2 style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: clamp(25px, 4vw, 36px); margin: 0 0 8px;">お問い合わせはこちら</h2>
-        <p style="margin: 0; color: #5c5f66; font-size: 14px;">設備・PLC教育、AIを使った業務改善のご相談を承ります。</p>
+        <h2 style="font-family: 'Zen Kaku Gothic New', sans-serif; font-size: clamp(25px, 4vw, 36px); margin: 0 0 8px;">お問い合わせは<wbr>こちら</h2>
+        <p style="margin: 0; color: #5c5f66; font-size: 14px;">技術教育の<wbr>仕組みづくり、<wbr>PLC教育・研修、<wbr>技術顧問、<wbr>PR・Webマーケティングなどの<wbr>ご相談を<wbr>承ります。</p>
       </div>
       <div class="company-cta">
-        <a class="c-btn c-btn--primary" href="contact.html">フォームで問い合わせる →</a>
-        <a class="c-btn c-btn--ghost" href="mailto:lorenics@outlook.jp">メールで問い合わせる</a>
+        <a class="c-btn c-btn--primary" href="contact.html">フォームで<wbr>問い合わせる <wbr>→</a>
+        <a class="c-btn c-btn--ghost" href="mailto:lorenics@outlook.jp">メールで<wbr>問い合わせる</a>
       </div>
     </div>
   </section>
@@ -141,26 +160,26 @@
   <div class="c-footer__grid">
     <div>
       <div class="c-footer__brand"><img src="images/lorenics-logo.png" alt="" width="899" height="209"><span>ロアニクス株式会社</span></div>
-      <p class="c-footer__desc">生産設備の現場から生まれた、PLC(シーケンス制御)の実践教育事業。設備保全の内製化を支援します。</p>
+      <p class="c-footer__desc">製造業の<wbr>現場から<wbr>生まれた<wbr>技術教育事業。<wbr>人材育成と、<wbr>社内で<wbr>教え続けられる<wbr>仕組みづくりを<wbr>支援します。</p>
     </div>
     <div class="c-footer__col">
       <div class="c-footer__head">COMPANY</div>
-      〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに南船場ビル205<br>
+      〒542-0081<br>大阪府大阪市中央区南船場3丁目2番22号<br>おおきに<wbr>南船場ビル205<br>
       <a href="mailto:lorenics@outlook.jp">lorenics@outlook.jp</a>
     </div>
     <div class="c-footer__col">
       <div class="c-footer__head">MENU</div>
       <ul>
         <li><a href="index.html">トップ</a></li>
-        <li><a href="ai.html">技術教育の仕組みづくり</a></li>
+        <li><a href="ai.html">技術教育の<wbr>仕組みづくり</a></li>
         <li><a href="plc.html">PLC教育・研修</a></li>
-        <li><a href="advisor.html">FA制御技術顧問</a></li>
+        <li><a href="advisor.html">技術顧問</a></li>
         <li><a href="ai-map.html">AI活用マップ</a></li>
         <li><a href="demo.html">ライブデモ</a></li>
-        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="faq.html">よく<wbr>ある<wbr>質問</a></li>
         <li><a href="message.html">代表メッセージ</a></li>
         <li><a href="company.html">会社案内</a></li>
-        <li><a href="contact.html?type=diag">技術伝承の無料診断</a></li>
+        <li><a href="contact.html?type=diag">技術伝承の<wbr>無料診断</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="privacy.html">プライバシーポリシー</a></li>
       </ul>

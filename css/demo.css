@@ -83,3 +83,15 @@
   .karte-rows i { grid-column: 2; }
   .demo-actions .c-btn { width: 100%; justify-content: center; }
 }
+
+/* 2026-10-12 小さく薄かった文字を、スマホでも読める大きさと濃さに */
+.demo-index i { font-size: 12px; background: #c2410c; }
+.demo-play { background: #c2410c; }
+.demo-play span { color: #c2410c; }
+.karte-tiles small { font-size: 12.5px; }
+.karte-rows li { grid-template-columns: 86px 1fr auto; }
+.karte-rows em { font-size: 12.5px; }
+.karte-rows span small { font-size: 12.5px; color: #4b5563; }
+.karte-rows i { font-size: 12.5px; }
+/* スマホでは4つの数字を2列に（「読みやすさ」が1文字だけ次の行に落ちないように） */
+@media (max-width: 480px) { .karte-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

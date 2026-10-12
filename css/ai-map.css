@@ -55,10 +55,13 @@
 .map-acc-pdf { margin: 10px 12px 14px; font: inherit; font-size: 14px; font-weight: 700; color: #b45309; background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
 @media (max-width: 759px) {
   .map-list { display: block; }
-  .map-svg { min-width: 1100px; }
-  .map-head { display: block; }
-  .map-legend { margin-top: 10px; font-size: 12px; }
+  /* スマホでは横に長い図は出さず、下の「工程から選ぶ」（縦に並べた一覧）で見せる。図の文字がスマホでは小さすぎて読めないため */
+  .map-scroll, .map-hint, .map-legend, .map-h small { display: none; }
+  .map-head { display: block; margin-bottom: 0; }
+  .map-list { margin-top: 12px; }
 }
+/* パソコンで図が右に続くときは、右端をぼかして続きがあると分かるようにする（js/sub.js が has-more を付ける） */
+.map-scroll.has-more { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 72px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 72px), transparent); }
 
 /* ユースケース集カード */
 .map-sub { margin: -8px 0 28px; color: #3a3c42; line-height: 1.95; }
