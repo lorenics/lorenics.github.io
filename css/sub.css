@@ -1038,3 +1038,9 @@ input, textarea, select { word-break: normal; }   /* 入力欄の中は、ふつ
 @media (max-width: 374px) {
   .res-point { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
+
+/* 2026-10-13 事業内容のメニュー：名前が長くなったので、狭いスマホでは折り返して画面に収める */
+@media (max-width: 420px) {
+  .c-nav-biz__menu { min-width: 0; width: calc(100vw - 12px); max-width: 360px; }
+  .c-nav-biz__menu a { white-space: normal; }
+}
