@@ -752,14 +752,7 @@ html:not(.force-motion) .c-anim, html:not(.force-motion) .c-anim * { animation: 
   .edu-consult-topics { flex-direction:column; margin:22px 0; }
 }
 
-/* ===== 数値で追う変化と学習の手法 ===== */
-.edu-metric-list { list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding:0; margin:30px 0 0; }
-.edu-metric-list li { border-top:2px solid #17181c; padding:21px 0 8px; }
-.edu-metric-list h3 { font-size:17px; line-height:1.6; margin:0 0 15px; }
-.edu-metric-list li > div { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
-.edu-metric-list b { font-family:var(--font-head); font-size:31px; font-weight:900; }
-.edu-metric-list b span { font-size:15px; font-weight:500; margin-left:4px; }
-.edu-metric-direction { font-size:16px; white-space:nowrap; }
+/* ===== 学習の手法 ===== */
 .edu-method-list { list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; padding:0; margin:30px 0; }
 .edu-method-list li { padding:24px; background:#fff; border-top:2px solid #17181c; position:relative; }
 .edu-method-list li > span { font-family:var(--font-head); font-size:30px; font-weight:900; }
@@ -775,12 +768,6 @@ html:not(.force-motion) .c-anim, html:not(.force-motion) .c-anim * { animation: 
 .edu-learning-order li:not(:last-child)::after { content:'→'; position:absolute; right:0; top:16px; color:#1f6fb0; }
 .edu-environment-title { font-family:var(--font-head); font-size:26px; line-height:1.5; margin:0 0 15px; }
 @media(max-width:759px) {
-  .edu-metric-list { grid-template-columns:1fr; gap:19px; margin-top:25px; }
-  .edu-metric-list li { padding:17px 0 4px; }
-  .edu-metric-list h3 { font-size:16px; margin-bottom:9px; }
-  .edu-metric-list b { font-size:27px; }
-  .edu-metric-list b span { font-size:13px; }
-  .edu-metric-direction { font-size:15px; }
   .edu-method-list { grid-template-columns:1fr; gap:24px; }
   .edu-method-list li { padding:20px; }
   .edu-method-list li:not(:last-child)::after { content:'↓'; right:auto; left:21px; top:auto; bottom:-26px; font-size:20px; }
@@ -968,12 +955,6 @@ input, textarea, select { word-break: normal; }   /* 入力欄の中は、ふつ
 /* よくある質問：右端の「＋」を質問の文の高さの真ん中に */
 .p-ai-faq summary::after { top: 50%; transform: translateY(-50%); line-height: 1; }
 
-/* 技術教育の仕組みづくり：目指す数値の変化（単位だけの大きな欄をやめ、何をどちらへ変えるかを大きく） */
-.edu-metric-list li > div { align-items: baseline; }
-.edu-metric-list .edu-metric-goal { font-family: var(--font-head); font-size: 28px; font-weight: 900; color: var(--blue-700); white-space: nowrap; }
-.edu-metric-list .edu-metric-unit { font-size: 14px; color: var(--ink-3); white-space: nowrap; }
-@media (max-width: 759px) { .edu-metric-list .edu-metric-goal { font-size: 24px; } }
-
 /* 技術教育の仕組みづくり：最後の相談の箱の2行を中央に／6つの手順の頭をそろえる／上のボタンの文字を中央に */
 .edu-final .c-cta-band__box > p:not(.c-label) { margin-left: auto; margin-right: auto; }
 .edu-final .c-cta-band__box > .edu-final-note { margin-left: auto; margin-right: auto; }
@@ -988,3 +969,71 @@ input, textarea, select { word-break: normal; }   /* 入力欄の中は、ふつ
 .svc-art-note { font-size: 13px; }
 /* 幅のごく狭いスマホ（360pxなど）でも、メニュー4つを2段目に収める */
 @media (max-width: 365px) { .c-header .c-header__nav { gap: 4px 8px; } }
+
+/* ============================================================
+   2026-10-12 技術教育の仕組みづくり：自社の実例
+   （数字のない「目指す数値の変化」をやめ、PLC講座の実績と計算に置き換えた）
+   ============================================================ */
+.res-block { margin-top: 46px; }
+.res-block:first-of-type { margin-top: 10px; }
+.res-h { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; font-family: var(--font-head); font-size: 25px; font-weight: 900; line-height: 1.4; }
+.res-no { flex-shrink: 0; display: inline-grid; place-items: center; width: 40px; height: 40px; background: #17181c; color: #fff; font: 700 20px/1 var(--font-mono); }
+.res-cards { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 0; margin: 0; }
+.res-cards--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.res-cards li { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; padding: 20px 0 6px; border-top: 2px solid #17181c; }
+.res-k { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.6; }
+.res-v { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0; }
+.res-v b { font-family: var(--font-head); font-size: 40px; font-weight: 900; line-height: 1.15; color: var(--blue-700); white-space: nowrap; }
+.res-v small, .res-bar-top small { font-size: 17px; font-weight: 700; margin: 0 1px; }
+.res-b4 { font-family: var(--font-head); font-size: 22px; font-weight: 900; color: #17181c; white-space: nowrap; }
+.res-to { display: inline-flex; align-items: baseline; gap: 10px; white-space: nowrap; }
+.res-ar { font-size: 20px; font-weight: 700; color: var(--blue-700); }
+.res-calc { margin: 2px 0 0; padding: 5px 11px; background: var(--blue-700); color: #fff; font-size: 14px; font-weight: 700; line-height: 1.5; }
+.res-n { margin: 0; font-size: 14px; line-height: 1.7; color: #505762; }
+.res-bars { position: relative; margin: 0 0 26px; padding: 20px 0 4px; border-top: 2px solid #17181c; }
+.res-bars-t { margin: 0 0 14px; font-size: 16px; font-weight: 700; }
+.res-bar + .res-bar { margin-top: 16px; }
+.res-bar-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; font-size: 15px; font-weight: 700; }
+.res-bar-top b { font-family: var(--font-head); font-size: 30px; font-weight: 900; line-height: 1.1; white-space: nowrap; }
+.res-bar--after .res-bar-top b { color: var(--blue-700); }
+.res-track { height: 20px; background: #e3eaf1; }
+.res-track i { display: block; height: 100%; background: #505762; }
+.res-bar--after .res-track i { min-width: 8px; background: var(--blue-700); }
+.res-bars-calc { margin: 14px 0 0; }
+.res-bars-calc span { display: inline-block; padding: 5px 11px; background: var(--blue-700); color: #fff; font-size: 14px; font-weight: 700; line-height: 1.5; }
+.res-point { display: flex; align-items: center; gap: 22px; margin: 26px 0 0; padding: 20px 24px; background: var(--blue-50); border-left: 5px solid var(--blue-700); }
+.res-point-num { flex-shrink: 0; margin: 0; font-family: var(--font-head); font-size: 22px; font-weight: 900; line-height: 1; color: var(--blue-700); white-space: nowrap; }
+.res-point-num b { font-size: 58px; margin-right: 2px; }
+.res-point-main { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.6; }
+.res-point-sub { margin: 6px 0 0; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+@media (max-width: 1050px) and (min-width: 760px) {
+  .res-cards--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 759px) {
+  .res-block { margin-top: 38px; }
+  .res-h { gap: 10px; font-size: 22px; }
+  .res-no { width: 34px; height: 34px; font-size: 17px; }
+  .res-cards, .res-cards--four { grid-template-columns: 1fr; gap: 16px; }
+  .res-cards li { padding: 16px 0 4px; }
+  .res-v b { font-size: 36px; }
+  .res-v small, .res-bar-top small { font-size: 16px; }
+  .res-b4 { font-size: 20px; }
+  .res-bar-top { font-size: 14px; }
+  .res-bar-top b { font-size: 26px; }
+  .res-point { gap: 16px; padding: 16px; }
+  .res-point-num { font-size: 19px; }
+  .res-point-num b { font-size: 48px; }
+  .res-point-main { font-size: 16px; }
+  .res-point-sub { font-size: 13px; }
+}
+/* スマホ：3の4つは短いので2列に並べて、縦に長くなりすぎないようにする（ごく狭い幅は1列のまま） */
+@media (max-width: 759px) and (min-width: 360px) {
+  .res-cards--four { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; }
+  .res-cards--four .res-v b { font-size: 31px; }
+  .res-cards--four .res-calc { padding: 4px 8px; font-size: 13px; }
+  .res-cards--four .res-n { font-size: 13px; }
+}
+/* 幅の狭いスマホ（360pxなど）：「5人」の箱は、数字の下に文を置く（横に並べると計算の行が細かく折れる） */
+@media (max-width: 374px) {
+  .res-point { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
