@@ -19,7 +19,7 @@
   var link = document.getElementById("dl-link");
   var btn = form.querySelector("button[type=submit]");
   var btnLabel = btn.textContent;
-  var MAIL = "lorenics@outlook.jp";
+  var MAIL = "nishihara.kento@lorenics.co.jp";
   var lastFocus = null, curPhase = null;
 
   function esc(s) {

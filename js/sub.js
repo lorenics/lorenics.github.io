@@ -98,7 +98,7 @@
   var form = document.getElementById("contact-form");
   if (!form) return;
 
-  var MAIL_TO = "lorenics@outlook.jp";
+  var MAIL_TO = "nishihara.kento@lorenics.co.jp";
   var TYPES = {
     plc: "PLC教育・研修",
     advisor: "技術顧問",
