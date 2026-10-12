@@ -980,6 +980,7 @@ input, textarea, select { word-break: normal; }   /* 入力欄の中は、ふつ
 .res-no { flex-shrink: 0; display: inline-grid; place-items: center; width: 40px; height: 40px; background: #17181c; color: #fff; font: 700 20px/1 var(--font-mono); }
 .res-cards { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 0; margin: 0; }
 .res-cards--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.res-cards--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .res-cards li { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; padding: 20px 0 6px; border-top: 2px solid #17181c; }
 .res-k { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.6; }
 .res-v { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0; }
@@ -1013,7 +1014,7 @@ input, textarea, select { word-break: normal; }   /* 入力欄の中は、ふつ
   .res-block { margin-top: 38px; }
   .res-h { gap: 10px; font-size: 22px; }
   .res-no { width: 34px; height: 34px; font-size: 17px; }
-  .res-cards, .res-cards--four { grid-template-columns: 1fr; gap: 16px; }
+  .res-cards, .res-cards--four, .res-cards--two { grid-template-columns: 1fr; gap: 16px; }
   .res-cards li { padding: 16px 0 4px; }
   .res-v b { font-size: 36px; }
   .res-v small, .res-bar-top small { font-size: 16px; }
