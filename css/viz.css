@@ -8,13 +8,13 @@
 /* 小さな横棒 */
 .vz-mbars { display: grid; gap: 6px; }
 .vz-mbars + .vz-mbars { margin-top: 4px; padding-top: 8px; border-top: 1px dashed #c9d3de; }
-.vz-mb { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #505762; }
+.vz-mb { display: grid; grid-template-columns: 2.2em 1fr 6em; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #505762; }
 .vz-mb > span { min-width: 1.5em; }
 .vz-mb-t { height: 14px; background: #e3eaf1; border-radius: 2px; overflow: hidden; }
 .vz-mb-t i { display: block; height: 100%; background: #505762; }
 .vz-mb.is-after { color: var(--blue-700); }
 .vz-mb.is-after .vz-mb-t i { background: var(--blue-700); }
-.vz-mb b { font-size: 14px; white-space: nowrap; color: inherit; }
+.vz-mb b { font-size: 14px; white-space: nowrap; color: inherit; text-align: right; }
 
 /* マス目 */
 .vz-cells { display: grid; gap: 3px; }
@@ -41,7 +41,7 @@
 
 /* 5人の箱 */
 .vz-point { flex: 1; min-width: 0; display: grid; gap: 10px; }
-.vz-point .vz-mb { grid-template-columns: 8.5em 1fr auto; font-size: 14px; }
+.vz-point .vz-mb { grid-template-columns: 8.5em 1fr 7em; font-size: 14px; }
 .vz-p5 { display: inline-flex; gap: 1px; margin-right: 4px; vertical-align: -2px; }
 .vz-p5 svg { width: 12px; height: 12px; fill: #505762; }
 .vz-point .res-point-sub { margin: 0; }
@@ -54,5 +54,5 @@
 .vz-stack-c span { margin-top: 3px; font-size: 12px; font-weight: 700; line-height: 1.35; text-align: center; color: #505762; }
 
 @media (max-width: 759px) {
-  .vz-point .vz-mb { grid-template-columns: 7.6em 1fr auto; font-size: 13px; }
+  .vz-point .vz-mb { grid-template-columns: 7.6em 1fr 6.6em; font-size: 13px; }
 }

@@ -1,4 +1,30 @@
 /* トップページ（トップ案B）　生成元：Claude Designのトップ案B */
+.vz{display:grid;gap:7px;margin:8px 0 4px}
+.vz-key{display:inline-flex;align-items:center;gap:6px;justify-self:start;padding:2px 10px;background:#eef3f9;border-radius:99px;font-size:13px;font-weight:700;color:#141b26;white-space:nowrap}
+.vz-key svg{width:14px;height:14px;fill:#0a5fd0}
+.vz-sq{display:inline-block;width:11px;height:11px;background:#0a5fd0;border-radius:2px}
+.vz-mbars{display:grid;gap:5px}
+.vz-mb{display:grid;grid-template-columns:2.4em 1fr 5.4em;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#4a5568}
+.vz-mb-t{height:12px;background:#e3eaf1;border-radius:2px;overflow:hidden}
+.vz-mb-t i{display:block;height:100%;background:#5b6675}
+.vz-mb.is-after{color:#0a5fd0}
+.vz-mb.is-after .vz-mb-t i{background:#0a5fd0}
+.vz-mb b{font-size:13px;white-space:nowrap;color:inherit;text-align:right}
+.vz-cells{display:grid;gap:3px}
+.vz-cells i{aspect-ratio:1;background:#e3eaf1;border-radius:2px}
+.vz-cells i.on{background:#0a5fd0}
+.vz-cells i.half{background:repeating-linear-gradient(135deg,#0a5fd0 0 3px,#9cc0e6 3px 6px)}
+.vz-cells--month{grid-template-columns:repeat(12,minmax(0,1fr))}
+.vz-cells--month i{aspect-ratio:auto;height:22px}
+.vz-cells--week{grid-template-columns:repeat(20,minmax(0,1fr))}
+.vz-cells--week i.on{background:#f07a1a}
+.vz-cells--page{grid-template-columns:repeat(37,minmax(0,1fr));gap:2px}
+.vz-cells--page i{border-radius:1px}
+.vz-cells--doc{grid-template-columns:repeat(10,minmax(0,1fr));max-width:260px}
+.vz-picto{display:flex;gap:4px}
+.vz-picto svg{width:22px;height:22px;fill:#0a5fd0}
+.vz-picto .lt svg{fill:#b9cde6}
+
 :root{--ink:#141b26;--ink2:#26324a;--blue:#0a5fd0;--vh:min(100vh,1000px);
 --grad:linear-gradient(118deg,#0552d0 0%,#0a78ee 42%,#16a6f3 72%,#3cc9f2 100%);
 --panel:linear-gradient(150deg,#0446c4 0%,#0a62dc 46%,#118ee9 100%);
