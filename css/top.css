@@ -1,4 +1,16 @@
 /* トップページ（トップ案B）　生成元：Claude Designのトップ案B */
+.ch { margin: 6px 0 2px; }
+.ch svg { display: block; max-width: 100%; height: auto; overflow: visible; }
+.ch-donut { display: flex; align-items: center; gap: 14px; }
+.ch-donut svg { flex: none; width: 96px; height: 96px; }
+.ch-donut p { margin: 0; display: grid; gap: 2px; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.ch-b { color: #5b6675; }
+.ch-a { color: #0a5fd0; }
+.ch-n { color: #6b7685; font-size: 12px; font-weight: 500; }
+.ch-slope, .ch-vbars { max-width: 340px; }
+.ch-vbars { max-width: 240px; }
+.ch-cross { max-width: 520px; margin-top: 12px; }
+
 .vz{display:grid;gap:7px;margin:8px 0 4px}
 .vz-key{display:inline-flex;align-items:center;gap:6px;justify-self:start;padding:2px 10px;background:#eef3f9;border-radius:99px;font-size:13px;font-weight:700;color:#141b26;white-space:nowrap}
 .vz-key svg{width:14px;height:14px;fill:#0a5fd0}

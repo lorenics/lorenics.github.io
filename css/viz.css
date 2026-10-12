@@ -56,3 +56,16 @@
 @media (max-width: 759px) {
   .vz-point .vz-mb { grid-template-columns: 7.6em 1fr 6.6em; font-size: 13px; }
 }
+
+/* いろいろな形のグラフ（charts.py） */
+.ch { margin: 6px 0 2px; }
+.ch svg { display: block; max-width: 100%; height: auto; overflow: visible; }
+.ch-donut { display: flex; align-items: center; gap: 14px; }
+.ch-donut svg { flex: none; width: 96px; height: 96px; }
+.ch-donut p { margin: 0; display: grid; gap: 2px; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.ch-b { color: #5b6675; }
+.ch-a { color: #0a5fd0; }
+.ch-n { color: #6b7685; font-size: 12px; font-weight: 500; }
+.ch-slope, .ch-vbars { max-width: 340px; }
+.ch-vbars { max-width: 240px; }
+.ch-cross { max-width: 520px; margin-top: 12px; }
