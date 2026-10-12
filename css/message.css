@@ -24,6 +24,7 @@
 .msg-sign { display: grid; gap: 2px; margin-top: 34px; padding-top: 22px; border-top: 1px solid rgba(11, 42, 82, .2); max-width: 360px; }
 .msg-sign span { font-size: 14px; font-weight: 700; color: #3a4a60; letter-spacing: .06em; }
 .msg-sign b { font: 800 clamp(28px, 2.8vw, 36px)/1.35 var(--font-serif); letter-spacing: .18em; color: var(--msg-navy); }
+.msg-age { font-style: normal; font-size: 14px; font-weight: 700; color: #3a4a60; letter-spacing: .04em; }
 .msg-sign i { justify-self: start; margin-top: 8px; padding: 4px 14px; background: var(--msg-navy); color: #fff; border-radius: 99px; font-style: normal; font-size: 13px; font-weight: 700; }
 
 /* 数字で見る */
