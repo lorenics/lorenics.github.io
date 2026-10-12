@@ -6,7 +6,7 @@
   --panel:linear-gradient(150deg,#0446c4 0%,#0a62dc 46%,#118ee9 100%);
   --orange:linear-gradient(90deg,#ffa53f 0%,#f2650c 100%);
   --q:#0a5fd0;--c:#12a070;--d:#f2650c;     /* 品質・コスト・納期（色の見分けは検証済み。名前と金額も必ず書く） */
-  --err:#b3261e;--bg:#f3f7fd;
+  --err:#b3261e;--bg:#f3f7fd;--bg-see:rgba(0,85,212,.047);   /* --bg-see：白の上で --bg と同じ色。うしろに漂う絵が透けて見える */
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -76,7 +76,7 @@ a{color:var(--blue);font-weight:700}
 }
 
 /* ---------- シート ---------- */
-.dg-main{background:var(--bg);padding:28px 16px 80px}
+.dg-main{background:var(--bg-see);padding:28px 16px 80px}
 .dg-wrap{max-width:780px;margin:0 auto}
 .dg-prog{position:sticky;top:79px;z-index:20;background:var(--bg);padding:12px 0 14px;margin:0 0 6px}
 .dg-prog-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
@@ -287,7 +287,7 @@ a{color:var(--blue);font-weight:700}
 .rs-tl-over .grow{background:var(--d)}
 
 /* ---------- 結果の1枚（ページ） ---------- */
-.rp-main{background:var(--bg);padding:24px 16px 80px}
+.rp-main{background:var(--bg-see);padding:24px 16px 80px}
 .rp-wrap{max-width:780px;margin:0 auto}
 .rp-actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px}
 .rp-actions .pill{height:52px;padding:0 20px;font-size:16px}

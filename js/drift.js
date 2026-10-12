@@ -264,7 +264,9 @@
     step(dt);
     paint(true);
   }
-  function stopped() { return document.hidden || root.classList.contains('motion-off'); }
+  /* 止めるボタンがないページ（無料診断など）では、端末の「動きを減らす」設定に従って止める */
+  var reduce = !document.getElementById('motion-stop') && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function stopped() { return document.hidden || reduce || root.classList.contains('motion-off'); }
   function sync() {
     if (stopped()) {
       if (running) { running = false; window.cancelAnimationFrame(raf); }
