@@ -27,7 +27,7 @@
   function rich(tag, cls, text) {
     var e = document.createElement(tag);
     if (cls) { e.className = cls; }
-    var re = /(約?[\d,.]+(?:万円|時間|か月|年分|分|回|%)(?:（仮）)?)/g, lastI = 0, m;
+    var re = /(約?[\d,.]+(?:万円|時間|か月分|か月|年分|人分|分|回|%)(?:（仮）)?)/g, lastI = 0, m;
     while ((m = re.exec(text))) {
       if (m.index > lastI) { e.appendChild(document.createTextNode(text.slice(lastI, m.index))); }
       var s = document.createElement('span'); s.className = 'nw'; s.textContent = m[1]; e.appendChild(s);
@@ -105,6 +105,14 @@
     box.appendChild(hero);
     /* 条件は合計のすぐ下に1行 */
     box.appendChild(h('p', { class: 'rs-cond', text: '条件：' + t.cond }));
+    /* ほかの仕事に回せる時間を、期間（1人の勤務の何か月分）と人数（何人分）に直して見せる */
+    if (t.free) {
+      box.appendChild(h('div', { class: 'rs-free' }, [
+        h('p', { class: 'fl', text: t.free.label }),
+        rich('p', 'fv', t.free.h),
+        rich('p', 'fe', t.free.eq)
+      ]));
+    }
     var showParts = !(opts && opts.breakdown === false);
     if (showParts) {
       var sum = t.parts.reduce(function (s2, p) { return s2 + p.v; }, 0);

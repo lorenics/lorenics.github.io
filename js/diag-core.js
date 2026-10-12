@@ -62,6 +62,19 @@
     return '1日 約' + (roundK(raw, fr(5)) * 5) + '分';
   }
   function tenth(x) { return oneDec(roundK(x, fr(1, 10))); }
+  /* ほかの仕事に回せる時間を、1人の勤務の何か月分・何人分かに直す
+     1か月＝160時間（年1,920時間÷12）、1人分＝年1,920時間。どちらも0.1単位
+     ・12.0か月分未満：「1人の勤務の約4.0か月分（約0.3人分）」。0.05人分未満は「0.1人分未満」
+     ・12.0か月分以上：「約2.5人分」（か月分が大きくなると思い浮かべにくいため、人数だけ）
+     ・0.05か月分未満：「1人の勤務の0.1か月分未満」（「約」は付けない） */
+  function freeEq(h) {
+    var mo = div(h, fr(160));
+    if (lt(mo, fr(1, 20))) { return '1人の勤務の0.1か月分未満'; }
+    var mk = roundK(mo, fr(1, 10));
+    var pp = div(h, fr(1920));
+    var pTxt = lt(pp, fr(1, 20)) ? '0.1人分未満' : '約' + oneDec(roundK(pp, fr(1, 10))) + '人分';
+    return mk < 120 ? '1人の勤務の約' + oneDec(mk) + 'か月分（' + pTxt + '）' : pTxt;
+  }
 
   /* ------------------------------------------------------------
      問い（設計書「質問（16問）」タブの全文）
@@ -235,7 +248,9 @@
     else if (perPerson) { R.total = { state: R.youngNone ? 'youngNone' : 'youngUnknown' }; }
     else {
       var sum = add(add(qSave === null ? fr(0) : qSave, cSave), dYen);
-      R.total = { state: 'value', yen: sum, kari: (mKari || dKari || eKari), q: qSave, c: cSave, d: dYen };
+      /* ほかの仕事に回せる時間＝品質とコストの「半分に減った場合」の時間の合計（納期の分は時間ではないので入れない） */
+      var freeH = add(R.q.state === 'value' ? R.q.halfH : fr(0), R.c.halfH);
+      R.total = { state: 'value', yen: sum, kari: (mKari || dKari || eKari), q: qSave, c: cSave, d: dYen, freeH: freeH };
     }
     return R;
   }
@@ -370,6 +385,10 @@
       tot.parts.push({ key: 'c', label: 'コスト', txt: '約' + man(R.total.c), v: num(R.total.c) });
       tot.parts.push({ key: 'd', label: '納期', txt: '約' + man(R.total.d), v: num(R.total.d) });
       tot.qNote = R.q.state === 'unknown' ? '※品質の分は入っていません（回数が分かると出せます）' : null;
+      /* 合計のすぐ下：ほかの仕事に回せる時間を、期間と人数に直す（「仮」は時間のあとに1回だけ。＝の右は時間を直しただけのため） */
+      var ft = R.total.kari ? KARI : '';
+      tot.free = { label: 'ほかの仕事に回せる時間', h: '年 約' + hours(R.total.freeH) + ft, eq: '＝' + freeEq(R.total.freeH) };
+      tot.freeLine = tot.free.label + '：' + tot.free.h + tot.free.eq;
     } else {
       tot.state = R.total.state;
       tot.alt = R.total.state === 'noTsukisoi' ? '教える時間がすでに少ないため、合計と回収の目安は面談で一緒に確かめます'
@@ -494,6 +513,7 @@
     L.push('・始めるのが合いそうな所：' + T.routeName + '（' + T.one + '）');
     if (T.total.state === 'value') {
       L.push('・品質・コスト・納期の効果の合計：年 ' + T.total.hero + (T.total.kari ? KARI : '') + '（' + COND + '）');
+      L.push('・' + T.total.freeLine);
     } else {
       L.push('・品質・コスト・納期の効果の合計：' + T.total.alt);
     }
@@ -541,6 +561,7 @@
     if (T.total.state === 'value') {
       var parts = T.total.parts.map(function (p) { return p.label + ' ' + p.txt; }).join('／');
       L.push('・品質・コスト・納期（QCD）の効果の合計：年 ' + T.total.hero + (T.total.kari ? KARI : '') + '（' + COND + '。' + parts + '）');
+      L.push('・' + T.total.freeLine);
       if (T.total.qNote) { L.push(T.total.qNote); }
       L.push('・' + T.total.roi);
     } else {
@@ -587,10 +608,11 @@
     if (T.total.state === 'value') {
       f.total = '・品質・コスト・納期（QCD）の効果の合計：年 ' + T.total.hero + (T.total.kari ? KARI : '') + '（' + COND + '。' +
         T.total.parts.map(function (p) { return p.label + ' ' + p.txt; }).join('／') + '）';
+      f.free = '・' + T.total.freeLine;                       /* ひな形：{total} の次の行 */
       f.totalNote = T.total.qNote || '';
       f.roi = '・' + T.total.roi;
     } else {
-      f.total = '・' + T.total.alt; f.totalNote = ''; f.roi = '';
+      f.total = '・' + T.total.alt; f.free = ''; f.totalNote = ''; f.roi = '';
     }
     f.time = '・教えることに使っている時間：' + (T.timeLine || '付き添いの時間は、すでに少ない状態です（ご回答）');
     f.delivery = '・' + T.delivery.say;
@@ -679,6 +701,6 @@
     encodeAll: encodeAll, resultHash: resultHash, parseResultHash: parseResultHash, dateLabel: dateLabel, today: today,
     /* 検算用（試験で使う） */
     _f: { fr: fr, dec: dec, mul: mul, div: div, add: add, num: num, roundK: roundK, hours: hours, hoursN: hoursN, man: man, manN: manN,
-      years: years, perDay: perDay, tenth: tenth, comma: comma }
+      years: years, perDay: perDay, tenth: tenth, comma: comma, freeEq: freeEq }
   };
 });

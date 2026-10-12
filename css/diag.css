@@ -216,6 +216,12 @@ a{color:var(--blue);font-weight:700}
 .rs-leg i{display:inline-block;width:14px;height:14px;border-radius:3px}
 .rs-note{margin:8px 0 0;font-weight:700;font-size:16px}
 .rs-cond{margin:12px 0 0;font-weight:700;font-size:16px;line-height:1.7}
+/* ほかの仕事に回せる時間（期間と人数） */
+.rs-free{margin:12px 0 0;padding:14px 16px;border-radius:14px;background:var(--blue-50);border:2px solid var(--blue-100)}
+.rs-free p{margin:0}
+.rs-free .fl{font-weight:900;font-size:16px;line-height:1.5}
+.rs-free .fv{margin-top:2px;font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;font-weight:900;font-size:clamp(26px,6.6vw,32px);line-height:1.3}
+.rs-free .fe{margin-top:4px;font-weight:900;font-size:18px;line-height:1.6}
 .rs-roi{margin:12px 0 0;padding:14px 16px;border-radius:14px;background:#fff6ec;border-left:6px solid #f2650c;font-weight:900;font-size:17px;line-height:1.75}
 .rs-alt{margin:8px 0 0;padding:16px;border-radius:14px;background:var(--blue-50);font-weight:900;font-size:18px;line-height:1.7}
 .rs-disc{margin:12px 0 0;font-size:15px;font-weight:700}

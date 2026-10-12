@@ -13,7 +13,7 @@
     endpoint: '',
     fields: {
       mail: 'mail', name: 'name',
-      route: '', one: '', total: '', totalNote: '', roi: '', time: '', delivery: '', role: '', meeting: '', screen: '',
+      route: '', one: '', total: '', free: '', totalNote: '', roi: '', time: '', delivery: '', role: '', meeting: '', screen: '',
       resultUrl: '', answers: ''
     }
   };
