@@ -27,3 +27,9 @@
   font-weight: 700;
   letter-spacing: 0;
 }
+
+/* ---------- フッターの SNS（YouTube・X） ---------- */
+.sns { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; padding: 0; }
+.sns a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1.5px solid #d4dce6; border-radius: 99px; background: #fff; color: #141b26 !important; font-size: 14px; font-weight: 700; line-height: 1; text-decoration: none; transition: border-color .2s, transform .2s; }
+.sns a:hover { border-color: #0a5fd0; transform: translateY(-1px); }
+.sns svg { display: block; flex: none; }
