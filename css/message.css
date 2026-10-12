@@ -1,0 +1,108 @@
+/* 代表メッセージ（message.html）
+   IR資料のトップメッセージのように、大きな見出しと数字・年表・図で見せ、本文は短く区切る */
+.p-message { --msg-navy: #0b2a52; --msg-blue: #0a5fd0; --msg-ink: #12233a; --msg-sub: #3a4452; --msg-or: #e8730c; }
+.p-message main { word-break: keep-all; overflow-wrap: anywhere; }
+.msg-wrap { max-width: 1120px; margin: 0 auto; padding-inline: var(--gutter); }
+.msg-wrap--narrow { max-width: 880px; }
+.msg-sec { padding-block: clamp(60px, 9vw, 104px); }
+.msg-sec--gray { background: #f3f6fa; }
+.msg-h2 { margin: 0 0 clamp(28px, 4vw, 44px); font: 900 clamp(26px, 3.4vw, 40px)/1.45 var(--font-head); color: var(--msg-ink); }
+
+/* 最初の画面 */
+.msg-hero { background: linear-gradient(150deg, var(--msg-navy) 0%, #0a3f86 60%, var(--msg-blue) 100%); color: #fff; overflow: hidden; }
+.msg-hero__in { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: clamp(24px, 4vw, 56px); padding: clamp(48px, 7vw, 88px) var(--gutter); }
+.msg-eyebrow { display: inline-block; margin: 0 0 18px; padding: 6px 16px; background: var(--msg-or); border-radius: 99px; font-size: 15px; font-weight: 900; letter-spacing: .08em; }
+.msg-title { margin: 0; font: 900 clamp(34px, 5.2vw, 64px)/1.3 var(--font-head); letter-spacing: .01em; }
+.msg-title em { font-style: normal; font-size: 1.32em; color: #ffd28f; }
+.msg-hero__lead { margin: 22px 0 0; font-size: clamp(16px, 1.6vw, 19px); font-weight: 700; line-height: 1.85; color: #e3ecf8; }
+.msg-sign { display: grid; gap: 2px; margin-top: 28px; }
+.msg-sign span { font-size: 14px; font-weight: 700; color: #cfdcef; }
+.msg-sign b { font: 900 clamp(28px, 3vw, 36px)/1.3 var(--font-head); letter-spacing: .08em; }
+.msg-sign i { justify-self: start; margin-top: 6px; padding: 4px 14px; border: 1.5px solid rgba(255, 255, 255, .55); border-radius: 99px; font-style: normal; font-size: 14px; font-weight: 700; }
+.msg-hero__ph { margin: 0; position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 60px rgba(4, 18, 40, .45); }
+.msg-hero__ph img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* 数字で見る */
+.msg-kpi { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.msg-kpi li { display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 24px 24px 22px; background: #fff; border-radius: 14px; border-top: 5px solid var(--msg-blue); box-shadow: 0 6px 20px rgba(18, 35, 58, .07); }
+.msg-kpi-k { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.55; color: var(--msg-ink); }
+.msg-kpi-v { margin: 4px 0 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 4px; color: var(--msg-blue); white-space: nowrap; }
+.msg-kpi-v b { font: 900 clamp(48px, 5.4vw, 66px)/1.05 var(--font-head); letter-spacing: -.01em; }
+.msg-kpi-v small { font-size: 19px; font-weight: 900; }
+.msg-kpi-n { margin: 4px 0 0; font-size: 14px; font-weight: 500; line-height: 1.7; color: var(--msg-sub); }
+
+/* 歩み（年表） */
+.msg-tl { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); position: relative; }
+.msg-tl::before { content: ""; position: absolute; left: 0; right: 0; top: 52px; height: 4px; background: linear-gradient(90deg, #b9cde6, var(--msg-blue)); border-radius: 2px; }
+.msg-tl li { position: relative; min-width: 0; padding-right: 18px; }
+.msg-tl-when { margin: 0; height: 36px; font: 900 22px/36px var(--font-head); color: var(--msg-blue); white-space: nowrap; }
+.msg-tl-dot { width: 20px; height: 20px; margin: 4px 0 18px; border-radius: 50%; background: #fff; border: 5px solid var(--msg-blue); position: relative; z-index: 1; }
+.msg-tl li.is-now .msg-tl-dot { background: var(--msg-or); border-color: var(--msg-or); box-shadow: 0 0 0 6px rgba(232, 115, 12, .2); }
+.msg-tl-body h3 { margin: 0 0 8px; font: 900 18px/1.55 var(--font-head); color: var(--msg-ink); }
+.msg-tl-body p { margin: 0; font-size: 14.5px; line-height: 1.85; color: var(--msg-sub); }
+
+/* 本文 */
+.msg-body { padding-top: clamp(64px, 9vw, 104px); }
+.msg-ch + .msg-ch { margin-top: clamp(64px, 9vw, 100px); }
+.msg-ch-no { margin: 0; font: 700 clamp(44px, 6vw, 64px)/1 var(--font-mono); color: #c7d7ea; }
+.msg-ch-h { margin: 10px 0 22px; font: 900 clamp(28px, 3.8vw, 44px)/1.4 var(--font-head); color: var(--msg-ink); }
+.msg-p { margin: 0; font-size: 17px; font-weight: 500; line-height: 2.05; color: #2c3440; }
+.msg-walls { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.msg-walls li { display: flex; align-items: center; gap: 18px; padding: 20px 22px; background: #f3f6fa; border-radius: 14px; }
+.msg-walls img { flex-shrink: 0; width: 64px; height: 64px; }
+.msg-walls p { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.7; color: var(--msg-ink); }
+.msg-quote { margin: 30px 0 0; padding: clamp(24px, 4vw, 40px); background: var(--msg-navy); color: #fff; border-radius: 16px; position: relative; }
+.msg-quote::before { content: "“"; position: absolute; top: -18px; left: 22px; font: 900 96px/1 Georgia, serif; color: var(--msg-or); }
+.msg-quote p { margin: 0; font: 700 clamp(20px, 2.6vw, 28px)/1.75 var(--font-head); }
+.msg-quote b { color: #ffd28f; }
+.msg-chart { margin-top: 32px; padding: clamp(22px, 3.5vw, 36px); border: 2px solid #d6e3f2; border-radius: 16px; }
+.msg-chart-t { margin: 0 0 18px; font-size: 17px; font-weight: 700; line-height: 1.7; }
+.msg-chart-t b { font: 900 clamp(22px, 2.6vw, 28px)/1.5 var(--font-head); }
+.msg-chart .res-bars { margin-bottom: 0; }
+.msg-note { margin: 18px 0 0; font-size: 14px; line-height: 1.85; color: var(--msg-sub); }
+.msg-biz { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 10px; }
+.msg-biz a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 18px 22px; background: #fff; border: 2px solid #d6e3f2; border-radius: 12px; color: var(--msg-ink); text-decoration: none; transition: border-color .2s, transform .2s; }
+.msg-biz a:hover { border-color: var(--msg-blue); transform: translateX(4px); }
+.msg-biz-no { font: 700 18px/1 var(--font-mono); color: var(--msg-blue); }
+.msg-biz b { font-size: 18px; line-height: 1.6; }
+.msg-biz-go { font-size: 20px; font-weight: 700; color: var(--msg-blue); }
+
+/* これから */
+.msg-close { padding-block: clamp(64px, 9vw, 104px); background: linear-gradient(160deg, var(--msg-navy), #0a3f86); color: #fff; }
+.msg-wish { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.msg-wish li { padding-left: 22px; border-left: 5px solid var(--msg-or); font: 900 clamp(21px, 2.8vw, 30px)/1.6 var(--font-head); }
+.msg-close-p { margin: 36px 0 0; font-size: 18px; font-weight: 700; line-height: 1.9; color: #e3ecf8; }
+.msg-sign--end { justify-items: end; text-align: right; }
+.msg-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 48px; }
+
+@media (prefers-reduced-motion: reduce) { .msg-biz a { transition: none; } }
+
+@media (max-width: 960px) {
+  .msg-hero__in { grid-template-columns: 1fr; }
+  .msg-hero__ph { order: -1; max-width: 640px; }
+  .msg-kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .msg-tl { grid-template-columns: 1fr; gap: 0; }
+  .msg-tl::before { left: 8px; right: auto; top: 10px; bottom: 10px; width: 4px; height: auto; background: linear-gradient(180deg, #b9cde6, var(--msg-blue)); }
+  .msg-tl li { display: grid; grid-template-columns: 20px 1fr; column-gap: 18px; padding: 0 0 26px; }
+  .msg-tl-dot { grid-row: 1 / span 2; grid-column: 1; margin: 6px 0 0; }
+  .msg-tl-when { grid-column: 2; height: auto; line-height: 1.5; }
+  .msg-tl-body { grid-column: 2; }
+  .msg-tl-when:empty, .msg-tl li:first-child .msg-tl-when { display: none; }
+  .msg-tl li:first-child .msg-tl-dot { grid-row: 1; }
+}
+@media (max-width: 640px) {
+  .msg-kpi { gap: 10px; }
+  .msg-kpi li { padding: 16px 14px 14px; border-top-width: 4px; }
+  .msg-kpi-k { font-size: 14px; }
+  .msg-kpi-v b { font-size: 40px; }
+  .msg-kpi-v small { font-size: 15px; }
+  .msg-kpi-n { font-size: 13px; }
+  .msg-walls { grid-template-columns: 1fr; }
+  .msg-walls li { padding: 16px 18px; }
+  .msg-walls img { width: 52px; height: 52px; }
+  .msg-walls br, .msg-wish br { display: none; }
+  .msg-p { font-size: 16px; }
+  .msg-biz a { padding: 16px; gap: 12px; }
+  .msg-biz b { font-size: 16px; }
+  .msg-cta .c-btn { width: 100%; justify-content: center; }
+}
