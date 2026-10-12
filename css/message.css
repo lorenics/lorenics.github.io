@@ -57,7 +57,7 @@
 .msg-leg li { display: grid; grid-template-columns: 12px 1fr auto; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 700; line-height: 1.45; color: var(--msg-ink); }
 .msg-leg i { width: 12px; height: 12px; border-radius: 3px; }
 .msg-leg b { font-family: var(--font-num); font-size: 15px; color: var(--msg-ink); }
-.msg-leg small { font-size: 11px; }
+.msg-leg small { font-size: 12.5px; }
 /* ピクトグラム（人・工場を並べる） */
 .msg-picto { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 3px; }
 .msg-picto svg { width: 100%; height: auto; aspect-ratio: 1; }
@@ -147,7 +147,7 @@
   .msg-kc { padding: 18px 16px; }
   .msg-years { gap: 3px; }
   .msg-years i { height: 30px; border-radius: 3px; }
-  .msg-years-end { margin-left: 4px; padding: 0 6px; font-size: 11.5px; }
+  .msg-years-end { margin-left: 4px; padding: 0 6px; font-size: 12.5px; }
   .msg-pie { grid-template-columns: 112px 1fr; gap: 12px; }
   .msg-donut { width: 112px; height: 112px; }
   .msg-walls { grid-template-columns: 1fr; }
