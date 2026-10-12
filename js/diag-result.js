@@ -52,7 +52,7 @@
     sheet.appendChild(h('footer', { class: 'rp-prem' }, [
       h('h2', { text: '計算の前提（要点）' }),
       h('ol', null, D.PREMISE5.map(function (s) { return h('li', { text: s }); })),
-      h('div', { class: 'rp-brand' }, [h('img', { src: 'images/lorenics-logo.png', alt: 'ロアニクス株式会社', width: '120', height: '28' }), h('span', { text: 'https://lorenics.com/' })])
+      h('div', { class: 'rp-brand' }, [h('img', { src: 'images/lorenics-logo.png', alt: 'ロアニクス株式会社', width: '120', height: '28' }), h('span', null, ['ロアニクス株式会社', h('br'), 'https://lorenics.com/'])])
     ]));
     box.appendChild(sheet);
 

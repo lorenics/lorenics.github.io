@@ -346,7 +346,8 @@
       }
       if (a.q6 === 0) { reason.push('熟練者がいない分、記録の読み解きが中心になります。どこまで読み解けるかは、面談で記録の種類を伺って確かめます。'); }
     }
-    if (a.q2 === 3 || a.q2 === 4 || a.q2 === 6) { extra.push('どこまで読み解けるかは面談で確かめます。'); }
+    var saidRead = reason.some(function (s) { return s.indexOf('どこまで読み解ける') >= 0; });
+    if ((a.q2 === 3 || a.q2 === 4 || a.q2 === 6) && !saidRead) { extra.push('どこまで読み解けるかは面談で確かめます。'); }
     if (a.q2 === 1 || a.q2 === 2) { extra.push('手段の例：3Dシミュレータ（本物の設備を止めずに試せる場）'); }
     T.reason = reason; T.extra = extra;
 
@@ -423,7 +424,7 @@
           C.perDay = '熟練者だけでは付き添いきれない量です。ほかの先輩も教えているか、面談で確認します';
         } else {
           C.perDay = '教える人1人あたり、' + perDay(R.c.dayRaw) + '浮く計算（半分に減った場合）' + tag;
-          if (R.c.over50) { C.over50 = 'いまは教える人の勤務の約' + R.c.pct + '%が付き添いです'; }
+          if (R.c.over50) { C.over50 = 'いまは教える人の勤務の約' + R.c.pct + '%が付き添いです' + tag; }
         }
         C.perTeacherYear = '年 約' + hours(R.c.perTeacher) + tag;
       } else {
@@ -436,7 +437,7 @@
     T.cost = C;
 
     /* 納期 */
-    var D = { line: R.d.line, kari: R.d.kari };
+    var D = { line: R.d.line, kari: R.d.kari, m: num(R.m), label: R.perPerson ? '若手1人の場合' : null };
     var dk = R.d.kari ? KARI : '';
     if (R.d.line === 'none') { D.say = '熟練者はすでにいません（ご回答）'; }
     else if (R.d.line === 'unknown') { D.say = '熟練者が離れる時期が分かると、間に合うかが見えます（面談で確認）'; }
@@ -446,7 +447,7 @@
       else if (R.d.k >= 11) { D.say = '熟練者がいるうちに一人立ちまで育てられるのは、あと10回以上' + dk; }
       else { D.say = '熟練者がいるうちに一人立ちまで育てられるのは、あと約' + R.d.k + '回' + (R.d.ijo ? '以上' : '') + dk; }
     }
-    D.faster = '一人立ちが1割早まった場合 ' + num(R.m) + 'か月→約' + tenth(R.d.mShort) + 'か月、年 約' + man(R.d.yen) + '分 早く戦力に' + dk;
+    D.faster = (R.perPerson ? '若手1人の場合：' : '') + '一人立ちが1割早まった場合 ' + num(R.m) + 'か月→約' + tenth(R.d.mShort) + 'か月、年 約' + man(R.d.yen) + '分 早く戦力に' + dk;
     T.delivery = D;
 
     /* メールと共有文に使う「教えることに使っている時間」 */
@@ -463,12 +464,15 @@
   function roleLine(a, R, T) {
     if (R.c.state === 'none') { return '付き添いの時間は、すでに少ない状態です（ご回答）。品質と納期の数字を中心にご覧ください'; }
     var tag = R.c.kari ? KARI : '';
-    var perT = R.c.perTeacher ? ('教える人1人あたり、付き添いに年 約' + hours(R.c.perTeacher)) : ('若手1人あたり、付き添いに約' + hours(R.c.per));
+    /* 若手の人数が分からないとき・教えられる人が分からないときは「若手1人あたり」で出す */
+    var perYoung = '若手1人あたり、付き添いに約' + hours(R.c.per) + tag;
+    var perT = (R.c.perTeacher && !R.perPerson) ? ('教える人1人あたり、付き添いに年 約' + hours(R.c.perTeacher) + tag) : perYoung;
     switch (a.q15) {
       case 0:
-        return perT + 'を使っている目安です' + tag + '。教材と確認表に置き換えると、同じ説明をくり返す時間を『質問に答える所』に寄せられます。上の方に説明するときは、この1枚をそのままお使いください';
+        return perT + 'を使っている目安です。教材と確認表に置き換えると、同じ説明をくり返す時間を『質問に答える所』に寄せられます。上の方に説明するときは、この1枚をそのままお使いください';
       case 1:
-        return '部下の方が付き添いに使っている時間は、' + (R.c.perTeacher ? '年 約' + hours(R.c.perTeacher) : '若手1人あたり 約' + hours(R.c.per)) + 'の目安です' + tag + '。上に説明する材料として、この1枚をそのままお使いいただけます';
+        /* 部下の方（教える人たち）の合計 */
+        return '部下の方が付き添いに使っている時間は、' + (R.perPerson ? '若手1人あたり 約' + hours(R.c.per) : '年 約' + hours(R.c.now)) + tag + 'の目安です。上に説明する材料として、この1枚をそのままお使いいただけます';
       case 2:
         var dept = R.perPerson ? ('若手1人あたり 約' + hours(R.c.per)) : ('年 約' + hours(R.c.now));
         return '部門で付き添いに使っている時間は' + dept + tag + (T.leaveWord ? '、いちばん早く熟練者が離れるまで' + T.leaveWord : '') + 'です。判断の材料としてお使いください';
@@ -572,24 +576,26 @@
     return L.join('\n');
   }
 
-  /* 結果メールに差し込む文（UTAGEの見えない項目に入れて送る。文の切り替えはここで済ませる） */
+  /* 結果メールに差し込む文（UTAGEの見えない項目に入れて送る。文の切り替えはここで済ませる）
+     行の頭の「・」も項目に入れて渡す。中身がない項目は空になるので、メールのひな形では各項目を1行に1つだけ置く
+     （「・」をひな形に書くと、空のときに「・」だけが残るため） */
   function mailFields(a, opts) {
     var R = compute(a), rt = route(a), T = texts(a, R, rt);
     var f = {};
-    f.route = T.routeName;
+    f.route = T.routeName;                                   /* ひな形：・始めるのが合いそうな所：{route}（{one}） */
     f.one = T.one;
     if (T.total.state === 'value') {
-      f.total = '品質・コスト・納期（QCD）の効果の合計：年 ' + T.total.hero + (T.total.kari ? KARI : '') + '（' + COND + '。' +
+      f.total = '・品質・コスト・納期（QCD）の効果の合計：年 ' + T.total.hero + (T.total.kari ? KARI : '') + '（' + COND + '。' +
         T.total.parts.map(function (p) { return p.label + ' ' + p.txt; }).join('／') + '）';
       f.totalNote = T.total.qNote || '';
-      f.roi = T.total.roi;
+      f.roi = '・' + T.total.roi;
     } else {
-      f.total = T.total.alt; f.totalNote = ''; f.roi = '';
+      f.total = '・' + T.total.alt; f.totalNote = ''; f.roi = '';
     }
-    f.time = '教えることに使っている時間：' + (T.timeLine || '付き添いの時間は、すでに少ない状態です（ご回答）');
-    f.delivery = T.delivery.say;
-    f.role = roleLine(a, R, T);
-    f.meeting = T.meeting;
+    f.time = '・教えることに使っている時間：' + (T.timeLine || '付き添いの時間は、すでに少ない状態です（ご回答）');
+    f.delivery = '・' + T.delivery.say;
+    f.role = '・' + roleLine(a, R, T);
+    f.meeting = '・' + T.meeting;
     f.screen = (a.q2 === 1 || a.q2 === 2) ? '教材や3Dシミュレータ（本物の設備を止めずに何度でも試せる場）の実際の画面もお見せします。' : '教材の実際の画面もお見せします。';
     f.resultUrl = (opts && opts.resultUrl) || '';
     f.answers = encodeAll(a);

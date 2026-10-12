@@ -103,19 +103,23 @@
       t.kari ? h('span', { class: 'kari', text: '（仮）' }) : null
     ]);
     box.appendChild(hero);
-    var sum = t.parts.reduce(function (s, p) { return s + p.v; }, 0);
-    var bar = h('div', { class: 'rs-bar', role: 'img', 'aria-label': '内訳 ' + t.parts.map(function (p) { return p.label + ' ' + p.txt; }).join('、') });
-    t.parts.forEach(function (p) {
-      if (p.v <= 0) { return; }
-      bar.appendChild(h('span', { class: p.key, style: 'flex:' + (p.v / sum).toFixed(5) + ' 1 0', title: p.label + ' ' + p.txt }));
-    });
-    box.appendChild(bar);
-    box.appendChild(h('ul', { class: 'rs-leg' }, t.parts.map(function (p) {
-      return h('li', null, [h('i', { class: p.key, 'aria-hidden': 'true' }), p.label + ' ' + p.txt]);
-    })));
-    if (t.qNote) { box.appendChild(h('p', { class: 'rs-note', text: t.qNote })); }
+    /* 条件は合計のすぐ下に1行 */
     box.appendChild(h('p', { class: 'rs-cond', text: '条件：' + t.cond }));
-    box.appendChild(rich('p', 'rs-roi', t.roi));
+    var showParts = !(opts && opts.breakdown === false);
+    if (showParts) {
+      var sum = t.parts.reduce(function (s2, p) { return s2 + p.v; }, 0);
+      var bar = h('div', { class: 'rs-bar', role: 'img', 'aria-label': '内訳 ' + t.parts.map(function (p) { return p.label + ' ' + p.txt; }).join('、') });
+      t.parts.forEach(function (p) {
+        if (p.v <= 0) { return; }
+        bar.appendChild(h('span', { class: p.key, style: 'flex:' + (p.v / sum).toFixed(5) + ' 1 0', title: p.label + ' ' + p.txt }));
+      });
+      box.appendChild(bar);
+      box.appendChild(h('ul', { class: 'rs-leg' }, t.parts.map(function (p) {
+        return h('li', null, [h('i', { class: p.key, 'aria-hidden': 'true' }), p.label + ' ' + p.txt]);
+      })));
+    }
+    if (t.qNote) { box.appendChild(h('p', { class: 'rs-note', text: t.qNote })); }
+    if (showParts) { box.appendChild(rich('p', 'rs-roi', t.roi)); }
     return box;
   }
 
@@ -208,7 +212,7 @@
     if (D.line === 'unknown') { shown = 3; }
     else if (D.k >= 11) { shown = 10; more = true; }
     else { shown = D.k; rest = D.L - D.k * D.m; }
-    for (var i = 1; i <= shown; i++) { bar.appendChild(h('span', { class: 'sg', style: 'flex:' + D.m + ' 1 0', text: String(i) })); }
+    for (var i = 1; i <= shown; i++) { bar.appendChild(h('span', { class: 'sg', style: 'flex:' + D.m + ' 1 0', text: D.line === 'unknown' ? '' : String(i) })); }
     if (rest > 0) { bar.appendChild(h('span', { class: 'sg rest', style: 'flex:' + rest + ' 1 0' })); }
     if (more) { bar.appendChild(h('span', { class: 'more', text: '…' })); }
     if (D.line === 'unknown') { bar.appendChild(h('span', { class: 'q', text: '？' })); }

@@ -109,16 +109,15 @@
   function syncCount(q) {
     var p = $('[data-count="' + q.id + '"]'); if (!p) { return; }
     var n = $$('input[name="' + q.id + '"]:checked', form).length;
-    p.textContent = q.max + 'つまで選べます（いま' + n + 'つ）';
+    p.textContent = n ? q.max + 'つまで選べます（いま' + n + 'つ選んでいます）' : q.max + 'つまで選べます';
   }
+  /* 画面2〜4の頭に、選んだ技術の名前を出す。差し込めないときは「最初に選んだ技術」（設計書の文） */
   function techLeads() {
     var a = collect(), t = a.q2;
     var name = (t !== null && D.TECH_SHORT[t]) ? D.TECH_SHORT[t] : null;
-    var target = name ? '『' + name + '』' : (t === 7 ? 'その仕事' : 'その技術');
-    var l2 = name ? 'ここからは『' + name + '』について答えます。'
-      : (t === 7 ? 'ここからは、教えるのにいちばん時間がかかる仕事について答えます。' : 'ここからは、最初に選んだ技術について答えます。');
-    $('[data-lead="2"]').textContent = l2;
-    $('[data-lead="3"]').textContent = (name ? '『' + name + '』について答えます。' : '') + 'だいたいで大丈夫です。いちばん近いものを選んでください。';
+    var target = name ? '『' + name + '』' : '最初に選んだ技術';
+    $('[data-lead="2"]').textContent = 'ここからは' + (name ? '' : '、') + target + 'について答えます。';
+    $('[data-lead="3"]').textContent = target + 'について答えます。だいたいで大丈夫です。いちばん近いものを選んでください。';
     $('[data-lead="4"]').textContent = target + 'で起きる、ミス・やり直しについて伺います。だいたいで大丈夫です。';
     $('[data-lead="5"]').textContent = 'あと4問で結果が出ます。';
   }
@@ -258,8 +257,9 @@
     var box = $('#dg-done');
     box.innerHTML = '';
     box.appendChild(h('h2', { class: 'u-sr', tabindex: '-1', text: '結果' }));
+    /* 答えた直後の画面：結論と効果の合計だけ（内訳と回収の目安はメールで） */
     var head = h('div', { class: 'dg-done-head' }, [
-      h('p', { class: 'dg-h2 head', text: '結果をメールでお送りしました' }),
+      h('p', { class: 'dg-h2 head', text: 'くわしい結果と、個別面談の日程調整フォームをメールでお送りしました' }),
       h('p', null, ['送り先：', h('span', { class: 'addr', text: last.mail })]),
       h('p', { text: '届くまで数分かかることがあります。届かないときは、迷惑メールのフォルダもご確認ください。' }),
       h('p', null, [h('a', { href: '#', id: 'dg-fix', text: '送り先を直す' })])
@@ -273,10 +273,11 @@
       V.routeMap(T), V.routeText(T, false)
     ]));
     box.appendChild(h('div', { class: 'dg-card' }, [
-      V.totalBlock(T),
-      h('p', { class: 'rs-disc', text: 'ご回答から計算した目安です。効果を約束するものではありません。' })
+      T.manyKari ? h('p', { class: 'rp-kari', text: '仮の値が多い結果です。面談で実際の数字に置き換えて計算し直します' }) : null,
+      V.totalBlock(T, { breakdown: false }),
+      h('ul', { class: 'rs-prem' }, D.PREMISE5.slice(0, 3).map(function (s) { return h('li', { text: s }); }))
     ]));
-    box.appendChild(h('div', { class: 'dg-mailnote jp', text: '品質・コスト・納期の内訳と、上の方にそのまま渡せる結果の1枚（図解）、個別面談（オンライン30分・無料）の日程調整フォームは、メールでご覧いただけます。' }));
+    box.appendChild(h('div', { class: 'dg-mailnote jp', text: '品質・コスト・納期の内訳と回収の目安、上の方にそのまま渡せる結果の1枚（図解）は、メールでご覧いただけます。' }));
     if (!sent) {
       box.appendChild(h('div', { class: 'dg-proto' }, [
         h('h3', { text: '試作の確認用（本番では出しません）' }),
