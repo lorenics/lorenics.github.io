@@ -11,6 +11,8 @@
   var ctx = cv.getContext('2d');
   if (!ctx) { return; }
   cv.className = 'drift';
+  /* CSSが古いまま残っていても崩れないよう、置き方はここでも指定する */
+  cv.style.cssText = 'position:fixed;left:0;top:0;width:100%;height:100%;z-index:-1;pointer-events:none';
   cv.setAttribute('aria-hidden', 'true');
   document.body.insertBefore(cv, document.body.firstChild);
 
