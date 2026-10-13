@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>工数・QCD診断シート｜ロアニクス株式会社</title>
+<meta name="description" content="製造業×AI活用法の勉強会 参加特典。5問に答えると、仕事の時間と品質・コスト・納期の変わり方がグラフで分かります。">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shindan.css?v=20261013">
+<script src="coefficients.js?v=20261013" defer></script>
+<script src="shindan.js?v=20261013" defer></script>
+</head>
+<body>
+<header class="hd">
+  <a class="logo" href="/"><img src="/images/lorenics-logo.png" alt="ロアニクス株式会社" width="120" height="28"></a>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="intro" id="intro" aria-labelledby="intro-h">
+    <p class="eyebrow">製造業×AI活用法の勉強会　参加特典</p>
+    <h1 id="intro-h">工数・QCD<br>診断シート</h1>
+    <p class="lead">自分の仕事で、<b>工数＝仕事にかかる時間</b>と、<b>QCD＝品質・コスト・納期</b>が、どれだけ変わるか。グラフで出します。</p>
+    <ul class="facts">
+      <li><b>5問</b><span>選ぶだけ</span></li>
+      <li><b>約3分</b><span>で終わる</span></li>
+      <li><b>送信なし</b><span>名前も会社名も不要</span></li>
+    </ul>
+    <button type="button" class="cta-btn" id="start">診断をはじめる<span class="ar" aria-hidden="true">›</span></button>
+  </section>
+
+  <section class="quiz" id="quiz" hidden aria-label="質問">
+    <div class="quiz-top">
+      <button type="button" class="back" id="back" hidden>‹ 戻る</button>
+      <span class="prog-n" id="prog-n">1 / 5</span>
+    </div>
+    <div class="prog" id="prog" aria-hidden="true"></div>
+    <div id="q-body"></div>
+  </section>
+
+  <div class="result" id="result" hidden aria-live="polite"></div>
+
+  <noscript><p class="nojs">この診断は、JavaScriptをオンにするとお使いいただけます。</p></noscript>
+</main>
+
+<footer class="ft">© ロアニクス株式会社</footer>
+</body>
+</html>
