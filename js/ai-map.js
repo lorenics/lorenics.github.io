@@ -17,6 +17,7 @@
   var err = document.getElementById("dl-err");
   var done = document.getElementById("dl-done");
   var link = document.getElementById("dl-link");
+  var pagesEl = document.getElementById("mp-pages");
   var btn = form.querySelector("button[type=submit]");
   var btnLabel = btn.textContent;
   var MAIL = "nishihara.kento@lorenics.co.jp";
@@ -76,6 +77,7 @@
     form.elements["押した箇所"].value = clicked;
     form.elements.subject.value = "【ロアニクスWeb】資料請求：" + p.name + "編";
     link.href = p.pdf;
+    if (pagesEl && p.pages) pagesEl.textContent = p.pages;
   }
 
   function open(fn, arg, from) {
