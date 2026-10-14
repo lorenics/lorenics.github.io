@@ -154,3 +154,35 @@ button{font-family:inherit}
   .bf{transition:none}
   .opt{transition:none}
 }
+
+/* ---------- v2（20問）追加 ---------- */
+.q-sec{display:inline-block;margin-bottom:8px;padding:3px 12px;border-radius:99px;background:var(--blue-50);color:var(--blue-d);font-size:13px;font-weight:900}
+.prog i{height:6px}
+.bd-h{margin:16px 0 6px;font-size:15px;font-weight:900;color:var(--ink2)}
+.bd{display:grid;gap:10px}
+.bd-row{display:grid;gap:4px}
+.bd-l{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:14px;font-weight:700;color:var(--ink2)}
+.bd-l b{font-size:15px;font-weight:900;color:var(--ink)}
+.bd-t{position:relative;height:18px;border-radius:6px;background:var(--track);overflow:hidden}
+.bd-t .bf{position:absolute;left:0;top:0;height:100%;border-radius:6px}
+.bd-t .bf--now{background:#b7c6de}
+.bd-t .bf--af2{background:var(--blue)}
+.blk--roi,.blk--risk,.blk--move{padding-top:22px;border-top:2px dashed var(--line);margin-top:16px}
+.roi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.roi-c{padding:12px 10px;border:2px solid var(--line);border-radius:14px;text-align:center}
+.roi-c span{display:block;font-size:13px;font-weight:900;color:var(--ink2)}
+.roi-c b{display:block;margin-top:2px;font-size:30px;font-weight:900;line-height:1.2;color:var(--ink)}
+.roi-c b small{font-size:14px;margin-left:2px}
+.roi-c--on{border-color:var(--c);background:#eefaf4}
+.roi-c--on b{color:var(--c)}
+.roi-l{margin-top:12px;text-align:center;font-size:17px;font-weight:700;line-height:1.6}
+.roi-l b{font-size:22px;font-weight:900;color:var(--c)}
+.roi-s{margin-top:6px;text-align:center;font-size:15px;font-weight:700;color:var(--ink2)}
+.risk{margin-top:12px;padding:14px;border-radius:14px;background:#fff4ea;border:2px solid #f3c7a3;font-size:16px;font-weight:700;line-height:1.7}
+.risk b{color:var(--d);font-weight:900}
+.risk p+p{margin-top:6px}
+.risk-hi{color:#b3261e;font-weight:900}
+.move{margin-top:12px;padding:14px;border-radius:14px;background:var(--blue-50);font-size:16px;font-weight:700;line-height:1.7}
+.move-k{font-size:20px;font-weight:900;color:var(--blue-d);line-height:1.4}
+.move-k span{display:block;font-size:14px;font-weight:900;color:var(--ink2)}
+.cta-s{margin:-6px 0 16px;font-size:15px;font-weight:700;color:var(--ink2);line-height:1.6}
