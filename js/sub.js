@@ -81,7 +81,7 @@
   });
 
   /* ---------- ヘッダーの高さ（ページ内リンクで飛んだとき、見出しがヘッダーに隠れないように CSS の --hdr に入れる） ---------- */
-  var header = document.querySelector(".c-header");
+  var header = document.querySelector(".hd, .c-header");
   function syncHeader() { if (header) root.style.setProperty("--hdr", header.offsetHeight + "px"); }
   syncHeader();
   window.addEventListener("resize", syncHeader);
