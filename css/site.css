@@ -1,0 +1,180 @@
+/* サイト全体の共通の見た目（2026-10-21）
+   トップページの作り（ヘッダー・フッター・ボタン・見出しラベル・診断の箱・スクロールの動き・背景の漂う絵）を、
+   下の層のページにも同じ形で当てる。トップでは top.css のあとに読み込み、ヘッダーの折り返し位置だけを足す。
+   各ページの CSS のあと、type.css の前に読み込む */
+
+:root{--grad:linear-gradient(118deg,#0552d0 0%,#0a78ee 42%,#16a6f3 72%,#3cc9f2 100%);
+--panel:linear-gradient(150deg,#0446c4 0%,#0a62dc 46%,#118ee9 100%);
+--orange:linear-gradient(90deg,#ffa53f 0%,#f2650c 100%)}
+
+/* ── 背景にうっすら漂う絵（js/drift.js が描く） ── */
+.drift{position:fixed;left:0;top:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+body{background:#fff}
+
+/* ── ヘッダー（全ページ共通） ── */
+.hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid #dfe9f7;font-family:"Noto Sans JP",sans-serif}
+.hd *{box-sizing:border-box}
+.hd-in{max-width:1360px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;gap:22px}
+.logo{display:block;line-height:0}
+.logo img{display:block;height:28px;width:auto}
+.nav{display:flex;align-items:center;gap:28px;margin-left:auto;font-size:16px;font-weight:700;line-height:1.5}
+.nav a{color:#141b26;text-decoration:none;white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:#0a5fd0}
+.nav a[aria-current="page"]{color:#0a5fd0;border-bottom-color:#0a5fd0}
+.nav-biz{position:relative;display:flex}
+.nav-biz-btn{display:inline-flex;align-items:center;gap:8px;margin:0;padding:4px 0;background:none;border:0;border-bottom:2px solid transparent;font:inherit;font-weight:700;color:#141b26;cursor:pointer;white-space:nowrap}
+.nav-biz-btn:hover,.nav-biz-btn[aria-expanded="true"]{color:#0a5fd0}
+.nav-biz.is-current .nav-biz-btn{color:#0a5fd0;border-bottom-color:#0a5fd0}
+.nav-biz-btn .caret{width:8px;height:8px;border-right:2.4px solid currentColor;border-bottom:2.4px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.nav-biz-btn[aria-expanded="true"] .caret{transform:translateY(2px) rotate(-135deg)}
+.nav-biz-menu{display:none;position:absolute;top:calc(100% + 14px);left:-18px;z-index:60;min-width:280px;padding:10px;background:#fff;border:1.5px solid #d4e5fb;border-radius:16px;box-shadow:0 18px 40px rgba(5,40,110,.16)}
+.nav-biz-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.nav-biz.is-open .nav-biz-menu{display:grid}
+@media (hover:hover){.nav-biz:hover .nav-biz-menu{display:grid}}
+.nav-biz-menu a{display:block;padding:12px 14px;border:0;border-radius:10px;font-size:16px;line-height:1.5;white-space:nowrap}
+.nav-biz-menu a:hover,.nav-biz-menu a:focus-visible,.nav-biz-menu a[aria-current="page"]{background:#eef5ff;color:#0a5fd0}
+.menu-btn{display:none;place-items:center;position:relative;flex:none;width:46px;height:46px;border:2px solid #0a5fd0;border-radius:12px;background:#fff;color:#0a5fd0;padding:0;cursor:pointer}
+.menu-btn span{position:absolute;left:10px;right:10px;height:2.4px;border-radius:2px;background:#0a5fd0;transition:transform .2s,opacity .2s}
+.menu-btn span:nth-child(1){top:12px}.menu-btn span:nth-child(2){top:19px}.menu-btn span:nth-child(3){top:26px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drawer{display:grid;max-height:calc(100vh - 62px);overflow-y:auto;overscroll-behavior:contain;padding:6px 20px 22px;background:#fff;border-top:1px solid #dfe9f7;box-shadow:0 18px 30px rgba(5,40,110,.12)}
+@supports (height:100dvh){.drawer{max-height:calc(100dvh - 62px)}}
+.drawer[hidden]{display:none !important}
+.drawer a{padding:15px 4px;border-bottom:1px solid #e6eef9;font-size:17px;font-weight:700;color:#141b26;text-decoration:none}
+.drawer a[aria-current="page"]{color:#0a5fd0}
+.drawer .pill{margin-top:14px;height:56px;border-bottom:0}
+.drawer .pill-or{color:#fff}
+.drawer .pill-line{margin-top:10px;color:#0a5fd0;border:2px solid #0a5fd0}
+.drawer-h{margin:8px 0 0;padding:12px 4px 4px;font-size:14px;font-weight:900;letter-spacing:.04em;color:#0a5fd0}
+.drawer a.drawer-sub{padding:12px 4px 12px 18px;font-size:16px}
+.hd a:focus-visible,.hd button:focus-visible,.ft a:focus-visible{outline:3px solid #f2650c;outline-offset:3px;border-radius:8px}
+
+/* ── 丸いボタン ── */
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:999px;font-weight:900;text-decoration:none;white-space:nowrap;line-height:1}
+.pill-or{background:var(--orange);color:#fff;box-shadow:0 12px 28px rgba(242,101,12,.32)}
+.pill-line{background:#fff;color:#0a5fd0;border:2px solid #0a5fd0}
+.hd-cta{flex:none;height:46px;padding:0 22px;font-size:15px}
+.hd .pill-or.hd-cta{margin-left:6px}
+.hd .hd-contact{box-shadow:none}
+
+/* ヘッダーの項目が入りきらない幅では、メニューのボタンにまとめる */
+@media (max-width:1180px){
+ .hd .nav{display:none}
+ .hd .hd-contact{display:none}
+ .hd .pill-or.hd-cta{margin-left:auto}
+ .hd .menu-btn{display:grid}
+}
+@media (min-width:1181px){.drawer{display:none !important}}
+/* トップの top.css には「901px以上はメニューを出さない」指定があるので、メニューのボタンを出す幅では開けるようにする */
+@media (min-width:901px) and (max-width:1180px){.drawer:not([hidden]){display:grid !important}}
+@media (max-width:900px){
+ .hd-in{height:62px;padding:0 16px;gap:12px}
+ .logo img{height:24px}
+ .hd-cta{height:44px;padding:0 18px}
+}
+
+/* ── フッター（全ページ共通） ── */
+.ft{padding:56px 0 40px;border-top:4px solid #0a5fd0;background:#fff;font-family:"Noto Sans JP",sans-serif;color:#141b26}
+.ft *{box-sizing:border-box}
+.ft .wrap,.wrap{max-width:1280px;margin-left:auto;margin-right:auto;padding-left:40px;padding-right:40px}
+.ft-in{display:flex;flex-wrap:wrap;gap:28px 48px;align-items:flex-start}
+.ft-co{flex:1 1 300px}
+.ft-co p{margin:14px 0 0;font-size:16px;line-height:1.9;font-weight:500}
+.ft-co a{color:#0a5fd0;font-weight:700}
+.ft nav{display:grid;grid-template-columns:repeat(2,auto);gap:12px 36px;font-size:16px;font-weight:700;line-height:1.6}
+.ft nav a{color:#141b26;text-decoration:none;word-break:keep-all;overflow-wrap:anywhere}
+.ft nav a:hover,.ft nav a[aria-current="page"]{color:#0a5fd0}
+.ft .pill{height:54px;padding:0 26px;font-size:16px}
+.copy{margin:32px auto 0;font-size:15px;font-weight:700;color:#2b3546}
+@media (max-width:900px){
+ .ft .wrap,.wrap{padding-left:20px;padding-right:20px}
+ .ft nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px}
+ .ft .pill{width:100%}
+}
+
+/* ====== ここから下は下の層のページだけ（トップには無い部品の名前） ====== */
+
+/* ── ページ名の帯：トップの最初の画面と同じ明るい背景・グラデーションの札・明朝の大きな見出し ── */
+.c-hero{min-height:0;display:block;place-items:normal;justify-items:normal;text-align:left;color:#141b26;
+ background:radial-gradient(900px 420px at 86% 100%,rgba(22,166,243,.20),rgba(22,166,243,0) 70%),linear-gradient(180deg,rgba(0,120,255,0) 0%,rgba(0,120,255,.067) 100%)}
+.c-hero__art{display:none}
+.c-hero__body{max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) 40px clamp(40px,5vw,64px);text-shadow:none}
+.c-hero__en{display:inline-flex;margin:0 0 22px;padding:8px 18px;border-radius:999px;background:var(--grad);color:#fff;font-family:"Noto Sans JP",sans-serif;font-size:14px;font-weight:700;letter-spacing:.12em;line-height:1.5;animation:siteFadeUp .7s ease backwards}
+.c-hero__ja{margin:0;font-family:"Shippori Mincho B1","Noto Serif JP",serif;font-weight:800;font-size:clamp(36px,5.2vw,68px);line-height:1.3;letter-spacing:.04em;color:#141b26;animation:siteLineUp .9s cubic-bezier(.2,.75,.15,1) backwards;animation-delay:.15s}
+@media (max-width:900px){.c-hero__body{padding-left:20px;padding-right:20px}}
+
+/* ── 見出しラベル：トップの斜めじまの札 ── */
+.c-label{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-family:"Noto Sans JP",sans-serif;font-size:17px;font-weight:900;letter-spacing:.06em;color:#0a5fd0;line-height:1.4}
+.c-label::before{content:"";flex:none;width:34px;height:8px;border-radius:2px;background:repeating-linear-gradient(135deg,#0a5fd0 0 6px,#fff 6px 12px);box-shadow:0 0 0 1.5px #0a5fd0}
+.l-section--dark .c-label{color:#fff}
+.l-section--dark .c-label::before{background:repeating-linear-gradient(135deg,#fff 0 6px,transparent 6px 12px);box-shadow:0 0 0 1.5px #fff}
+
+/* ── 見出し：明朝で大きく（トップの .h2 と同じ） ── */
+.c-h2{font-size:clamp(30px,3.8vw,52px);line-height:1.34;letter-spacing:.02em}
+.map-hero h1,.demo-hero h1,.demo-h,.map-h,.msg-ch-h,.c-hero__ja{font-family:"Shippori Mincho B1","Noto Serif JP",serif;font-weight:800;letter-spacing:.03em}
+
+/* ── ボタン：トップと同じ丸いボタン（主＝オレンジ、ほか＝青い線） ── */
+.c-btn{border-radius:999px;font-weight:900;letter-spacing:.02em;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.c-btn--primary{background:var(--orange);border-color:transparent;color:#fff;box-shadow:0 12px 28px rgba(242,101,12,.30)}
+.c-btn--primary:hover{background:var(--orange);color:#fff;transform:translateY(-2px);box-shadow:0 16px 32px rgba(242,101,12,.38)}
+.c-btn--sub,.c-btn--ghost{background:#fff;color:#0a5fd0;border:2px solid #0a5fd0;box-shadow:none}
+.c-btn--sub:hover,.c-btn--ghost:hover{background:#0a5fd0;color:#fff}
+.c-btn--lg{min-height:62px;padding-left:34px;padding-right:30px;font-size:17px}
+
+/* ── 無料診断の箱：トップの最後と同じ青いパネル ── */
+.c-diag{position:relative;overflow:hidden;border:0;border-radius:32px;background:var(--panel);color:#fff;box-shadow:0 30px 70px rgba(5,60,170,.28)}
+.c-diag::before{content:none}
+.c-diag *{color:inherit}
+.c-diag__badge{color:#fff}
+.c-diag__badge span{background:#fff;color:#0a5fd0}
+.c-diag__title{color:#fff}
+.c-diag__lead,.c-diag__note{color:rgba(255,255,255,.9)}
+.c-diag__list li{border-color:rgba(255,255,255,.25)}
+.c-diag__list li::before{color:#fff;border-color:#fff}
+.c-diag .c-btn--primary{color:#fff}
+.c-diag .c-btn--sub{background:#fff;color:#0a5fd0;border-color:#fff}
+
+/* ── スクロールで出てくる動き：トップと同じ「下から持ち上がる」 ── */
+.js-reveal [data-reveal]{opacity:0;transform:translateY(48px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.75,.15,1)}
+.js-reveal [data-reveal].is-in{opacity:1;transform:none}
+@supports (animation-timeline: view()){
+ .c-h2,.c-label,.c-diag,.c-lead{animation:sitePop linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+}
+@keyframes sitePop{from{opacity:0;transform:translateY(48px)}}
+@keyframes siteFadeUp{from{opacity:0;transform:translateY(16px)}}
+@keyframes siteLineUp{from{opacity:0;transform:translateY(40%)}}
+@media (prefers-reduced-motion:reduce){
+ .c-hero__en,.c-hero__ja,.c-h2,.c-label,.c-diag,.c-lead{animation:none !important}
+}
+
+/* ── よくある質問：トップと同じ白い丸カード・Q と A の丸 ── */
+.p-ai-faq details{background:#fff;border:1.5px solid #d4e5fb;border-radius:20px;box-shadow:0 12px 28px rgba(5,40,110,.07)}
+.p-ai-faq details[open]{border-color:#b9d3f3}
+.p-ai-faq summary,.p-faq .p-ai-faq summary{align-items:center;gap:16px;padding:20px 64px 20px 22px;font-size:18px;font-weight:900;line-height:1.55;word-break:keep-all;overflow-wrap:anywhere}
+.p-ai-faq summary b,.p-ai-faq__a b{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font-family:"Zen Kaku Gothic New",sans-serif;font-size:20px;font-weight:900;line-height:1}
+.p-ai-faq summary b{background:var(--grad);color:#fff}
+.p-ai-faq__a b{background:#fff1e6;color:#b2470a}
+.p-ai-faq summary::after{content:"+";display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#eaf3ff;color:#0a5fd0;font:900 20px/1 "Noto Sans JP",sans-serif;transition:transform .2s}
+.p-ai-faq details[open] summary::after{content:"+";transform:translateY(-50%) rotate(45deg)}
+.p-ai-faq__a{gap:16px;padding:0 24px 24px 22px;font-size:17px;line-height:1.85}
+.faq-nav a{padding:9px 18px;border:1.5px solid #c9dcf3;border-radius:999px;color:#0a5fd0;font-size:15px}
+.faq-nav a:hover{background:#0a5fd0;border-color:#0a5fd0;color:#fff}
+@media (max-width:900px){
+ .p-ai-faq summary,.p-faq .p-ai-faq summary{font-size:16.5px;padding:16px 56px 16px 16px;gap:12px}
+ .p-ai-faq summary b,.p-ai-faq__a b{width:34px;height:34px;font-size:17px}
+ .p-ai-faq__a{padding:0 16px 20px;gap:12px;font-size:16px}
+}
+
+/* パンくずの左端を、ページ名の帯の見出しにそろえる */
+.c-crumb{max-width:1280px;padding:14px 40px 0;font-size:13px}
+@media (max-width:900px){.c-crumb{padding:12px 20px 0}}
+
+/* ── 各ページの最初の画面：トップと同じ明るい背景と、グラデーションの札 ── */
+.edu-hero,.svc-hero,.map-hero,.demo-hero{background:radial-gradient(900px 520px at 88% 100%,rgba(22,166,243,.18),rgba(22,166,243,0) 70%),linear-gradient(180deg,rgba(0,120,255,0) 0%,rgba(0,120,255,.06) 100%)}
+.edu-eyebrow,.svc-eyebrow,.msg-eyebrow{display:inline-flex;align-items:center;gap:10px;width:auto;margin:0 0 24px;padding:8px 18px;border-radius:999px;background:var(--grad);color:#fff;font-size:15px;font-weight:700;letter-spacing:.04em;line-height:1.5;animation:siteFadeUp .7s ease backwards}
+.msg-eyebrow span{color:#fff;font-size:13px;letter-spacing:.18em}
+.msg-eyebrow span::after{background:rgba(255,255,255,.7)}
+.edu-hero h1,.svc-hero h1,.map-hero h1,.demo-hero h1,.msg-title{animation:siteFadeUp .9s cubic-bezier(.2,.75,.15,1) backwards;animation-delay:.12s}
+@media (prefers-reduced-motion:reduce){.edu-eyebrow,.svc-eyebrow,.msg-eyebrow,.edu-hero h1,.svc-hero h1,.map-hero h1,.demo-hero h1,.msg-title{animation:none !important}}
