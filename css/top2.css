@@ -109,3 +109,53 @@
  .fx-v{font-size:40px}
  .fx-bar em,.fx-cap{font-size:13.5px}
 }
+
+/* ── 工程表と無駄の印 ── */
+.muda{padding:90px 0 40px;background:linear-gradient(180deg,#fff 0%,#f4f8ff 100%)}
+.muda .h2 em,.h1 em{font-style:normal}
+.muda .h2 em{color:#c0392b}
+.muda-scroll{margin-top:40px;border-radius:24px;background:#fff;border:1px solid #dbe7f7;box-shadow:inset 0 1px 0 #fff,0 30px 70px rgba(5,40,110,.16);overflow-x:auto;scrollbar-width:thin}
+.muda-scroll:focus-visible{outline:3px solid #0a5fd0;outline-offset:3px}
+.muda-map{position:relative;min-width:900px;padding:14px}
+.muda-map img{display:block;width:100%;height:auto;border-radius:12px}
+.mk{position:absolute;transform:translate(-50%,-135%);display:flex;align-items:center;gap:0;pointer-events:none;z-index:1}
+.mk i{position:relative;display:block;width:14px;height:14px;margin-right:-5px;z-index:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff7a6b,#c0392b 70%);box-shadow:0 0 0 4px rgba(255,255,255,.95),0 6px 14px rgba(192,57,43,.45)}
+.mk i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:3px solid rgba(192,57,43,.55);animation:mkPulse 2.2s ease-out infinite}
+.mk b{padding:1px 8px 1px 10px;border-radius:7px;background:#c0392b;color:#fff;font-size:14px;font-weight:900;line-height:1.5;white-space:nowrap;box-shadow:0 4px 10px rgba(192,57,43,.30)}
+@keyframes mkPulse{0%{transform:scale(1);opacity:1}100%{transform:scale(2.1);opacity:0}}
+.muda-cap{margin:14px 0 0;font-size:14px;font-weight:700;color:#4a5568}
+.muda-cap a{color:#0a5fd0;font-weight:900}
+
+/* ── Before / After ── */
+.ba{padding:80px 0 50px;background:#f4f8ff}
+.ba .ex-steps{margin-top:36px}
+.ba-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:36px 0 0;padding:0;list-style:none}
+.ba-card{padding:28px 30px 30px;border-radius:26px;background:linear-gradient(180deg,#fff 0%,#f7faff 100%);border:1px solid #dbe7f7;box-shadow:inset 0 1px 0 #fff,0 26px 56px rgba(5,40,110,.13)}
+.ba-k{display:flex;align-items:center;gap:12px;margin:0;font-size:18px;font-weight:900;line-height:1.4;color:#141b26}
+.q{display:inline-flex;align-items:baseline;gap:4px;padding:4px 10px;border-radius:10px;font-family:"Barlow Semi Condensed",sans-serif;font-size:20px;font-weight:700;line-height:1;color:#fff;background:#0a5fd0}
+.q small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:900}
+.q-C{background:#0b7a5a}
+.ba-row{display:grid;grid-template-columns:auto auto 1fr;grid-template-areas:"b ar ." "a a a";align-items:center;gap:10px 14px;margin-top:18px}.ba-b{grid-area:b}.ba-ar{grid-area:ar}.ba-a{grid-area:a}
+.ba-b,.ba-a{display:flex;align-items:baseline;gap:2px;font-family:"Barlow Semi Condensed","Zen Kaku Gothic New",sans-serif;font-weight:700;line-height:1;white-space:nowrap}
+.ba-b>small:first-child,.ba-a>small:first-child{align-self:center;margin-right:8px;padding:3px 8px;border-radius:7px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:900;line-height:1.3}
+.ba-b{font-size:30px;color:#6b7685;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(107,118,133,.6)}
+.ba-b>small:first-child{background:#e6ebf1;color:#4a5568;text-decoration:none}
+.ba-a{font-size:clamp(52px,5.4vw,76px);letter-spacing:-.01em;color:#0a5fd0;background:linear-gradient(180deg,#2e86d3 0%,#0a4fb0 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ba-a>small:first-child{background:#0a5fd0;color:#fff;-webkit-text-fill-color:#fff}
+.ba-b small:not(:first-child),.ba-a small:not(:first-child){font-family:"Zen Kaku Gothic New",sans-serif;font-size:max(14px,.42em);font-weight:900}
+.ba-ar{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#eaf3ff;color:#0a5fd0;transform:rotate(90deg)}
+.tb .ex{padding:60px 0 110px}
+
+@media (max-width:900px){
+ .muda{padding:64px 0 28px}
+ .muda-scroll{margin:28px -20px 0;border-radius:0;border-left:0;border-right:0}
+ .mk i{width:12px;height:12px}
+ .mk b{font-size:13px}
+ .ba{padding:56px 0 36px}
+ .ba-list{grid-template-columns:minmax(0,1fr);gap:14px;margin-top:28px}
+ .ba-card{padding:22px 20px 24px;border-radius:22px}
+ .ba-k{font-size:16px}
+ .ba-b{font-size:24px}
+ .ba-a{font-size:50px}
+ .ba-ar{width:32px;height:32px}
+}
