@@ -103,7 +103,7 @@
     plc: "PLC教育・研修",
     advisor: "技術顧問",
     edu: "製造業特化型　教育システムづくり・導入支援",
-    diag: "技術伝承・AI活用の無料診断",
+    diag: "業務効率化・AI活用の無料診断",
     ai: "AI研修・業務改善",
     pr: "PR・Webマーケティング（YouTube・X）",
     other: "取材・PR・その他"
@@ -122,7 +122,7 @@
     var isDiag = select && select.value === TYPES.diag;
     if (diagHint) diagHint.hidden = !isDiag;
     if (message) message.placeholder = isDiag
-      ? "例：保全の段取りを若手に教えたい／教えられる人が1人しかいない　など\n診断のご希望日時（候補を2〜3つ）もご記入ください"
+      ? "例：日報や点検記録の書き写しに時間がかかる／過去のトラブル対応を探すのに時間がかかる　など\n診断のご希望日時（候補を2〜3つ）もご記入ください"
       : defaultPlaceholder;
   }
   if (select) { select.addEventListener("change", syncDiag); syncDiag(); }
