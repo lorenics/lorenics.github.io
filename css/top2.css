@@ -221,12 +221,29 @@
  .ba-pct{font-size:46px}
 }
 
-/* ── 手を入れるとこうなる：設備の仕事ごと（2026-11-07） ── */
+/* ── 手を入れるとこうなる：設備の仕事ごと・縦棒（2026-11-07） ── */
 .ba-lead{margin:22px 0 0;font-size:18px;line-height:1.9;font-weight:700;color:#2b3440;max-width:40em;word-break:keep-all;overflow-wrap:anywhere}
 .q-r{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;font-weight:900;padding:5px 10px;line-height:1.3}
-.ba-unit{margin:18px 0 0;font-size:14px;font-weight:900;line-height:1.5;color:#4a5568}
-.ba-unit+.ba-chart{margin-top:10px}
-.ba-split{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;margin-top:20px;padding-top:18px;border-top:1px solid #dbe7f7}
+.ba-mid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px 26px;margin-top:22px;align-items:start}
+.ba-unit{margin:0;font-size:14px;font-weight:900;line-height:1.5;color:#4a5568}
+.ba-vchart{display:grid;grid-template-columns:repeat(2,88px);grid-template-rows:152px auto;margin-top:12px}
+.vb{display:contents}
+.vb-v{position:absolute;left:50%;bottom:calc(var(--h) + 6px);transform:translateX(-50%);font-style:normal;font-family:"Barlow Semi Condensed","Zen Kaku Gothic New",sans-serif;font-weight:700;line-height:1.1;white-space:nowrap}
+.vb-v small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:900;margin-left:1px}
+.vb-v.pre{font-size:22px;color:#6b7685}
+.vb-v.post{font-size:26px;color:#0a5fd0}
+.vb-t{grid-row:1;align-self:end;position:relative;display:block;height:120px;border-bottom:2px solid #d3deee}
+.vb-t i{position:absolute;left:50%;bottom:0;width:56px;height:var(--h);min-height:8px;transform:translateX(-50%);border-radius:10px 10px 0 0}
+.vb-pre .vb-t i{background:repeating-linear-gradient(135deg,#b9c3cf 0 8px,#c8d1db 8px 16px)}
+.vb-post .vb-t i{background:linear-gradient(180deg,#2e86d3,#0a5fd0);box-shadow:0 6px 14px rgba(10,95,208,.4)}
+.vb-l{grid-row:2;justify-self:center;margin-top:10px;display:grid;place-items:center;min-width:34px;height:26px;padding:0 10px;border-radius:7px;background:#e6ebf1;color:#4a5568;font-size:14px;font-weight:900}
+.vb-l.a{background:#0a5fd0;color:#fff}
+@supports (animation-timeline:view()){
+ .vb-t i{animation:barGrowV linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
+ @keyframes barGrowV{from{height:0}to{height:var(--h)}}
+}
+@media (prefers-reduced-motion:reduce){.vb-t i{animation:none!important}}
+.ba-split{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;padding-left:24px;border-left:1px solid #dbe7f7}
 .bs b{display:inline-block;padding:4px 10px;border-radius:8px;font-size:13px;font-weight:900;line-height:1.3;color:#fff;background:#0a5fd0;white-space:nowrap}
 .bs-hu b{background:#141b26}
 .bs ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:6px}
@@ -236,8 +253,12 @@
 .fx-src a{color:#0a5fd0;font-weight:900}
 @media (max-width:900px){
  .ba-lead{margin-top:18px;font-size:16px}
+ .ba-split{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
  .bs li{font-size:14px}
 }
 @media (max-width:600px){
- .ba-split{grid-template-columns:minmax(0,1fr);gap:12px}
+ .ba-mid{grid-template-columns:minmax(0,1fr);gap:18px;margin-top:18px}
+ .ba-vchart{grid-template-rows:142px auto}
+ .vb-t{height:110px}
+ .ba-split{grid-template-columns:minmax(0,1fr);gap:12px;padding:16px 0 0;border-left:0;border-top:1px solid #dbe7f7}
 }
