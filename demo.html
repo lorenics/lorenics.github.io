@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Mono:wght@400;700&family=Shippori+Mincho+B1:wght@600;800&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/sub.css?v=20261013a">
-<link rel="stylesheet" href="css/demo.css?v=20261012f">
+<link rel="stylesheet" href="css/demo.css?v=20261109a">
 <script src="js/demo.js" defer></script>
 <script src="js/sub.js?v=20261029a" defer></script>
 <script type="application/ld+json">
@@ -96,9 +96,41 @@
   <h1>話を<wbr>聞く<wbr>前に<br><span>動く<wbr>ものを<wbr>触ってください</span></h1>
   <p class="svc-intro">ロアニクスが<wbr>教育と<wbr>現場で<wbr>使っている<wbr>仕組みの<wbr>一部を<wbr>公開しています。<br>登録は<wbr>いりません。<wbr>ブラウザだけで<wbr>動きます。</p>
   <ul class="demo-index">
+   <li><a href="#koujou">工場の<wbr>3Dシミュレータ</a></li>
    <li><a href="#sim">3Dシミュレータ <i>この<wbr>ページで<wbr>動く</i></a></li>
    <li><a href="#karte">ラダーカルテ</a></li>
   </ul>
+ </div>
+</section>
+
+<section class="demo-sec" id="koujou" aria-labelledby="koujou-h">
+ <div class="l-container demo-grid">
+  <div>
+   <p class="demo-k">工場ごと<wbr>教材に<wbr>した<wbr>例</p>
+   <h2 class="demo-h" id="koujou-h">工場の<wbr>3Dシミュレータ</h2>
+   <p class="demo-lead">工程を<wbr>見て<wbr>回り　<wbr>組立の<wbr>設備は<wbr>ラダーで<wbr>動かす</p>
+   <p class="demo-p">車を<wbr>作る<wbr>工場の<wbr>24の<wbr>工程を、<wbr>ブラウザの<wbr>中に<wbr>並べました。<wbr>工程を<wbr>押すと、<wbr>どの<wbr>機器が、<wbr>どんな<wbr>合図で、<wbr>どう<wbr>動くかが<wbr>出ます。<wbr>組立の<wbr>設備は、<wbr>ラダーと<wbr>3Dが<wbr>並んだ<wbr>画面で<wbr>書き換えて<wbr>動かせます。</p>
+   <div class="demo-try"><b>試し方</b>
+    <ol><li>工場の<wbr>中の<wbr>〔ギアユニットの<wbr>自動組立〕を<wbr>押す</li><li>〔ラダーを<wbr>開いて<wbr>動かす〕→<wbr>〔PLCへ<wbr>書き込み〕→<wbr>右の<wbr>〔起動〕</li><li>〔トラブル練習〕で<wbr>故障を<wbr>1つ<wbr>入れ、<wbr>原因を<wbr>探して<wbr>直す</li></ol>
+   </div>
+   <ul class="demo-use">
+    <li>工程の<wbr>流れと<wbr>設備の<wbr>役割を　<wbr>新人に<wbr>画面で<wbr>説明できる</li>
+    <li>実機を<wbr>止めずに　<wbr>PLCの<wbr>デバッグと<wbr>故障対応を<wbr>練習できる</li>
+    <li>御社の<wbr>設備に<wbr>置き換えて<wbr>作ることも<wbr>できます</li>
+   </ul>
+   <div class="demo-actions"><a class="c-btn c-btn--primary" href="sim/koujou/" target="_blank" rel="noopener">工場を<wbr>開く ↗</a></div>
+   <p class="demo-note">パソコンで<wbr>開くのを<wbr>おすすめします<wbr>（3Dの<wbr>描画が<wbr>重いため）。</p>
+  </div>
+  <div class="demo-visual demo-shots">
+   <figure class="demo-shot">
+    <img src="images/v3/ex-koujou-1.webp" width="1200" height="750" loading="lazy" decoding="async" alt="工場の3Dシミュレータの画面。左に工程の説明（ギアユニットの自動組立：テーブル・各ステーションのシリンダ・検査のステーションの合図と動き）、右に組立の設備が2台並ぶ工場の中">
+    <figcaption>工程を<wbr>押すと　<wbr>どの<wbr>機器が<wbr>どんな<wbr>合図で<wbr>どう<wbr>動くかが<wbr>出る</figcaption>
+   </figure>
+   <figure class="demo-shot">
+    <img src="images/v3/ex-koujou-2.webp" width="1200" height="750" loading="lazy" decoding="async" alt="組立の設備のラダーエディタと3Dの画面。左にラダー（モニタ中で、ONの接点が青く光る）、右にインデックス組立機の3Dと起動・停止・リセットのボタン、左上にトラブル練習のボタン">
+    <figcaption>組立の<wbr>設備は　<wbr>ラダーと<wbr>3Dを<wbr>並べて<wbr>動かす</figcaption>
+   </figure>
+  </div>
  </div>
 </section>
 

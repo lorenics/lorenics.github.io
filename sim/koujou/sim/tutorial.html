@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<script>(function(){if(!/^lorenics\.com$|(^|\.)lorenics\.com$|^lorenics\.github\.io$/.test(location.hostname)){location.replace('about:blank');return;}document.addEventListener('contextmenu',function(e){e.preventDefault();});document.addEventListener('keydown',function(e){var k=(e.key||'').toLowerCase();if(e.key==='F12'||(e.ctrlKey&&(k==='u'||k==='s'))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c')))e.preventDefault();},true);})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>使い方｜ブラウザPLC ラダーエディタ＋3Dライン</title>
+<style>
+  :root{--ink:#0b1220;--sub:#334155;--line:#cbd5e1;--red:#e11d48;--blue:#1d4ed8;--green:#15803d;--yellow:#fde047;--bg:#f1f5f9}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:600;line-height:1.75;font-size:17px;-webkit-text-size-adjust:100%}
+  header{background:#0b1220;color:#fff;padding:22px 18px 20px}
+  header .in{max-width:980px;margin:0 auto}
+  header h1{margin:0;font-size:26px;font-weight:900;line-height:1.35}
+  header p{margin:8px 0 0;font-size:16px;color:#e2e8f0}
+  header .go{display:inline-block;margin-top:14px;background:#2563eb;color:#fff;text-decoration:none;font-weight:900;padding:12px 18px;border-radius:10px;font-size:17px}
+  nav{background:#fff;border-bottom:2px solid var(--line);position:sticky;top:0;z-index:10;overflow-x:auto;white-space:nowrap}
+  nav .in{max-width:980px;margin:0 auto;padding:8px 10px;display:flex;gap:6px}
+  nav a{display:inline-block;font-size:14px;font-weight:900;color:var(--ink);text-decoration:none;background:#e2e8f0;border-radius:999px;padding:6px 12px}
+  main{max-width:980px;margin:0 auto;padding:10px 14px 60px}
+  section{background:#fff;border-radius:16px;padding:20px 18px;margin:18px 0;box-shadow:0 1px 0 #cbd5e1,0 6px 18px rgba(15,23,42,.06)}
+  h2{margin:0 0 10px;font-size:23px;font-weight:900;line-height:1.4;display:flex;align-items:center;gap:10px}
+  h2 .no{flex:none;background:var(--ink);color:#fff;border-radius:10px;font-size:16px;padding:3px 10px}
+  h3{font-size:19px;font-weight:900;margin:22px 0 8px;border-left:6px solid var(--blue);padding-left:10px;line-height:1.45}
+  p{margin:8px 0}
+  b,strong{font-weight:900}
+  .mark{background:linear-gradient(transparent 55%,var(--yellow) 55%)}
+  .key{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:900;background:#0b1220;color:#fff;border-radius:6px;padding:0 7px;font-size:.9em;line-height:1.6;margin:0 1px}
+  code{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:800;background:#e0e7ff;color:#1e3a8a;border-radius:5px;padding:0 5px}
+  .term{font-size:.88em;color:var(--sub);font-weight:700}
+  /* 注釈つき画像 */
+  .shot{position:relative;margin:12px 0 6px;border:3px solid #0b1220;border-radius:10px;overflow:hidden;background:#000;line-height:0}
+  .shot img{width:100%;height:auto;display:block}
+  .shot .box{position:absolute;border:3px solid var(--red);border-radius:6px;box-shadow:0 0 0 2px rgba(255,255,255,.85)}
+  .shot .num{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:var(--red);color:#fff;font-weight:900;font-size:17px;line-height:30px;text-align:center;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);font-family:system-ui,sans-serif}
+  .shot.wide{overflow-x:auto;overflow-y:hidden}
+  .shot.wide .inner{position:relative;min-width:760px}
+  .shot.narrow{max-width:420px;margin-left:auto;margin-right:auto}
+  .cap{font-size:13px;color:var(--sub);text-align:center;margin:0 0 10px}
+  ol.legend{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}
+  ol.legend li{display:flex;gap:10px;align-items:flex-start;background:#f8fafc;border:2px solid #e2e8f0;border-radius:10px;padding:10px 12px}
+  ol.legend li .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;font-weight:900;text-align:center;line-height:30px;font-size:16px}
+  ol.legend li .t{flex:1}
+  ol.legend li .t b{display:block;font-size:17.5px}
+  /* 手順 */
+  .steps{counter-reset:s;display:grid;gap:12px;margin:12px 0}
+  .step{display:flex;gap:12px;background:#eff6ff;border:2px solid #bfdbfe;border-radius:12px;padding:14px}
+  .step::before{counter-increment:s;content:counter(s);flex:none;width:40px;height:40px;border-radius:12px;background:var(--blue);color:#fff;font-weight:900;font-size:22px;text-align:center;line-height:40px}
+  .step b.big{font-size:19px;display:block}
+  .note{background:#fefce8;border:2px solid #facc15;border-radius:12px;padding:12px 14px;margin:12px 0}
+  .warn{background:#fff1f2;border:2px solid #fb7185;border-radius:12px;padding:12px 14px;margin:12px 0}
+  .ok{background:#f0fdf4;border:2px solid #4ade80;border-radius:12px;padding:12px 14px;margin:12px 0}
+  .note b:first-child,.warn b:first-child,.ok b:first-child{font-size:17.5px}
+  table{border-collapse:collapse;width:100%;font-size:15.5px;margin:10px 0}
+  th,td{border:2px solid #cbd5e1;padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:#0b1220;color:#fff;font-weight:900}
+  td:first-child{white-space:nowrap;font-weight:900}
+  .tw{overflow-x:auto}
+  .two{display:grid;gap:12px}
+  @media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+  .ex{border:2px solid #c4b5fd;background:#f5f3ff;border-radius:12px;padding:12px 14px;margin:12px 0}
+  .ex h4{margin:0 0 4px;font-size:18px;font-weight:900;color:#5b21b6}
+  details{border:2px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:8px 0;background:#f8fafc}
+  summary{font-weight:900;cursor:pointer;font-size:17px}
+  .diagram{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;justify-content:center;margin:14px 0}
+  .mon{flex:1 1 220px;max-width:340px;border:4px solid #0b1220;border-radius:12px;background:#0b1220;color:#fff;text-align:center;padding:10px}
+  .mon .scr{background:#fff;color:#0b1220;border-radius:6px;padding:18px 8px;font-weight:900;font-size:18px}
+  .mon .scr.sim{background:#dcfce7}
+  .mon small{display:block;margin-top:6px;font-size:13px;color:#cbd5e1}
+  .arrow{align-self:center;font-weight:900;font-size:15px;color:var(--blue);text-align:center}
+  footer{text-align:center;color:var(--sub);font-size:13px;padding:20px}
+  @media(max-width:600px){
+    body{font-size:16.5px}
+    header h1{font-size:22px}
+    h2{font-size:20px}
+    .shot .num{width:24px;height:24px;margin:-12px 0 0 -12px;font-size:14px;line-height:24px;border-width:2px}
+    .shot .box{border-width:2px}
+    ol.legend li .t b{font-size:16.5px}
+  }
+</style>
+</head>
+<body>
+<header><div class="in">
+  <h1>ブラウザPLC ラダーエディタ＋3Dライン<br>使い方ガイド</h1>
+  <p>ラダーを書いて「PLCへ書き込み」すると、3Dの生産ラインがその通りに動きます。GX Works3もPLC本体もいりません。</p>
+  <a class="go" href="index.html">▶ エディタを開く</a>
+</div></header>
+
+<nav><div class="in">
+  <a href="#s1">画面の見かた</a><a href="#s2">まず動かす</a><a href="#s3">ラダーの書き方</a><a href="#s4">モニタ</a><a href="#s5">エラー</a><a href="#s6">2画面で使う</a><a href="#s7">ライン2</a><a href="#s7b">ライン3</a><a href="#s7c">トラブル練習</a><a href="#s8">練習問題</a><a href="#s9">保存・共有</a><a href="#s10">よくある質問</a>
+</div></nav>
+
+<main>
+
+
+<section id="s1">
+  <h2><span class="no">1</span>画面の見かた</h2>
+  <p>左が<b>ラダーエディタ</b>、右が<b>3Dライン</b>です。上のボタンはGX Works3と同じ並び・同じキーで使えるようにしています。</p>
+  <div class="shot wide" data-img="overview"><div class="inner"><img src="guide/overview.jpg" alt="エディタ全体の画面"></div></div>
+  <p class="cap">PCで開いたときの画面（ライン2を表示中）。スマホでは横にスクロールできます</p>
+  <ol class="legend" data-legend="overview">
+    <li data-k="bar"><span class="n"></span><span class="t"><b>ツールバー</b>ライン切替・ファイル・変換・書き込み・RUN/STOP・モニタ・別ウィンドウ・使い方。すぐ下で拡大して説明します。</span></li>
+    <li data-k="palette"><span class="n"></span><span class="t"><b>部品パレット</b>a接点・b接点・コイル・命令など。キーボードのF5〜F9でも置けます。</span></li>
+    <li data-k="ladder"><span class="n"></span><span class="t"><b>ラダー図</b>ここに回路を描きます。青い枠がカーソルです。</span></li>
+    <li data-k="sim"><span class="n"></span><span class="t"><b>3Dライン</b>ドラッグで回転、ホイール（スマホは2本指）で拡大。黒いラベルがI/Oの番号です。</span></li>
+    <li data-k="pbs"><span class="n"></span><span class="t"><b>操作盤</b>起動（X0）・停止（X1）・リセット（X2）の押しボタン。</span></li>
+    <li data-k="status"><span class="n"></span><span class="t"><b>メッセージ欄</b>次にやることや、エラーの場所が出ます。</span></li>
+  </ol>
+
+  <h3>ツールバー（拡大）</h3>
+  <div class="shot wide" data-img="toolbar"><div class="inner"><img src="guide/toolbar.jpg" alt="ツールバーの拡大"></div></div>
+  <p class="cap">スマホでは横にスクロールできます</p>
+  <ol class="legend" data-legend="toolbar">
+    <li data-k="line"><span class="n"></span><span class="t"><b>ライン切替</b>ライン1（押出し）・ライン2（ロボット＋プレス）・ライン3（インデックス組立機）を選びます。</span></li>
+    <li data-k="file"><span class="n"></span><span class="t"><b>ファイル</b>サンプルを開く・新規・書き出し・読み込み。</span></li>
+    <li data-k="conv"><span class="n"></span><span class="t"><b>変換（F4）</b>描いたラダーにミスがないか確かめます。<span class="term">（変換＝絵のラダーを、PLCが実行できる形に直す作業）</span></span></li>
+    <li data-k="write"><span class="n"></span><span class="t"><b>PLCへ書き込み</b>ラダーを内蔵PLCに送ります。ここで初めてラインに反映されます。</span></li>
+    <li data-k="run"><span class="n"></span><span class="t"><b>STOP / RUN</b>内蔵PLCを止めたり動かしたりします。</span></li>
+    <li data-k="mon"><span class="n"></span><span class="t"><b>モニタ（F3）</b>ONの接点・コイルが青く光り、タイマの現在値も見えます。</span></li>
+    <li data-k="detach"><span class="n"></span><span class="t"><b>3Dを別ウィンドウへ</b>3Dラインを別ウィンドウに出します。2画面で使うとき用（<a href="#s6">6章</a>）。</span></li>
+    <li data-k="help"><span class="n"></span><span class="t"><b>使い方</b>このページを開きます。</span></li>
+    <li data-k="state"><span class="n"></span><span class="t"><b>PLCの状態</b>緑の「RUN」なら実行中。</span></li>
+  </ol>
+  <div class="note"><b>スマホで開いたとき</b><br>画面が狭いので、上に「ラダー」「3Dライン」の切替タブが出ます。片方ずつ表示されます。</div>
+</section>
+
+
+<section id="s2">
+  <h2><span class="no">2</span>まず動かしてみる（3ステップ）</h2>
+  <div class="steps">
+    <div class="step"><div><b class="big">「ファイル」→「サンプルを開く」</b>選んでいるラインの完成ラダーが入ります。初めて開いたときは最初から入っています。</div></div>
+    <div class="step"><div><b class="big">「PLCへ書き込み」を押す</b>メッセージ欄に<b style="color:var(--green)">「PLCへ書き込みました」</b>と出て、右上が<b style="color:var(--green)">RUN</b>になればOK。</div></div>
+    <div class="step"><div><b class="big">右下の「起動」を押す</b>ワークが流れ始めます。止めるときは「停止」。異常で止まったら「リセット」。</div></div>
+  </div>
+  <div class="ok"><b>ここがポイント</b><br>ラダーを書き換えても、<span class="mark">「PLCへ書き込み」を押すまでラインは前のラダーのまま</span>動きます。本物のPLCと同じ考え方です。</div>
+</section>
+
+
+<section id="s3">
+  <h2><span class="no">3</span>ラダーの書き方</h2>
+  <p>置きたい場所をクリックして、キーを押すか、パレットのボタンを押します。入力欄にデバイス番号を打って<span class="key">Enter</span>で確定です。</p>
+  <div class="shot" data-img="input"><img src="guide/input.jpg" alt="デバイス入力欄"></div>
+  <p class="cap">X0・X1の右に「コイル」を置こうとしているところ</p>
+  <ol class="legend" data-legend="input">
+    <li data-k="palette"><span class="n"></span><span class="t"><b>部品パレット</b>ボタンの右に書いてあるキーと同じ働きです。</span></li>
+    <li data-k="box"><span class="n"></span><span class="t"><b>入力欄</b>ここに <code>Y0</code> のように打ちます。小文字でもOK。下に入力例が出ます。</span></li>
+  </ol>
+
+  <h3>キー操作（GX Works3と同じ）</h3>
+  <div class="tw"><table>
+    <tr><th>キー</th><th>置くもの</th><th>入力の例</th></tr>
+    <tr><td><span class="key">F5</span></td><td>a接点<span class="term">（ONで通る接点）</span></td><td><code>X0</code></td></tr>
+    <tr><td><span class="key">F6</span></td><td>b接点<span class="term">（OFFで通る接点）</span></td><td><code>X1</code></td></tr>
+    <tr><td><span class="key">⇧F5</span></td><td>並列a接点<span class="term">（上の行と並べる）</span></td><td><code>M0</code>（自己保持など）</td></tr>
+    <tr><td><span class="key">⇧F6</span></td><td>並列b接点</td><td><code>M0</code></td></tr>
+    <tr><td><span class="key">F7</span></td><td>コイル・タイマ・カウンタ</td><td><code>Y0</code>／<code>T0 K30</code>（3.0秒）／<code>C0 K5</code></td></tr>
+    <tr><td><span class="key">F8</span></td><td>命令</td><td><code>MOV K800 D200</code>／<code>RST C1</code>／<code>ZRST M11 M31</code></td></tr>
+    <tr><td><span class="key">F9</span></td><td>横線</td><td>—</td></tr>
+    <tr><td><span class="key">⇧F9</span></td><td>縦線<span class="term">（カーソルの右下に引く）</span></td><td>—</td></tr>
+    <tr><td><span class="key">Del</span></td><td>カーソル位置を消す</td><td>—</td></tr>
+    <tr><td><span class="key">⇧Ins</span>／<span class="key">⇧Del</span></td><td>行の挿入／行の削除</td><td>—</td></tr>
+    <tr><td><span class="key">F4</span></td><td>変換</td><td>—</td></tr>
+    <tr><td><span class="key">F3</span></td><td>モニタ開始・終了</td><td>—</td></tr>
+  </table></div>
+
+  <h3>命令を直接打つ（リスト入力）</h3>
+  <p>ラダーの上で<b>そのまま文字を打ち始める</b>と、入力欄が開きます。GX Works3の「命令で打つ」やり方がそのまま使えます。</p>
+  <div class="tw"><table>
+    <tr><th>打つ文字</th><th>結果</th></tr>
+    <tr><td><code>LD X0</code></td><td>行の頭にa接点 X0</td></tr>
+    <tr><td><code>ANI X1</code></td><td>直列にb接点 X1</td></tr>
+    <tr><td><code>OR M0</code></td><td>並列にa接点 M0</td></tr>
+    <tr><td><code>OUT Y0</code></td><td>コイル Y0</td></tr>
+    <tr><td><code>LDP X0</code>／<code>LDF X0</code></td><td>立上り／立下りパルス接点</td></tr>
+    <tr><td><code>AND&gt;= D101 K2680</code></td><td>比較接点（D101が2680以上で通る）</td></tr>
+  </table></div>
+
+  <h3>使えるデバイスと命令</h3>
+  <div class="two">
+    <div class="note" style="margin:0"><b>デバイス</b><br>X・Y（8進数：X7の次はX10）、M、L、B、T（タイマ 100ms単位）、C（カウンタ）、D（数値）、K（定数）、SM400（常時ON）、SM401（常時OFF）、SM402（RUN後1回だけON）</div>
+    <div class="note" style="margin:0"><b>命令</b><br>OUT、SET、RST、PLS、PLF、MOV(P)、ZRST、INC(P)、DEC(P)、＋、－、比較（＝ &lt;&gt; &gt; &lt; &gt;= &lt;=）</div>
+  </div>
+</section>
+
+
+<section id="s4">
+  <h2><span class="no">4</span>モニタで動きを見る</h2>
+  <p><b>モニタ（F3）</b>を押すと、ONになっている接点やコイルが<b style="color:var(--blue)">青く塗られ</b>ます。タイマは <code>T41 K30=19</code> のように<b>現在値</b>が出ます（19＝1.9秒経過）。</p>
+  <div class="shot" data-img="monitor"><img src="guide/monitor.jpg" alt="モニタ中のラダー"></div>
+  <p class="cap">起動後のモニタ。自動運転 M0 が自己保持され、運転中 M1 も入っている</p>
+  <div class="note"><b>見るポイント</b><br>「ラインが止まった」ときは、<span class="mark">どの接点が青くならずに電気が止まっているか</span>を探します。現場のトラブルシュートと同じ見方です。</div>
+</section>
+
+
+<section id="s5">
+  <h2><span class="no">5</span>エラーが出たとき</h2>
+  <p>「変換」や「PLCへ書き込み」でミスが見つかると、<b>メッセージ欄に赤字で行番号と理由</b>が出て、カーソルがその行へ飛びます。</p>
+  <div class="shot" data-img="error"><img src="guide/error.jpg" alt="変換エラーの例"></div>
+  <p class="cap">2行目にコイルを置き忘れた例（途中を省略しています）</p>
+  <ol class="legend" data-legend="error">
+    <li data-k="status"><span class="n"></span><span class="t"><b>エラーメッセージ</b>「行2：出力（コイル・命令）がない回路です」</span></li>
+  </ol>
+  <div class="tw"><table>
+    <tr><th>メッセージ</th><th>直し方</th></tr>
+    <tr><td>出力がない回路</td><td>行の右端にコイルか命令を置く</td></tr>
+    <tr><td>つながっていない</td><td>途中に空きマスがある。横線（F9）でつなぐ</td></tr>
+    <tr><td>左の母線に届かない</td><td>並列の枝が左端まで来ていない。縦線（⇧F9）を確認</td></tr>
+    <tr><td>書込み先はDに</td><td>MOV・INC・＋などの最後はDを指定する</td></tr>
+  </table></div>
+</section>
+
+
+<section id="s6">
+  <h2><span class="no">6</span>2画面で使う（エディタと3Dを別ウィンドウに）</h2>
+  <p>モニタが2枚ある人は、<b>片方の画面にラダー、もう片方に3Dライン</b>を大きく出せます。</p>
+  <div class="diagram">
+    <div class="mon"><div class="scr">ラダーエディタ</div><small>画面1：書く・モニタする</small></div>
+    <div class="arrow">⇄<br>自動で<br>連動</div>
+    <div class="mon"><div class="scr sim">3Dライン</div><small>画面2：動きを見る・ボタンを押す</small></div>
+  </div>
+
+  <div class="steps">
+    <div class="step"><div><b class="big">上の「3Dを別ウィンドウへ」を押す</b>新しいウィンドウに3Dラインが開きます。</div></div>
+    <div class="step"><div><b class="big">そのウィンドウを2枚目の画面へドラッグ</b>最大化すると大きく見られます。</div></div>
+    <div class="step"><div><b class="big">あとはいつも通り</b>エディタで「PLCへ書き込み」→ どちらかの「起動」。ラダーの変更もモニタも、そのまま連動します。</div></div>
+  </div>
+
+  <h3>エディタ側の画面</h3>
+  <div class="shot wide" data-img="detach_editor"><div class="inner"><img src="guide/detach_editor.jpg" alt="3Dを別ウィンドウにしたときのエディタ"></div></div>
+  <ol class="legend" data-legend="detach_editor">
+    <li data-k="detach"><span class="n"></span><span class="t"><b>3Dを別ウィンドウへ</b>押すと3Dが別ウィンドウになり、エディタは横いっぱいに広がります。</span></li>
+    <li data-k="bar"><span class="n"></span><span class="t"><b>黄色い帯</b>「3Dラインは別ウィンドウで動いています」の表示。</span></li>
+    <li data-k="attach"><span class="n"></span><span class="t"><b>元に戻す</b>別ウィンドウを閉じて、1画面の表示に戻します。</span></li>
+  </ol>
+
+  <h3>3Dライン側の画面</h3>
+  <div class="shot wide" data-img="detach_sim"><div class="inner"><img src="guide/detach_sim.jpg" alt="別ウィンドウの3Dライン"></div></div>
+  <p class="cap">別ウィンドウでは右側のパネルが付き、情報が多く出ます（右側を拡大↓）</p>
+  <div class="shot narrow" data-img="detach_panel"><img src="guide/detach_panel.jpg" alt="右側パネルの拡大"></div>
+  <ol class="legend" data-legend="detach_panel">
+    <li data-k="status"><span class="n"></span><span class="t"><b>「エディタと連動中」</b>緑ならエディタとつながっています。</span></li>
+    <li data-k="pbs"><span class="n"></span><span class="t"><b>操作盤</b>起動・停止・リセットはこちらでもエディタ側でも押せます。</span></li>
+    <li data-k="counts"><span class="n"></span><span class="t"><b>カウンタ</b>良品出荷・NG箱・不良流出などの数。ラダーの出来を数字で確かめられます。</span></li>
+  </ol>
+  <p>右側のタブで<b>「プレス」（荷重カーブ）「I/O」（ON/OFF一覧）「割付表」</b>も見られます。1画面のときより情報が多く出ます。</p>
+
+  <div class="warn"><b>別ウィンドウが開かないとき</b><br>ブラウザが「ポップアップをブロックしました」と止めている場合があります。アドレスバー右のアイコンから<b>このサイトのポップアップを許可</b>して、もう一度押してください。それでも開かないときは、画面に出るURLを<b>同じブラウザの別タブ</b>で開くと連動します。</div>
+  <div class="note"><b>注意</b><br>エディタと3Dは<b>同じブラウザ（例：どちらもChrome）</b>で開いてください。ChromeとEdgeのように別のブラウザだと連動しません。</div>
+</section>
+
+
+<section id="s7">
+  <h2><span class="no">7</span>ライン2の見どころ（ロボット＋サーボプレス）</h2>
+  <p>ライン2は、<b>供給 → ロボットでプレス台へ → クランプ → 加圧 → 判定 → ロボットで排出かNG箱へ</b>、の流れです。サンプルラダーは114回路で、ライン3と同じステップラダーの組み方です。供給・ロボット投入・クランプと加圧・ロボット排出の4つのサイクルに分け、工程は「指令」と「確認」の組で1段ずつ進みます<span class="term">（SET/RST は使いません）</span>。止まるときは異常番号（D20）が出ます。</p>
+  <div class="two">
+    <div>
+      <div class="shot narrow" data-img="press" style="margin-top:0"><img src="guide/press.jpg" alt="プレスタブの荷重カーブ"></div>
+      <p class="cap">「プレス」タブ。青線が今回の荷重カーブ</p>
+    </div>
+    <div>
+      <h3 style="margin-top:0">判定のしくみ</h3>
+      <p>プレスは<b>目標荷重（D200）</b>に達したところで止まり、そのときの<b>位置（D101）</b>をPLCに返します。</p>
+      <p>サンプルラダーは、<b>位置が268.0〜270.0mm（D101が2680〜2700）なら良品</b>と判定しています。</p>
+      <div class="note" style="margin-top:6px"><b>緑の枠＝良品の窓</b><br>カーブの先端が緑の枠に入れば良品。手前で荷重が立ち上がるのは<b>部品がきつい</b>、奥まで下がってから立ち上がるのは<b>部品が入っていない</b>ワークです。</div>
+    </div>
+  </div>
+  <h3>I/O割付（ライン2）</h3>
+  <div class="tw"><table>
+    <tr><th>デバイス</th><th>内容</th></tr>
+    <tr><td>X0 / X1 / X2</td><td>起動PB / 停止PB / リセットPB</td></tr>
+    <tr><td>X3 / X4</td><td>供給 入口センサー / 取出し位置センサー</td></tr>
+    <tr><td>X5 / X6 / X7</td><td>ロボット 動作中 / 動作完了 / 原点</td></tr>
+    <tr><td>X10 / X11</td><td>クランプ 前進端 / 後退端</td></tr>
+    <tr><td>X12 / X13 / X14</td><td>プレス 上限 / 加圧完了 / 下限</td></tr>
+    <tr><td>X15</td><td>プレス台 ワーク有無</td></tr>
+    <tr><td>D100 / D101</td><td>プレス 現在荷重[N] / 位置[0.1mm]</td></tr>
+    <tr><td>Y0 / Y1</td><td>供給コンベア / ワーク供給指令</td></tr>
+    <tr><td>Y2 / Y3・Y4</td><td>ロボット起動 / プログラム番号（1＝供給→台、2＝台→排出、3＝台→NG箱）</td></tr>
+    <tr><td>Y5 / Y6 / Y7</td><td>クランプSOL / プレス加圧指令 / 排出コンベア</td></tr>
+    <tr><td>Y10 / Y11 / Y12</td><td>運転ランプ / NG判定ランプ / 異常ランプ</td></tr>
+    <tr><td>D200 / D20</td><td>プレス 目標荷重[N] / 異常番号</td></tr>
+  </table></div>
+  <details><summary>ライン1（押出し）の割付を見る</summary>
+    <div class="tw"><table>
+      <tr><th>デバイス</th><th>内容</th></tr>
+      <tr><td>X0 / X1</td><td>入口センサー / 押出位置センサー</td></tr>
+      <tr><td>X2 / X3</td><td>シリンダ 後退端 / 前進端</td></tr>
+      <tr><td>X4 / X5 / X6</td><td>起動PB / 停止PB / リセットPB</td></tr>
+      <tr><td>Y0 / Y1</td><td>コンベア運転 / シリンダ前進SOL</td></tr>
+      <tr><td>Y2 / Y3 / Y4</td><td>ワーク供給指令 / 運転ランプ / 異常ランプ</td></tr>
+      <tr><td>D20</td><td>異常番号</td></tr>
+    </table></div>
+  </details>
+</section>
+
+
+<section id="s7b">
+  <h2><span class="no">7b</span>ライン3の見どころ（インデックステーブル式 自動組立機）</h2>
+  <p>ライン3は、<b>8か所の治具が載った回転テーブル</b>のまわりに5つのステーションが並ぶ自動組立機です。<b>圧入 → 部品置き → ねじ締め → 検査 → 取り出し</b>を5か所で同時に行い、全部が終わるとテーブルが45度回って次の拍へ進みます。サンプルラダーは178回路で、現場のステップラダーの組み方どおりに見出しで区切ってあります。</p>
+  <ul>
+    <li><b>サイクルごとに番号の帯</b>：ステーション1〜5と割出しを、サイクル1〜6に分けています。サイクル1は M100〜、サイクル2は M120〜 … 割出しは M200〜 で、帯の中は「+0 相互インターロック → +1 定位置 → +2 準備完了 → +3 サイクルスタート → 工程 → +19 完了」の順に並びます。</li>
+    <li><b>工程は「指令」と「確認」の組</b>：指令は「ステップ動作 <code>M2</code> か自己保持」かつ前の工程、確認は「動きの端の安定タイマか自己保持」かつ指令で、1段ずつ進みます。SET/RST は使っていません（RST はカウンタを0に戻すときだけ）。</li>
+    <li><b>順番を守る</b>：ロックが入っているときだけステーションを下げ、全部が上がってロックが抜けてから割出しします。出力のすぐ上に、動いてよい条件を並べたインターロックのメモリを置いています。</li>
+    <li><b>止まるときは必ず異常が出る</b>：サイクルが決めた時間で終わらない（1秒クロック <code>SM412</code> をカウンタで数える）、シリンダが出力に合った端に着かない・両端のセンサが同時にON、部品切れ、サイクルが始まらない、の14種類です。異常番号は <code>D20</code>、異常ランプは <code>Y14</code>。直したら<b>リセット → 起動</b>で、止まった工程の続きから動きます。</li>
+    <li><b>テーブルの位置は D0</b>（0〜7）で届きます。割出し指令 <code>Y0</code> で45度回り、回っている間は位置決め完了 <code>X3</code> がOFFになります。</li>
+    <li><b>検査値は D10</b>（0.01mm単位）。480〜520 で検査OK、それ以外は検査NGです。OKとNGは片方しか入らないので、検査が終わって値が0に戻っても判定は変わりません。</li>
+    <li><b>取り出しの行き先は Y13</b>（良品シュート切替）。判定はデータレジスタ（<code>D30</code>＝検査の位置、<code>D31</code>＝取り出しの位置。1＝良品、2＝NG）で持ち、割出しのたびに送ります。良品の印があるときだけ ON にして良品の箱へ入れます。OFF なら NG箱なので、電磁弁や配線が壊れても不良は良品の箱へ流れません。</li>
+  </ul>
+  <h3>I/O割付（ライン3）</h3>
+  <div class="tw"><table>
+    <tr><th>デバイス</th><th>内容</th></tr>
+    <tr><td>X0 / X1 / X2</td><td>起動PB / 停止PB / リセットPB</td></tr>
+    <tr><td>X3 / X4</td><td>テーブル 位置決め完了 / ボウルフィーダ 部品あり</td></tr>
+    <tr><td>X5 / X6</td><td>排出位置 製品あり / 検査 完了</td></tr>
+    <tr><td>X10〜X14</td><td>ステーション1〜5 下降端</td></tr>
+    <tr><td>X15 / X16</td><td>テーブルロック 前進端 / 後退端</td></tr>
+    <tr><td>X20〜X24</td><td>ステーション1〜5 上昇端</td></tr>
+    <tr><td>D0 / D10</td><td>テーブル位置（0〜7） / 検査値[0.01mm]</td></tr>
+    <tr><td>Y0</td><td>テーブル割出し（ONで45度回る）</td></tr>
+    <tr><td>Y1〜Y5</td><td>ステーション1〜5 下降SOL（圧入 / 置き / ねじ締め / 検査 / 取り出し）</td></tr>
+    <tr><td>Y6 / Y7 / Y10</td><td>テーブルロック 解除SOL（ONでピンが抜ける） / ボウルフィーダ運転 / ホッパーゲート</td></tr>
+    <tr><td>Y11 / Y12 / Y13</td><td>運転ランプ / NG判定ランプ / 良品シュート切替（ONのときだけ良品の箱へ）</td></tr>
+    <tr><td>Y14 / D20</td><td>異常ランプ / 異常番号（0＝異常なし）</td></tr>
+  </table></div>
+</section>
+
+
+<section id="s7c">
+  <h2><span class="no">7c</span>トラブル対応の練習（ライン3）</h2>
+  <p>ライン3には、故障を1つ仕込んで原因を探す練習が8問あります。現場からの連絡を受けて、止まっている場所を見つけ、原因の部品を選んで直し、ラインがもう一度動くまでが1問です。故障は3D側に入るので、ラダーエディタでも、中継ソフトでつないだ GX Simulator3 でも同じように起きます。</p>
+  <div class="shot wide" data-img="trouble"><div class="inner"><img src="guide/trouble.jpg" alt="ラダーエディタの中でトラブル対応の練習をしているところ"></div></div>
+  <ol class="legend" data-legend="trouble">
+    <li data-k="toggle"><span class="n"></span><span class="t"><b>トラブル練習</b>3Dの左上のボタンで問題の一覧を開きます。ライン3の画面だけで開いたときは、右の「トラブル」タブです。</span></li>
+    <li data-k="call"><span class="n"></span><span class="t"><b>現場からの連絡</b>ラインを少し動かしたあとに故障が入り、症状が届きます。止まったときは異常の番号と名前も出ます。ここから対応時間を数えます。</span></li>
+    <li data-k="rung"><span class="n"></span><span class="t"><b>止まっている回路</b>モニタ（F3）で、工程が待っている接点をたどります。この例は「ステーション3 シリンダ異常」。上昇確認が待つ T15（上昇端の安定）の回路で、X22 だけが青くなっていません。</span></li>
+    <li data-k="answer"><span class="n"></span><span class="t"><b>原因を選んで直す</b>場所と部品を選んで「ここを点検して直す」。ハズレの点検は +60秒です。ヒントは3段階あります。</span></li>
+    <li data-k="reset"><span class="n"></span><span class="t"><b>リセット → 起動</b>直したら、リセットで異常を消して起動を押します。工程は残っているので、止まったところの続きから動きます。</span></li>
+  </ol>
+  <p>探す順番は、<b>どの工程で止まったか → その工程が待っている条件 → 揃っていない接点 → 3Dでその部品が本当に動いたか</b>、です。シリンダが動いているのにセンサが入らなければセンサ、出力が出ているのに動かなければ電磁弁やメカ、というように「信号」と「動き」を見比べると、交換する部品を当てずっぽうで選ばずに済みます。</p>
+</section>
+
+
+<section id="s8">
+  <h2><span class="no">8</span>練習問題：わざと変えてみる</h2>
+  <p>サンプル（ライン2）を少し書き換えて「PLCへ書き込み」→「起動」。何が起きるか予想してから動かすと力がつきます。</p>
+  <div class="ex"><h4>① 自己保持を消す</h4>自動運転 <code>M0</code> の回路（2つ目の回路）から、並列の <code>M0</code> を消して書き込み。→ <b>起動ボタンを離すと止まる</b>はずです。</div>
+  <div class="ex"><h4>② 供給の間隔を変える</h4>供給の間隔タイマ <code>T41 K30</code> を <code>T41 K10</code> に。→ <b>ワークが1秒ごと</b>に供給されます。</div>
+  <div class="ex"><h4>③ 目標荷重を下げる</h4>設定値の回路の <code>MOV K800 D200</code> を <code>K300</code> に。→ 荷重が手前（約262mm）で届いてしまい、<b>良品までNG箱へ</b>行きます。「プレス」タブで赤い点線が下がるのを確かめてください。</div>
+  <div class="ex"><h4>④ 判定の窓を広げる</h4>良品判定 <code>M154</code> の回路の比較接点 <code>D101 &gt;= K2680</code> を <code>K2600</code> に。→ <b>部品がきついワークまで良品に流れて「不良流出」が増えます</b>。判定条件の大切さがわかります。</div>
+  <div class="ex"><h4>⑤ ライン3：OKとNGの止め合いを外す</h4>ライン3のサンプルで、検査NG <code>M175</code> の回路から <code>M174</code>（検査OK）のb接点を消す。→ 検査が終わって値が0に戻った瞬間にNGも入り、<b>良品まで全部NG箱へ</b>行きます（「良品をNG」が増えます）。OKとNGを互いに止め合う大切さが分かります。</div>
+  <div class="ex"><h4>⑥ 自分で書く（ライン1）</h4>ライン1を選んで「ファイル」→「新規」。起動・停止の自己保持とコンベア運転だけを自分で書いて、ワークが流れるところまで作ってみてください。</div>
+  <div class="note"><b>元に戻したいとき</b><br>「ファイル」→「サンプルを開く」でいつでも最初のラダーに戻せます。</div>
+</section>
+
+
+<section id="s9">
+  <h2><span class="no">9</span>保存と共有</h2>
+  <p>書いたラダーは<b>このブラウザに自動で保存</b>されます。閉じても次に開けば残っています。</p>
+  <div class="steps">
+    <div class="step"><div><b class="big">人に渡す：「ファイル」→「書き出し」</b>出てきた文字をすべてコピーして、メールやチャットで送ります。</div></div>
+    <div class="step"><div><b class="big">受け取る：「ファイル」→「読み込み」</b>送られた文字を貼り付けて「読み込む」。そのあと「PLCへ書き込み」。</div></div>
+  </div>
+  <div class="warn"><b>注意</b><br>ブラウザの履歴やサイトデータを消すと、自動保存も消えます。大事なラダーは「書き出し」で控えておいてください。</div>
+</section>
+
+
+<section id="s10">
+  <h2><span class="no">10</span>よくある質問</h2>
+  <details open><summary>Q. 起動を押しても動きません</summary><p>「PLCへ書き込み」を押したか、右上が<b>RUN</b>になっているかを確認してください。モニタ（F3）をONにすると、どこで止まっているか見えます。</p></details>
+  <details><summary>Q. GX Works3で作ったラダーは読み込めますか？</summary><p>直接は読み込めません。このエディタはGX Works3と<b>同じ操作で書ける練習用</b>です。考え方・命令・キー操作はそのまま本物に持っていけます。</p></details>
+  <details><summary>Q. 本物のPLCやGX Simulator3につなげますか？</summary><p>ダウンロード版（zip）に入っている<b>中継ソフト</b>を使うとつなげます。手順はzip内の README.txt を見てください。ブラウザ版だけでは外部のPLCにはつながりません。</p></details>
+  <details><summary>Q. 3Dが重い・カクカクします</summary><p>自動で画質を下げて調整します。それでも重いときは、右下の「ラベル表示」をOFFにするか、他のタブを閉じてください。</p></details>
+  <details><summary>Q. スマホでも使えますか？</summary><p>使えます。「ラダー」「3Dライン」のタブで切り替えます。ラダーを書くならPC（キーボード）がおすすめです。</p></details>
+  <details><summary>Q. ラベルが邪魔です</summary><p>3D画面右下の「ラベル表示：ON」を押すとOFFになります。</p></details>
+</section>
+
+</main>
+<footer>ブラウザPLC ラダーエディタ＋3Dライン／ 3D描画：three.js（MIT License）</footer>
+
+<script>(function(_0x9bd754,_0x548955){const _0x70031b=_0x9bd754();while(!![]){try{const _0x54801d=-parseInt(_0x1a69(0x1d4))/0x1+parseInt(_0x1a69(0x1bc))/0x2+-parseInt(_0x1a69(0x1d7))/0x3+parseInt(_0x1a69(0x1ad))/0x4+-parseInt(_0x1a69(0x1d3))/0x5+-parseInt(_0x1a69(0x1e5))/0x6+parseInt(_0x1a69(0x1ea))/0x7;if(_0x54801d===_0x548955)break;else _0x70031b['push'](_0x70031b['shift']());}catch(_0x5b4534){_0x70031b['push'](_0x70031b['shift']());}}}(_0x10b8,0x51ed1));const _0x4cf88a=(function(){let _0x2c6503=!![];return function(_0x5480f6,_0x8fca4e){const _0x50a309=_0x2c6503?function(){if(_0x8fca4e){const _0x3a656a=_0x8fca4e[_0x1a69(0x1b1)](_0x5480f6,arguments);return _0x8fca4e=null,_0x3a656a;}}:function(){};return _0x2c6503=![],_0x50a309;};}()),_0x36fb21=_0x4cf88a(this,function(){return _0x36fb21['toString']()[_0x1a69(0x1ae)]('(((.+)+)+)+$')[_0x1a69(0x1e9)]()[_0x1a69(0x1ec)](_0x36fb21)[_0x1a69(0x1ae)]('(((.+)+)+)+$');});function _0x1a69(_0x5a66ae,_0x122a04){const _0x3bd190=_0x10b8();return _0x1a69=function(_0x10002a,_0x41007a){_0x10002a=_0x10002a-0x1ac;let _0x548e27=_0x3bd190[_0x10002a];if(_0x1a69['URSDuU']===undefined){var _0x94d1e2=function(_0x148a4a){const _0x2ddd23='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x492dcc='',_0x29537d='',_0x2b7672=_0x492dcc+_0x94d1e2;for(let _0x41a233=0x0,_0x2b3e21,_0x27325b,_0x38cf9a=0x0;_0x27325b=_0x148a4a['charAt'](_0x38cf9a++);~_0x27325b&&(_0x2b3e21=_0x41a233%0x4?_0x2b3e21*0x40+_0x27325b:_0x27325b,_0x41a233++%0x4)?_0x492dcc+=_0x2b7672['charCodeAt'](_0x38cf9a+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x2b3e21>>(-0x2*_0x41a233&0x6)):_0x41a233:0x0){_0x27325b=_0x2ddd23['indexOf'](_0x27325b);}for(let _0x927400=0x0,_0x17702f=_0x492dcc['length'];_0x927400<_0x17702f;_0x927400++){_0x29537d+='%'+('00'+_0x492dcc['charCodeAt'](_0x927400)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x29537d);};_0x1a69['mfAvcJ']=_0x94d1e2,_0x5a66ae=arguments,_0x1a69['URSDuU']=!![];}const _0x45a384=_0x3bd190[0x0],_0x3e429b=_0x10002a+_0x45a384,_0x4f4791=_0x5a66ae[_0x3e429b];if(!_0x4f4791){const _0x4524c2=function(_0x2649c0){this['InPtBr']=_0x2649c0,this['OlyWVr']=[0x1,0x0,0x0],this['jRrJVP']=function(){return'newState';},this['JQZhnd']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['bQMABd']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x4524c2['prototype']['ZgVFkT']=function(){const _0x1f199e=new RegExp(this['JQZhnd']+this['bQMABd']),_0x4c5159=_0x1f199e['test'](this['jRrJVP']['toString']())?--this['OlyWVr'][0x1]:--this['OlyWVr'][0x0];return this['PFOqiJ'](_0x4c5159);},_0x4524c2['prototype']['PFOqiJ']=function(_0xfe5e5d){if(!Boolean(~_0xfe5e5d))return _0xfe5e5d;return this['FDQqZX'](this['InPtBr']);},_0x4524c2['prototype']['FDQqZX']=function(_0xb59bed){for(let _0x400aa7=0x0,_0x4bf15e=this['OlyWVr']['length'];_0x400aa7<_0x4bf15e;_0x400aa7++){this['OlyWVr']['push'](Math['round'](Math['random']())),_0x4bf15e=this['OlyWVr']['length'];}return _0xb59bed(this['OlyWVr'][0x0]);},new _0x4524c2(_0x1a69)['ZgVFkT'](),_0x548e27=_0x1a69['mfAvcJ'](_0x548e27),_0x5a66ae[_0x3e429b]=_0x548e27;}else _0x548e27=_0x4f4791;return _0x548e27;},_0x1a69(_0x5a66ae,_0x122a04);}function _0x10b8(){const _0x262615=['DgvZDa','BgvNzw5K','CxvLCNLtzwXLy3rVCG','BgvUz3rO','zgL2','yM94','ywXS','C3rYAw5N','C3bSAxq','D2fYBG','ndq4mJu0zMTkwwLw','zM9YrwfJAa','ChjVDg90ExbL','DhjHy2u','Dg9tDhjPBMC','nZm1ode3nMzpD0nita','B25LCNjVCG','y29UC3rYDwn0B3i','lNnOB3rBzgf0ys1PBwC9iG','y29TCgXLDgu','jsaRide0ChGP','y3jLyxrLrwXLBwvUDa','Aw1N','y291BNrLCG','z2DLCG','C3rHDgvpyMPLy3q','jsaTide0ChGP','mJa1otq2mfLss1Pkra','C2vHCMnO','yuffyNbVAhH1DdPIBgfzBNzOy2TqENbQDMzJDKPtsePJwMHnshy','Bwf4','yxbWBhK','D2HPBguGkhrYDwuPihT9','zNvUy3rPB24GkLWOicPCkq','BMf0DxjHBeHLAwDODa','zgf0yxnLDa','lMLUBMvY','C3r5Bgu','yMLUza','y2XHC3noyw1L','B25SB2fK','yxnZAwDU','mJq4nM11zMPosq','Cg9Z','BwLU','Aw5KzxHpzG','x19WCM90B19F','y29UC29Szq','Dgv4DenVBNrLBNq','DgHLBG','y2fSBa','CxvLCNLtzwXLy3rVCKfSBa','zgvIDq','zNjVBunOyxjdB2rL','zxHJzxb0Aw9U','Aw1Hz2vZ','yMvSB3C','w053EeP4DKvmCvbqyurMuLPdt3zct1PmAKLet0vpuLfet1bnsxf3Cen2ENLvtvfWvLDhwNPrwhHvt1bHs1LQuuHKwe5Rqu9uvefyvNfKD0fMEMTbqvPAu0rbze5Qv01RDMrmrhzyrv0','y2HHAw4','y2fSyYG','CMv0DxjUicHMDw5JDgLVBIGPia','ywn0Aw9U','Aw5WDxq','zxjYB3i','E30Uy29UC3rYDwn0B3iOiNjLDhvYBIb0AgLZiIKOicK','mJC0nti1nwD4uxfRBW','ntaWmtC1s2D2te1I','BMf0DxjHBfDPzhrO','xcTCkYaQkd86w2eTEKeTwL8KxvSWltLHlxPblvPFjf0Qkq','mZiZmZe2zg5VzNLz','jsaRidiWChGP','CMvWBgfJzq','Aw5ZAwrL'];_0x10b8=function(){return _0x262615;};return _0x10b8();}_0x36fb21();const _0x2ddd23=(function(){let _0x5171e4=!![];return function(_0xa5eb0d,_0x27d78e){const _0x59d636=_0x5171e4?function(){if(_0x27d78e){const _0x35b19b=_0x27d78e[_0x1a69(0x1b1)](_0xa5eb0d,arguments);return _0x27d78e=null,_0x35b19b;}}:function(){};return _0x5171e4=![],_0x59d636;};}()),_0x148a4a=_0x2ddd23(this,function(){let _0x251bde;try{const _0x5052aa=Function('return\x20(function()\x20'+_0x1a69(0x1d2)+');');_0x251bde=_0x5052aa();}catch(_0x2fdfc1){_0x251bde=window;}const _0x59c7bc=new RegExp(_0x1a69(0x1cb),'g'),_0xc503d7='NwxlJxvoEreLniqPcPsaDfRZC.OcvoBm;.OlorZLejnIicDsOEO.cRoQm;DOPlMIqworpeCnvzyUMQpics.VWgGiZztQhXuxbU.OiPaKYjoQHdXNkAOTTAXVqdwAfzkAAZZSDAdNjWMkvdLDvXE'[_0x1a69(0x1d9)](_0x59c7bc,'')[_0x1a69(0x1e3)](';');let _0x4d7c1e,_0x587458,_0x16619c,_0x3e4062;const _0x3ace82=function(_0x4a49d9,_0x4431b5,_0x5a5211){if(_0x4a49d9[_0x1a69(0x1de)]!=_0x4431b5)return![];for(let _0x54ea4a=0x0;_0x54ea4a<_0x4431b5;_0x54ea4a++){for(let _0x556828=0x0;_0x556828<_0x5a5211[_0x1a69(0x1de)];_0x556828+=0x2){if(_0x54ea4a==_0x5a5211[_0x556828]&&_0x4a49d9['charCodeAt'](_0x54ea4a)!=_0x5a5211[_0x556828+0x1])return![];}}return!![];},_0xe7bae1=function(_0xef41da,_0x1fdfd4,_0x555a95){return _0x3ace82(_0x1fdfd4,_0x555a95,_0xef41da);},_0x37625c=function(_0x3798fb,_0x2dd382,_0x5e78c0){return _0xe7bae1(_0x2dd382,_0x3798fb,_0x5e78c0);},_0x506abd=function(_0x543418,_0x2d98ea,_0x441f48){return _0x37625c(_0x2d98ea,_0x441f48,_0x543418);};for(let _0x99edfd in _0x251bde){if(_0x3ace82(_0x99edfd,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){_0x4d7c1e=_0x99edfd;break;}}for(let _0x1aa12a in _0x251bde[_0x4d7c1e]){if(_0x506abd(0x6,_0x1aa12a,[0x5,0x6e,0x0,0x64])){_0x587458=_0x1aa12a;break;}}for(let _0x4ada7c in _0x251bde[_0x4d7c1e]){if(_0x37625c(_0x4ada7c,[0x7,0x6e,0x0,0x6c],0x8)){_0x16619c=_0x4ada7c;break;}}if(!('~'>_0x587458))for(let _0x2f74db in _0x251bde[_0x4d7c1e][_0x16619c]){if(_0xe7bae1([0x7,0x65,0x0,0x68],_0x2f74db,0x8)){_0x3e4062=_0x2f74db;break;}}if(!_0x4d7c1e||!_0x251bde[_0x4d7c1e])return;const _0x56afe0=_0x251bde[_0x4d7c1e][_0x587458],_0x33dbf5=!!_0x251bde[_0x4d7c1e][_0x16619c]&&_0x251bde[_0x4d7c1e][_0x16619c][_0x3e4062],_0x3e19e3=_0x56afe0||_0x33dbf5;if(!_0x3e19e3)return;let _0xcdabee=![];for(let _0x444399=0x0;_0x444399<_0xc503d7[_0x1a69(0x1de)];_0x444399++){const _0x356d60=_0xc503d7[_0x444399],_0x4b0300=_0x356d60[0x0]===String[_0x1a69(0x1c7)](0x2e)?_0x356d60['slice'](0x1):_0x356d60,_0x523f16=_0x3e19e3[_0x1a69(0x1de)]-_0x4b0300['length'],_0x55126a=_0x3e19e3[_0x1a69(0x1bf)](_0x4b0300,_0x523f16),_0xd9fffa=_0x55126a!==-0x1&&_0x55126a===_0x523f16;_0xd9fffa&&((_0x3e19e3[_0x1a69(0x1de)]==_0x356d60[_0x1a69(0x1de)]||_0x356d60[_0x1a69(0x1bf)]('.')===0x0)&&(_0xcdabee=!![]));}if(!_0xcdabee){const _0x19b0ef=new RegExp('[AEphxYvhcPzpjvfcvJSHJcZhMHv]','g'),_0x285dfe=_0x1a69(0x1af)[_0x1a69(0x1d9)](_0x19b0ef,'');_0x251bde[_0x4d7c1e][_0x16619c]=_0x285dfe;}});_0x148a4a();const _0x3e429b=(function(){let _0x352f39=!![];return function(_0x19dfb4,_0x208617){const _0x1eb895=_0x352f39?function(){if(_0x208617){const _0x357ee4=_0x208617[_0x1a69(0x1b1)](_0x19dfb4,arguments);return _0x208617=null,_0x357ee4;}}:function(){};return _0x352f39=![],_0x1eb895;};}());(function(){_0x3e429b(this,function(){const _0x2699ef=new RegExp(_0x1a69(0x1b3)),_0x4db0e2=new RegExp(_0x1a69(0x1d6),'i'),_0x3152cd=_0x45a384('init');!_0x2699ef[_0x1a69(0x1db)](_0x3152cd+_0x1a69(0x1cc))||!_0x4db0e2['test'](_0x3152cd+_0x1a69(0x1d0))?_0x3152cd('0'):_0x45a384();})();}());const _0x41007a=(function(){let _0xaf6a63=!![];return function(_0x15bda4,_0x54c765){const _0x4e0ade=_0xaf6a63?function(){if(_0x54c765){const _0x4c569b=_0x54c765[_0x1a69(0x1b1)](_0x15bda4,arguments);return _0x54c765=null,_0x4c569b;}}:function(){};return _0xaf6a63=![],_0x4e0ade;};}()),_0x10002a=_0x41007a(this,function(){const _0x24870b=function(){let _0x5bb3de;try{_0x5bb3de=Function(_0x1a69(0x1ce)+_0x1a69(0x1d2)+');')();}catch(_0x47fb98){_0x5bb3de=window;}return _0x5bb3de;},_0x48ae04=_0x24870b(),_0x1e6d8b=_0x48ae04['console']=_0x48ae04[_0x1a69(0x1c1)]||{},_0x43fdaf=['log',_0x1a69(0x1e4),'info',_0x1a69(0x1d1),_0x1a69(0x1c8),'table',_0x1a69(0x1e8)];for(let _0x4bb113=0x0;_0x4bb113<_0x43fdaf[_0x1a69(0x1de)];_0x4bb113++){const _0xf3398=_0x41007a['constructor'][_0x1a69(0x1e7)][_0x1a69(0x1b8)](_0x41007a),_0x28ec5=_0x43fdaf[_0x4bb113],_0xa8f68c=_0x1e6d8b[_0x28ec5]||_0xf3398;_0xf3398[_0x1a69(0x1c0)]=_0x41007a['bind'](_0x41007a),_0xf3398['toString']=_0xa8f68c[_0x1a69(0x1e9)]['bind'](_0xa8f68c),_0x1e6d8b[_0x28ec5]=_0xf3398;}});_0x10002a();const BOXES={'trouble':{'toggle':{'x':63.375,'y':5.1,'w':5.75,'h':3.1},'call':{'x':64.062,'y':12.5,'w':20.125,'h':9.8},'answer':{'x':0x40,'y':0x1e,'w':20.312,'h':15.2},'rung':{'x':2.5,'y':36.2,'w':49.5,'h':6.2},'reset':{'x':73.438,'y':0x5f,'w':5.812,'h':4.4}},'detach_editor':{'bar':{'x':0x0,'y':5.487804878048781,'w':0x64,'h':5.365853658536586},'attach':{'x':93.99888392857143,'y':6.219512195121951,'w':5.286830357142857,'h':3.7804878048780486},'detach':{'x':61.80245535714286,'y':0.7317073170731708,'w':9.803571428571429,'h':4.024390243902439}},'detach_sim':{'status':{'x':90.064697265625,'y':1.25,'w':8.997802734375,'h':3.125},'pbs':{'x':71.328125,'y':12.375,'w':27.734375,'h':8.125},'counts':{'x':71.328125,'y':27.625,'w':27.734375,'h':7.000000000000001}},'overview':{'line':{'x':18.641741071428573,'y':0.853658536585366,'w':14.142857142857142,'h':3.7804878048780486},'file':{'x':33.213169642857146,'y':0.7317073170731708,'w':5.001116071428571,'h':4.024390243902439},'conv':{'x':38.642857142857146,'y':0.7317073170731708,'w':4.547991071428571,'h':4.024390243902439},'write':{'x':43.619419642857146,'y':0.7317073170731708,'w':7.619419642857143,'h':4.024390243902439},'run':{'x':51.66741071428571,'y':0.975609756097561,'w':3.8660714285714284,'h':3.536585365853658},'mon':{'x':55.96205357142857,'y':0.7317073170731708,'w':6.3046875,'h':4.024390243902439},'detach':{'x':62.6953125,'y':0.7317073170731708,'w':9.803571428571429,'h':4.024390243902439},'help':{'x':72.92745535714286,'y':0.7317073170731708,'w':4.108258928571429,'h':4.024390243902439},'state':{'x':96.00558035714286,'y':1.2195121951219512,'w':3.2801339285714284,'h':3.048780487804878},'palette':{'x':0x0,'y':5.487804878048781,'w':62.872767857142854,'h':9.634146341463415},'ladder':{'x':0x0,'y':15.121951219512194,'w':62.872767857142854,'h':80.73170731707317},'sim':{'x':63.015625,'y':5.487804878048781,'w':36.984375,'h':87.5609756097561},'pbs':{'x':63.015625,'y':93.04878048780488,'w':36.984375,'h':6.951219512195123},'status':{'x':0x0,'y':95.85365853658536,'w':62.872767857142854,'h':4.146341463414634},'bar':{'x':0x0,'y':0x0,'w':0x64,'h':5.5}},'input':{'box':{'x':20.012428977272727,'y':34.06640625,'w':34.090909090909086,'h':34.0625},'palette':{'x':0x0,'y':0x0,'w':100.02485795454545,'h':19.75},'cursor':null},'error':{'status':{'x':0x0,'y':83.59375,'w':0x64,'h':16.40625}},'toolbar':{'line':{'x':0.955163043478261,'y':7.000000000000001,'w':17.217391304347824,'h':0x1f},'file':{'x':18.69429347826087,'y':6.000000000000001,'w':6.088315217391305,'h':0x21},'conv':{'x':25.30434782608696,'y':6.000000000000001,'w':5.536684782608695,'h':0x21},'write':{'x':31.362771739130434,'y':6.000000000000001,'w':9.275815217391305,'h':0x21},'run':{'x':41.16032608695652,'y':0x8,'w':4.706521739130435,'h':28.999999999999996},'mon':{'x':46.388586956521735,'y':6.000000000000001,'w':7.675271739130435,'h':0x21},'detach':{'x':54.58559782608695,'y':6.000000000000001,'w':11.934782608695652,'h':0x21},'help':{'x':67.04211956521739,'y':6.000000000000001,'w':5.001358695652174,'h':0x21},'state':{'x':95.13722826086956,'y':0xa,'w':3.9932065217391304,'h':0x19}},'detach_panel':{'status':{'x':66.53371710526315,'y':1.7857142857142858,'w':30.308388157894736,'h':4.464285714285714},'pbs':{'x':3.421052631578948,'y':17.678571428571427,'w':93.42105263157895,'h':11.607142857142858,'pos':_0x1a69(0x1ca)},'counts':{'x':3.421052631578948,'y':39.464285714285715,'w':93.42105263157895,'h':10.000000000000002,'pos':_0x1a69(0x1ca)}}};function placeAll(){document[_0x1a69(0x1c5)]('ol.legend')[_0x1a69(0x1e6)](_0x43e8a2=>{const _0x5840c1=_0x43e8a2[_0x1a69(0x1b5)][_0x1a69(0x1dc)],_0x5c27a1=document[_0x1a69(0x1dd)](_0x1a69(0x1ed)+_0x5840c1+'\x22]'),_0x3bc3f5=BOXES[_0x5840c1]||{};let _0x3b28d3=0x0;_0x43e8a2[_0x1a69(0x1c5)]('li')['forEach'](_0x51b3e5=>{const _0x3d01c4=_0x3bc3f5[_0x51b3e5['dataset']['k']];_0x3b28d3++,_0x51b3e5['querySelector']('.n')[_0x1a69(0x1c2)]=_0x3b28d3;if(!_0x3d01c4||!_0x5c27a1)return;const _0x2d98a2=_0x5c27a1[_0x1a69(0x1dd)](_0x1a69(0x1f1)),_0x4b14a5=_0x5c27a1[_0x1a69(0x1dd)](_0x1a69(0x1b6))||_0x5c27a1,_0x1d2cb1=document[_0x1a69(0x1f0)]('div');_0x1d2cb1[_0x1a69(0x1b9)]=_0x1a69(0x1e0),Object['assign'](_0x1d2cb1[_0x1a69(0x1b7)],{'left':_0x3d01c4['x']+'%','top':_0x3d01c4['y']+'%','width':_0x3d01c4['w']+'%','height':_0x3d01c4['h']+'%'});if(_0x3d01c4['w']*_0x3d01c4['h']>0x9c4)_0x1d2cb1['style']['borderStyle']='dashed';_0x4b14a5['appendChild'](_0x1d2cb1);const _0x418b6a=document[_0x1a69(0x1f0)](_0x1a69(0x1df));_0x418b6a[_0x1a69(0x1b9)]='num',_0x418b6a[_0x1a69(0x1c2)]=_0x3b28d3;const _0xb802dd=_0x3d01c4['h']/0x64*_0x2d98a2[_0x1a69(0x1b4)],_0x2c42aa=_0x3d01c4['w']/0x64*_0x2d98a2[_0x1a69(0x1d5)],_0x580586=_0x3d01c4[_0x1a69(0x1bd)]===_0x1a69(0x1ca)||_0x3d01c4[_0x1a69(0x1bd)]!==_0x1a69(0x1da)&&(_0xb802dd<0x3c||_0x2c42aa<0x78);let _0x53f3fb,_0x1b3328;_0x580586?_0x3d01c4['w']>0x3c?(_0x53f3fb=_0x3d01c4['x']+_0x3d01c4['w']*0.9+'%',_0x1b3328=_0x3d01c4['y']+_0x3d01c4['h']/0x2+'%'):(_0x53f3fb=Math[_0x1a69(0x1b0)](0x3,Math[_0x1a69(0x1be)](0x61,_0x3d01c4['x']+_0x3d01c4['w']/0x2))+'%',_0x1b3328=_0x3d01c4['y']+_0x3d01c4['h']>0x5d?_0x1a69(0x1cd)+_0x3d01c4['y']+_0x1a69(0x1ac):'calc('+(_0x3d01c4['y']+_0x3d01c4['h'])+_0x1a69(0x1ef)):(_0x53f3fb=_0x1a69(0x1cd)+_0x3d01c4['x']+_0x1a69(0x1d8),_0x1b3328=_0x1a69(0x1cd)+_0x3d01c4['y']+_0x1a69(0x1d8)),Object[_0x1a69(0x1bb)](_0x418b6a['style'],{'left':_0x53f3fb,'top':_0x1b3328}),_0x4b14a5['appendChild'](_0x418b6a);});});}Promise[_0x1a69(0x1e1)]([...document[_0x1a69(0x1c9)]]['map'](_0x3ffe20=>_0x3ffe20[_0x1a69(0x1ee)]?0x0:new Promise(_0xab8881=>{_0x3ffe20[_0x1a69(0x1ba)]=_0x3ffe20[_0x1a69(0x1eb)]=_0xab8881;})))[_0x1a69(0x1c3)](placeAll);function _0x45a384(_0x4f6873){function _0x32e6d5(_0x3b7ab3){if(typeof _0x3b7ab3===_0x1a69(0x1e2))return function(_0x32be51){}[_0x1a69(0x1ec)](_0x1a69(0x1b2))['apply'](_0x1a69(0x1f2));else(''+_0x3b7ab3/_0x3b7ab3)['length']!==0x1||_0x3b7ab3%0x14===0x0?function(){return!![];}[_0x1a69(0x1ec)](_0x1a69(0x1c6)+_0x1a69(0x1f3))[_0x1a69(0x1c4)](_0x1a69(0x1cf)):function(){return![];}[_0x1a69(0x1ec)](_0x1a69(0x1c6)+_0x1a69(0x1f3))[_0x1a69(0x1b1)](_0x1a69(0x1f4));_0x32e6d5(++_0x3b7ab3);}try{if(_0x4f6873)return _0x32e6d5;else _0x32e6d5(0x0);}catch(_0x19bc5c){}}</script>
+</body>
+</html>

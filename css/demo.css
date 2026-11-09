@@ -96,3 +96,10 @@
 /* スマホでは4つの数字を2列に（「読みやすさ」が1文字だけ次の行に落ちないように） */
 @media (max-width: 480px) { .karte-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .karte-bar span { font-size: 12.5px; }
+
+/* 2026-11-09 工場の3Dシミュレータ：画面の写真を2枚縦に並べる */
+.demo-shots { display: grid; gap: 18px; }
+.demo-shot { margin: 0; }
+.demo-shot img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(18, 53, 91, .18); }
+.demo-shot figcaption { margin: 8px 0 0; font-size: 13px; color: #4b5563; line-height: 1.6; }
+.demo-note { margin: 10px 0 0; font-size: 13px; color: #4b5563; }
