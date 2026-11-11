@@ -169,9 +169,15 @@
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('roi-wait');e.target.classList.add('roi-go');io.unobserve(e.target);}});},{threshold:.35});
-  document.querySelectorAll('.roi-c').forEach(function(c){c.classList.add('roi-wait');io.observe(c);});
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var cs=[].slice.call(document.querySelectorAll('.roi-c'));
+  cs.forEach(function(c){c.classList.add('roi-wait');});
+  function go(c){if(c.classList.contains('roi-wait')){c.classList.remove('roi-wait');c.classList.add('roi-go');}}
+  function chk(){var h=window.innerHeight;cs.forEach(function(c){var r=c.getBoundingClientRect();if(r.top<h*0.8&&r.bottom>h*0.15)go(c);});}
+  window.addEventListener('scroll',chk,{passive:true});
+  window.addEventListener('resize',chk);
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)go(e.target);});},{threshold:.2});cs.forEach(function(c){io.observe(c);});}
+  chk();
 });
 </script><style>.roi-sec{padding:30px 0 110px}@media (max-width:900px){.roi-sec{padding:10px 0 72px}}</style></head>
 <body>
