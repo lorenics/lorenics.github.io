@@ -102,7 +102,78 @@
 .reasons .ritem.sv{padding:26px 24px}.reasons .ritem.sv h3{font-size:22px}
 }
 </style>
-</head>
+<style id="roi1">
+.roi,.roi *,.roi-facts,.roi-facts *{word-break:keep-all;overflow-wrap:anywhere}
+.roi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+.roi-c{background:#fff;border:1.5px solid #d4e5fb;border-top:6px solid #0a5fd0;border-radius:20px;padding:30px 32px 28px;box-shadow:0 18px 40px rgba(5,40,110,.10)}
+.roi-c.is-or{border-top-color:#e8730c}
+.roi-k{display:inline-block;margin:0;padding:4px 14px;border-radius:999px;background:#0a5fd0;color:#fff;font-size:15px;font-weight:900;letter-spacing:.06em}
+.roi-c.is-or .roi-k{background:#c85f06}
+.roi-h{margin:16px 0 0;font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;font-weight:900;font-size:28px;line-height:1.45;color:#141b26}
+.roi-h em{font-style:normal;color:#0a5fd0}
+.roi-c.is-or .roi-h em{color:#c85f06}
+.roi-bars{display:flex;align-items:flex-end;justify-content:center;gap:44px;height:290px;margin:22px 0 0;padding:0 8px;border-bottom:2px solid #141b26}
+.roi-b{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:relative;width:132px}
+.roi-b b{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;font-weight:900;font-size:30px;line-height:1.2;color:#141b26;white-space:nowrap}
+.roi-b b small{font-size:16px;margin-left:2px}
+.roi-b i{display:block;width:100%;margin-top:8px;border-radius:10px 10px 0 0;background:#9fb0c4}
+.roi-b.is-post i{background:#0a5fd0}
+.roi-b.is-post b{color:#0a5fd0}
+.roi-c.is-or .roi-b i{background:#f2a35e}
+.roi-c.is-or .roi-b:last-child i{background:#e8730c}
+.roi-c.is-or .roi-b:last-child b{color:#c85f06}
+.roi-b span{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:10px;width:150px;text-align:center;font-size:16px;font-weight:700;line-height:1.4;color:#141b26}
+.roi-sum{margin:70px 0 0;font-size:19px;font-weight:700;line-height:1.7;color:#141b26}
+.roi-sum strong{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;font-weight:900;font-size:34px;color:#0a5fd0;margin:0 4px}
+.roi-c.is-or .roi-sum strong{color:#c85f06}
+.roi-pre{margin:18px 0 0;padding:12px 16px;border-radius:10px;background:#f3f6fa;font-size:14px;line-height:1.75;color:#3a4558}
+.roi-pre span{display:inline-block;margin-right:10px;padding:1px 10px;border-radius:6px;background:#141b26;color:#fff;font-size:13px;font-weight:700}
+.roi-facts{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.roi-facts li{background:#fff;border:1.5px solid #d4e5fb;border-radius:16px;padding:18px 16px;text-align:center}
+.roi-facts b{display:block;font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;font-weight:900;font-size:34px;line-height:1.2;color:#0a5fd0;white-space:nowrap}
+.roi-facts b small{font-size:15px;margin-left:2px}
+.roi-facts span{display:block;margin-top:6px;font-size:15px;font-weight:700;line-height:1.5;color:#141b26}
+@media (max-width:900px){
+.roi{grid-template-columns:1fr;gap:18px;margin-top:28px}
+.roi-c{padding:24px 20px 22px}
+.roi-h{font-size:23px}
+.roi-bars{gap:14px;height:270px;padding:0}
+.roi-b{width:82px}
+.roi-b b{font-size:20px}.roi-b b small{font-size:13px}
+.roi-b span{width:92px;font-size:14px}
+.roi-sum{font-size:17px}.roi-sum strong{font-size:28px}
+.roi-facts{grid-template-columns:1fr 1fr}
+.roi-facts li:first-child{grid-column:1/-1}
+.roi-facts b{font-size:28px}
+}
+</style><style id="roi2">
+.roi-h{font-size:24px;margin-top:14px}
+.roi-svg{display:block;width:100%;height:auto;margin:10px 0 0}
+.roi-svg .rb-g{fill:#9fb0c4}
+.roi-pre{background:none;padding:0;margin-top:14px;font-size:13px;line-height:1.7;color:#4a5567}
+.roi-svg .rb,.roi-svg .r-shrink{transform-box:fill-box;transform-origin:50% 100%}
+.roi-svg .r-shrink{transform:scaleY(var(--k))}
+.roi-wait .roi-svg .rb{transform:scaleY(0)}
+.roi-wait .roi-svg .r-shrink{transform:scaleY(1)}
+.roi-wait .roi-svg .r-arw{opacity:0}
+.roi-wait .roi-svg .r-wipe{clip-path:inset(0 100% 0 0)}
+.roi-go .roi-svg .rb{animation:roiGrow .7s cubic-bezier(.2,.8,.2,1) both}
+.roi-go .roi-svg .r-shrink{animation:roiShrink 1.1s cubic-bezier(.6,0,.2,1) .7s both}
+.roi-go .roi-svg .r-wipe{animation:roiWipe 1.6s ease-out both}
+.roi-go .roi-svg .r-arw{animation:roiFade .5s ease-out 1.7s both}
+@keyframes roiGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes roiShrink{from{transform:scaleY(1)}to{transform:scaleY(var(--k))}}
+@keyframes roiWipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes roiFade{from{opacity:0}to{opacity:1}}
+@media (max-width:900px){.roi-h{font-size:21px}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('roi-wait');e.target.classList.add('roi-go');io.unobserve(e.target);}});},{threshold:.35});
+  document.querySelectorAll('.roi-c').forEach(function(c){c.classList.add('roi-wait');io.observe(c);});
+});
+</script><style>.roi-sec{padding:30px 0 110px}@media (max-width:900px){.roi-sec{padding:10px 0 72px}}</style></head>
 <body>
 <!-- wbr:budoux --><div class="tb" id="tb">
 <a class="c-skip" href="#main">本文へ<wbr>スキップ</a>
@@ -156,6 +227,26 @@
 <article class="stop-card"><span class="no">01</span><h3>制御が分かる人が<wbr>1人しかいない</h3><p>定年や退職のあとを<wbr>任せられる人が、<wbr>まだ育っていない。</p></article>
 <article class="stop-card"><span class="no">02</span><h3>自分たちで組んだが<wbr>動かない</h3><p>自動化を試したものの、<wbr>仕事で使える所まで<wbr>届いていない。</p></article>
 <article class="stop-card"><span class="no">03</span><h3>日々の仕事で<wbr>手が空かない</h3><p>調べる時間も<wbr>試す時間も、<wbr>勤務時間の中に<wbr>取れない。</p></article>
+</div>
+</div>
+</section>
+<section class="roi-sec nx" id="cost" aria-labelledby="cost-h">
+<div class="wrap">
+<p class="kicker">数字で見る</p>
+<h2 class="h2" id="cost-h">教える時間を<br>お金に直すと<wbr>こうなる</h2>
+<div class="roi">
+<article class="roi-c">
+<p class="roi-k">費用対効果</p>
+<h3 class="roi-h">教える時間</h3>
+<svg class="roi-svg" viewBox="0 0 540 420" role="img" aria-label="100名に教える時間。付き添って教えると24,000時間、仕組みで教えると約1,070時間。96パーセント、人件費で約7,900万円分がなくなる"><rect class="rb rb-g" x="35" y="110" width="190" height="250" rx="8"/><line class="r-ln" x1="225" y1="112" x2="305" y2="112" stroke="#0a5fd0" stroke-width="3" stroke-dasharray="8 7"/><rect class="r-ghost" x="305" y="110" width="190" height="250" rx="8" fill="#eef4fd" stroke="#0a5fd0" stroke-width="3" stroke-dasharray="10 8"/><rect class="r-shrink" x="305" y="110" width="190" height="250" rx="6" fill="#0a5fd0" style="--k:0.0480"/><line x1="20" y1="360" x2="520" y2="360" stroke="#141b26" stroke-width="3"/><text class="r-t" x="130" y="96" text-anchor="middle" font-size="32" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">24,000<tspan font-size="24">時間</tspan></text><g class="r-arw"><text class="r-t" x="400" y="180" text-anchor="middle" font-size="56" fill="#0a5fd0" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">−96<tspan font-size="34">%</tspan></text><text class="r-t" x="400" y="230" text-anchor="middle" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">約7,900万円分</text><line class="r-ln" x1="400" y1="250" x2="400" y2="276" stroke="#0a5fd0" stroke-width="6" stroke-dasharray="7 6"/><polygon class="r-hd" points="386,274 414,274 400,294" fill="#0a5fd0"/><text class="r-t" x="400" y="338" text-anchor="middle" font-size="26" fill="#0a5fd0" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">約1,070<tspan font-size="24">時間</tspan></text></g><text class="r-t" x="130" y="398" text-anchor="middle" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">付き添って教える</text><text class="r-t" x="400" y="398" text-anchor="middle" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">仕組みで教える</text></svg>
+<p class="roi-pre">100名に教える場合の自社の実績と試算。人件費は1時間3,439円（厚生労働省 毎月勤労統計調査 令和6年 製造業）</p>
+</article>
+<article class="roi-c is-or">
+<p class="roi-k">機会損失</p>
+<h3 class="roi-h">失っていく<wbr>ベテランの<wbr>稼ぎ</h3>
+<svg class="roi-svg" viewBox="0 0 540 420" role="img" aria-label="付き添って教える時間が続くと失っていくベテランの稼ぎ。1年で約351万円、2年で約702万円、3年で約1054万円"><defs><linearGradient id="roiLoss" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbd9b8"/><stop offset="1" stop-color="#e8730c"/></linearGradient></defs><g class="r-wipe"><polygon points="60,84 480,84 480,270" fill="url(#roiLoss)"/><line class="r-ln" x1="60" y1="84" x2="480" y2="270" stroke="#141b26" stroke-width="5" stroke-linecap="round"/><line class="r-ln" x1="200" y1="92" x2="200" y2="130" stroke="#b4530f" stroke-width="5" stroke-dasharray="7 6"/><polygon class="r-hd" points="189,128 211,128 200,145" fill="#b4530f"/><line class="r-ln" x1="340" y1="92" x2="340" y2="192" stroke="#b4530f" stroke-width="5" stroke-dasharray="7 6"/><polygon class="r-hd" points="329,190 351,190 340,207" fill="#b4530f"/><line class="r-ln" x1="480" y1="92" x2="480" y2="254" stroke="#b4530f" stroke-width="5" stroke-dasharray="7 6"/><polygon class="r-hd" points="469,252 491,252 480,269" fill="#b4530f"/></g><line class="r-ln" x1="60" y1="84" x2="500" y2="84" stroke="#141b26" stroke-width="3" stroke-dasharray="9 7"/><text class="r-t" x="60" y="68" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">本来の稼ぎ</text><text class="r-t" x="64" y="146" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">実際</text><g class="r-arw"><text class="r-t" x="206" y="190" text-anchor="end" font-size="24" fill="#b4530f" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">−351<tspan font-size="24">万円</tspan></text><text class="r-t" x="346" y="256" text-anchor="end" font-size="28" fill="#b4530f" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">−702<tspan font-size="24">万円</tspan></text><text class="r-t" x="502" y="336" text-anchor="end" font-size="44" fill="#b4530f" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">−1,054<tspan font-size="26">万円</tspan></text></g><line x1="40" y1="366" x2="520" y2="366" stroke="#141b26" stroke-width="3"/><text class="r-t" x="60" y="398" text-anchor="middle" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">今</text><text class="r-t" x="200" y="398" text-anchor="middle" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">1年</text><text class="r-t" x="340" y="398" text-anchor="middle" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">2年</text><text class="r-t" x="480" y="398" text-anchor="middle" font-size="24" fill="#141b26" font-family="Zen Kaku Gothic New,Noto Sans JP,sans-serif" font-weight="900">3年</text></svg>
+<p class="roi-pre">ベテラン1人が1日2時間、付き添って教え続ける場合（年240日）。1人が1時間に生む稼ぎは7,317円（経済産業省 2024年経済構造実態調査 製造業）</p>
+</article>
 </div>
 </div>
 </section>
