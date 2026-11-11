@@ -99,15 +99,7 @@
   if (!form) return;
 
   var MAIL_TO = "nishihara.kento@lorenics.co.jp";
-  var TYPES = {
-    plc: "PLC教育・研修",
-    advisor: "技術顧問",
-    edu: "製造業特化型　教育システムづくり・導入支援",
-    diag: "業務効率化・AI活用の無料診断",
-    ai: "AI研修・業務改善",
-    pr: "PR・Webマーケティング（YouTube・X）",
-    other: "取材・PR・その他"
-  };
+  var TYPES = { plc: "PLC研修", advisor: "技術顧問", edu: "教育の仕組みづくり", diag: "その他", ai: "その他", pr: "その他", other: "その他" };
   var select = form.querySelector("[name='ご相談の種類']");
   try {
     var t = new URLSearchParams(location.search).get("type");

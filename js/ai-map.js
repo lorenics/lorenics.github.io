@@ -1,5 +1,5 @@
-/* AI活用マップ（ai-map.html）
-   - 図の箱を押す → その作業のAI活用＋人に残す判断を表示
+/* 工程マップ（ai-map.html）
+   - 図の箱を押す → その作業で任せられること＋人に残す判断を表示
    - 工程名・資料カードを押す → その工程の困りごと＋作業一覧を表示
    - フォーム送信（Web3Forms）→ 工程ごとのユースケースPDFをダウンロード */
 (function () {
@@ -51,7 +51,7 @@
       '<p class="mp-tags"><span class="mp-tag">' + esc(p.name) + '</span><span class="mp-tag lane" style="--lc:' + lc + '">' + esc(b.lane) + "</span></p>" +
       '<h2 class="mp-title" id="mp-title">' + esc(b.title) + "</h2>" +
       '<p class="mp-work">' + esc(b.work) + "</p>" +
-      '<h3 class="mp-h">AIでできること</h3><ul class="mp-ai">' + b.ai.map(function (a) { return "<li>" + esc(a) + "</li>"; }).join("") + "</ul>" +
+      '<h3 class="mp-h">任せられること</h3><ul class="mp-ai">' + b.ai.map(function (a) { return "<li>" + esc(a) + "</li>"; }).join("") + "</ul>" +
       '<h3 class="mp-h keep">人に残す判断</h3><p class="mp-keep">' + esc(b.keep) + "</p>" +
       '<h3 class="mp-h">' + esc(p.name) + "の他の作業</h3><ul class=\"mp-sib\">" + siblings(b.phase, id) + "</ul>";
     setPhase(b.phase, p.name + "／" + b.title);
@@ -64,7 +64,7 @@
       '<h2 class="mp-title" id="mp-title">' + esc(p.name) + "</h2>" +
       '<p class="mp-work">' + esc(p.lead) + "</p>" +
       '<h3 class="mp-h">よくある困りごと</h3><ul class="mp-pains">' + p.pains.map(function (a) { return "<li>" + esc(a) + "</li>"; }).join("") + "</ul>" +
-      '<h3 class="mp-h">作業を押すとAI活用が見えます</h3><ul class="mp-sib">' + siblings(pid, null) + "</ul>";
+      '<h3 class="mp-h">作業を押すと内容が見えます</h3><ul class="mp-sib">' + siblings(pid, null) + "</ul>";
     setPhase(pid, p.name + "（工程全体）");
     markActive(null, pid);
   }
@@ -72,7 +72,7 @@
     var p = P[pid];
     if (curPhase !== pid) { done.hidden = true; form.hidden = false; err.textContent = ""; }
     curPhase = pid;
-    doc.textContent = "製品ができるまで × AI活用　" + p.name + "編";
+    doc.textContent = "工程ごとの資料　" + p.name + "編";
     form.elements["資料名"].value = p.name + "編";
     form.elements["押した箇所"].value = clicked;
     form.elements.subject.value = "【ロアニクスWeb】資料請求：" + p.name + "編";
