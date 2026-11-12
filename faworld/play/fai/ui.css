@@ -19,6 +19,10 @@ body.fai-walk canvas { cursor: none; }
 #faiKeys { position: absolute; left: 14px; bottom: 14px; display: flex; gap: 18px; align-items: center; padding: 8px 16px 8px 10px; background: var(--bar); border-radius: 8px; font: 400 17px/1 var(--ui); }
 #faiKeys kbd { font-size: 15px; min-width: 30px; padding: 6px 8px; margin-right: 6px; }
 #faiKeys span { display: inline-flex; align-items: center; }
+#faiKeyE { transition: opacity .15s; }
+#faiKeyE.off { opacity: .55; }
+#faiTip { position: absolute; left: 50%; bottom: 84px; transform: translateX(-50%); max-width: 92vw; padding: 12px 22px; background: var(--bar); border: 2px solid var(--line); border-radius: 9px; font: 700 20px/1.4 var(--ui); text-align: center; }
+#faiTip[hidden] { display: none; }
 
 #faiCover { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(8, 11, 15, .62); pointer-events: auto; }
 #faiCover .card { width: min(580px, 92vw); padding: 34px 40px 28px; background: #151a21; border: 1px solid #2c3540; border-radius: 14px; box-shadow: 0 30px 80px rgba(0, 0, 0, .55); text-align: center; }
