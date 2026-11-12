@@ -1,0 +1,45 @@
+@font-face { font-family: "FAI UI"; font-weight: 400; font-display: block; src: url("fonts/zen-400.woff2") format("woff2"); }
+@font-face { font-family: "FAI UI"; font-weight: 700; font-display: block; src: url("fonts/zen-700.woff2") format("woff2"); }
+
+#fai { --ink: #f4f6f8; --bar: rgba(22, 27, 34, .84); --line: #66f0e6; --ui: "FAI UI", "Zen Kaku Gothic New", sans-serif; position: fixed; inset: 0; z-index: 30; pointer-events: none; color: var(--ink); font-family: var(--ui); }
+#fai [hidden] { display: none !important; }
+#fai kbd { font: 700 21px/1 var(--ui); display: inline-block; min-width: 38px; padding: 8px 10px; text-align: center; color: #15181c; background: #fff; border-radius: 6px; }
+
+/* walking: the factory's own panels step aside */
+body.fai-walk #hud, body.fai-walk #ctl, body.fai-walk #tip, body.fai-walk #labels, body.fai-walk #vignette,
+body.fai-title #hud, body.fai-title #ctl, body.fai-title #tip, body.fai-title #labels { display: none !important; }
+body.fai-walk canvas { cursor: none; }
+
+#faiGoal { position: absolute; left: 12px; top: 10px; max-width: 62vw; padding: 10px 22px; background: var(--bar); border-radius: 8px; font: 700 26px/1.25 var(--ui); }
+#faiZone { position: absolute; left: 12px; top: 64px; padding: 6px 16px; background: var(--bar); border-radius: 8px; font: 400 18px/1.3 var(--ui); color: #c9d3de; }
+#faiDot { position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1.5px rgba(0, 0, 0, .5); }
+#faiTag { position: absolute; display: flex; gap: 14px; align-items: center; padding: 9px 20px 9px 12px; background: var(--bar); border: 2.5px solid var(--line); border-radius: 9px; font: 700 25px/1 var(--ui); transform: translate(-50%, -50%); white-space: nowrap; }
+#faiWay { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 4px; transform: translate(-50%, -100%); font: 700 17px/1 var(--ui); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+#faiWay i { width: 16px; height: 16px; background: var(--line); transform: rotate(45deg); border: 2px solid #0e2b2a; }
+#faiKeys { position: absolute; left: 14px; bottom: 14px; display: flex; gap: 18px; align-items: center; padding: 8px 16px 8px 10px; background: var(--bar); border-radius: 8px; font: 400 17px/1 var(--ui); }
+#faiKeys kbd { font-size: 15px; min-width: 30px; padding: 6px 8px; margin-right: 6px; }
+#faiKeys span { display: inline-flex; align-items: center; }
+
+#faiCover { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(8, 11, 15, .62); pointer-events: auto; }
+#faiCover .card { width: min(580px, 92vw); padding: 34px 40px 28px; background: #151a21; border: 1px solid #2c3540; border-radius: 14px; box-shadow: 0 30px 80px rgba(0, 0, 0, .55); text-align: center; }
+#faiCover h1 { margin: 0 0 10px; font: 700 54px/1.1 var(--ui); letter-spacing: .02em; }
+#faiCover h1 small { display: block; margin-top: 8px; font: 400 21px/1 var(--ui); letter-spacing: .08em; color: #b9c3ce; }
+#faiState { margin: 0 0 20px; min-height: 28px; font: 400 19px/1.5 var(--ui); color: #b9c3ce; }
+#faiHelp { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 11px; text-align: left; font: 400 20px/1 var(--ui); }
+#faiHelp li { display: flex; gap: 8px; align-items: center; }
+#faiHelp li span { margin-left: 10px; }
+#faiHelp kbd { font-size: 17px; min-width: 34px; padding: 7px 9px; }
+#faiGo { display: block; width: 100%; padding: 18px; font: 700 25px/1 var(--ui); color: #10231a; background: #5fe07a; border: 0; border-radius: 10px; cursor: pointer; }
+#faiGo:hover { background: #7bea92; }
+#faiGo:disabled { background: #3a4450; color: #8a96a3; cursor: default; }
+#faiNote { margin: 16px 0 0; font: 400 15px/1.6 var(--ui); color: #9aa6b2; }
+#faiLang { margin-top: 12px; padding: 8px 18px; font: 700 16px/1 var(--ui); color: var(--ink); background: transparent; border: 1.5px solid #4a5665; border-radius: 8px; cursor: pointer; }
+#faiMapBar { position: absolute; left: 50%; top: 12px; transform: translateX(-50%); display: flex; gap: 12px; align-items: center; padding: 8px 18px 8px 10px; background: var(--bar); border: 2px solid var(--line); border-radius: 9px; font: 700 20px/1 var(--ui); pointer-events: auto; cursor: pointer; }
+
+/* where the browser will not lock the pointer: the ring marks "look straight"; the pointer stays visible */
+#faiRing{position:fixed;left:50%;top:50%;border:2px solid rgba(102,240,230,.55);border-radius:50%;pointer-events:none;z-index:30;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+#faiSteerTip{position:fixed;left:50%;top:calc(50% + 12vh);transform:translateX(-50%);z-index:30;pointer-events:none;background:rgba(13,17,23,.86);color:#fff;font:700 14px/1.4 "FAI UI",sans-serif;padding:7px 14px;border-radius:8px;white-space:nowrap}
+#faiRing[hidden],#faiSteerTip[hidden]{display:none}
+body.fai-steer canvas{cursor:crosshair}
+
+#faiLic{display:block;margin-top:10px;font-size:12px;color:#9aa4ae;text-decoration:underline;pointer-events:auto}
