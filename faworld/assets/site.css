@@ -82,6 +82,8 @@ html[lang=ja] .amt.wait{font-size:42px;line-height:64px}
 .ck{display:inline-block;width:12px;height:21px;border:solid var(--go);border-width:0 3.5px 3.5px 0;transform:rotate(42deg);margin-top:-6px}
 .dash{display:inline-block;width:18px;height:3px;border-radius:2px;background:#8793a1;vertical-align:middle}
 .soon{padding:19px 44px;font-weight:900;font-size:21px;line-height:1;color:#dfe5ec;border:1.5px solid #5a6878;border-radius:16px}
+.end{margin:120px auto 0;text-align:center}
+.end .go{min-width:320px}
 .note{margin:96px auto 0;text-align:center;font-size:19px;color:var(--ink)}
 .ugc{margin:16px auto 0;text-align:center;font-size:17px;color:var(--sub)}
 footer{margin-top:104px;border-top:1px solid var(--ln)}
@@ -108,6 +110,7 @@ footer nav a:hover{text-decoration-color:#fff}
   .card .go,.card .soon{font-size:18px;padding:20px 6px;white-space:nowrap}
   .cmp{margin-top:28px}.cmp col.c0{width:52%}
   .cmp th,.cmp td{padding:18px 6px;font-size:16px}.cmp thead th{font-size:16px}
+  .end{margin-top:72px}.end .go{min-width:0}
   .note{margin-top:64px;font-size:17px}.ugc{font-size:15px}
   footer .wrap{flex-direction:column;align-items:flex-start;gap:18px;padding:26px 0 40px}
 }
