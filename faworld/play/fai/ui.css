@@ -21,6 +21,7 @@ body.fai-walk canvas { cursor: none; }
 #faiKeys span { display: inline-flex; align-items: center; }
 #faiKeyE { transition: opacity .15s; }
 #faiKeyE.off { opacity: .55; }
+#faiKeyG.run kbd { background: var(--line); }
 #faiTip { position: absolute; left: 50%; bottom: 84px; transform: translateX(-50%); max-width: 92vw; padding: 12px 22px; background: var(--bar); border: 2px solid var(--line); border-radius: 9px; font: 700 20px/1.4 var(--ui); text-align: center; }
 #faiTip[hidden] { display: none; }
 
