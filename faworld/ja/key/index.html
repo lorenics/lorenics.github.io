@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>会員のキーを入れる | FA World by Lorenics</title>
+<meta name="theme-color" content="#0a0e13">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../assets/fonts/zen-900.woff2">
+<link rel="stylesheet" href="../../assets/key.css">
+</head>
+<body>
+<div class="bg" style="background-image:url('../../assets/img/ja_hero.webp')"></div>
+<header class="top"><a class="brand" href="../">FA World<small>by Lorenics</small></a><a class="lang" href="../../key/" lang="en" hreflang="en">English</a></header>
+<main>
+<section class="card" id="ask">
+<p class="eye">会員の方へ</p>
+<h1>会員のキーを入れる</h1>
+<p class="lead"><span class="ph">申し込みの後に届いたメールに</span> <span class="ph">キーが書いてあります</span></p>
+<form id="kf" novalidate data-msg="{&quot;empty&quot;: &quot;ライセンスキーを貼ってください&quot;, &quot;wait&quot;: &quot;確かめています&quot;, &quot;none&quot;: &quot;このキーは見つかりませんでした メールのキーを そのまま貼ってください&quot;, &quot;dead&quot;: &quot;このキーは使えなくなっています&quot;, &quot;ended&quot;: &quot;会員の期間が終わっています 続けるには更新してください&quot;, &quot;net&quot;: &quot;会員の確かめにつながりませんでした もう一度試してください&quot;}">
+<label for="k">ライセンスキー</label>
+<input id="k" name="k" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="例 1A2B3C4D-5E6F7A8B-9C0D1E2F-3A4B5C6D">
+<p class="msg" id="km" role="status" aria-live="polite"></p>
+<button class="go" type="submit">会員の問題を開く</button>
+</form>
+<ul class="notes"><li><span class="ph">キーは</span> <span class="ph">このブラウザに覚えます</span></li><li><span class="ph">別のパソコンで遊ぶ時は</span> <span class="ph">もう一度入れてください</span></li></ul>
+<p class="more"><span class="ph">キーが見つからない時は</span> <a href="mailto:nishihara.kento@lorenics.co.jp">nishihara.kento@lorenics.co.jp</a></p>
+</section>
+<section class="card" id="done" hidden>
+<p class="eye ok">会員になりました</p>
+<h1>全部の問題が開きました</h1>
+<p class="lead"><span class="ph">このブラウザで</span> <span class="ph">会員の問題を選べます</span></p>
+<div class="act"><a class="go" href="../../play/?lang=ja">スタート</a></div>
+<button class="again" id="again" type="button">別のキーを入れる</button>
+</section>
+</main>
+<script src="../../assets/key.js" defer></script>
+</body>
+</html>
