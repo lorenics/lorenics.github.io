@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Feedback | FA World by Lorenics</title>
+<meta name="theme-color" content="#0a0e13">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/zen-900.woff2">
+<link rel="stylesheet" href="../assets/feedback.css">
+</head>
+<body>
+<div class="bg" style="background-image:url('../assets/img/en_hero.webp')"></div>
+<header class="top"><a class="brand" href="../">FA World<small>by Lorenics</small></a><a class="lang" href="../ja/feedback/" lang="ja" hreflang="ja">日本語</a></header>
+<main>
+<section class="card" id="ask">
+<p class="eye">Feedback</p>
+<h1>Tell us what you found</h1>
+<p class="lead">Bug reports, requests and questions are all welcome</p>
+<form id="fbf" novalidate data-msg="{&quot;empty&quot;: &quot;Please write the details&quot;, &quot;email&quot;: &quot;Please check the email address&quot;, &quot;long&quot;: &quot;Please keep it under 4,000 characters&quot;, &quot;wait&quot;: &quot;Sending&quot;, &quot;busy&quot;: &quot;We are getting many messages right now. Please try again later&quot;, &quot;net&quot;: &quot;Could not send. Please try again&quot;}">
+<fieldset><legend>What is it about</legend><div class="kinds"><label><input type="radio" name="kind" value="bug" checked><span>Bug</span></label><label><input type="radio" name="kind" value="request"><span>Request</span></label><label><input type="radio" name="kind" value="question"><span>Question</span></label></div></fieldset>
+<div class="fld"><label for="fm">Details</label>
+<textarea id="fm" name="message" maxlength="4000" placeholder="Which screen, what you did, and what happened"></textarea></div>
+<div class="fld"><label for="fe">Email address<small>only if you want a reply</small></label>
+<input id="fe" name="email" type="email" autocomplete="email" spellcheck="false" placeholder="you@example.com"></div>
+<div class="hp" aria-hidden="true"><label for="fs">Website</label><input id="fs" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+<p class="msg" id="fmsg" role="status" aria-live="polite"></p>
+<button class="go" type="submit">Send</button>
+</form>
+<p class="more">We use what you send to reply and to improve FA World<br><a class="lg" href="../legal/#privacy">Terms, refunds and privacy</a></p>
+</section>
+<section class="card" id="done" hidden>
+<p class="eye ok">Sent</p>
+<h1>Thank you</h1>
+<p class="lead">We read every message and use it to improve FA World</p>
+<div class="act"><a class="go" href="../">Back to FA World</a></div>
+<div class="act2"><button class="again" id="again" type="button">Send another</button></div>
+</section>
+</main>
+<script src="../assets/feedback.js" defer></script>
+</body>
+</html>

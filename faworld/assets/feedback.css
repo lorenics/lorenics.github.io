@@ -1,0 +1,69 @@
+@font-face{font-family:"Zen Kaku Gothic New";font-weight:500;font-display:swap;src:url("fonts/zen-500.woff2") format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-weight:700;font-display:swap;src:url("fonts/zen-700.woff2") format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-weight:900;font-display:swap;src:url("fonts/zen-900.woff2") format("woff2")}
+:root{color-scheme:dark;--bg:#0a0e13;--sf:#141a22;--ln:#2f3b49;--ink:#f4f6f8;--sub:#c6cfd9;--go:#5fe07a;--goink:#0b2414;--cy:#66f0e6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+html{background:var(--bg)}
+body{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--cy);outline-offset:3px}
+[hidden]{display:none!important}
+.ph{display:inline-block}
+.bg{position:fixed;inset:0;background:#0a0e13 30% 50%/cover no-repeat}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,19,.86) 0%,rgba(10,14,19,.8) 50%,rgba(10,14,19,.94) 100%)}
+.top{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:22px 40px}
+.brand{font-weight:900;font-size:24px;letter-spacing:.01em;color:var(--ink);text-decoration:none}
+.brand small{margin-left:10px;font-weight:500;font-size:14px;letter-spacing:.08em;color:var(--sub)}
+.lang{padding:9px 18px;font-weight:700;font-size:15px;color:var(--ink);border:1.5px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(10,14,19,.35);text-decoration:none}
+.lang:hover{border-color:#fff}
+main{position:relative;z-index:2;min-height:calc(100% - 90px);display:flex;align-items:center;justify-content:center;padding:8px 24px 72px}
+.card{width:min(760px,100%);background:var(--sf);border:1px solid var(--ln);border-radius:22px;box-shadow:0 40px 120px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.08);padding:44px 48px 36px}
+.eye{font-weight:900;font-size:16px;letter-spacing:.14em;color:var(--cy)}
+.eye.ok{display:flex;align-items:center;gap:12px;color:var(--go);letter-spacing:.08em;font-size:18px}
+.eye.ok::before{content:"";width:11px;height:19px;border:solid var(--go);border-width:0 3.5px 3.5px 0;transform:rotate(42deg);margin:-5px 2px 0 4px}
+h1{margin-top:10px;font-weight:900;font-size:42px;line-height:1.2;color:#fff}
+.lead{margin-top:12px;font-size:19px;color:#dfe5ec}
+form,.act{margin-top:28px}
+label{display:block;font-weight:700;font-size:16px;color:#fff}
+input{display:block;width:100%;margin-top:8px;padding:18px;font-family:ui-monospace,Consolas,monospace;font-weight:500;font-size:21px;line-height:1.2;color:#fff;background:#0f141b;border:1.5px solid #7b8896;border-radius:12px}
+input::placeholder{color:#aeb9c5}
+input.bad{border-color:#ffb4a8}
+.msg{min-height:26px;margin-top:10px;font-weight:700;font-size:16px;color:#ffb4a8}
+.msg.wait{color:var(--sub)}
+.go{display:block;width:100%;margin-top:8px;padding:20px 12px;font-family:inherit;font-weight:900;font-size:21px;line-height:1;color:var(--goink);background:linear-gradient(180deg,#86f09c 0%,#5fe07a 45%,#46cf66 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 10px 30px rgba(70,207,102,.3);border:0;border-radius:12px;cursor:pointer;text-align:center;text-decoration:none}
+.go:hover{filter:brightness(1.06)}
+.notes{margin-top:22px;display:flex;flex-wrap:wrap;gap:4px 22px;font-size:15px;color:var(--sub);list-style:none}
+.more{margin-top:22px;padding-top:18px;border-top:1px solid var(--ln);font-size:16px;color:var(--sub)}
+.more a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#7b8896;overflow-wrap:anywhere}
+.more .lg{display:inline-block;margin:10px 22px 0 0;font-weight:500;font-size:15px;color:var(--sub)}
+.again{display:inline-block;margin-top:18px;padding:0;border:0;background:none;font-family:inherit;font-weight:700;font-size:16px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:#7b8896;cursor:pointer}
+@media (max-width:820px){
+  .top{padding:16px 18px}.brand{font-size:20px}.brand small{font-size:13px;margin-left:8px}
+  main{padding:4px 14px 40px;align-items:flex-start}
+  .card{padding:28px 20px 24px;border-radius:18px}
+  h1{font-size:30px}.lead{font-size:17px}
+  input{font-size:14px;padding:16px 10px}.go{font-size:19px;padding:18px 10px}
+}
+
+/* ---- feedback page: the parts the key page does not have */
+fieldset{border:0;margin-top:28px}
+legend{display:block;font-weight:700;font-size:16px;color:#fff}
+.kinds{margin-top:8px;display:flex;flex-wrap:wrap;gap:10px}
+.kinds label{position:relative;display:block;margin:0}
+.kinds input{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:pointer;border:0}
+.kinds span{display:block;padding:12px 26px;font-weight:700;font-size:17px;line-height:1.2;color:#fff;border:1.5px solid #7b8896;border-radius:999px}
+.kinds input:checked+span{color:var(--goink);background:var(--cy);border-color:var(--cy)}
+.kinds input:focus-visible+span{outline:3px solid var(--cy);outline-offset:3px}
+.fld{margin-top:22px}
+.fld label small{margin-left:10px;font-weight:500;font-size:14px;color:var(--sub)}
+textarea{display:block;width:100%;min-height:170px;margin-top:8px;padding:16px 18px;font-family:inherit;font-weight:500;font-size:17px;line-height:1.7;color:#fff;background:#0f141b;border:1.5px solid #7b8896;border-radius:12px;resize:vertical}
+textarea::placeholder{color:#aeb9c5}
+textarea.bad{border-color:#ffb4a8}
+textarea:focus-visible{outline:3px solid var(--cy);outline-offset:3px}
+#fbf{margin-top:0}
+#fbf input[type=email]{font-family:inherit;font-size:17px;padding:16px 18px}
+#fbf .go{margin-top:6px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.act2{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 26px}
+.act2 .again{margin-top:0}
+@media (max-width:820px){.kinds span{padding:11px 20px;font-size:16px}textarea{font-size:16px;padding:14px 12px}#fbf input[type=email]{font-size:16px;padding:14px 12px}}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>改善・要望 | FA World by Lorenics</title>
+<meta name="theme-color" content="#0a0e13">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../assets/fonts/zen-900.woff2">
+<link rel="stylesheet" href="../../assets/feedback.css">
+</head>
+<body>
+<div class="bg" style="background-image:url('../../assets/img/ja_hero.webp')"></div>
+<header class="top"><a class="brand" href="../">FA World<small>by Lorenics</small></a><a class="lang" href="../../feedback/" lang="en" hreflang="en">English</a></header>
+<main>
+<section class="card" id="ask">
+<p class="eye">改善・要望</p>
+<h1><span class="ph">気づいた事を</span> <span class="ph">教えてください</span></h1>
+<p class="lead"><span class="ph">不具合・要望・質問を</span> <span class="ph">受け付けています</span></p>
+<form id="fbf" novalidate data-msg="{&quot;empty&quot;: &quot;内容を書いてください&quot;, &quot;email&quot;: &quot;メールアドレスを確かめてください&quot;, &quot;long&quot;: &quot;4,000字までにしてください&quot;, &quot;wait&quot;: &quot;送っています&quot;, &quot;busy&quot;: &quot;今は連絡が混み合っています 時間をおいて もう一度送ってください&quot;, &quot;net&quot;: &quot;送れませんでした もう一度試してください&quot;}">
+<fieldset><legend>どんな内容ですか</legend><div class="kinds"><label><input type="radio" name="kind" value="bug" checked><span>不具合</span></label><label><input type="radio" name="kind" value="request"><span>要望</span></label><label><input type="radio" name="kind" value="question"><span>質問</span></label></div></fieldset>
+<div class="fld"><label for="fm">内容</label>
+<textarea id="fm" name="message" maxlength="4000" placeholder="どの画面で 何をした時に 何が起きたか"></textarea></div>
+<div class="fld"><label for="fe">メールアドレス<small>返事が要る時だけ</small></label>
+<input id="fe" name="email" type="email" autocomplete="email" spellcheck="false" placeholder="you@example.com"></div>
+<div class="hp" aria-hidden="true"><label for="fs">Website</label><input id="fs" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+<p class="msg" id="fmsg" role="status" aria-live="polite"></p>
+<button class="go" type="submit">送る</button>
+</form>
+<p class="more"><span class="ph">送った内容は</span> <span class="ph">返事と改善のために使います</span><br><a class="lg" href="../legal/#privacy">規約と表記</a></p>
+</section>
+<section class="card" id="done" hidden>
+<p class="eye ok">送りました</p>
+<h1>ありがとうございます</h1>
+<p class="lead"><span class="ph">内容を確かめて</span> <span class="ph">改善に使います</span></p>
+<div class="act"><a class="go" href="../">FA World へ戻る</a></div>
+<div class="act2"><button class="again" id="again" type="button">もう1件送る</button></div>
+</section>
+</main>
+<script src="../../assets/feedback.js" defer></script>
+</body>
+</html>
