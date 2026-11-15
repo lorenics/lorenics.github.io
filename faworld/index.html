@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>(function(){try{var k='faworld-lang';if(/[?&]hl=en(&|$)/.test(location.search)){localStorage.setItem(k,'en');return}if(localStorage.getItem(k)==='en')return;var l=String((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();if(l==='ja'||l.indexOf('ja-')===0)location.replace('ja/'+location.hash)}catch(e){}})()</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FA World by Lorenics | PLC troubleshooting simulator in your browser</title>
 <meta name="description" content="Walk a 3D factory, run an assembly machine with your own hands and troubleshoot its PLC ladder logic. Plays in your browser.">
@@ -25,7 +26,7 @@
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<header class="top"><a class="brand" href="./" translate="no">FA World<small>by Lorenics</small></a><nav><a class="lang" href="ja/" translate="no" lang="ja" hreflang="ja">日本語</a><a class="go-s d" href="#join">Join the waitlist</a></nav></header>
+<header class="top"><a class="brand" href="./" translate="no">FA World<small>by Lorenics</small></a><nav><a class="lang" href="ja/" translate="no" lang="ja" hreflang="ja" onclick="try{localStorage.removeItem('faworld-lang')}catch(e){}">日本語</a><a class="go-s d" href="#join">Join the waitlist</a></nav></header>
 <section class="hero" style="background-image:url('assets/img/en_hero.webp')"><div class="in">
 <h1><span>Walk the factory</span><span>Fix the machine</span></h1>
 <p class="sub">A PLC troubleshooting simulator you play in your browser</p>
