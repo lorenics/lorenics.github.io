@@ -1,9 +1,9 @@
 (function(){
-  var URL_='https://faworld-feedback.nishihara-kento.workers.dev/w',VER='20261116-0128',KEY='faworld-waitlist-v1',q=function(s){return document.getElementById(s);};
+  var URL_='https://faworld-feedback.nishihara-kento.workers.dev/w',VER='20261118-2006',KEY='faworld-waitlist-v1',q=function(s){return document.getElementById(s);};
   var f=q('wf');if(!f)return;
   var em=q('we'),msg=q('wm'),ask=q('wl-ask'),done=q('wl-done'),num=q('wn'),pos=q('wp'),btn=f.querySelector('button'),M=JSON.parse(f.getAttribute('data-msg')),busy=false;
   function say(t,wait){msg.textContent=t;msg.className='wl-m'+(wait?' wait':'');}
-  function show(n){ask.hidden=true;done.hidden=false;num.textContent=n?String(n):'';pos.hidden=!n;}
+  function show(n){document.documentElement.classList.add('wl-in');ask.hidden=true;done.hidden=false;num.textContent=n?String(n):'';pos.hidden=!n;}
   function read(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){return {};}}
   function save(n){try{localStorage.setItem(KEY,JSON.stringify({ok:1,n:n}));}catch(e){}}
   var m=read();if(m.ok&&m.n)show(m.n);
