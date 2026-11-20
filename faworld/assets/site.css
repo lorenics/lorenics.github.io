@@ -177,6 +177,17 @@ footer nav a:hover{text-decoration-color:#fff}
 .wl-m.wait{color:#e6ebf0}
 .wl-f input.bad{border-color:#ffb4a8}
 .wl-f input:focus-visible,.wl-f .go:focus-visible{outline:3px solid var(--cy);outline-offset:3px}
+/* 公開の形の登録の欄（2026-11-20）：スタートの下。主のボタンはスタートなので、登録のボタンは枠だけ */
+.wl-o{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);max-width:600px}
+.wl-oh{font-weight:800;font-size:19px;color:#fff}
+/* 欄の分だけ中身が高くなるので、最初の画面は中身に合わせて伸ばし、上の帯（ロゴ・言葉・スタート）の下から始める */
+.hero.hw{height:auto;min-height:max(680px,min(100vh,1000px));max-height:none;padding-top:120px}
+@media (max-width:820px){.hero.hw{min-height:820px;padding-top:96px}}
+.wl-o .wl-f{margin-top:12px}
+.wl-o .wl-f input{padding:14px 18px;font-size:17px;border-radius:12px}
+.wl-o .wl-f .go{padding:14px 26px;font-size:18px;color:#fff;background:rgba(10,14,19,.6);border:1.5px solid #8a97a5;border-radius:12px;box-shadow:none}
+.wl-o .wl-n{font-size:15px}
+.wl-o .wl-pos{font-size:clamp(22px,2vw,28px)}
 .wl-f .go:disabled{cursor:progress}
 .wl-sh a:hover{filter:brightness(1.08)}
 /* 登録した後の知らせるボタン（2026-11-18。見本 landing_mock/make_done2_mock.py）：細い線の下に1行と、枠だけの小さいボタン。登録した後は右上と下の登録のボタンを出さない（wl.js が html に wl-in を付ける） */
