@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script>(function(){try{var k='faworld-lang';if(/[?&]hl=en(&|$)/.test(location.search)){localStorage.setItem(k,'en');return}if(localStorage.getItem(k)==='en')return;var l=String((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();if(l==='ja'||l.indexOf('ja-')===0)location.replace('ja/'+location.hash)}catch(e){}})()</script>
+<script>(function(){try{var s=new URLSearchParams(location.search).get('s');if(s&&/^[a-z0-9]{1,16}$/.test(s))localStorage.setItem('fai-src-v1',s)}catch(e){}try{var k='faworld-lang';if(/[?&]hl=en(&|$)/.test(location.search)){localStorage.setItem(k,'en');return}if(localStorage.getItem(k)==='en')return;var l=String((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();if(l==='ja'||l.indexOf('ja-')===0)location.replace('ja/'+location.hash)}catch(e){}})()</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FA World by Lorenics | PLC troubleshooting simulator in your browser</title>
 <meta name="description" content="Experience troubleshooting in a realistic world. Practice PLC machine troubles in your browser, as many times as you like.">

@@ -1,5 +1,5 @@
 (function(){
-  var URL_='https://faworld-feedback.nishihara-kento.workers.dev/w',VER='20261120-2232',KEY='faworld-waitlist-v1',q=function(s){return document.getElementById(s);};
+  var URL_='https://faworld-feedback.nishihara-kento.workers.dev/w',VER='20261121-0419',KEY='faworld-waitlist-v1',q=function(s){return document.getElementById(s);};
   var f=q('wf');if(!f)return;
   var em=q('we'),msg=q('wm'),ask=q('wl-ask'),done=q('wl-done'),num=q('wn'),pos=q('wp'),btn=f.querySelector('button'),M=JSON.parse(f.getAttribute('data-msg')),busy=false;
   function say(t,wait){msg.textContent=t;msg.className='wl-m'+(wait?' wait':'');}
