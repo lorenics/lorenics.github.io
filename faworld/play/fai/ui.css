@@ -60,6 +60,10 @@ body.fai-steer canvas{cursor:crosshair}
 #faiMember .sub{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:19px;color:#dfe5ec;list-style:none}
 #faiMember .sub li{display:flex;align-items:center;gap:10px}
 #faiMember .sub li::before{content:"";width:10px;height:17px;border:solid #5fe07a;border-width:0 3px 3px 0;transform:rotate(42deg);margin:-4px 4px 0 2px}
+#faiMember .sub.mer{flex-direction:column;flex-wrap:nowrap;gap:4px;line-height:1.35}
+#faiMember .sub li::before{flex:none}
+#faiMember .sub .tx{min-width:0}
+#faiMember .lead{margin-top:16px;font-weight:700;font-size:24px;line-height:1.3;color:#fff}
 #faiMember .plans{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
 #faiMember .plan{padding:24px 26px;border-radius:16px;background:#1a222d;border:1px solid #2f3b49;display:flex;flex-direction:column}
 #faiMember .plan.y{border-color:rgba(95,224,122,.6)}
@@ -107,3 +111,4 @@ body.fai-steer canvas{cursor:crosshair}
 #faiMember .ph{display:inline-block}
 #faiMember :focus-visible{outline:3px solid #66f0e6;outline-offset:2px}
 @media (max-height:820px){#faiMember .pw{padding:22px 36px 18px}#faiMember .eye{font-size:14px}#faiMember h2{margin-top:6px;font-size:30px}#faiMember .sub{margin-top:8px;font-size:17px}#faiMember .plans{margin-top:14px;gap:14px}#faiMember .plan{padding:14px 22px 16px}#faiMember .amt{margin-top:4px;font-size:40px}#faiMember .per{margin:4px 0 10px;font-size:16px}#faiMember .go{padding:13px 12px;font-size:18px}#faiMember .terms{margin-top:10px}#faiMember .row{margin-top:8px}#faiMember .later{padding:10px 22px}#faiMember .more{margin-top:12px;padding-top:12px}}
+@media (max-height:820px){#faiMember .sub.mer{gap:1px}#faiMember .lead{margin-top:10px;font-size:21px}#faiMember .pw{padding:18px 36px 14px}#faiMember .steps{margin-top:8px}#faiMember .steps li{padding-top:16px}#faiMember .steps li::before{top:2px}#faiMember .steps li::after{top:8px}#faiMember .plan{padding:12px 22px 12px}#faiMember .amt{font-size:36px}#faiMember .per{margin:2px 0 8px}#faiMember .terms{margin-top:8px;line-height:1.45}#faiMember .row{margin-top:6px}#faiMember .later{padding:8px 22px}#faiMember .more{margin-top:8px;padding-top:8px}}
