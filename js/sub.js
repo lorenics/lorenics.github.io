@@ -138,10 +138,17 @@
     valueMissing: {
       "ご相談の種類": "ご相談の種類を選んでください。",
       "お名前": "お名前を入力してください。",
+      "会社名・屋号": "会社名・屋号を入力してください。",
+      "部署名": "部署名を入力してください（代表の場合は「なし」）。",
+      "役職": "役職を選んでください。",
+      "年齢": "年齢を入力してください。",
       "email": "メールアドレスを入力してください。",
       "ご相談内容": "ご相談内容を入力してください。",
       "privacy": "プライバシーポリシーへの同意が必要です。"
     },
+    rangeUnderflow: { "年齢": "年齢は15〜99の数字で入力してください。" },
+    rangeOverflow: { "年齢": "年齢は15〜99の数字で入力してください。" },
+    badInput: { "年齢": "年齢は数字で入力してください。" },
     typeMismatch: { "email": "メールアドレスの形式が正しくありません（例：name@example.co.jp）。" },
     patternMismatch: { "電話番号": "電話番号は数字とハイフンで入力してください。" }
   };
@@ -157,7 +164,7 @@
     var v = field.validity;
     var msg = "";
     if (!v.valid) {
-      var key = v.valueMissing ? "valueMissing" : v.typeMismatch ? "typeMismatch" : v.patternMismatch ? "patternMismatch" : "";
+      var key = v.valueMissing ? "valueMissing" : v.typeMismatch ? "typeMismatch" : v.rangeUnderflow ? "rangeUnderflow" : v.rangeOverflow ? "rangeOverflow" : v.badInput ? "badInput" : v.patternMismatch ? "patternMismatch" : "";
       msg = (MESSAGES[key] && MESSAGES[key][field.name]) || "入力内容を確認してください。";
     }
     field.setAttribute("aria-invalid", msg ? "true" : "false");
@@ -187,6 +194,9 @@
       "ご相談の種類: " + (data["ご相談の種類"] || ""),
       "お名前: " + (data["お名前"] || ""),
       "会社名・屋号: " + (data["会社名・屋号"] || ""),
+      "部署名: " + (data["部署名"] || ""),
+      "役職: " + (data["役職"] || ""),
+      "年齢: " + (data["年齢"] || ""),
       "メール: " + (data.email || ""),
       "電話番号: " + (data["電話番号"] || ""),
       "",

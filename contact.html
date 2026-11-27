@@ -106,8 +106,37 @@
           </div>
 
           <div class="c-field">
-            <label class="c-field__label" for="f-company">会社名・屋号 <span class="c-field__tag c-field__tag--opt">任意</span></label>
-            <input class="c-input" id="f-company" name="会社名・屋号" type="text" autocomplete="organization" maxlength="120" placeholder="山田電気工事">
+            <label class="c-field__label" for="f-company">会社名・屋号 <span class="c-field__tag c-field__tag--req">必須</span></label>
+            <input class="c-input" id="f-company" name="会社名・屋号" type="text" autocomplete="organization" required maxlength="120" placeholder="山田電気工事" aria-describedby="err-company">
+            <p class="c-field__error" id="err-company"></p>
+          </div>
+
+          <div class="c-field">
+            <label class="c-field__label" for="f-dept">部署名 <span class="c-field__tag c-field__tag--req">必須</span></label>
+            <input class="c-input" id="f-dept" name="部署名" type="text" autocomplete="organization-title" required maxlength="80" placeholder="例：生産技術部（代表の場合は「なし」）" aria-describedby="err-dept">
+            <p class="c-field__error" id="err-dept"></p>
+          </div>
+
+          <div class="c-field">
+            <label class="c-field__label" for="f-role">役職 <span class="c-field__tag c-field__tag--req">必須</span></label>
+            <select class="c-select" id="f-role" name="役職" required aria-describedby="err-role">
+<option value="">選択してください</option>
+<option>社長・代表</option>
+<option>役員</option>
+<option>部長</option>
+<option>課長</option>
+<option>係長</option>
+<option>主任</option>
+<option>担当</option>
+<option>その他</option>
+</select>
+            <p class="c-field__error" id="err-role"></p>
+          </div>
+
+          <div class="c-field">
+            <label class="c-field__label" for="f-age">年齢 <span class="c-field__tag c-field__tag--req">必須</span></label>
+            <input class="c-input" id="f-age" name="年齢" type="number" inputmode="numeric" min="15" max="99" required placeholder="45" aria-describedby="err-age">
+            <p class="c-field__error" id="err-age"></p>
           </div>
 
           <div class="c-field">
@@ -142,10 +171,8 @@
         </form>
 
         <aside class="c-aside" aria-label="その他の連絡方法">
-          <p class="c-aside__head">FREE CHECK</p>
-          <p>依頼する<wbr>か<wbr>決めていない<wbr>段階なら、<a href="contact.html">無料診断<wbr>（オンライン30分〜60分）</a>から<wbr>でも<wbr>大丈夫です。</p>
           <p><a class="c-btn c-btn--line" data-line hidden href="#">LINEで<wbr>無料診断を<wbr>申し込む</a></p>
-          <p class="c-aside__head" style="margin-top:24px;">MAIL</p>
+          <p class="c-aside__head">MAIL</p>
           <p>メールで<wbr>直接ご連絡いただく<wbr>こともできます。</p>
           <p><a class="c-aside__mail" href="mailto:nishihara.kento@lorenics.co.jp">nishihara.kento@lorenics.co.jp</a></p>
           <p class="c-aside__head" style="margin-top:24px;">AFTER SENDING</p>
